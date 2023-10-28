@@ -11,6 +11,8 @@ body {
   background-color: black;
   color: white;
   font-family: 'Kelly Slab', sans-serif;
+  background-size: cover; /* This will make the image cover the entire background */
+  background-repeat: no-repeat;
 }
 
 code {

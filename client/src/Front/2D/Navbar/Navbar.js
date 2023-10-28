@@ -32,6 +32,7 @@ const Navbar = ({setLanguage, language}) => {
   return (
     <div>
       <div className="index">
+
         <button onClick={handleLanguage} className="transparent-button-lang">{language === "español" ? "EN" : "ES"}</button>
 
         {/* <div className="overlap"> */}
@@ -60,16 +61,18 @@ const Navbar = ({setLanguage, language}) => {
           />
         </a> */}
         
-        <a href="/">
+        <a href="/login">
           <img
             className="user"
             alt="User"
             src="/assets/img/menu-Items/user.png"
           />
         </a>
+
         
         {/* </div> */}
       </div>
+     
       {modalOpen  && <Modal setOpenModal={setModalOpen} language={language}/>}
     </div>
   );

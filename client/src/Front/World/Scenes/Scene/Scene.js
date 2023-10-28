@@ -4,13 +4,14 @@ const Scene = ({ text, img, onClick }) => {
 
 
 
-  const backgroundStyle = {
-    backgroundImage: `url(${img})`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-  };
+  // const backgroundStyle = {
+  //   backgroundImage: `url(${img})`,
+  //   backgroundSize: 'cover',
+  //   backgroundRepeat: 'no-repeat',
+  // };
+  document.body.style.backgroundImage = `url(${img})`;
   return (
-    <div style={backgroundStyle} >
+    <div >
       <div className="App">
         <div className="content" onClick={onClick}>
           <p>{text}</p>

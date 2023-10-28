@@ -103,6 +103,14 @@
     top: 10px; /* Adjust the top position for the distance from the top */
     right: 10px; /* Adjust the right position for the distance from the right */
   }
+  .index .home {
+    height: 70px;
+    left: 355px;
+    object-fit: cover;
+    position: absolute;
+    top: 29px;
+    width: 70px;
+  }
   
   
   .index .text-wrapper {

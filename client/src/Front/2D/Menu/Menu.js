@@ -30,7 +30,7 @@ const Menu = ({language}) => {
       </div> 
       <div className="container">
       <button className="transparent-button" onClick={navigateToGame}>
-      {language === "español" ? "INICAR" : "START"}
+      {language === "español" ? "INICIAR" : "START"}
       </button>
         <button className="transparent-button">{language === "español" ? "REANUDAR PARTIDA" : "RESUME GAME"}</button> </div>
       </div>

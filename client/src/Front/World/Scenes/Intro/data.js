@@ -10,8 +10,8 @@ export const introArray = [
       message: 'Alice has a perfect life, a husband and son who she loves so much, her life could not be more perfect',
     },
     {
-      imageUrl: 'https://example.com/image3.jpg',
-      mensaje: 'This is the third image and message.',
-    },
-    // Add more objects with different data as needed
+      imageUrl: '/assets/img/scenarios/nobel.png',
+      mensaje: 'aaaAlice tiene una vida perfecta, un esposo e hijo que ama con todo el corazón, su vida no podría ser mas perfecta',
+      message: 'aaaAlice has a perfect life, a husband and son who she loves so much, her life could not be more perfect',
+    }
   ];
