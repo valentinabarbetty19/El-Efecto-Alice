@@ -1,0 +1,29 @@
+.content {
+  border-radius: 30px;
+  background-color: #ffffff; /* White */
+  padding: 20px;
+  border: 1px solid #ccc; /* Add a border for separation */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  max-width: 1200px; /* Set a maximum width for the box */
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+/* Style the text inside the box */
+.content p {
+  font-size:25px;
+  color: #000000; 
+  font-family: "Open Sans-Regular", Helvetica;
+  font-weight: 400;/* Dark gray text color */
+}
+  
+.background-element {
+  background-image: url(/public/assets/img/scenarios/laboratory.png); /* Replace 'path-to-your-image.jpg' with the actual path to your image file */
+  background-size: cover; /* Adjust the background size as needed */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  /* You can add more background properties here as needed */
+}
