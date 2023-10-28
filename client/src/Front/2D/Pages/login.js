@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import {gapi} from "gapi-script";
 import GoogleLogin from "react-google-login";
-import { serviceLogin } from "../../Services/serviceLogin";
+import { serviceLogin } from "../../../Services/serviceLogin";
 
 
-export const Login = (props) => {
+export const Login = (props, {language}) => {
 
   const [usuarios, setUsuarios] = useState(null);
   const [clientID, setClienteID] = useState('');

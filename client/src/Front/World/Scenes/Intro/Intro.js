@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Intro.css'
 import Scene from '../Scene/Scene'
 import {introArray} from './data'
-const Intro = () => {
+const Intro = ({language}) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const changeImage = () => {
@@ -10,7 +10,7 @@ const Intro = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % introArray.length);
   };
   return (
-    <Scene text={introArray[currentImageIndex].message}
+    <Scene text={language === "español" ? introArray[currentImageIndex].mensaje : introArray[currentImageIndex].message}
     img={introArray[currentImageIndex].imageUrl} onClick={changeImage}/>
     
     

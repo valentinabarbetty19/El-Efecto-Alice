@@ -10,9 +10,9 @@ const Scene = ({ text, img, onClick }) => {
     backgroundRepeat: 'no-repeat',
   };
   return (
-    <div style={backgroundStyle} onClick={onClick}>
+    <div style={backgroundStyle} >
       <div className="App">
-        <div className="content">
+        <div className="content" onClick={onClick}>
           <p>{text}</p>
         </div>
       </div>

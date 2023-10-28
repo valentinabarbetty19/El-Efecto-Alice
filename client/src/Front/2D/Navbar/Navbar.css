@@ -74,14 +74,11 @@
     width: 50px;
     object-fit: cover;
     position: fixed; /* Change to fixed position */
-    top: 10px; /* Adjust the top position for the distance from the top */
-    left: 10px; /* Adjust the left position for the distance from the left */
+    top: 20px; /* Adjust the top position for the distance from the top */
+    left: 50px; /* Adjust the left position for the distance from the left */
   }
-  
-  .index .book {
-    left: 70px; /* Adjust the left position to create horizontal spacing */
-  }
-  
+
+
   .index .transparent-button-lang {
     background-color: transparent;
     border: 2px solid white;
