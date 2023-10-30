@@ -31,15 +31,9 @@ export const introArray = [
     // }, //sombras????
     // {
     //   imageUrl: '/assets/img/scenarios/laboratory.png',
-    //   mensaje: 'A pesar de su persistente experimentación con el brazalete, empieza a considerar queesto no tendrá solución.',
+    //   mensaje: 'A pesar de su persistente experimentación con el brazalete, empieza a considerar que esto no tendrá solución.',
     //   message: 'Despite her persistent experimentation with the bracelet, she begins to consider that this may have no solution.',
     // }, //alice sad, brazalete
-    // {
-    //   imageUrl: '/assets/img/scenarios/laboratory.png',
-    //   mensaje: 'Alice ha quedado devastada tras este hecho, pues prácticamente toda su vida se ha derrumbado.',
-    //   message: 'Alice has been left devastated by this event, as practically her entire life has crumbled.',
-    // }, //alice sad caminando a casa (otra escena? (background)).
-    // // *sale del laboratorio y se dirije a su casa*
     // {
     //   imageUrl: '/assets/img/scenarios/thunderstorm.png',
     //   mensaje: 'En una tarde lluviosa, cerca de su casa, Alice vio algo cerca a un viejo árbol, al ir a investigar, Fue alcanzada por un rayo.',
@@ -92,9 +86,22 @@ export const introArray = [
     //   message: "Sadness and confusion overwhelmed her, and she couldn't grasp what had happened. Her thoughts became entangled, wondering if it had been a vivid dream or if the bracelet had played a role in that strange episode.",
     // },
     // {
-    //   imageUrl: '/assets/img/scenarios/living-room.png',
-    //   mensaje: 'Después de despertar en su realidad original, un vecino golpeó su puerta preocupado por un rayo cercano y notó una quemadura en la mano de Alice. Le sugirió que fueran al hospital.',
-    //   message: "After waking up in her original reality, a neighbor knocked on her door, concerned about a nearby lightning strike, and noticed a burn on Alice's hand. He suggested they go to the hospital.",
+    //   imageUrl: '/assets/img/scenarios/outside.png',
+    //   mensaje: 'Vecino: (golpea la puerta) ¡Hola, Alice! Escuché un fuerte estruendo de un rayo y me preocupé. ¿Estás bien?',
+    //   message: "Neighbor: (knocks on the door) Hello, Alice! I heard a loud boom of lightning and got worried. Are you OK?",
+    // }, //Sonido de puerta siendo tocada :3, creo que seria buena idea agregar al vecino
+    // {
+    //   imageUrl: '/assets/img/scenarios/outside.png',
+    //   mensaje: 'Alice: (mirando su mano) No estoy segura de cómo ocurrió. De repente, estaba en mi cuarto y...',
+    //   message: "Alice: (looking at her hand) I'm not sure how it happened. Suddenly, I was in my room and...",
+    // }, //Si se puede cambiar la expresion de alice mejor
+    //   imageUrl: '/assets/img/scenarios/outside.png',
+    //   mensaje: 'Vecino: (preocupado) ¿Te lastimaste cuando cayó el rayo? Deberías ir al hospital para que lo revisen.',
+    //   message: "Neighbor: (worried) Did you get hurt when the lightning struck? You should go to the hospital to get it checked out.",
     // },
+    //   imageUrl: '/assets/img/scenarios/outside.png',
+    //   mensaje: 'Alice: (pensativa) No estoy segura de cómo ocurrió esto, pero...',
+    //   message: "Alice: (thoughtful) I'm not sure how this happened, but...",
+    // },Poner alice pensativa?
 
   ];

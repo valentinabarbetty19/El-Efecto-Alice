@@ -112,7 +112,8 @@ export const bifur1Array = [
     //   message: "After waking up in her original reality, a neighbor knocked on her door, concerned about a nearby lightning strike, and noticed a burn on Alice's hand. He suggested they go to the hospital.",
     // },
 
-  ];export const bifur2Array = [
+  ];
+  export const bifur2Array = [
     {
       imageUrl: '/assets/img/scenarios/nobel.png',
       mensaje: 'bifur2222222222222222222222222222222222',
