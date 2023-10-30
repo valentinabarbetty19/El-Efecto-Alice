@@ -1,19 +1,4 @@
 export const introArray = [
-    // {
-    //   imageUrl: '/assets/img/scenarios/laboratory.png',
-    //   mensaje: 'Alice es una científica y ha hecho un collar para viajar al pasado, sin embargo, este artefacto le falta energía para que funcione correctamente',
-    //   message: 'Alice is a scientific and she has made a collar to travel to the past, but, this artifact is missing energy in order for it to work correctly',
-    // },
-    // {
-    //   imageUrl: '/assets/img/scenarios/living-room.png',
-    //   mensaje: 'Alice tiene una vida perfecta, un esposo e hijo que ama con todo el corazón, su vida no podría ser mas perfecta',
-    //   message: 'Alice has a perfect life, a husband and son who she loves so much, her life could not be more perfect',
-    // },
-    // {
-    //   imageUrl: '/assets/img/scenarios/nobel.png',
-    //   mensaje: 'aaaAlice tiene una vida perfecta, un esposo e hijo que ama con todo el corazón, su vida no podría ser mas perfecta',
-    //   message: 'aaaAlice has a perfect life, a husband and son who she loves so much, her life could not be more perfect',
-    // }
     {
       imageUrl: '/assets/img/scenarios/laboratory.png',
       mensaje: 'Alice Brown, una de las mejores científicas del país, ha destinado toda su vida al estudio de la física cuántica y los viajes en el tiempo.',
