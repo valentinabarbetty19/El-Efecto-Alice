@@ -1,4 +1,4 @@
-export const introArray = [
+export const bifur1Array = [
     // {
     //   imageUrl: '/assets/img/scenarios/laboratory.png',
     //   mensaje: 'Alice es una científica y ha hecho un collar para viajar al pasado, sin embargo, este artefacto le falta energía para que funcione correctamente',
@@ -15,23 +15,23 @@ export const introArray = [
     //   message: 'aaaAlice has a perfect life, a husband and son who she loves so much, her life could not be more perfect',
     // }
     {
-      imageUrl: '/assets/img/scenarios/laboratory.png',
-      mensaje: 'Alice Brown, una de las mejores científicas del país, ha destinado toda su vida al estudio de la física cuántica y los viajes en el tiempo.',
+      imageUrl: '/assets/img/scenarios/nobel.png',
+      mensaje: 'bifur1111111111111111',
       message: "Alice Brown, one of the country's top scientists, has dedicated her entire life to the study of quantum physics and time travel.",
     },
-    {
-      imageUrl: '/assets/img/scenarios/laboratory.png',
-      mensaje: ' Ha estado trabajando en un brazalete que le permitiría escoger la fecha a dónde quiere viajar en el pasado, sin embargo, este artefacto no tiene la energía suficiente para que funcione.',
-      message: 'She has been working on a bracelet that would allow her to choose the date to which she wants to travel into the past. However, this device does not have enough energy to function.',
-    },//brazalete
-    {
-      imageUrl: '/assets/img/scenarios/living-room.png',
-      mensaje: 'Tiene su vida feliz con su hijo y su esposo. Los ama mucho...',
-      message: 'She leads a happy life with her son and her husband. She loves them very much...',
-    },//añadir modelosd e hijo y esposo
+    // {
+    //   imageUrl: '/assets/img/scenarios/laboratory.png',
+    //   mensaje: ' Ha estado trabajando en un brazalete que le permitiría escoger la fecha a dónde quiere viajar en el pasado, sin embargo, este artefacto no tiene la energía suficiente para que funcione.',
+    //   message: 'She has been working on a bracelet that would allow her to choose the date to which she wants to travel into the past. However, this device does not have enough energy to function.',
+    // },//brazalete
+    // {
+    //   imageUrl: '/assets/img/scenarios/living-room.png',
+    //   mensaje: 'Tiene su vida feliz con su hijo y su esposo. Los ama mucho...',
+    //   message: 'She leads a happy life with her son and her husband. She loves them very much...',
+    // },//añadir modelosd e hijo y esposo
     {
       imageUrl: '/assets/img/scenarios/car.png',
-      mensaje: 'pero desafortunadamente, ella, su hijo y su esposo tuvieron un accidente automovilístico, y todos menos ella, perdieron la vida.',
+      mensaje: 'bifur11111111111111111111111111111111111111111111111111111111111',
       message: 'Unfortunately, they were all involved in a car accident, and everyone except for her lost their lives.',
     }, //????
     // {
@@ -112,4 +112,10 @@ export const introArray = [
     //   message: "After waking up in her original reality, a neighbor knocked on her door, concerned about a nearby lightning strike, and noticed a burn on Alice's hand. He suggested they go to the hospital.",
     // },
 
+  ];export const bifur2Array = [
+    {
+      imageUrl: '/assets/img/scenarios/nobel.png',
+      mensaje: 'bifur2222222222222222222222222222222222',
+      message: "Alice Brown, one of the country's top scientists, has dedicated her entire life to the study of quantum physics and time travel.",
+    },
   ];
