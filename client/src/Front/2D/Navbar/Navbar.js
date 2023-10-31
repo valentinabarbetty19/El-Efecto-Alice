@@ -33,7 +33,7 @@ const Navbar = ({setLanguage, language}) => {
     <div>
       <div className="index">
 
-        <button onClick={handleLanguage} className="transparent-button-lang">{language === "español" ? "ES" : "EN"}</button>
+        <button onClick={handleLanguage} className="transparent-button-lang">{language === "español" ? "EN" : "ES"}</button>
 
         {/* <div className="overlap"> */}
         <div onClick={handleClick}>
