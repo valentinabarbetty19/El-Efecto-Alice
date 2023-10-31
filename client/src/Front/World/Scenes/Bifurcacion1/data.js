@@ -1,117 +1,64 @@
 export const bifur1Array = [
-    // {
-    //   imageUrl: '/assets/img/scenarios/laboratory.png',
-    //   mensaje: 'Alice es una científica y ha hecho un collar para viajar al pasado, sin embargo, este artefacto le falta energía para que funcione correctamente',
-    //   message: 'Alice is a scientific and she has made a collar to travel to the past, but, this artifact is missing energy in order for it to work correctly',
-    // },
-    // {
-    //   imageUrl: '/assets/img/scenarios/living-room.png',
-    //   mensaje: 'Alice tiene una vida perfecta, un esposo e hijo que ama con todo el corazón, su vida no podría ser mas perfecta',
-    //   message: 'Alice has a perfect life, a husband and son who she loves so much, her life could not be more perfect',
-    // },
-    // {
-    //   imageUrl: '/assets/img/scenarios/nobel.png',
-    //   mensaje: 'aaaAlice tiene una vida perfecta, un esposo e hijo que ama con todo el corazón, su vida no podría ser mas perfecta',
-    //   message: 'aaaAlice has a perfect life, a husband and son who she loves so much, her life could not be more perfect',
-    // }
     {
       imageUrl: '/assets/img/scenarios/nobel.png',
-      mensaje: 'bifur1111111111111111',
-      message: "Alice Brown, one of the country's top scientists, has dedicated her entire life to the study of quantum physics and time travel.",
+      mensaje: 'Alice: …creo que tienes razón. Es mejor asegurarse de que todo esté en orden.',
+      message: "Alice: …I think you're right. It's best to make sure everything is in order.",
     },
     // {
     //   imageUrl: '/assets/img/scenarios/laboratory.png',
-    //   mensaje: ' Ha estado trabajando en un brazalete que le permitiría escoger la fecha a dónde quiere viajar en el pasado, sin embargo, este artefacto no tiene la energía suficiente para que funcione.',
-    //   message: 'She has been working on a bracelet that would allow her to choose the date to which she wants to travel into the past. However, this device does not have enough energy to function.',
+    //   mensaje: 'Vecino: (amablemente) Bueno, no te preocupes. Puedo llevarte al hospital si lo necesitas. Es importante cuidar esa quemadura.',
+    //   message: 'Neighbor: (kindly) Well, don't worry. I can take you to the hospital if you need it. It is important to take care of that burn.',
     // },//brazalete
     // {
     //   imageUrl: '/assets/img/scenarios/living-room.png',
-    //   mensaje: 'Tiene su vida feliz con su hijo y su esposo. Los ama mucho...',
-    //   message: 'She leads a happy life with her son and her husband. She loves them very much...',
-    // },//añadir modelosd e hijo y esposo
+    //   mensaje: 'Alice: (agradecida) Eso sería amable de tu parte, gracias. No entiendo lo que está sucediendo, pero creo que es lo mejor.',
+    //   message: 'Alice: (grateful) That would be kind of you, thank you. I don't understand what's happening, but I think it's for the best.',
+    // },
     {
-      imageUrl: '/assets/img/scenarios/car.png',
-      mensaje: 'bifur11111111111111111111111111111111111111111111111111111111111',
-      message: 'Unfortunately, they were all involved in a car accident, and everyone except for her lost their lives.',
-    }, //????
-    // {
-    //   imageUrl: '/assets/img/scenarios/living-room.png',
-    //   mensaje: 'Alice ha quedado devastada tras este hecho, pues prácticamente toda su vida se ha derrumbado.',
-    //   message: 'Alice has been left devastated by this event, as practically her entire life has crumbled.',
-    // },//alice sad en casa or hospitalized (imageUrl)
+      imageUrl: '/assets/img/scenarios/living-room.png',
+      mensaje: 'En el hospital Alice comenta toda la situación al médico y espera resultados después de unos análisis, los médicos la diagnosticaron con problemas mentales y esquizofrenia debido al daño causado por el rayo. Recibe tratamiento y se le ofrece una opción experimental: una pasta azul',
+      message: 'At the hospital Alice tells the doctor about the whole situation and waits for results. After some tests, the doctors diagnosed her with mental problems and schizophrenia due to the damage caused by the lightning. He receives treatment and is offered an experimental option: a blue paste',
+    }, //(en 3D en movimiento, referencia matrix).
     // {
     //   imageUrl: '/assets/img/scenarios/laboratory.png',
-    //   mensaje: 'Después de su pérdida, comienza a experimentar visiones confusas que la hacen cuestionar su salud, aunque estas preocupaciones son obviadas por su firme determinación de recuperar su pasado',
-    //   message: 'After her loss, she begins to experience confusing visions that make her question her health, although these concerns are dismissed by her strong determination to reclaim her past.',
-    // }, //sombras????
-    // {
+    //   mensaje: 'Doctor: (amablemente) Alice, hemos revisado tus análisis y observaciones, y parece que el daño causado por la descarga del rayo ha tenido un impacto significativo en tu salud mental. Te hemos diagnosticado con problemas mentales y esquizofrenia.',
+    //   message: 'Doctor: (kindly) Alice, we have reviewed your analyzes and observations, and it appears that the damage caused by the lightning strike has had a significant impact on your mental health. We have diagnosed you with mental problems and schizophrenia.',
+    // }, //sonido aterrador????????
+    //{
     //   imageUrl: '/assets/img/scenarios/laboratory.png',
-    //   mensaje: 'A pesar de su persistente experimentación con el brazalete, empieza a considerar queesto no tendrá solución.',
-    //   message: 'Despite her persistent experimentation with the bracelet, she begins to consider that this may have no solution.',
-    // }, //alice sad, brazalete
-    // {
+    //   mensaje: 'Alice: (perpleja) ¿Esquizofrenia? ¿Estás seguro? ¿No es posible que todo esto sea solo un sueño, una ilusión? ¿Qué es real? (Las lágrimas comenzaron a formarse en sus ojos mientras se aferraba a la esperanza de que su vida con su esposo e hijo no hubiera sido un sueño.)',
+    //   message: 'Alicia: (perplexed) Schizophrenia? You're sure? Isn't it possible that all this is just a dream, an illusion? That is real? (Tears began to form in her eyes as she clung to the hope that her life with her husband and son had not been a dream.)',
+    // }, //sonido aterrador????????
+    //{
     //   imageUrl: '/assets/img/scenarios/laboratory.png',
-    //   mensaje: 'Alice ha quedado devastada tras este hecho, pues prácticamente toda su vida se ha derrumbado.',
-    //   message: 'Alice has been left devastated by this event, as practically her entire life has crumbled.',
-    // }, //alice sad caminando a casa (otra escena? (background)).
-    // // *sale del laboratorio y se dirije a su casa*
-    // {
-    //   imageUrl: '/assets/img/scenarios/thunderstorm.png',
-    //   mensaje: 'En una tarde lluviosa, cerca de su casa, Alice vio algo cerca a un viejo árbol, al ir a investigar, Fue alcanzada por un rayo.',
-    //   message: 'On a rainy afternoon near her house, Alice saw something near an old tree. As she went to investigate, she was struck by lightning.',
+    //   mensaje: 'Doctor: (comprensivo) Entendemos que esto debe ser abrumador para ti, Alice. Pero los análisis y observaciones clínicas son concluyentes en cuanto a tu diagnóstico. Ahora, respecto a la pasta experimental, queremos subrayar que es una opción que podría ayudarte a recuperar la estabilidad mental.',
+    //   message: 'Doctor: (sympathetic) We understand this must be overwhelming for you, Alice. But the clinical analyzes and observations are conclusive regarding your diagnosis. Now, regarding the experimental pasta, we want to emphasize that it is an option that could help you regain mental stability.',
+    // }, //sonido aterrador????????
+    //{
+    //   imageUrl: '/assets/img/scenarios/laboratory.png',
+    //   mensaje: 'La confusión se apoderaba de mí mientras intentaba asimilar el diagnóstico. ¿Cómo podía ser que mi vida anterior con mi esposo e hijo estuviera completamente descartada como un producto de mi mente perturbada? ¿Y qué demonios era esa pasta azul? ¿Qué camino debo seguir? ¿Recuperar mi vida "anterior" o someterme a un tratamiento experimental y enfrentar una nueva realidad?',
+    //   message: 'Confusion took over me as I tried to digest the diagnosis. How could it be that my previous life with my husband and son was completely dismissed as a product of my disturbed mind? And what the hell was that blue paste? What path should I follow? Get my "old" life back or undergo an experimental treatment and face a new reality?',
+    // }, //cambio de escenario, deberíamos centrarnos en Alice, luego de esto, volver al escenario de hospital
+    //{
+    //   imageUrl: '/assets/img/scenarios/laboratory.png',
+    //   mensaje: 'Alice: (insegura) No estoy segura, Doctor Carl. ¿Qué tipo de pastilla es?',
+    //   message: 'Alice: (unsure) I'm not sure, Doctor Carl. What type of pill is it?',
     // },
-    // // *El brazalete se ilumina misteriosamente pero ella no lo nota* 
-    // {
-    //   imageUrl: '/assets/img/scenarios/outside.png',
-    //   mensaje: 'Después de ser impactada por el rayo, Alice quedó momentáneamente aturdida y desconcertada. Con cuidado, se tocó para asegurarse de que no estaba herida. Luego, se apresuró a regresar a su casa, donde comenzó a secarse y a recuperarse del impacto. ',
-    //   message: "After being struck by lightning, Alice was momentarily dazed and bewildered. Carefully, she touched herself to ensure she wasn't injured. Then, she hurried back to her house, where she began to dry off and recover from the shock.",
+    //{
+    //   imageUrl: '/assets/img/scenarios/laboratory.png',
+    //   mensaje: 'Doctor Carl: (comprensivo) Entiendo tus dudas, Alice. Esta pastilla es segura y ha ayudado a muchas personas en situaciones similares. No cambiará tu realidad, pero podría proporcionarte un respiro.',
+    //   message: 'Doctor Carl: (sympathetic) I understand your doubts, Alice. This pill is safe and has helped many people in similar situations. It won't change your reality, but it might give you a break.',
     // },
-    // {
-    //   imageUrl: '/assets/img/scenarios/thunderstorm.png',
-    //   mensaje: 'Mientras lo hacía, observó su brazo y notó que el brazalete que llevaba puesto misteriosamente se iluminaba. Esto la llevó a pensar que finalmente podría viajar en el tiempo y recuperar su vida perdida. ',
-    //   message: 'As she did so, she looked at her arm and noticed that the bracelet she was wearing was mysteriously glowing. This led her to believe that she could finally time travel and reclaim her lost life.',
+    //{
+    //   imageUrl: '/assets/img/scenarios/laboratory.png',
+    //   mensaje: 'Alice: (dubitativa) ¿Qué efecto tendrá en mí?',
+    //   message: 'Alice: (hesitantly) What effect will it have on me?',
     // },
-    // {
-    //   imageUrl: '/assets/img/scenarios/living-room.png',
-    //   mensaje: 'Sin dudarlo, Alice eligió la fecha de su cumpleaños como su primera parada en su viaje en el tiempo.',
-    //   message: 'Without hesitation, Alice chose her birthday as her first stop on her time travel journey.',
+    //{
+    //   imageUrl: '/assets/img/scenarios/laboratory.png',
+    //   mensaje: 'Doctor Carl: (gentilmente) No te preocupes, no te alejará de la realidad, pero podría ayudarte a sentirte más tranquila, al menos temporalmente.',
+    //   message: 'Doctor Carl: (gently) Don't worry, it won't take you away from reality, but it might help you feel calmer, at least temporarily.',
     // },
-    // {
-    //   imageUrl: '/assets/img/scenarios/outside.png',
-    //   mensaje: 'De repente, todo se oscureció y, al despertar, se encontró en su cuarto.',
-    //   message: 'Suddenly, everything went dark, and when she woke up, she found herself in her room.',
-    // },
-    // {
-    //   imageUrl: '/assets/img/scenarios/outside.png',
-    //   mensaje: 'Creía que no habia pasado nada pero...',
-    //   message: 'She believed that nothing had happened, but...',
-    // }, //escena habitacion de alice.
-    // {
-    //   imageUrl: '/assets/img/scenarios/outside.png',
-    //   mensaje: 'su esposo e hijo la sorprendieron en la mañana de su cumpleaños, vivos y llenos de alegría. La confusión y la felicidad se entrelazaron en su mente, ya que, hasta hace un momento, la realidad era que habían fallecido en un accidente.',
-    //   message: ' her husband and son surprised her on the morning of her birthday, alive and full of joy. Confusion and happiness intertwined in her mind, as just moments ago, the reality was that they had passed away in an accident.',
-    // },//escena habitacion de alice, maybe otra ropa
-    // {
-    //   imageUrl: '/assets/img/scenarios/living-room.png',
-    //   mensaje: 'Alice pasó el día disfrutando de la compañía de su familia, aunque las preguntas sobre lo que había sucedido atormentaban su mente. Sin embargo, prefirió no pensar demasiado en ello y se sumergió en la dicha de estar con ellos una vez más.',
-    //   message: 'Alice spent the day enjoying the company of her family, even though questions about what had happened tormented her mind. However, she chose not to dwell on it too much and immersed herself in the joy of being with them once again.',
-    // },
-    // {
-    //   imageUrl: '/assets/img/scenarios/living-room.png',
-    //   mensaje: 'Cuando volvió a dormir, se despertó abruptamente en su triste realidad original.',
-    //   message: 'When she went to sleep again, she woke up abruptly in her sad original reality.',
-    // },
-    // {
-    //   imageUrl: '/assets/img/scenarios/living-room.png',
-    //   mensaje: 'La tristeza y la confusión la abrumaron, y no pudo comprender lo que había ocurrido.  Sus pensamientos se enredaron entre sí había sido un sueño vivido o si el brazalete había jugado un papel en ese extraño episodio.',
-    //   message: "Sadness and confusion overwhelmed her, and she couldn't grasp what had happened. Her thoughts became entangled, wondering if it had been a vivid dream or if the bracelet had played a role in that strange episode.",
-    // },
-    // {
-    //   imageUrl: '/assets/img/scenarios/living-room.png',
-    //   mensaje: 'Después de despertar en su realidad original, un vecino golpeó su puerta preocupado por un rayo cercano y notó una quemadura en la mano de Alice. Le sugirió que fueran al hospital.',
-    //   message: "After waking up in her original reality, a neighbor knocked on her door, concerned about a nearby lightning strike, and noticed a burn on Alice's hand. He suggested they go to the hospital.",
-    // },
-
   ];
   export const bifur2Array = [
     {
