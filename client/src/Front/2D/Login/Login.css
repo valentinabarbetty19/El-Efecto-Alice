@@ -1,0 +1,53 @@
+.centeredBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .whiteBox {
+    background-color: white;
+    border-radius: 10px; /* You can adjust the border radius to your desired value */
+    width: 400px; /* Set the width and height to your desired dimensions */
+    height: 300px;
+    padding: 20px; /* Add padding to create space inside the box */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+    display: flex; /* Add display flex to center the button horizontally */
+    flex-direction: column; /* Stack items vertically inside the white box */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+  }
+  
+  .text {
+    color: black;
+    text-align: center;
+    font-family: "Open Sans-Regular", Helvetica;
+  }
+  .texto {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Open Sans-Regular", Helvetica;
+  }
+  .button {
+    background: rgb(201, 201, 201);
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px; /* Add margin to create space around the button */
+  }
+  
+  .buttonText {
+    font-size: 18px; /* Set the text size */
+    font-family: "Open Sans-Regular", Helvetica;
+    padding: 10px;
+  }
+  
+  .buttonIcon {
+    width: 24px; /* Set the icon width */
+    height: 24px; /* Set the icon height */
+  }
+  

@@ -1,0 +1,53 @@
+.content {
+    border-radius: 30px;
+    background-color: #ffffff; /* White */
+    padding: 20px;
+    border: 1px solid #ccc; /* Add a border for separation */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    max-width: 1200px; /* Set a maximum width for the box */
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  
+  /* Style the text inside the box */
+  .content p {
+    font-size:25px;
+    color: #000000; 
+    font-family: "Open Sans-Regular", Helvetica;
+    font-weight: 400;/* Dark gray text color */
+  }
+    
+  .background-element {
+    background-image: url(/public/assets/img/scenarios/laboratory.png); /* Replace 'path-to-your-image.jpg' with the actual path to your image file */
+    background-size: cover; /* Adjust the background size as needed */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    /* You can add more background properties here as needed */
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Adjust the gap between buttons */
+  }
+  
+  .button-outline {
+    border: 2px solid black; /* Add a black outline to the buttons */
+    background-color: transparent; /* Make the background transparent */
+    color: black; /* Set the text color to black */
+    padding: 10px 20px; /* Add padding to the buttons */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 18px; /* Set the text size */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: "Open Sans-Regular", Helvetica;
+  }
+  
+  .button-outline:hover {
+    background-color: black;
+    color: white;
+  }
+  
