@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
-export function Vecino(props) {
-  const { nodes, materials } = useGLTF("/assets/models/Vecino/vecino.glb");
+export function Alex(props) {
+  const { nodes, materials } = useGLTF("/assets/models/Esposo/Alex.glb");
   return (
-    <group {...props} dispose={null} position-y={-5} position-x={3} rotation-y={-Math.PI / 2}
+    <group {...props} dispose={null} position-y={-5} position-x={3}
     scale={4}>
       <primitive object={nodes.Hips} />
       <skinnedMesh
@@ -72,5 +72,5 @@ export function Vecino(props) {
     </group>
   );
 }
-export default Vecino;
-useGLTF.preload("/assets/models/Vecino/vecino.glb");
+export default Alex;
+useGLTF.preload("/assets/models/Esposo/Alex.glb");

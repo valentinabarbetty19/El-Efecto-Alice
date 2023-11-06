@@ -81,7 +81,7 @@ export const introArray = [
     alice: true,
     alex: false,
     jonas: false,
-    eyder: false,
+    eyder: true,
     carl: false,
     jimmy: false,
     narrador: false,

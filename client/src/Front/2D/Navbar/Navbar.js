@@ -55,7 +55,7 @@ const Navbar = ({ setLanguage, language }) => {
         </div>
 
         <div>
-          <a href="/home">
+          <a href="/">
             <img
               className="home"
               alt="Home"

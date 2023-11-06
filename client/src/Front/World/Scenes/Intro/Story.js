@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./Intro.css";
-import Scene from "../Scene/Scene";
-import { introArray } from "./data";
+
 import Alice from "../models/Alice";
-import { Html } from "@react-three/drei";
+
 import { Canvas } from "@react-three/fiber";
 import { useNavigate } from "react-router-dom";
 
 import SceneDecision from "../Scene-decision/Scene-decision";
 
 import Vecino from "../models/Vecino";
+import Alex from "../models/Alex";
+import Jonas from "../models/Jonas";
 
 const Story = ({ language, info, route1, route2 }) => {
   const navigate = useNavigate();
@@ -59,7 +60,9 @@ const Story = ({ language, info, route1, route2 }) => {
         <ambientLight intensity={2} />
 
         {shouldShowAlice && <Alice />}
-        {shouldShowAlex && <Vecino />}
+        {shouldShowEyder && <Vecino />}
+        {shouldShowAlex && <Alex />}
+        {shouldShowJonas && <Jonas />}
       </Canvas>
       <div>
         <SceneDecision
