@@ -6,19 +6,23 @@ const SceneDecision = ({ language, text, img, decision1, decision2, setDecision1
   document.body.style.backgroundImage = `url(${img})`;
 
   
-
+ 
   return (
     <div >
       <div className="App">
-        <div className="content" >
+        <div className="content" onClick={onClick}>
           <p>{text}</p>
           <div className="button-container">
-            <button className="button-outline" onClick={() => { setDecision1(true)
-              // ; onClick(); 
-              }}>{decision1}</button>
-            <button className="button-outline" onClick={() => { setDecision2(true)
-              // ; onClick();
-               }}>{decision2}</button>
+            {decision1 !== null && (
+              <button className="button-outline" onClick={() => { setDecision1(true) }}>
+                {decision1}
+              </button>
+            )}
+            {decision2 !== null && (
+              <button className="button-outline" onClick={() => { setDecision2(true) }}>
+                {decision2}
+              </button>
+            )}
           </div>
         </div>
       </div>

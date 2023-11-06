@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
 import { AuthProvider } from "./context/AuthContext.jsx";
 
-import Intro from "./Front/World/Scenes/Intro/Intro";
+
 
 import Menu from "./Front/2D/Menu/Menu";
 import Navbar from "./Front/2D/Navbar/Navbar";
@@ -13,6 +13,8 @@ import SignUp from "./Front/2D/SignUp/SignUp";
 import Bifur1 from "./Front/World/Scenes/Bifurcacion1/Bifur1.js";
 import Bifur2 from "./Front/World/Scenes/Bifurcacion1/Bifur2.js";
 import Log from "./Front/2D/Pages/login.js";
+import Story from "./Front/World/Scenes/Intro/Story.js";
+import Intro from "./Front/World/Scenes/Intro/Intro.js";
 
 function App() {
   const [language, setLanguage] = useState("español");
