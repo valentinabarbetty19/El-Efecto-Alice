@@ -46,6 +46,7 @@ const Story = ({ language, info, route1, route2 }) => {
   const shouldShowCarl = info[currentImageIndex].carl === true;
   const shouldShowJimmy = info[currentImageIndex].jimmy === true;
   const shouldShowNarrador = info[currentImageIndex].narrador === true;
+console.log(info[currentImageIndex].animation)
 
   return (
     <div
@@ -59,7 +60,7 @@ const Story = ({ language, info, route1, route2 }) => {
       <Canvas style={{ width: "100vw", height: "80vh" }}>
         <ambientLight intensity={2} />
 
-        {shouldShowAlice && <Alice />}
+        {shouldShowAlice && <Alice animation={info[currentImageIndex].animation}/>}
         {shouldShowEyder && <Vecino />}
         {shouldShowAlex && <Alex />}
         {shouldShowJonas && <Jonas />}

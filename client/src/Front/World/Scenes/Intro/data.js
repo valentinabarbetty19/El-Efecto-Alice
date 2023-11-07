@@ -16,6 +16,8 @@ export const introArray = [
     carl: false,
     jimmy: false,
     narrador: false,
+    animation: 0,
+
   },
   {
     imageUrl: "/assets/img/scenarios/laboratory.png",
@@ -34,6 +36,7 @@ export const introArray = [
     carl: false,
     jimmy: false,
     narrador: false,
+    animation: 0
   }, //brazalete
   {
     imageUrl: "/assets/img/scenarios/living-room.png",
@@ -51,6 +54,7 @@ export const introArray = [
     carl: false,
     jimmy: false,
     narrador: false,
+    animation: 0
   }, //añadir modelosd e hijo y esposo
   {
     imageUrl: "/assets/img/scenarios/car.png",
@@ -69,6 +73,7 @@ export const introArray = [
     carl: false,
     jimmy: false,
     narrador: false,
+    animation: 0
   },
   {
     imageUrl: "/assets/img/scenarios/outside.png",
@@ -85,6 +90,7 @@ export const introArray = [
     carl: false,
     jimmy: false,
     narrador: false,
+    animation: 1
   },
   //????
   // {
