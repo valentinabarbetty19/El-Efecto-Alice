@@ -4,7 +4,7 @@ import { useGLTF } from "@react-three/drei";
 export function Vecino(props) {
   const { nodes, materials } = useGLTF("/assets/models/Vecino/vecino.glb");
   return (
-    <group {...props} dispose={null} position-y={-5} position-x={3} rotation-y={-Math.PI / 2}
+    <group {...props} dispose={null} position-y={-5} position-x={5} rotation-y={-Math.PI / 2}
     scale={4}>
       <primitive object={nodes.Hips} />
       <skinnedMesh

@@ -1,45 +1,55 @@
 import React, { useRef, useEffect, useState } from "react";
 import { useAnimations, useFBX, useGLTF } from "@react-three/drei";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export function Alice(props) {
   const { nodes, materials } = useGLTF("/assets/models/Alice/Alice.glb");
-  const aliceRef = useRef();
-  const [keyState, setKeyState] = useState({
-    ArrowLeft: false,
-    ArrowRight: false,
-  });
-  const [rotation, setRotation] = useState(0)
-
   const { animations: walkingAnimation } = useFBX(
     "/assets/models/Alice/Animations/Walking.fbx"
   );
+  const { animations: turningLeftAnimation } = useFBX(
+    "/assets/models/Alice/Animations/hpta.fbx"
+  );
+  const aliceRef = useRef();
+
+  const navigate = useNavigate();
+  const [rotationx, setRotationx] = useState(props.rotationx);
+  const [rotationz, setRotationz] = useState(0);
+  const [rotationy, setRotationy] = useState(props.rotationy);
+  const [positionx, setPositionX] = useState(0);
+  const [izqWalk, setIzqWalk] = useState(false);
+  const [derWalk, setDerWalk] = useState(false);
 
   walkingAnimation[0].name = "Walking";
+  turningLeftAnimation[0].name = "Turning";
 
-  const { actions } = useAnimations(walkingAnimation, aliceRef);
+  const { actions } = useAnimations(
+    [walkingAnimation[0], turningLeftAnimation[0]],
+    aliceRef
+  );
 
-  
-
-  useEffect(() => {
-    // Inicializa la posición de Alice
-    if (props.animation === 1) {
-      aliceRef.current.position.set(0, -5, 0);
-    }
-  }, []);
-  console.log(props.animation);
+  const nextBifur1 = () => {
+    setRotationy(Math.PI / 2);
+    setRotationz(Math.PI / 2);
+    setPositionX(-2.3);
+    //
+    //actions["Turning"].stop();
+    navigate("/game/bifur1");
+  };
+  const nextBifur2 = () => {
+    navigate("/game/bifur2");
+  };
   useEffect(() => {
     if (props.animation === 1) {
       const handleKeyDown = (event) => {
         const speed = 0.1;
 
         if (event.key === "ArrowLeft") {
-          aliceRef.current.position.x -= speed;
-          setRotation(- Math.PI / 2)
-          actions["Walking"].play();
+          setIzqWalk(true);
+          setDerWalk(false);
         } else if (event.key === "ArrowRight") {
-          aliceRef.current.position.x += speed;
-          setRotation(- Math.PI / 2)
-          actions["Walking"].play();
+          setDerWalk(true);
+          setIzqWalk(false);
         }
       };
 
@@ -49,10 +59,69 @@ export function Alice(props) {
         window.removeEventListener("keydown", handleKeyDown);
       };
     }
-  }, [props.animation])
+  }, [props.animation]);
+
+  useEffect(() => {
+    if (props.animation === 1) {
+      const speed = 0.02;
+
+      const updateCharacterPosition = () => {
+        if (aliceRef.current) {
+          if (izqWalk) {
+            setRotationx(-Math.PI / 2);
+            setRotationz(-Math.PI / 2);
+            setPositionX(2);
+
+            aliceRef.current.position.x -= speed;
+
+            if (actions && actions["Walking"]) {
+              actions["Walking"].play();
+            }
+
+            setTimeout(nextBifur2, 2000);
+          }
+          if (derWalk) {
+            setRotationx(-Math.PI / 2);
+            setRotationz(0);
+           // setPositionX(-2.3);
+
+            if (actions && actions["Turning"]) {
+              actions["Turning"].play();
+            }
+
+            // aliceRef.current.position.x += speed;
+            setTimeout(nextBifur1, 2100);
+          }
+          requestAnimationFrame(updateCharacterPosition);
+        }
+      };
+
+      updateCharacterPosition();
+
+      return () => {
+        cancelAnimationFrame(updateCharacterPosition);
+      };
+    } else {
+      setIzqWalk(false);
+      setDerWalk(false);
+    }
+  }, [props.animation, izqWalk, derWalk]);
+
+  
   return (
-    <group ref={aliceRef} {...props} dispose={null} scale={4} position-y={-5}>
-      <group rotation-x={rotation}>
+    <group
+      ref={aliceRef}
+      {...props}
+      dispose={null}
+      scale={4.2}
+      position-x={positionx}
+      position-y={-5}
+    >
+      <group
+        rotation-x={rotationx}
+        rotation-z={rotationz}
+        rotation-y={rotationy}
+      >
         <primitive object={nodes.Hips} />
         <skinnedMesh
           name="EyeLeft"

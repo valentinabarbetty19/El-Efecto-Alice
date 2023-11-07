@@ -8,7 +8,7 @@ const Bifur1 = ({ language }) => {
   const route = "/login"
 
   return (
-    <Story language={language}  info={info} route={route}/>
+    <Story language={language}  info={info} route={route} />
   );
 };
 

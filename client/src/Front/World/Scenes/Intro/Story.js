@@ -11,6 +11,7 @@ import SceneDecision from "../Scene-decision/Scene-decision";
 import Vecino from "../models/Vecino";
 import Alex from "../models/Alex";
 import Jonas from "../models/Jonas";
+import { CameraControls } from "@react-three/drei";
 
 const Story = ({ language, info, route1, route2 }) => {
   const navigate = useNavigate();
@@ -46,7 +47,7 @@ const Story = ({ language, info, route1, route2 }) => {
   const shouldShowCarl = info[currentImageIndex].carl === true;
   const shouldShowJimmy = info[currentImageIndex].jimmy === true;
   const shouldShowNarrador = info[currentImageIndex].narrador === true;
-console.log(info[currentImageIndex].animation)
+
 
   return (
     <div
@@ -58,9 +59,10 @@ console.log(info[currentImageIndex].animation)
       }}
     >
       <Canvas style={{ width: "100vw", height: "80vh" }}>
+        <CameraControls />
         <ambientLight intensity={2} />
 
-        {shouldShowAlice && <Alice animation={info[currentImageIndex].animation}/>}
+        {shouldShowAlice && <Alice animation={info[currentImageIndex].animation} rotationx={info[currentImageIndex].rotationx} rotationy={info[currentImageIndex].rotationy}/>}
         {shouldShowEyder && <Vecino />}
         {shouldShowAlex && <Alex />}
         {shouldShowJonas && <Jonas />}

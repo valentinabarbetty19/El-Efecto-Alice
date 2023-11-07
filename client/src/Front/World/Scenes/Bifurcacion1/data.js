@@ -14,7 +14,9 @@ export const bifur1Array = [
       carl: false,
       jimmy: false,
       narrador: false,
-      id_scena: 1
+      id_scena: 1,
+      rotationx: 0,
+      rotationy:  Math.PI / 2
     },
     {
       imageUrl: '/assets/img/scenarios/outside.png',
@@ -31,7 +33,9 @@ export const bifur1Array = [
       carl: false,
       jimmy: false,
       narrador: false,
-      id_scena: 1
+      id_scena: 1,
+      rotationx: 0,
+      rotationy:  Math.PI / 2
     },//brazalete
     {
       imageUrl: '/assets/img/scenarios/outside.png',
@@ -48,7 +52,9 @@ export const bifur1Array = [
       carl: false,
       jimmy: false,
       narrador: false,
-      id_scena: 1
+      id_scena: 1,
+      rotationx: 0,
+      rotationy:  Math.PI / 2
     },
     {
       imageUrl: '/assets/img/scenarios/hospital.png',
