@@ -14,18 +14,18 @@ const corsOptions = {
   app.use(cors(corsOptions));
 
 const db = mysql.createConnection({
-    host:"192.168.0.27",
-    user:"root",
-    password:"",
-    database:"bd_novel"
+    host:"bwraz4hqpf89yuawksin-mysql.services.clever-cloud.com",
+    user:"uuw8h1m93rkfjbfo",
+    password:"wSJ8QpZWDWRlP26ekY2H",
+    database:"bwraz4hqpf89yuawksin"
 });
 
 app.listen(3001, ()=>{
     console.log("Run server 3001")
   })
 
-app.get(`/login`,(req,res)=>{
-    db.query('SELECT * FROM usuario', (err, result) => {
+app.get('/login',(req,res)=>{
+    db.query('SELECT * FROM usuarios', (err, result) => {
         if(err){
             console.log(err);
             res.status(500).send("Error al obtener usuarios");
