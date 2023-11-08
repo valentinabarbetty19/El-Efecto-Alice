@@ -1,15 +1,4 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
-import { bifur2Array } from "./data";
-
-import Story from "../Intro/Story";
-const Bifur2 = ({ language }) => {
-  const info = bifur2Array;
-  const route = "/home"
-
-  return (
-    <Story language={language}  info={info} route={route}/>
-=======
 import Scene from "../Scene/Scene";
 import { bifur2Array } from "./data";
 import Alice from "../models/Alice";
@@ -87,7 +76,6 @@ const Bifur2 = ({ language }) => {
           )}
         </div>
     </div>
->>>>>>> a45ae1d543fccf575e01707ef2a07bbd7c34734f
   );
 };
 

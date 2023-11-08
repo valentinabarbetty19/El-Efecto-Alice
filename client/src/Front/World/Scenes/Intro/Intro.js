@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-=======
 import React, { useEffect, useState } from "react";
 import "./Intro.css";
 import Scene from "../Scene/Scene";
@@ -10,22 +7,10 @@ import { Html } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useNavigate } from "react-router-dom";
 
->>>>>>> a45ae1d543fccf575e01707ef2a07bbd7c34734f
 
 import { introArray } from "./data";
 import Story from "../Intro/Story";
 const Intro = ({ language }) => {
-<<<<<<< HEAD
-
-  const info = introArray;
-  const route1 = "/game/bifur1"
-  const route2 = "/game/bifur2"
-  
-
-  return (
-    <Story language={language}  info={info} route1={route1} route2={route2}
-    />
-=======
   const navigate = useNavigate();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showSceneDecision, setShowSceneDecision] = useState(false);
@@ -100,7 +85,6 @@ const Intro = ({ language }) => {
           )}
         </div>
     </div>
->>>>>>> a45ae1d543fccf575e01707ef2a07bbd7c34734f
   );
 };
 
