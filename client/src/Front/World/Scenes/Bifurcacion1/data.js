@@ -106,8 +106,8 @@ export const bifur1Array = [
     }, //sonido aterrador????????
     {
       imageUrl: '/assets/img/scenarios/hospital.png',
-      mensaje: 'Alice: (perpleja) ¿Esquizofrenia? ¿Estás seguro? ¿No es posible que todo esto sea solo un sueño, una ilusión? ¿Qué es real? (Las lágrimas comenzaron a formarse en sus ojos mientras se aferraba a la esperanza de que su vida con su esposo e hijo no hubiera sido un sueño.)',
-      message: "Alicia: (perplexed) Schizophrenia? You're sure? Isn't it possible that all this is just a dream, an illusion? That is real? (Tears began to form in her eyes as she clung to the hope that her life with her husband and son had not been a dream.)",
+      mensaje: 'Alice: (Perpleja) ¿Esquizofrenia? ¿Estás seguro? ¿No es posible que todo esto sea solo un sueño, una ilusión? ¿Qué es real? (Las lágrimas comenzaron a formarse en sus ojos mientras se aferraba a la esperanza de que su vida con su esposo e hijo no hubiera sido un sueño.)',
+      message: "Alicia: (Perplexed) Schizophrenia? You're sure? Isn't it possible that all this is just a dream, an illusion? That is real? (Tears began to form in her eyes as she clung to the hope that her life with her husband and son had not been a dream.)",
       decision1en: null,
       decision2en: null,
       decision1es: null,
