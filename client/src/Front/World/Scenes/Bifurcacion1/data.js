@@ -16,7 +16,8 @@ export const bifur1Array = [
       narrador: false,
       id_scena: 1,
       rotationx: 0,
-      rotationy:  Math.PI / 2,
+      rotationy: Math.PI / 2,
+      rotationz:  0,
     animation: 0
     },
     {
@@ -37,6 +38,7 @@ export const bifur1Array = [
       id_scena: 1,
       rotationx: 0,
       rotationy:  Math.PI / 2,
+      rotationz:  0,
       animation: 0
     },//brazalete
     {
@@ -55,8 +57,9 @@ export const bifur1Array = [
       jimmy: false,
       narrador: false,
       id_scena: 1,
-      rotationx: 0,
+      rotationx:  0,
       rotationy:  Math.PI / 2,
+      rotationz:   0,
       animation: 0
     },
     {
@@ -75,7 +78,11 @@ export const bifur1Array = [
       jimmy: false,
       narrador: false,
       id_scena: 1,
-      animation: 0
+      animation: 0,
+      rotationx: 0,
+     rotationy:  0,
+     rotationz:  0,
+
     }, //(en 3D en movimiento, referencia matrix).
     {
       imageUrl: '/assets/img/scenarios/hospital.png',
@@ -93,7 +100,9 @@ export const bifur1Array = [
       jimmy: false,
       narrador: false,
       id_scena: 1,
-      animation: 0
+      animation: 0,   rotationx: 0,
+      rotationy:  0,
+      rotationz:  0,
     }, //sonido aterrador????????
     {
       imageUrl: '/assets/img/scenarios/hospital.png',
@@ -111,7 +120,10 @@ export const bifur1Array = [
       jimmy: false,
       narrador: false,
       id_scena: 1,
-      animation: 0
+      animation: 0,   
+      rotationx: 0,
+      rotationy:  0,
+      rotationz:  0,
     }, //sonido aterrador????????
     {
       imageUrl: '/assets/img/scenarios/hospital.png',
@@ -129,7 +141,10 @@ export const bifur1Array = [
       jimmy: false,
       narrador: false,
       id_scena: 1,
-      animation: 0
+      animation: 0, 
+      rotationx: 0,
+      rotationy:  0,
+      rotationz:  0,
     }, //sonido aterrador????????
     {
       imageUrl: '/assets/img/scenarios/hospital.png',
@@ -147,7 +162,10 @@ export const bifur1Array = [
       jimmy: false,
       narrador: false,
       id_scena: 1,
-      animation: 0
+      animation: 0 ,  
+      rotationx: 0,
+      rotationy:  0,
+      rotationz:  0,
     }, //cambio de escenario, deberíamos centrarnos en Alice, luego de esto, volver al escenario de hospital
     {
       imageUrl: '/assets/img/scenarios/hospital.png',
@@ -165,7 +183,10 @@ export const bifur1Array = [
       jimmy: false,
       narrador: false,
       id_scena: 1,
-      animation: 0
+      animation: 0,
+      rotationx: 0,
+      rotationy:  0,
+      rotationz:  0,
     },
     {
       imageUrl: '/assets/img/scenarios/hospital.png',
@@ -183,7 +204,10 @@ export const bifur1Array = [
       jimmy: false,
       narrador: false,
       id_scena: 1,
-      animation: 0
+      animation: 0,
+      rotationx: 0,
+      rotationy:  0,
+      rotationz:  0,
     },
     {
       imageUrl: '/assets/img/scenarios/hospital.png',
@@ -201,7 +225,10 @@ export const bifur1Array = [
       jimmy: false,
       narrador: false,
       id_scena: 1,
-      animation: 0
+      animation: 0,
+      rotationx: 0,
+      rotationy:  0,
+      rotationz:  0,
     },
     {
       imageUrl: '/assets/img/scenarios/hospital.png',
@@ -219,7 +246,10 @@ export const bifur1Array = [
       jimmy: false,
       narrador: false,
       id_scena: 1,
-      animation: 0
+      animation: 0,
+      rotationx: 0,
+      rotationy:  0,
+      rotationz:  0,
     },
     {
       imageUrl: "/assets/img/scenarios/outside.png",
@@ -237,7 +267,10 @@ export const bifur1Array = [
       jimmy: false,
       narrador: false,
       id_scena: 1,
-      animation: 0
+      animation: 0,
+      rotationx: 0,
+      rotationy:  0,
+      rotationz:  0,
     },
   ];
   export const bifur2Array = [
@@ -257,7 +290,10 @@ export const bifur1Array = [
       jimmy: false,
       narrador: false,
       id_scena: 2,
-      animation: 0
+      animation: 0,
+      rotationx: 0,
+      rotationy: 0,
+      rotationz:  0,
     },
     {
       imageUrl: "/assets/img/scenarios/outside.png",
@@ -275,6 +311,9 @@ export const bifur1Array = [
       jimmy: false,
       narrador: false,
       id_scena: 2,
-      animation: 0
+      animation: 0,
+      rotationx: 0,
+      rotationy:  0,
+      rotationz:  0,
     },
   ];

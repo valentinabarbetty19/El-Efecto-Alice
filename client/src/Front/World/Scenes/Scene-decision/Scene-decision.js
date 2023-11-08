@@ -11,6 +11,7 @@ const SceneDecision = ({
   setDecision2,
   onClick,
   animation = 0,
+  photo
 }) => {
   document.body.style.backgroundImage = `url(${img})`;
 
@@ -45,7 +46,7 @@ const SceneDecision = ({
               </div>
             ) : animation === 1 ? (
               <img
-                src="assets/img/gif/keyboard.gif" 
+                src= {photo} 
                 alt="GIF"
                 style={{
                   width: "200px", 

@@ -48,7 +48,6 @@ const Story = ({ language, info, route1, route2, animation }) => {
   const shouldShowJimmy = info[currentImageIndex].jimmy === true;
   const shouldShowNarrador = info[currentImageIndex].narrador === true;
 
-
   return (
     <div
       style={{
@@ -62,7 +61,14 @@ const Story = ({ language, info, route1, route2, animation }) => {
         <CameraControls />
         <ambientLight intensity={2} />
 
-        {shouldShowAlice && <Alice animation={info[currentImageIndex].animation} rotationx={info[currentImageIndex].rotationx} rotationy={info[currentImageIndex].rotationy}/>}
+        {shouldShowAlice && (
+          <Alice
+            animation={info[currentImageIndex].animation}
+            rotationx={info[currentImageIndex].rotationx}
+            rotationz={info[currentImageIndex].rotationz}
+            rotationy={info[currentImageIndex].rotationy}
+          />
+        )}
         {shouldShowEyder && <Vecino />}
         {shouldShowAlex && <Alex />}
         {shouldShowJonas && <Jonas />}
@@ -89,6 +95,7 @@ const Story = ({ language, info, route1, route2, animation }) => {
           setDecision1={setDecision1}
           setDecision2={setDecision2}
           animation={info[currentImageIndex].animation}
+          photo={info[currentImageIndex].photo}
           // onClick={changeDecision}
         />
       </div>

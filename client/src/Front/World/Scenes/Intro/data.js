@@ -17,6 +17,9 @@ export const introArray = [
     jimmy: false,
     narrador: false,
     animation: 0,
+     rotationx: 0,
+     rotationy:  0,
+     rotationz:  0,
 
   },
   {
@@ -36,7 +39,10 @@ export const introArray = [
     carl: false,
     jimmy: false,
     narrador: false,
-    animation: 0
+    animation: 0,
+    rotationx: 0,
+    rotationy:  0,
+    rotationz:  0,
   }, //brazalete
   {
     imageUrl: "/assets/img/scenarios/living-room.png",
@@ -54,7 +60,10 @@ export const introArray = [
     carl: false,
     jimmy: false,
     narrador: false,
-    animation: 0
+    animation: 0,
+    rotationx: 0,
+    rotationy:  Math.PI / 2,
+    rotationz:  0,
   }, //añadir modelosd e hijo y esposo
   {
     imageUrl: "/assets/img/scenarios/car.png",
@@ -73,7 +82,10 @@ export const introArray = [
     carl: false,
     jimmy: false,
     narrador: false,
-    animation: 0
+    animation: 0,
+    rotationx: 0,
+    rotationy:  Math.PI / 2,
+    rotationz:  0,
   },
   {
     imageUrl: "/assets/img/scenarios/outside.png",
@@ -90,7 +102,11 @@ export const introArray = [
     carl: false,
     jimmy: false,
     narrador: false,
-    animation: 1
+    animation: 1,
+    photo: "assets/img/gif/keyboard.gif",
+    rotationx: 0,
+    rotationy:  0,
+    rotationz:  0,
   },
   //????
   // {

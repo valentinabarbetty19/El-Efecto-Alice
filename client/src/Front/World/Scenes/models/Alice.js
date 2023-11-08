@@ -14,7 +14,7 @@ export function Alice(props) {
 
   const navigate = useNavigate();
   const [rotationx, setRotationx] = useState(props.rotationx);
-  const [rotationz, setRotationz] = useState(0);
+  const [rotationz, setRotationz] = useState(props.rotationz);
   const [rotationy, setRotationy] = useState(props.rotationy);
   const [positionx, setPositionX] = useState(0);
   const [izqWalk, setIzqWalk] = useState(false);
@@ -27,10 +27,14 @@ export function Alice(props) {
     [walkingAnimation[0], turningLeftAnimation[0]],
     aliceRef
   );
-
+  // useEffect(() => {
+  //   setRotationx(props.rotationx);
+  //   setRotationy(props.rotationy);
+  //   setRotationz(props.rotationz);
+  // })
   const nextBifur1 = () => {
-    setRotationy(Math.PI / 2);
-    setRotationz(Math.PI / 2);
+    // setRotationx(0);
+    //setRotationy(0);
     setPositionX(-2.3);
     //
     //actions["Turning"].stop();
@@ -52,9 +56,9 @@ export function Alice(props) {
           window.removeEventListener("keydown", handleKeyDown);
         }
       };
-  
+
       window.addEventListener("keydown", handleKeyDown);
-  
+
       return () => {
         window.removeEventListener("keydown", handleKeyDown);
       };
@@ -68,13 +72,18 @@ export function Alice(props) {
       const updateCharacterPosition = () => {
         if (aliceRef.current) {
           if (izqWalk) {
-            setRotationx(-Math.PI / 2);
+            setRotationx(-Math.PI / 2); // No rotation along X-axis
+            setRotationy(0); // Rotate along Y-axis to face left
             setRotationz(-Math.PI / 2);
             setPositionX(2);
 
-            aliceRef.current.position.x -= speed;
-
             if (actions && actions["Walking"]) {
+              //setRotationy(0);
+              //setRotationz(0);
+              setRotationx(-Math.PI / 2); // No rotation along X-axis
+              setRotationy(0); // Rotate along Y-axis to face left
+              setRotationz(-Math.PI / 2);
+              aliceRef.current.position.x -= speed;
               actions["Walking"].play();
             }
 
@@ -82,8 +91,9 @@ export function Alice(props) {
           }
           if (derWalk) {
             setRotationx(-Math.PI / 2);
+            setRotationy(0);
             setRotationz(0);
-           // setPositionX(-2.3);
+            // setPositionX(-2.3);
 
             if (actions && actions["Turning"]) {
               actions["Turning"].play();
@@ -105,9 +115,20 @@ export function Alice(props) {
       setIzqWalk(false);
       setDerWalk(false);
     }
-  }, [props.animation, izqWalk, derWalk]);
+    if (props.animation === 0) {
+      setRotationx(props.rotationx);
+      setRotationy(props.rotationy);
+      setRotationz(props.rotationz);
+    }
+  }, [
+    props.animation,
+    izqWalk,
+    derWalk,
+    props.rotationx,
+    props.rotationy,
+    props.rotationz,
+  ]);
 
-  
   return (
     <group
       ref={aliceRef}
