@@ -36,7 +36,7 @@ function App() {
           {/* <Route path="/" element={<Login language={language}/>} /> */}
           <Route path="/login" element={<Login language={language} />} />
           <Route path="/sign-up" element={<SignUp language={language} />} />
-          <Route path="/home" element={<Menu language={language} />} />
+          <Route path="/" element={<Menu language={language} />} />
           <Route path="/game" element={<Intro language={language} />}/>
           <Route path="/game/bifur1" element={<Bifur1 language={language}/>} />
           <Route path="/game/bifur2" element={<Bifur2 language={language}/>} />

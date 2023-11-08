@@ -89,6 +89,7 @@ const Story = ({ language, info, route1, route2, animation }) => {
           setDecision1={setDecision1}
           setDecision2={setDecision2}
           animation={info[currentImageIndex].animation}
+          photo={info[currentImageIndex].photo}
           // onClick={changeDecision}
         />
       </div>
