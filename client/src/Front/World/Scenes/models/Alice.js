@@ -42,19 +42,19 @@ export function Alice(props) {
   useEffect(() => {
     if (props.animation === 1) {
       const handleKeyDown = (event) => {
-        const speed = 0.1;
-
         if (event.key === "ArrowLeft") {
           setIzqWalk(true);
           setDerWalk(false);
+          window.removeEventListener("keydown", handleKeyDown);
         } else if (event.key === "ArrowRight") {
           setDerWalk(true);
           setIzqWalk(false);
+          window.removeEventListener("keydown", handleKeyDown);
         }
       };
-
+  
       window.addEventListener("keydown", handleKeyDown);
-
+  
       return () => {
         window.removeEventListener("keydown", handleKeyDown);
       };
