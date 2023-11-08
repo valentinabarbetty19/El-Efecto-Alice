@@ -1,19 +1,34 @@
 import React from 'react'
 import { useState } from 'react';
 import { useAuth } from '../../../context/AuthContext';
+import { serviceLogin } from "../../../Services/serviceLogin";
 import swal from "sweetalert"
+import { useNavigate } from "react-router-dom";
 
 const SignUp = ({ language }) => {
   const auth = useAuth();
   const [emailRegister, setEmailRegister] = useState('');
   const [passwordRegister, setPasswordRegister] = useState('');
 
-  const handleRegister = (e) => {
+  const ServiceLogin = new serviceLogin();
+  const navigate = useNavigate();
+
+  const handleRegister = async (e) => {
     e.preventDefault();
     auth.register(emailRegister, passwordRegister)
-    if(!auth.email){
-      swal("Ok")
-    }else{swal("Ok")}
+    console.log(emailRegister, passwordRegister)
+    const nombre_usuario = emailRegister;
+    const correo = emailRegister;
+    const contraseña = passwordRegister;
+
+
+    ServiceLogin.postUsers(nombre_usuario, correo, contraseña);
+    swal({
+      title: "Usuario Registrado",
+      icon: "success",
+    });
+    navigate('/login');
+
   }
   return (
     <div>    <div className="centeredBox">

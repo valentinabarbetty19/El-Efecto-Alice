@@ -5,13 +5,13 @@ import { AuthProvider } from "./context/AuthContext.jsx";
 
 
 import Intro from "./Front/World/Scenes/Intro/Intro.js";
-import Menu from "./Front/2D/Menu/Menu";
-import Navbar from "./Front/2D/Navbar/Navbar";
+import Menu from "./Front/2D/Menu/Menu.js";
+import Navbar from "./Front/2D/Navbar/Navbar.js";
 import { useState } from "react";
-import Login from "./Front/2D/Login/Login";
-import SignUp from "./Front/2D/SignUp/SignUp";
-import Bifur1 from "./Front/World/Scenes/Bifurcacion1/Bifur1";
-import Bifur2 from "./Front/World/Scenes/Bifurcacion1/Bifur2";
+import Login from "./Front/2D/Login/Login.js";
+import SignUp from "./Front/2D/SignUp/SignUp.js";
+import Bifur1 from "./Front/World/Scenes/Bifurcacion1/Bifur1.js";
+import Bifur2 from "./Front/World/Scenes/Bifurcacion1/Bifur2.js";
 
 
 function App() {

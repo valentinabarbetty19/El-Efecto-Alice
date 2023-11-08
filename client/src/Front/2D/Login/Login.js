@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Login.css";
 import { useAuth } from '../../../context/AuthContext';
 import swal from "sweetalert";
 import { serviceLogin } from "../../../Services/serviceLogin";
+import { useNavigate } from "react-router-dom";
+
 
 
 const Login = ({ language }) => {
@@ -13,11 +15,43 @@ const Login = ({ language }) => {
 
   const ServiceLogin = new serviceLogin();
 
+  const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+
+  const handleLogin = async (e) => {
     e.preventDefault();
-    auth.loginWithGoogle();
-    console.log(auth.responseGoogle)
+  
+    try {
+      const response = await auth.loginWithGoogle();
+      console.log(response);
+  
+      swal({
+        title: "Login éxitoso",
+        icon: "success",
+      });
+  
+      navigate('/game');
+    } catch (error) {
+      console.error("Error al iniciar sesión con Google:", error);
+  
+      swal({
+        title: "Login falló",
+        icon: "error",
+      });
+    }
+  }
+  
+  const handleLogin2 = (e) => {
+    e.preventDefault();
+    auth.login(emailRegister, passwordRegister);
+    console.log(auth.response)
+
+    swal({
+      title: "Login éxitoso",
+      icon: "success",
+    });
+
+    navigate('/game');
 
   }
 
@@ -26,11 +60,23 @@ const Login = ({ language }) => {
       console.log(data);
       setUsuarios(data);
     })
-  })
+  }, [])
   return (
     <div className="centeredBox">
       <div className="whiteBox">
-        <h1 className="text"> {language === "español" ? "INICIAR SESIÓN" : "LOG IN"}</h1>
+        <h1 className="text"> {language === "español" ? "INICIAR SESIÓN" : "LOGIN"}</h1>
+
+        <input onChange={(e) => setEmailRegister(e.target.value)} className='input' type='email' />
+        <div style={{ padding: '10px' }}></div>
+        <input onChange={(e) => setPasswordRegister(e.target.value)} className='input' type='email' />
+
+        <button className="button" onClick={(e) => handleLogin2(e)}>
+
+          <span className="buttonText">
+            {language === "español" ? "Iniciar sesión" : "Log In"}
+          </span>
+
+        </button>
 
         <button className="button" onClick={(e) => handleLogin(e)}>
           <img
@@ -41,6 +87,7 @@ const Login = ({ language }) => {
           <span className="buttonText">
             {language === "español" ? "Iniciar sesión con Google" : "Log in with Google"}
           </span>
+
         </button>
         <h3 className="texto">
           {language === "español" ? (
