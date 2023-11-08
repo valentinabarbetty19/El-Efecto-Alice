@@ -4,7 +4,7 @@ import GoogleLogin from "react-google-login";
 import { serviceLogin } from "../../../Services/serviceLogin";
 
 
-export const Login = (props, {language}) => {
+export const Log = (props, {language}) => {
 
   const [usuarios, setUsuarios] = useState(null);
   const [clientID, setClienteID] = useState('');
@@ -64,4 +64,4 @@ export const Login = (props, {language}) => {
     );
 }
 
-export default (Login)
+export default Log

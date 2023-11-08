@@ -69,7 +69,8 @@
 }
 
 .index .speaker-filled-audio,
-.index .book {
+.index .book, 
+.index .home {
   height: 50px;
   width: 50px;
   object-fit: cover;
@@ -127,4 +128,8 @@
   height: 100vh; /* Set the height to the viewport height */
   width: 100vw; /* Set the width to the viewport width */
   position: relative;
+}
+
+.index .speaker-filled-audio {
+  left: 185px; /* Adjust the left position to create horizontal spacing */
 }

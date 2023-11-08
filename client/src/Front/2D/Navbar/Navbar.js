@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Modal from "../Modal/Modal";
 
-const Navbar = ({setLanguage, language}) => {
+const Navbar = ({ setLanguage, language }) => {
 
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -53,14 +53,17 @@ const Navbar = ({setLanguage, language}) => {
             src="/assets/img/menu-Items/book.png"
           />
         </div>
-        {/* <a href="/home">
-          <img
-            className="house"
-            alt="Home"
-            src="/assets/img/menu-Items/home.png"
-          />
-        </a> */}
-        
+
+        <div>
+          <a href="/">
+            <img
+              className="home"
+              alt="Home"
+              src="/assets/img/menu-Items/home.png"
+            />
+          </a>
+        </div>
+
         <a href="/login">
           <img
             className="user"
@@ -69,11 +72,11 @@ const Navbar = ({setLanguage, language}) => {
           />
         </a>
 
-        
+
         {/* </div> */}
       </div>
-     
-      {modalOpen  && <Modal setOpenModal={setModalOpen} language={language}/>}
+
+      {modalOpen && <Modal setOpenModal={setModalOpen} language={language} />}
     </div>
   );
 };
