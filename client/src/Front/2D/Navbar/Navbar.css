@@ -1,0 +1,135 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+  }
+  
+  .transparent-button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    display: block;
+    margin-bottom: 20px; /* Increase the margin between buttons */
+    margin-top: 10px; /* Increase the margin between buttons and text */
+    text-decoration: none !important;
+  }
+  
+  .index {
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    /* Prevent scrolling */
+  }
+  
+  .transparent-button:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .index .overlap {
+    height: 50px;
+    left: 150px;
+    position: absolute;
+    top: 10px;
+    width: 76px;
+  }
+  
+  .index .rectangle {
+    border: 1px solid;
+    border-color: #ffffff;
+    border-radius: 10px;
+    height: 70px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50px;
+  }
+  
+  .index .text-wrapper-3 {
+    color: #ffffff;
+    font-family: "Kelly Slab", Helvetica;
+    font-size: 36px;
+    font-weight: 400;
+    left: 13px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 12px;
+    width: 63px;
+  }
+  
+  .index .speaker-filled-audio,
+  .index .book {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    position: fixed; /* Change to fixed position */
+    top: 20px; /* Adjust the top position for the distance from the top */
+    left: 50px; /* Adjust the left position for the distance from the left */
+  }
+
+
+  .index .transparent-button-lang {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 9px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    position: fixed; /* Change to fixed position */
+    top: 10px; /* Adjust the top position for the distance from the top */
+    left: 130px; /* Adjust the left position for the distance from the left */
+    display: flex; /* Use flex display to align horizontally */
+    align-items: center; /* Center items vertically */
+    margin-top: 3px; /* Adjust the top margin for spacing */
+  }
+  
+  .index .user {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    position: fixed; /* Change to fixed position */
+    top: 10px; /* Adjust the top position for the distance from the top */
+    right: 10px; /* Adjust the right position for the distance from the right */
+  }
+  .index .home {
+    height: 70px;
+    left: 355px;
+    object-fit: cover;
+    position: absolute;
+    top: 29px;
+    width: 70px;
+  }
+  
+  
+  .index .text-wrapper {
+    color: #ffffff;
+    font-family: "Kelly Slab", Helvetica;
+    font-size: 90px;
+    font-weight: 400;
+    left: 50%; /* Set left to 50% */
+    transform: translateX(-50%); /* Center horizontally */
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 20%; /* Set top to 50% */
+   
+  }
+  
+  .index .div {
+    background-color: #000000;
+    height: 100vh; /* Set the height to the viewport height */
+    width: 100vw; /* Set the width to the viewport width */
+    position: relative;
+  }
