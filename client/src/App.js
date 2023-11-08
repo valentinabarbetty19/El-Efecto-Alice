@@ -4,7 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { AuthProvider } from "./context/AuthContext.jsx";
 
 
-
+import Intro from "./Front/World/Scenes/Intro/Intro.js";
 import Menu from "./Front/2D/Menu/Menu";
 import Navbar from "./Front/2D/Navbar/Navbar";
 import { useState } from "react";
