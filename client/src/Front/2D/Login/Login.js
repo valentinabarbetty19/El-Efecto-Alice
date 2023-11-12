@@ -1,13 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useContext} from "react";
 import "./Login.css";
 import { useAuth } from '../../../context/AuthContext';
+import { authContext } from "../../../context/AuthContext";
+
 import swal from "sweetalert";
 import { serviceLogin } from "../../../Services/serviceLogin";
 import { useNavigate } from "react-router-dom";
 
 
 
+
+
 const Login = ({ language }) => {
+
+  const {setEmailUser} = useContext(authContext);
+
   const auth = useAuth();
   const [emailRegister, setEmailRegister] = useState('');
   const [passwordRegister, setPasswordRegister] = useState('');
@@ -45,6 +52,8 @@ const Login = ({ language }) => {
     e.preventDefault();
     auth.login(emailRegister, passwordRegister);
     console.log(auth.response)
+
+    setEmailUser(emailRegister);
 
     swal({
       title: "Login éxitoso",

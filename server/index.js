@@ -53,6 +53,18 @@ app.post('/registro',(req,res)=>{
     });
 });
 
+app.put('/escenariousuarios', (req, res) => {
+    const { correo, nuevoEstadoEscenario } = req.body;
+    const query = 'UPDATE usuarios SET estado_escenario = ? WHERE correo = ?';
+    db.query(query, [nuevoEstadoEscenario, correo], (err, result) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Error al actualizar el estado del escenario");
+        } else {
+            res.send(result);
+        }
+    });
+});
 
 
 module.exports = app;

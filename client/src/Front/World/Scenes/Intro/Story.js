@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./Intro.css";
 
 import Alice from "../models/Alice";
 
 import { Canvas } from "@react-three/fiber";
 import { useNavigate } from "react-router-dom";
-
+import { authContext } from "../../../../context/AuthContext";
 import SceneDecision from "../Scene-decision/Scene-decision";
+
+import { serviceLogin } from "../../../../Services/serviceLogin";
 
 import Vecino from "../models/Vecino";
 import Alex from "../models/Alex";
@@ -14,19 +16,36 @@ import Jonas from "../models/Jonas";
 import { CameraControls } from "@react-three/drei";
 
 const Story = ({ language, info, route1, route2, animation }) => {
+
+  const ServiceLogin = new serviceLogin();
+
   const navigate = useNavigate();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { id, setId, emailUser } = useContext(authContext);
   const [decision1, setDecision1] = useState(false);
   const [decision2, setDecision2] = useState(false);
-
+  const sumarEsce = () =>{
+    setId(id+1)
+}
   const changeImage = () => {
     if (currentImageIndex === info.length - 1) {
       if (decision1) {
+        sumarEsce();
+        console.log(id);
+        ServiceLogin.putUserEscenario(emailUser, id);
         navigate(route1);
       } else if (decision2) {
+        sumarEsce();
+        console.log(id);
+        ServiceLogin.putUserEscenario(emailUser, id);
+
         navigate(route2);
       }
     } else {
+      console.log(id);
+      sumarEsce();
+      ServiceLogin.putUserEscenario(emailUser, id);
+
       setCurrentImageIndex((prevIndex) => prevIndex + 1);
     }
   };
