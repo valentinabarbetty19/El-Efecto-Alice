@@ -11,10 +11,16 @@ import { useState } from "react";
 import Login from "./Front/2D/Login/Login";
 import SignUp from "./Front/2D/SignUp/SignUp";
 import Bifur1 from "./Front/World/Scenes/Bifurcacion1/Bifur1.js";
-import Bifur2 from "./Front/World/Scenes/Bifurcacion1/Bifur2.js";
+import Bifur2 from "./Front/World/Scenes/Bifurcación2/Bifur2.js";
 import Log from "./Front/2D/Pages/login.js";
 import Story from "./Front/World/Scenes/Intro/Story.js";
 import Intro from "./Front/World/Scenes/Intro/Intro.js";
+import Bifur11 from "./Front/World/Scenes/Bifurcación1.1/Bifur1.1.js";
+import Bifur12 from "./Front/World/Scenes/Bifurcación1.2/Bifur1.2.js";
+import Bifur21 from "./Front/World/Scenes/Bifurcación2.1/Bifur2.1.js";
+import Bifur22 from "./Front/World/Scenes/Bifurcación2.2/Bifur2.2.js";
+import Bifur221 from "./Front/World/Scenes/Bifurcación2.2.1/Bifur2.2.1.js";
+import Bifur222 from "./Front/World/Scenes/Bifuración2.2.2/Bifur2.2.2.js";
 
 function App() {
   const [language, setLanguage] = useState("español");
@@ -42,6 +48,12 @@ function App() {
           <Route path="/game" element={<Intro language={language} />}/>
           <Route path="/game/bifur1" element={<Bifur1 language={language}/>} />
           <Route path="/game/bifur2" element={<Bifur2 language={language}/>} />
+          <Route path="/game/bifur1/bifur1" element={<Bifur11 language={language}/>} />
+          <Route path="/game/bifur1/bifur2" element={<Bifur12 language={language}/>} />
+          <Route path="/game/bifur2/bifur1" element={<Bifur21 language={language}/>} />
+          <Route path="/game/bifur2/bifur2" element={<Bifur22 language={language}/>} />
+          <Route path="/game/bifur2/bifur2/bifur1" element={<Bifur221 language={language}/>} />
+          <Route path="/game/bifur2/bifur2/bifur2" element={<Bifur222 language={language}/>} />
         </Routes>
       </div>
     </Router>

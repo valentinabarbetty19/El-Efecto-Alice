@@ -13,7 +13,7 @@ import Alex from "../models/Alex";
 import Jonas from "../models/Jonas";
 import { CameraControls } from "@react-three/drei";
 
-const Story = ({ language, info, route1, route2, animation }) => {
+const Story = ({ language, id, info, route1, route2, animation }) => {
   const navigate = useNavigate();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [decision1, setDecision1] = useState(false);
@@ -22,6 +22,7 @@ const Story = ({ language, info, route1, route2, animation }) => {
   const changeImage = () => {
     if (currentImageIndex === info.length - 1) {
       if (decision1) {
+        //setDecision1(id)
         navigate(route1);
       } else if (decision2) {
         navigate(route2);

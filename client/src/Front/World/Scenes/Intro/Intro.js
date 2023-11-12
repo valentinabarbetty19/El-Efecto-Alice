@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { introArray } from "./data";
+import { introArray } from "../data";
 import Story from "../Intro/Story";
 const Intro = ({ language }) => {
 
