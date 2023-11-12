@@ -1,5 +1,6 @@
 export const bifur1Array = [
     {
+      id: 1,
       imageUrl: '/assets/img/scenarios/outside.png',
       mensaje: 'Alice: …creo que tienes razón. Es mejor asegurarse de que todo esté en orden.',
       message: "Alice: …I think you're right. It's best to make sure everything is in order.",
@@ -18,7 +19,11 @@ export const bifur1Array = [
       rotationx: 0,
       rotationy: Math.PI / 2,
       rotationz:  0,
-    animation: 0
+      positionx: 0,
+      positiony: 0,
+      positionz: 0,
+      animation: 0,
+      sonido: 0
     },
     {
       imageUrl: '/assets/img/scenarios/outside.png',
