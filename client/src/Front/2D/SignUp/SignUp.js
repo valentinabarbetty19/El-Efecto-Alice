@@ -14,20 +14,31 @@ const SignUp = ({ language }) => {
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
-    e.preventDefault();
-    auth.register(emailRegister, passwordRegister)
-    console.log(emailRegister, passwordRegister)
-    const nombre_usuario = emailRegister;
-    const correo = emailRegister;
-    const contraseña = passwordRegister;
-
-
-    ServiceLogin.postUsers(nombre_usuario, correo, contraseña);
-    swal({
-      title: "Usuario Registrado",
-      icon: "success",
-    });
-    navigate('/login');
+    try {
+      e.preventDefault();
+      const response = await auth.register(emailRegister, passwordRegister)
+      console.log(emailRegister, passwordRegister)
+      console.log(response)
+      const nombre_usuario = emailRegister;
+      const correo = emailRegister;
+      const contraseña = passwordRegister;
+  
+  
+      ServiceLogin.postUsers(nombre_usuario, correo, contraseña);
+      swal({
+        title: "Usuario Registrado",
+        icon: "success",
+      });
+      navigate('/login');
+      
+    } catch (error) {
+      swal({
+        title: "Ingrese un formato de Correo Válido o una Contraseña con Más de seis Caracteres",
+        icon: "error",
+      });
+      
+    }
+   
 
   }
   return (
