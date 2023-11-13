@@ -89,9 +89,9 @@ const Login = ({ language }) => {
       <div className="whiteBox">
         <h1 className="text"> {language === "español" ? "INICIAR SESIÓN" : "LOGIN"}</h1>
 
-        <input onChange={(e) => setEmailRegister(e.target.value)} className='input' type='email' />
+        <input onChange={(e) => setEmailRegister(e.target.value)} className='input' type='email' placeholder={language === "español" ? "correo" : "email"}/>
         <div style={{ padding: '10px' }}></div>
-        <input onChange={(e) => setPasswordRegister(e.target.value)} className='input' type='email' />
+        <input onChange={(e) => setPasswordRegister(e.target.value)} className='input' type='password' placeholder={language === "español" ? "contraseña" : "password"}/>
 
         <button className="button" onClick={(e) => handleLogin2(e)}>
 
