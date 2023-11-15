@@ -1,0 +1,55 @@
+.centeredBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1e1e1e; /* Dark background color */
+}
+
+.whiteBox {
+  background-color: #2c2c2c; /* Darker box color */
+  border-radius: 10px;
+  width: 400px;
+  height: 500px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* White box shadow for contrast */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text, .texto {
+  color: #fff; /* White text color */
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.button {
+  background: #333; /* Dark button color */
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px;
+  color: #fff; /* White text color on the button */
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #555; /* Darker color on hover */
+}
+
+.buttonText {
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px;
+}
+
+.buttonIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}

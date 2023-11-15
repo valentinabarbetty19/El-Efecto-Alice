@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@900&family=Kelly+Slab&family=League+Spartan:wght@700;900&family=Open+Sans:wght@300&family=Patua+One&display=swap');
+/* src/index.css */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: white;
+  font-family: 'Kelly Slab', sans-serif;
+  background-size: cover; /* This will make the image cover the entire background */
+  background-repeat: no-repeat;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
