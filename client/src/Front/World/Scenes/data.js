@@ -1,5 +1,6 @@
 export const introArray = [
   {
+    // lab - animacion lab - estudiando
     id: 1,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
@@ -28,6 +29,7 @@ export const introArray = [
     sonido: 0,
   },
   {
+    // fondo negro mostrando el brazalete en 3D
     id: 2,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
@@ -56,12 +58,13 @@ export const introArray = [
     sonido: 0,
   }, //brazalete
   {
+    //habitación - triste - alice llorando - musica sad
     id: 3,
     imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
-      "Tenía su vida feliz con su hijo y su esposo, pero desafortunadamente, ella, su hijo y su esposo tuvieron un accidente automovilístico, y todos menos ella, perdieron la vida.",
+      "Tenía su vida feliz con su hijo y su esposo, pero desafortunadamente, tuvieron un accidente automovilístico, y todos menos ella, perdieron la vida.",
     message:
-      "She had a happy life with her son and husband, but unfortunately, she, her son, and her husband had a car accident, and everyone except her lost their lives.",
+      "She had a happy life with her son and husband, but unfortunately, they had a car accident, and everyone except her lost their lives.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -84,6 +87,7 @@ export const introArray = [
     sonido: 0,
   }, //añadir modelosd e hijo y esposo
   {
+    //mismo del 3
     id: 4,
     imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
@@ -107,12 +111,13 @@ export const introArray = [
     rotationz: 0,
   },
   {
+    //alice lab decepcionada con el brazalete ********************
     id: 5,
     imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
-      "Tras la tragedia, experimenta visiones perturbadoras que la hacen dudar su salud. A pesar de su empeño en usar el brazalete, comienza a perder la esperanza en su recuperación.",
+      "Tras la tragedia, experimenta visiones perturbadoras que la hacen dudar su salud.",
     message:
-      "After the tragedy, she experiences disturbing visions that make her doubt her health. Despite her efforts to use the bracelet, she begins to lose hope in her recovery.",
+      "After the tragedy, she experiences disturbing visions that make her doubt her health.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -130,12 +135,38 @@ export const introArray = [
     rotationz: 0,
   },
   {
+    //alice lab decepcionada con el brazalete ********************
     id: 6,
+    imageUrl: "/assets/img/scenarios/car.png",
+    mensaje: "¿Jonas? No, no puede ser... ¿qué me pasa?",
+    message:
+      "Jonas? No, this can't be real... What is going on with me?",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+  },
+  {
+    //brazalete - ventana el arbol ve al hijo - va a investigar - rayo
+
+    //img 3d ventana arbol dia lluvioso
+    id: 7,
     imageUrl: "/assets/img/scenarios/thundersorm.png",
     mensaje:
-      "En una tarde lluviosa, cerca de su casa, Alice vio algo cerca a un viejo árbol, al ir a investigar, Fue alcanzada por un rayo.",
+      "A pesar de su empeño en usar el brazalete, comienza a perder la esperanza en recuperar a su familia.",
     message:
-      "On a rainy afternoon near her house, Alice saw something near an old tree. When she went to investigate, she was struck by lightning.",
+      "Despite his efforts to wear the bracelet, she begins to lose hope in getting his family back.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -153,7 +184,59 @@ export const introArray = [
     rotationz: 0,
   },
   {
-    id: 7,
+    //brazalete - ventana el arbol ve al hijo - va a investigar - rayo
+
+    //img 3d ventana arbol dia lluvioso
+    id: 8,
+    imageUrl: "/assets/img/scenarios/thundersorm.png",
+    mensaje:
+      "En una tarde lluviosa, cerca de su casa, Alice vio algo cerca a un viejo árbol, cree que es su hijo.",
+    message:
+      "On a rainy afternoon near her house, Alice saw something near an old tree. She thinks it's her son",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+  },
+  {
+    //brazalete - ventana el arbol ve al hijo - va a investigar - rayo
+
+    //arbol sonido grito y rayo
+    id: 9,
+    imageUrl: "/assets/img/scenarios/thundersorm.png",
+    mensaje: "al ir a investigar, Fue alcanzada por un rayo.",
+    message:
+      "When she went to investigate, she was struck by lightning.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+  },
+  {
+    // al lado del arbol esta aturdida 
+    id: 10,
     imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
       "Tras el impacto del rayo, Alice,  momentáneamente aturdida y desconcertada, se apresura a casa para recuperarse.",
@@ -176,7 +259,8 @@ export const introArray = [
     rotationz: 0,
   },
   {
-    id: 8,
+    //sentada en la sala mirando el brazalete
+    id: 11,
     imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
       "Mientras se recuperaba en casa, el brazalete en su brazo se iluminó, llevándola a creer que podría viajar en el tiempo. Sin dudarlo, eligió su cumpleaños como su primera parada en su viaje temporal.",
@@ -199,7 +283,8 @@ export const introArray = [
     rotationz: 0,
   },
   {
-    id: 9,
+    //cuarto de alice - llorando de felicidad 2D
+    id: 12,
     imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
       "De repente, todo se oscureció, y cuando despertó, se encontró en su cuarto. Para su asombro, su esposo e hijo la sorprendieron en la mañana de su cumpleaños, vivos y llenos de alegría.",
@@ -222,13 +307,15 @@ export const introArray = [
     rotationz: 0,
   },
   {
-    id: 10,
+    //sala bailando 3D
+    id: 13,
     imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
       "Alice disfrutó el día con su familia, aunque las preguntas la atormentaban. Decidió no pensar demasiado en ello y se sumergió en la felicidad de estar con ellos de nuevo.",
     message:
       "Alice enjoyed the day with her family, although questions tormented her. She chose not to dwell on them and immersed herself in the happiness of being with them again.",
     decision1en: null,
+
     decision2en: null,
     decision1es: null,
     decision2es: null,
@@ -245,7 +332,8 @@ export const introArray = [
     rotationz: 0,
   },
   {
-    id: 11,
+    //cuarto confundida 
+    id: 14,
     imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
       "Al despertar, volvió a su triste realidad original, confundida y abrumada por la tristeza. Se preguntaba si lo que vivió fue un sueño o si el brazalete tuvo un papel en ese extraño episodio.",
@@ -268,79 +356,13 @@ export const introArray = [
     rotationz: 0,
   },
   {
-    id: 12,
-    imageUrl: "/assets/img/scenarios/car.png",
-    mensaje:
-      "Después de despertar en su realidad original, un vecino golpeó su puerta preocupado por un rayo cercano y notó una quemadura en la mano de Alice. Le sugirió que fueran al hospital.",
-    message:
-      "After waking up in her original reality, a neighbor knocked on her door, concerned about a nearby lightning strike and noticed a burn on Alice's hand. He suggested they go to the hospital.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-  },
-  {
-    id: 13,
-    imageUrl: "/assets/img/scenarios/car.png",
-    mensaje:
-      "¡Hola! Escuché un fuerte estruendo de un rayo y me preocupé. ¿Estás bien?",
-    message: "Hello! I heard a loud thunder and got worried. Are you okay?",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-  },
-  {
-    id: 14,
-    imageUrl: "/assets/img/scenarios/car.png",
-    mensaje:
-      "Sí, estoy bien, gracias por preocuparte. Fue un rayo cercano, pero estoy ilesa.",
-    message:
-      "Yes, I'm fine, thank you for caring. It was a nearby lightning strike, but I'm unharmed.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-  },
-  {
+    //en la puerta de la casa
     id: 15,
     imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
-      "Espera, ¿qué te pasó en la mano? ¿Estás segura de que estás bien?",
-    message: "Wait, what happened to your hand? Are you sure you're okay?",
+      "Después de despertar en su realidad original, un vecino golpeó su puerta preocupado por el grito de una mujer la noche anterior",
+    message:
+      "After waking up in her original reality, a neighbor knocked on her door, concerned about a women screaming last night",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -358,11 +380,12 @@ export const introArray = [
     rotationz: 0,
   },
   {
+    //puerta alice y vecino hablando
     id: 16,
     imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
-      "No estoy segura de cómo ocurrió. De repente, estaba en mi cuarto y...",
-    message: "I'm not sure how it happened. Suddenly, I was in my room and...",
+      "Liam: ¡Hola! Escuché un fuerte estruendo de un rayo y gritos de una mujer, he preguntado con los vecinos y todos sospechan de que fuiste tu y me preocupé. ¿Estás bien?",
+    message: "Liam: Hello! I heard a loud thunder and a women screaming, I've been asking the neighrbors and everyone suspects it was you and I got worried. Are you okay?",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -383,9 +406,9 @@ export const introArray = [
     id: 17,
     imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
-      "¿Te lastimaste cuando cayó el rayo? Deberías ir al hospital para que lo revisen.",
+      "Alice: Sí, estoy bien, gracias por preocuparte. Fue un rayo cercano, pero estoy ilesa.",
     message:
-      "Did you get hurt when the lightning struck? You should go to the hospital to get it checked.",
+      "Alice: Yes, I'm fine, thank you for caring. It was a nearby lightning strike, but I'm unharmed.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -405,8 +428,9 @@ export const introArray = [
   {
     id: 18,
     imageUrl: "/assets/img/scenarios/car.png",
-    mensaje: "No estoy segura de cómo ocurrió esto, pero...",
-    message: "I'm not sure how this happened, but...",
+    mensaje:
+      "Liam: Espera, ¿qué te pasó en la mano? ¿Estás segura de que estás bien?",
+    message: "Liam: Wait, what happened to your hand? Are you sure you're okay?",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -425,9 +449,75 @@ export const introArray = [
   },
   {
     id: 19,
+    imageUrl: "/assets/img/scenarios/car.png",
+    mensaje:
+      "Alice: No estoy segura de cómo ocurrió. De repente, estaba en mi cuarto y...",
+    message: "Alice: I'm not sure how it happened. Suddenly, I was in my room and...",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+  },
+  {
+    id: 20,
+    imageUrl: "/assets/img/scenarios/car.png",
+    mensaje:
+      "Liam: ¿Te lastimaste cuando cayó el rayo? Deberías ir al hospital para que lo revisen.",
+    message:
+      "Liam: Did you get hurt when the lightning struck? You should go to the hospital to get it checked.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    rotationx: 0,
+    rotationy: 0,
+    rotationz: 0,
+  },
+  {
+    id: 21,
+    imageUrl: "/assets/img/scenarios/car.png",
+    mensaje: "Alice: No estoy segura de cómo ocurrió esto, pero...",
+    message: "Alice: I'm not sure how this happened, but...",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    rotationx: 0,
+    rotationy: 0,
+    rotationz: 0,
+  },
+  {
+    id: 22,
     imageUrl: "/assets/img/scenarios/outside.png",
-    mensaje: "¿Qué hago? ¿Voy o no voy?",
-    message: "What should I do? Should I go or not?",
+    mensaje: "Alice: ¿Qué hago? ¿Voy o no voy?",
+    message: "Alice: What should I do? Should I go or not?",
     decision1en: "Yes",
     decision2en: "No",
     decision1es: "Si",
@@ -453,96 +543,12 @@ export const introArray = [
 ];
 export const bifur1Array = [
   {
-    id: 20,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje:
-      "...creo que tienes razón. Es mejor asegurarse de que todo esté en orden.",
-    message:
-      "I think you're right. It's better to make sure everything is in order.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
-  },
-  {
-    id: 21,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje:
-      "Bueno, no te preocupes. Puedo llevarte al hospital si lo necesitas. Es importante cuidar esa quemadura.",
-    message:
-      "Well, don't worry. I can take you to the hospital if you need to. It's important to take care of that burn.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
-  },
-  {
-    id: 22,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje:
-      "Eso sería amable de tu parte, gracias. No entiendo lo que está sucediendo, pero creo que es lo mejor.",
-    message:
-      "That would be kind of you, thank you. I don't understand what's happening, but I think it's for the best.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
-  },
-  {
     id: 23,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
-      "En el hospital Alice comenta toda la situación al médico y espera resultados después de unos análisis.",
+      "Alice: ...creo que tienes razón. Es mejor asegurarse de que todo esté en orden.",
     message:
-      "Decides to go to the hospital: At the hospital, Alice explains the whole situation to the doctor and waits for the results after some tests.",
+      "Alice: ...I think you're right. It's better to make sure everything is in order.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -568,9 +574,9 @@ export const bifur1Array = [
     id: 24,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
-      "Hemos revisado tus análisis y observaciones con problemas mentales y esquizofrenia debido al daño causado por el rayo.",
+      "Liam: Bueno, no te preocupes. Puedo llevarte al hospital si lo necesitas. Es importante cuidar esa quemadura.",
     message:
-      "We have reviewed your analyses and observations, and it appears that you have mental health problems and schizophrenia due to the damage caused by the lightning.",
+      "Liam: Well, don't worry. I can take you to the hospital if you need to. It's important to take care of that burn.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -596,9 +602,9 @@ export const bifur1Array = [
     id: 25,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
-      "¿Esquizofrenia? ¿Estás seguro? ¿No es posible que todo esto sea solo un sueño, una ilusión? ¿Qué es real?",
+      "Alice: Eso sería amable de tu parte, gracias. No entiendo lo que está sucediendo, pero creo que es lo mejor.",
     message:
-      "Schizophrenia? Are you sure? Could this all just be a dream, an illusion? What's real?",
+      "Alice: That would be kind of you, thank you. I don't understand what's happening, but I think it's for the best.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -621,12 +627,13 @@ export const bifur1Array = [
     sonido: 0,
   },
   {
+    //hospital
     id: 26,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
-      "Entiendo que esto debe ser abrumador para ti, Alice. Pero los análisis y observaciones clínicas son concluyentes. Ahora te quiero hablar respecto a dos pastillas experimental, que son una opción que podría ayudarte a recuperar la estabilidad mental.",
+      "En el hospital Alice comenta toda la situación acerca de sus visiones y el impacto del rayo al médico y espera resultados después de unos análisis médicos y largos analisis de comportamiento.",
     message:
-      "I understand that this must be overwhelming for you, Alice. But the clinical analyses and observations are conclusive. Now, I want to talk to you about two experimental pills, which are an option that could help you regain mental stability.",
+      "At the hospital Alice discusses the entire situation about her visions and the impact of the lightning to the doctor and waits for results after some medical tests and long behavioral analysis.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -651,9 +658,10 @@ export const bifur1Array = [
   {
     id: 27,
     imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje: "No estoy segura, Doctor Carl. ¿Qué tipo de pastillas son?",
+    mensaje:
+      "Doctor Carl: Hemos revisado tus análisis al parecer la quemadura no es nada grave. Sanará en unos días, pero sí se pudieron evidencias probelmas mentales y esquizofrenia.",
     message:
-      "Son pastillas seguras y ha ayudado a muchas personas en situaciones similares. Tienes que escoger entre la roja y la azul.",
+      "Doctor Carl: We have reviewed your tests, it seems the burn is nothing serious. He will heal in a few days, but there was evidence of mental problems and schizophrenia.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -678,8 +686,10 @@ export const bifur1Array = [
   {
     id: 28,
     imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje: "¿Qué efecto tendrá en mí?",
-    message: "What will be the effect on me?",
+    mensaje:
+      "Alice: ¿Esquizofrenia? ¿Estás seguro? ¿No es posible que todo esto sea solo un sueño, una ilusión? ¿Qué es real? Esto debe ser una broma",
+    message:
+      "Alice: Schizophrenia? Are you sure? Could this all just be a dream, an illusion? What's real? This has to be a joke",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -699,15 +709,15 @@ export const bifur1Array = [
     positionx: 0,
     positiony: 0,
     positionz: 0,
-    sonido: 0,
-  },
+    sonido: 0,
+  },
   {
     id: 29,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
-      "No te preocupes, no te alejará de la realidad, pero podría ayudarte a sentirte más tranquila, al menos temporalmente.",
+      "Doctor Carl: Entiendo que esto debe ser abrumador para ti, Alice. Pero los análisis y observaciones clínicas son concluyentes. Ahora te quiero hablar respecto a dos pastillas experimentales, que son una opción que podría ayudarte a recuperar la estabilidad mental.",
     message:
-      "Don't worry, it won't take you away from reality, but it might help you feel calmer, at least temporarily.",
+      "Doctor Carl: I understand that this must be overwhelming for you, Alice. But the clinical analyses and observations are conclusive. Now, I want to talk to you about two experimental pills, which are an option that could help you regain mental stability.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -732,12 +742,13 @@ export const bifur1Array = [
   {
     id: 30,
     imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje: "¿qué pasta debo tomar?",
-    message: "Which pill should I take?",
-    decision1en: "Blue",
-    decision2en: "Red",
-    decision1es: "Azul",
-    decision2es: "Roja",
+    mensaje: "Alice: No estoy segura, Doctor Carl. ¿Qué tipo de pastillas son?",
+    message:
+      "Alice: I'm not sure, Doctor Carl. What kind of pills are they?",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
     alice: true,
     alex: false,
     jonas: false,
@@ -755,15 +766,12 @@ export const bifur1Array = [
     positionz: 0,
     sonido: 0,
   },
-];
-export const bifur11Array = [
   {
     id: 31,
     imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje:
-      "Está bien, Doctor Carl, lo intentaré con la pasta azul. Necesito encontrar algo de paz.",
+    mensaje: "Doctor Carl: Son pastillas seguras y ha ayudado a muchas personas en situaciones similares. Tienes que escoger entre la roja y la azul.",
     message:
-      "Alright, Doctor Carl, I'll give the blue pill a try. I need to find some peace.",
+      "Doctor Carl: They are safe pills and have helped many people in similar situations. You have to choose between the red and the blue one.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -788,10 +796,8 @@ export const bifur11Array = [
   {
     id: 32,
     imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje:
-      "Has tomado una decisión valiente, Alice. Verás que esto te ayudará a sentirte mejor.",
-    message:
-      "You've made a brave choice, Alice. You'll see that this will help you feel better.",
+    mensaje: "Alice: ¿Qué efecto tendrá en mí?",
+    message: "Alice: What will be the effect on me?",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -815,6 +821,121 @@ export const bifur11Array = [
   },
   {
     id: 33,
+    imageUrl: "/assets/img/scenarios/laboratory.png",
+    mensaje:
+      "Doctor Carl: No te preocupes, no te alejará de la realidad, pero podría ayudarte a sentirte más tranquila, al menos temporalmente.",
+    message:
+      "Doctor Carl: Don't worry, it won't take you away from reality, but it might help you feel calmer, at least temporarily.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    id_scena: 1,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+    positionx: 0,
+    positiony: 0,
+    positionz: 0,
+    sonido: 0,
+  },
+  {
+    //ANIMACIÓN 3D
+    id: 34,
+    imageUrl: "/assets/img/scenarios/laboratory.png",
+    mensaje: "Alice: ¿Qué pasta debo tomar?",
+    message: "Alice: Which pill should I take?",
+    decision1en: "Blue",
+    decision2en: "Red",
+    decision1es: "Azul",
+    decision2es: "Roja",
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    id_scena: 1,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+    positionx: 0,
+    positiony: 0,
+    positionz: 0,
+    sonido: 0,
+  },
+];
+export const bifur11Array = [
+  {
+    id: 35,
+    imageUrl: "/assets/img/scenarios/laboratory.png",
+    mensaje:
+      "Alice: Está bien, Doctor Carl, lo intentaré con la pasta azul. Necesito encontrar algo de paz.",
+    message:
+      "Alice: Alright, Doctor Carl, I'll give the blue pill a try. I need to find some peace.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    id_scena: 1,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+    positionx: 0,
+    positiony: 0,
+    positionz: 0,
+    sonido: 0,
+  },
+  {
+    id: 36,
+    imageUrl: "/assets/img/scenarios/laboratory.png",
+    mensaje:
+      "Doctor Carl: Has tomado una decisión valiente, Alice. Verás que esto te ayudará a sentirte mejor.",
+    message:
+      "Doctor Carl: You've made a brave choice, Alice. You'll see that this will help you feel better.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    id_scena: 1,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+    positionx: 0,
+    positiony: 0,
+    positionz: 0,
+    sonido: 0,
+  },
+  {
+    //imagen de premio nobel ella esta feliz saliudando al publico - la img de fondo se cambia a la de un manicomio - ella haciendo 
+    //la misma accion sonidos de publico que luego se van apagando mientras se cambia el fondo al manicomio
+    id: 37,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       'Su salud mental "mejora", supera el trauma y logra grandes avances en su carrera como científica, ganando un premio Nobel.',
@@ -842,124 +963,12 @@ export const bifur11Array = [
     sonido: 0,
   },
   {
-    id: 34,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje:
-      "Carl, ¿cómo se encuentra nuestra paciente, Alice? ¿Ha experimentado algún cambio notable?",
-    message:
-      "Carl, how is our patient, Alice? Has she experienced any noticeable changes?",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
-  },
-  {
-    id: 35,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje:
-      "Doctor Carl: (tranquilamente) La paciente se encuentra muy bien, Jimmy. La pastilla ha tenido un efecto positivo en su estado. Está mucho más tranquila.",
-    message:
-      "The patient is doing very well, Jimmy. The pill has had a positive effect on her condition. She's much calmer.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
-  },
-  {
-    id: 36,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje: "Carl, ¿tomó Alice la pastilla azul que le ofrecimos?",
-    message: "Carl, did Alice take the blue pill we offered?",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
-  },
-  {
-    id: 37,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje:
-      "Sí, Jimmy, la tomó. Parece que estamos manteniéndola en la realidad fabricada.",
-    message:
-      "Yes, Jimmy, she took it. It seems we're keeping her in the fabricated reality.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
-  },
-];
-export const bifur12Array = [
-  {
     id: 38,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
-      "Está bien, lo intentaré con la pasta roja. Necesito encontrar algo de paz.",
+      "Doctor Jimin: Carl, ¿cómo se encuentra nuestra paciente, Alice? ¿Ha experimentado algún cambio notable?",
     message:
-      "Alright, I'll give the red pill a try. I need to find some peace.",
+      "Doctor Jimin: Carl, how is our patient, Alice? Has she experienced any noticeable changes?",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -985,9 +994,9 @@ export const bifur12Array = [
     id: 39,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
-      "Has tomado una decisión valiente. Verás que esto te ayudará a sentirte mejor.",
+      "Doctor Carl: La paciente se encuentra muy bien, Jimmy. La pastilla ha tenido un efecto positivo en su estado. Está mucho más tranquila.",
     message:
-      "You've made a brave decision. You'll see that this will help you feel better.",
+      "Doctor Carl: The patient is doing very well, Jimmy. The pill has had a positive effect on her condition. She's much calmer.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -1012,8 +1021,8 @@ export const bifur12Array = [
   {
     id: 40,
     imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje: "Su condición empeora y entra en coma.",
-    message: "Su condición empeora y entra en coma.",
+    mensaje: "Doctor Jimin: Carl, ¿tomó Alice la pastilla azul que le ofrecimos?",
+    message: "Doctor Jimin: Carl, did Alice take the blue pill we offered?",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -1038,8 +1047,10 @@ export const bifur12Array = [
   {
     id: 41,
     imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje: "Carl, ¿qué ha sucedido con la paciente?",
-    message: "Carl, what happened to the patient?",
+    mensaje:
+      "Doctor Carl: Sí, Jimin, la tomó. Parece que estamos manteniéndola en la realidad fabricada.",
+    message:
+      "Doctor Carl: Yes, Jimin, she took it. It seems we're keeping her in the fabricated reality.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -1061,13 +1072,15 @@ export const bifur12Array = [
     positionz: 0,
     sonido: 0,
   },
+];
+export const bifur12Array = [
   {
     id: 42,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
-      "Está en coma, no se recuperará pronto. Se le tiene que administrar de la pastilla azul para que sea como si no hubiera pasado nada.",
+      "Alice: Está bien, lo intentaré con la pasta roja. Necesito encontrar algo de paz.",
     message:
-      "She's in a coma, she won't recover anytime soon. We need to give her the blue pill so it's like nothing ever happened.",
+      "Alice: Alright, I'll give the red pill a try. I need to find some peace.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -1092,8 +1105,10 @@ export const bifur12Array = [
   {
     id: 43,
     imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje: "Nadie puede salir de aquí, eh?",
-    message: "Nobody can get out of here, huh?",
+    mensaje:
+      "Doctor Carl: Has tomado una decisión valiente. Verás que esto te ayudará a sentirte mejor.",
+    message:
+      "Doctor Carl: You've made a brave decision. You'll see that this will help you feel better.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -1116,12 +1131,120 @@ export const bifur12Array = [
     sonido: 0,
   },
   {
+    //camilla alice en coma - pitido del coso ese
     id: 44,
     imageUrl: "/assets/img/scenarios/laboratory.png",
+    mensaje: "La condición de Alice empeora y entra en coma.",
+    message: "Alice health state gets worse and she gets into a comma",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    id_scena: 1,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+    positionx: 0,
+    positiony: 0,
+    positionz: 0,
+    sonido: 0,
+  },
+  {
+    id: 45,
+    imageUrl: "/assets/img/scenarios/laboratory.png",
+    mensaje: "Doctor Jimin: Carl, ¿qué ha sucedido con la paciente?",
+    message: "Doctor Jimin: Carl, what happened to the patient?",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    id_scena: 1,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+    positionx: 0,
+    positiony: 0,
+    positionz: 0,
+    sonido: 0,
+  },
+  {
+    id: 46,
+    imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
-      "Se estaba haciendo muchas preguntas, teníamos que deshacernos de ella. Ambos ríen",
+      "Doctor Carl: Está en coma, no se recuperará pronto. Se le tiene que administrar de la pastilla azul para que sea como si no hubiera pasado nada.",
     message:
-      "She was asking too many questions, we had to get rid of her. They both laugh.",
+      "Doctor Carl: She's in a coma, she won't recover anytime soon. We need to give her the blue pill so it's like nothing ever happened.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    id_scena: 1,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+    positionx: 0,
+    positiony: 0,
+    positionz: 0,
+    sonido: 0,
+  },
+  {
+    id: 47,
+    imageUrl: "/assets/img/scenarios/laboratory.png",
+    mensaje: "Doctor Jimin: Nadie puede salir de aquí, eh?",
+    message: "Doctor Jimin: Nobody can get out of here, huh?",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    id_scena: 1,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+    positionx: 0,
+    positiony: 0,
+    positionz: 0,
+    sonido: 0,
+  },
+  {
+    // animacion de risa de los dos doctores
+    id: 48,
+    imageUrl: "/assets/img/scenarios/laboratory.png",
+    mensaje:
+      "Doctor Jimin: Se estaba haciendo muchas preguntas, teníamos que deshacernos de ella. (Ambos ríen)",
+    message:
+      "Doctor Jimin: She was asking too many questions, we had to get rid of her. (They both laugh).",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -1146,7 +1269,7 @@ export const bifur12Array = [
 ];
 export const bifur2Array = [
   {
-    id: 45,
+    id: 49,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Aprecio tu preocupación, pero en realidad estoy cansada y preferiría quedarme, además, la quemadura es pequeña. Gracias de todos modos.",
@@ -1174,7 +1297,8 @@ export const bifur2Array = [
     sonido: 0,
   },
   {
-    id: 46,
+    //sala
+    id: 50,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "En su casa, decide regresar al pasado una vez más para salvar a su familia. Va al día del accidente.",
@@ -1202,10 +1326,11 @@ export const bifur2Array = [
     sonido: 0,
   },
   {
-    id: 47,
+    //
+    id: 51,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
-      "Se encontró su casa que recordaba y se sentía apresurada por encontrar a su esposo y a su hijo.",
+      "Una vez se encontró en su casa, se sentía apresurada por encontrar a su esposo y a su hijo.",
     message:
       "She found her home that she remembered and felt rushed to find her husband and her son.",
     decision1en: null,
@@ -1230,12 +1355,13 @@ export const bifur2Array = [
     sonido: 0,
   },
   {
-    id: 48,
+    //preocupada - corriendo por la sala
+    id: 52,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
-      "Buscó en todos los sitios de la casa y no los encontraba. Entonces decidió irse en su auto a buscarlos porque intuyó que ya se habían ido. Esta era mi última oportunidad de cambiar el curso de los eventos y salvarlos.",
+      "Buscó en todos los sitios de la casa y no los encontraba.",
     message:
-      "She searched in all the places in the house and couldn't find them. Then she decided to leave in her car to look for them because she had a feeling they had already left. This was my last chance to change the course of events and save them.",
+      "She searched in all the places in the house and couldn't find them.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -1258,10 +1384,13 @@ export const bifur2Array = [
     sonido: 0,
   },
   {
-    id: 49,
+    //imagen de calles y ella corriendo
+    id: 53,
     imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje: "Una vez en el carro, no sabe por cuál camino ellos se fueron.",
-    message: "Once in the car, she doesn't know which way they went.",
+    mensaje:
+      "Entonces decidió irse a buscarlos porque intuyó que ya se habían ido. Esta era su última oportunidad de cambiar el curso de los eventos y salvarlos.",
+    message:
+      "Then she decided to leave to look for them because she had a feeling they had already left. This was her last chance to change the course of events and save them.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -1284,10 +1413,11 @@ export const bifur2Array = [
     sonido: 0,
   },
   {
-    id: 50,
+    //ANIMACIÓN 3D
+    id: 54,
     imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje: "¿Por cuál calle debería ir? ¿Calle 1 o Calle 2?",
-    message: "Which street should I go on? Street 1 or Street 2?",
+    mensaje: "No sabe por cuál camino ellos se fueron. ¿Por cuál calle debería ir? ¿Calle 1 o Calle 2?",
+    message: "She doesn't know which way they went. Which street should I go on? Street 1 or Street 2?",
     decision1en: "Street 1",
     decision2en: "Street 2",
     decision1es: "Calle 1",
@@ -1312,7 +1442,7 @@ export const bifur2Array = [
 ];
 export const bifur21Array = [
   {
-    id: 51,
+    id: 55,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje: "¡Esperen!",
     message: "Wait!",
@@ -1338,7 +1468,8 @@ export const bifur21Array = [
     sonido: 0,
   },
   {
-    id: 52,
+    //sonidos de autos chocando ella gritando y llorando - fondo negro
+    id: 56,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Alice ve frente a sus ojos cómo su familia pierde la vida en el accidente.",
@@ -1366,7 +1497,7 @@ export const bifur21Array = [
     sonido: 0,
   },
   {
-    id: 53,
+    id: 57,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Decide hacer otro viaje al pasado, y esta vez ella ya sabe cómo han ocurrido las cosas.",
@@ -1394,7 +1525,8 @@ export const bifur21Array = [
     sonido: 0,
   },
   {
-    id: 54,
+    //sonidos de frenos y ella gritando / fondo negro
+    id: 58,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Ella es la que se accidenta con aquel camión y muere, y su familia se salva.",
@@ -1420,39 +1552,12 @@ export const bifur21Array = [
     positiony: 0,
     positionz: 0,
     sonido: 0,
-  },
-  {
-    id: 55,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje:
-      "Hombre misterioso toma el brazalete y desaparece en la oscuridad.",
-    message:
-      "The mysterious man takes the bracelet and disappears into the darkness.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
-  },
+  }
 ];
 export const bifur22Array = [
   {
-    id: 56,
+    //calle y el auto - alice agitada el esposo le habla
+    id: 59,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Cerca del automóvil, Alice finalmente encuentra un momento a solas con su esposo, decidida a explicarle la extraña situación y, con suerte, evitar la tragedia que se avecina.",
@@ -1480,94 +1585,12 @@ export const bifur22Array = [
     sonido: 0,
   },
   {
-    id: 57,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje:
-      "Amor, por favor, necesito que me escuches. Lo que voy a decir puede sonar increíble, pero es de vital importancia.",
-    message:
-      "Honey, please, I need you to listen to me. What I'm about to say may sound unbelievable, but it's of vital importance.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
-  },
-  {
-    id: 58,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje:
-      "¿Qué pasa, Amor? Estás muy agitada, sabes que no podemos perder el viaje.",
-    message:
-      "What's going on, Love? You seem very agitated, you know we can't miss the trip.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
-  },
-  {
-    id: 59,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje:
-      "Lo que voy a decir puede sonar extraño, pero esta mañana experimenté algo que no puedo explicar. He viajado en el tiempo, he visto el futuro. Y en ese futuro, tú y nuestro hijo... están en peligro.",
-    message:
-      "Alice: (speaking in a hushed voice) What I'm about to say may sound strange, but this morning I experienced something I can't explain. I traveled through time, I saw the future. And in that future, you and our son... are in danger.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
-  },
-  {
     id: 60,
     imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje: "Alice, no entiendo. ¿De qué estás hablando?",
-    message: "Alice, I don't understand. What are you talking about?",
+    mensaje:
+      "Alice: Amor, por favor, necesito que me escuches. Lo que voy a decir puede sonar increíble, pero es de vital importancia.",
+    message:
+      "Alice: Honey, please, I need you to listen to me. What I'm about to say may sound unbelievable, but it's of vital importance.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -1593,9 +1616,9 @@ export const bifur22Array = [
     id: 61,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
-      "No tengo tiempo para explicarlo todo ahora, pero necesito que confíes en mí. Por favor, quédate con nuestra hijo aquí y evita que suba al automóvil. Yo lo manejaré. Es la única manera de mantenerlos a salvo.",
+      "Fabián: ¿Qué pasa, Amor? Estás muy agitada, sabes que no podemos perder el viaje.",
     message:
-      "I don't have time to explain it all now, but I need you to trust me. Please, stay with our son here and prevent him from getting in the car. I'll drive it. It's the only way to keep you safe.",
+      "Fabián: What's going on, Love? You seem very agitated, you know we can't miss the trip.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -1621,9 +1644,9 @@ export const bifur22Array = [
     id: 62,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
-      "Alice, esto suena como una locura. Pero si esto es lo que necesitas, lo haré. Vamos a casa ♥.",
+      "Alice: Lo que voy a decir puede sonar extraño, pero esta mañana experimenté algo que no puedo explicar. He viajado en el tiempo, he visto el futuro. Y en ese futuro, tú y nuestro hijo... están en peligro.",
     message:
-      "Alice, this sounds like madness. But if this is what you need, I'll do it. Let's go home ♥.",
+      "Alice: (speaking in a hushed voice) What I'm about to say may sound strange, but this morning I experienced something I can't explain. I traveled through time, I saw the future. And in that future, you and our son... are in danger.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -1647,6 +1670,89 @@ export const bifur22Array = [
   },
   {
     id: 63,
+    imageUrl: "/assets/img/scenarios/laboratory.png",
+    mensaje: "Fabián: Alice, no entiendo. ¿De qué estás hablando?",
+    message: "Fabián: Alice, I don't understand. What are you talking about?",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    id_scena: 1,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+    positionx: 0,
+    positiony: 0,
+    positionz: 0,
+    sonido: 0,
+  },
+  {
+    id: 64,
+    imageUrl: "/assets/img/scenarios/laboratory.png",
+    mensaje:
+      "Alice: No tengo tiempo para explicarlo todo ahora, pero necesito que confíes en mí. Por favor, quédate con nuestra hijo aquí y evita que suba al automóvil. Yo lo manejaré. Es la única manera de mantenerlos a salvo.",
+    message:
+      "Alice: I don't have time to explain it all now, but I need you to trust me. Please, stay with our son here and prevent him from getting in the car. I'll drive it. It's the only way to keep you safe.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    id_scena: 1,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+    positionx: 0,
+    positiony: 0,
+    positionz: 0,
+    sonido: 0,
+  },
+  {
+    id: 65,
+    imageUrl: "/assets/img/scenarios/laboratory.png",
+    mensaje:
+      "Fabián: Alice, esto suena como una locura. Pero si esto es lo que necesitas, lo haré. Vamos a casa.",
+    message:
+      "Fabián: Alice, this sounds like madness. But if this is what you need, I'll do it. Let's go home.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    id_scena: 1,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+    positionx: 0,
+    positiony: 0,
+    positionz: 0,
+    sonido: 0,
+  },
+  {
+    //bailando en la casa felices - alice baila raro mas lento preocupada
+    id: 66,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Alice logra salvar a su familia y regresa al presente original, donde su esposo e hijo están a salvo y bien. Aunque aún tiene esa sensación extraña.",
@@ -1674,7 +1780,8 @@ export const bifur22Array = [
     sonido: 0,
   },
   {
-    id: 64,
+    //puerta de la casa
+    id: 67,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje: "Sin embargo, el vecino regresa para saber cómo sigue.",
     message: "However, the neighbor returns to check how you're doing.",
@@ -1700,36 +1807,11 @@ export const bifur22Array = [
     sonido: 0,
   },
   {
-    id: 65,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje: "Hola Alice, cómo sigues?",
-    message: "Hello Alice, how are you?",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
-  },
-  {
+    //puerta de la casa
     id: 66,
     imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje: "Todo muy bien, mi familia y yo estamos bien",
-    message: "Everything's fine, my family and I are well.",
+    mensaje: "Liam: Hola Alice, cómo sigues?",
+    message: "Liam: Hello Alice, how are you?",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -1754,9 +1836,8 @@ export const bifur22Array = [
   {
     id: 67,
     imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje: "Perdón? Alice, tu familia murió hace dos años, estás sola aquí",
-    message:
-      "I'm sorry? Alice, your family died two years ago, you're alone here.",
+    mensaje: "Alice: Todo muy bien, mi familia y yo estamos bien",
+    message: "Alice: Everything's fine, my family and I are well.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -1781,8 +1862,35 @@ export const bifur22Array = [
   {
     id: 68,
     imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje: "¿Estás segura que no quieres ir al médico?",
-    message: "Are you sure you don't want to go to the doctor?",
+    mensaje: "Liam: Perdón? Alice, tu familia murió hace dos años, estás sola aquí",
+    message:
+      "Liam: I'm sorry? Alice, your family died two years ago, you're alone here.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    id_scena: 1,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+    positionx: 0,
+    positiony: 0,
+    positionz: 0,
+    sonido: 0,
+  },
+  {
+    id: 69,
+    imageUrl: "/assets/img/scenarios/laboratory.png",
+    mensaje: "Liam: ¿Estás segura que no quieres ir al médico?",
+    message: "Liam: Are you sure you don't want to go to the doctor?",
     decision1en: "Go with the neighbor",
     decision2en: "Don't go with the neighbor",
     decision1es: "Ir con el vecino",
@@ -1807,12 +1915,13 @@ export const bifur22Array = [
 ];
 export const bifur221Array = [
   {
-    id: 69,
+    //agonia
+    id: 70,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
-      "No es cierto, mi familia está conmigo. No los veo, No entiendo nada...",
+      "Alice: No es cierto, mi familia está conmigo. No los veo, No entiendo nada...",
     message:
-      "It's not true, my family is with me. I can't see them, I don't understand...",
+      "Alice: It's not true, my family is with me. I can't see them, I don't understand...",
     decision1en: null,
     decision2en: null,
     decision1es: null,
@@ -1835,7 +1944,8 @@ export const bifur221Array = [
     sonido: 0,
   },
   {
-    id: 70,
+    //manicomio
+    id: 71,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje: "Alice es diagnosticada con esquizofrenia",
     message: "Alice is diagnosed with schizophrenia",
@@ -1863,7 +1973,7 @@ export const bifur221Array = [
 ];
 export const bifur222Array = [
   {
-    id: 71,
+    id: 72,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "No es cierto, mi familia está conmigo. No los veo, No entiendo nada...",
@@ -1891,7 +2001,8 @@ export const bifur222Array = [
     sonido: 0,
   },
   {
-    id: 72,
+    //hospital camilla
+    id: 73,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Alice queda en blanco y, de repente, despierta del coma. Confundida en el hospital",
@@ -1919,7 +2030,8 @@ export const bifur222Array = [
     sonido: 0,
   },
   {
-    id: 73,
+    //llorando sentada en la camilla 
+    id: 74,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Alice descubre que hubo un accidente con su familia y que los demás murieron mientras ella se salvó. Todo el tiempo estuvo en coma y fue un sueño",
