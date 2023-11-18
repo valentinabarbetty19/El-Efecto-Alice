@@ -11,27 +11,22 @@ export const introArray = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
+    aliceLab: true,
+    lab: true,
+    animation: 2,
     id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
+    rotationx: Math.PI / 2,//Math.PI/5,
+    rotationy: Math.PI / -1,//Math.PI / 1.2,
+    rotationz: -Math.PI / 2,
+    positionx: 2,
+    positiony: 1.3,
+    positionz:-1.2,
     sonido: 0,
   },
   {
     // fondo negro mostrando el brazalete en 3D
     id: 2,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
+   // imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Ha estado trabajando en un brazalete que le permitiría escoger la fecha a dónde quiere viajar en el pasado, sin embargo, este artefacto no tiene la energía suficiente para que funcione.",
     message:
@@ -40,13 +35,7 @@ export const introArray = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
+    bracelet: true,
     id_scena: 1,
     rotationx: 0,
     rotationy: Math.PI / 2,
@@ -60,7 +49,7 @@ export const introArray = [
   {
     //habitación - triste - alice llorando - musica sad
     id: 3,
-    imageUrl: "/assets/img/scenarios/car.png",
+   // imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
       "Tenía su vida feliz con su hijo y su esposo, pero desafortunadamente, tuvieron un accidente automovilístico, y todos menos ella, perdieron la vida.",
     message:
@@ -70,26 +59,21 @@ export const introArray = [
     decision1es: null,
     decision2es: null,
     alice: true,
-    alex: true,
-    jonas: true,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
+    bedroom: true,
     id_scena: 1,
     rotationx: 0,
     rotationy: Math.PI / 2,
     rotationz: 0,
     positionx: 0,
     positiony: 0,
-    positionz: 0,
+    positionz: -5,
     animation: 0,
     sonido: 0,
   }, //añadir modelosd e hijo y esposo
   {
     //mismo del 3
     id: 4,
-    imageUrl: "/assets/img/scenarios/car.png",
+    //imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
       "Alice ha quedado devastada tras este hecho, pues prácticamente toda su vida se ha derrumbado.",
     message:
@@ -99,12 +83,7 @@ export const introArray = [
     decision1es: null,
     decision2es: null,
     alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
+    bedroom: true,
     animation: 0,
     rotationx: 0,
     rotationy: Math.PI / 2,
@@ -123,11 +102,7 @@ export const introArray = [
     decision1es: null,
     decision2es: null,
     alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
+    livingroom: true,
     narrador: false,
     animation: 0,
     rotationx: 0,
@@ -146,12 +121,7 @@ export const introArray = [
     decision1es: null,
     decision2es: null,
     alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
+    livingroom: true,
     animation: 0,
     rotationx: 0,
     rotationy: Math.PI / 2,
@@ -172,12 +142,7 @@ export const introArray = [
     decision1es: null,
     decision2es: null,
     alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
+    livingroom: true,
     animation: 0,
     rotationx: 0,
     rotationy: Math.PI / 2,
@@ -188,7 +153,6 @@ export const introArray = [
 
     //img 3d ventana arbol dia lluvioso
     id: 8,
-    imageUrl: "/assets/img/scenarios/thundersorm.png",
     mensaje:
       "En una tarde lluviosa, cerca de su casa, Alice vio algo cerca a un viejo árbol, cree que es su hijo.",
     message:
@@ -197,13 +161,7 @@ export const introArray = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
+    tree: true,
     animation: 0,
     rotationx: 0,
     rotationy: Math.PI / 2,
@@ -212,7 +170,7 @@ export const introArray = [
   {
     //brazalete - ventana el arbol ve al hijo - va a investigar - rayo
 
-    //arbol sonido grito y rayo
+    //arbol sonido grito y rayo fondo negro
     id: 9,
     imageUrl: "/assets/img/scenarios/thundersorm.png",
     mensaje: "al ir a investigar, Fue alcanzada por un rayo.",
@@ -222,13 +180,6 @@ export const introArray = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
     animation: 0,
     rotationx: 0,
     rotationy: Math.PI / 2,
@@ -237,7 +188,7 @@ export const introArray = [
   {
     // al lado del arbol esta aturdida 
     id: 10,
-    imageUrl: "/assets/img/scenarios/car.png",
+   // imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
       "Tras el impacto del rayo, Alice,  momentáneamente aturdida y desconcertada, se apresura a casa para recuperarse.",
     message:
@@ -246,13 +197,7 @@ export const introArray = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
+    tree: true,
     animation: 0,
     rotationx: 0,
     rotationy: Math.PI / 2,
@@ -271,12 +216,7 @@ export const introArray = [
     decision1es: null,
     decision2es: null,
     alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
+    livingroom: true,
     animation: 0,
     rotationx: 0,
     rotationy: Math.PI / 2,
@@ -295,12 +235,7 @@ export const introArray = [
     decision1es: null,
     decision2es: null,
     alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
+    bedroom: true,
     animation: 0,
     rotationx: 0,
     rotationy: Math.PI / 2,
@@ -320,12 +255,7 @@ export const introArray = [
     decision1es: null,
     decision2es: null,
     alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
+    livingroom: true,
     animation: 0,
     rotationx: 0,
     rotationy: Math.PI / 2,
@@ -344,12 +274,7 @@ export const introArray = [
     decision1es: null,
     decision2es: null,
     alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
+    bedroom: true,
     animation: 0,
     rotationx: 0,
     rotationy: Math.PI / 2,
@@ -358,7 +283,7 @@ export const introArray = [
   {
     //en la puerta de la casa
     id: 15,
-    imageUrl: "/assets/img/scenarios/car.png",
+    imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
       "Después de despertar en su realidad original, un vecino golpeó su puerta preocupado por el grito de una mujer la noche anterior",
     message:
@@ -368,12 +293,6 @@ export const introArray = [
     decision1es: null,
     decision2es: null,
     alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
     animation: 0,
     rotationx: 0,
     rotationy: Math.PI / 2,
@@ -382,7 +301,7 @@ export const introArray = [
   {
     //puerta alice y vecino hablando
     id: 16,
-    imageUrl: "/assets/img/scenarios/car.png",
+    imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
       "Liam: ¡Hola! Escuché un fuerte estruendo de un rayo y gritos de una mujer, he preguntado con los vecinos y todos sospechan de que fuiste tu y me preocupé. ¿Estás bien?",
     message: "Liam: Hello! I heard a loud thunder and a women screaming, I've been asking the neighrbors and everyone suspects it was you and I got worried. Are you okay?",
@@ -391,12 +310,6 @@ export const introArray = [
     decision1es: null,
     decision2es: null,
     alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
     animation: 0,
     rotationx: 0,
     rotationy: Math.PI / 2,
@@ -404,7 +317,7 @@ export const introArray = [
   },
   {
     id: 17,
-    imageUrl: "/assets/img/scenarios/car.png",
+    imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
       "Alice: Sí, estoy bien, gracias por preocuparte. Fue un rayo cercano, pero estoy ilesa.",
     message:
@@ -427,7 +340,7 @@ export const introArray = [
   },
   {
     id: 18,
-    imageUrl: "/assets/img/scenarios/car.png",
+    imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
       "Liam: Espera, ¿qué te pasó en la mano? ¿Estás segura de que estás bien?",
     message: "Liam: Wait, what happened to your hand? Are you sure you're okay?",
@@ -449,7 +362,7 @@ export const introArray = [
   },
   {
     id: 19,
-    imageUrl: "/assets/img/scenarios/car.png",
+    imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
       "Alice: No estoy segura de cómo ocurrió. De repente, estaba en mi cuarto y...",
     message: "Alice: I'm not sure how it happened. Suddenly, I was in my room and...",
@@ -471,7 +384,7 @@ export const introArray = [
   },
   {
     id: 20,
-    imageUrl: "/assets/img/scenarios/car.png",
+    imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
       "Liam: ¿Te lastimaste cuando cayó el rayo? Deberías ir al hospital para que lo revisen.",
     message:
@@ -494,7 +407,7 @@ export const introArray = [
   },
   {
     id: 21,
-    imageUrl: "/assets/img/scenarios/car.png",
+    imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje: "Alice: No estoy segura de cómo ocurrió esto, pero...",
     message: "Alice: I'm not sure how this happened, but...",
     decision1en: null,
@@ -515,7 +428,7 @@ export const introArray = [
   },
   {
     id: 22,
-    imageUrl: "/assets/img/scenarios/outside.png",
+    imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje: "Alice: ¿Qué hago? ¿Voy o no voy?",
     message: "Alice: What should I do? Should I go or not?",
     decision1en: "Yes",
@@ -544,7 +457,7 @@ export const introArray = [
 export const bifur1Array = [
   {
     id: 23,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
+    imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
       "Alice: ...creo que tienes razón. Es mejor asegurarse de que todo esté en orden.",
     message:
@@ -572,7 +485,7 @@ export const bifur1Array = [
   },
   {
     id: 24,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
+    imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
       "Liam: Bueno, no te preocupes. Puedo llevarte al hospital si lo necesitas. Es importante cuidar esa quemadura.",
     message:
@@ -600,7 +513,7 @@ export const bifur1Array = [
   },
   {
     id: 25,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
+    imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
       "Alice: Eso sería amable de tu parte, gracias. No entiendo lo que está sucediendo, pero creo que es lo mejor.",
     message:
@@ -629,7 +542,7 @@ export const bifur1Array = [
   {
     //hospital
     id: 26,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
+   // imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "En el hospital Alice comenta toda la situación acerca de sus visiones y el impacto del rayo al médico y espera resultados después de unos análisis médicos y largos analisis de comportamiento.",
     message:
