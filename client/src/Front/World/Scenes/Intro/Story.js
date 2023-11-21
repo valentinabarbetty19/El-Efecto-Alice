@@ -18,6 +18,10 @@ import Brazalete from "../models/Brazalete";
 import Bedroom from "../models/Scenarios/Bedroom";
 import Livingroom from "../models/Scenarios/Livingroom";
 import Tree from "../models/Scenarios/Tree";
+import Hospital from "../models/Scenarios/Hospital";
+import Manicomio from "../models/Scenarios/Manicomio";
+import Street from "../models/Street";
+import StreetDecision from "../models/Scenarios/Street-decision";
 
 const Story = ({ language, id, info, route1, route2, animation }) => {
   const navigate = useNavigate();
@@ -58,7 +62,10 @@ const Story = ({ language, id, info, route1, route2, animation }) => {
   const shouldShowTree = info[currentImageIndex].tree === true;
   const shouldShowCarl = info[currentImageIndex].carl === true;
   const shouldShowJimmy = info[currentImageIndex].jimmy === true;
-
+  const shouldShowHospital = info[currentImageIndex].hospital === true;
+  const shouldShowManicomio = info[currentImageIndex].manicomio === true;
+  const shouldShowStreet = info[currentImageIndex].street === true;
+  const shouldShowStreetDecision = info[currentImageIndex].street_decision === true;
 
   return (
     <div
@@ -83,6 +90,9 @@ const Story = ({ language, id, info, route1, route2, animation }) => {
           />
         )}
         {shouldShowLab && <Lab />}
+        {shouldShowHospital && <Hospital />}
+        {shouldShowStreet && <Street />}
+        {shouldShowStreetDecision && <StreetDecision />}
         {shouldShowLab && <AliceLab animation={info[currentImageIndex].animation}
             rotationx={info[currentImageIndex].rotationx}
             rotationz={info[currentImageIndex].rotationz}
@@ -97,6 +107,7 @@ const Story = ({ language, id, info, route1, route2, animation }) => {
         {shouldShowBedRoom && <Bedroom />}
         {shouldShowLivingRoom && <Livingroom />}
         {shouldShowTree && <Tree />}
+        {shouldShowManicomio && <Manicomio />}
       </Canvas>
     </div>
       <div>
