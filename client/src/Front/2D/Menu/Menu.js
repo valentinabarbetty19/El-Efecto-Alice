@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, lazy, Suspense, useEffect , useContext } from "react";
 import styles from "./Menu.css";
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../../../context/AuthContext";
@@ -27,9 +27,8 @@ const Menu = ({ language }) => {
         title: "No Puede Jugar sin Iniciar Sesión",
         icon: "info",
       });
-
-    }
-    else {
+      navigate('/login');
+    } else {
       navigate('/game');
     }
     // 👇️ navigate to /contacts
@@ -39,16 +38,15 @@ const Menu = ({ language }) => {
   return (
     <div>
       <div className="index">
-
-
         <div className="text-wrapper">{language === "español" ? "EFECTO ALICE" : "ALICE EFFECT"}</div>
-
       </div>
+
       <div className="container">
         <button className="transparent-button" onClick={navigateToGame}>
           {language === "español" ? "INICIAR" : "START"}
         </button>
-        <button className="transparent-button">{language === "español" ? "REANUDAR PARTIDA" : "RESUME GAME"}</button> </div>
+        <button className="transparent-button">{language === "español" ? "REANUDAR PARTIDA" : "RESUME GAME"}</button>
+      </div>
     </div>
 
   );
