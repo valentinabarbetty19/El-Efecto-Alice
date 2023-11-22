@@ -4,8 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { authContext } from "../../../context/AuthContext";
 import swal from "sweetalert";
 
-
-
 const Menu = ({ language }) => {
 
   const { emailUser } = useContext(authContext);
@@ -24,7 +22,7 @@ const Menu = ({ language }) => {
   const navigateToGame = () => {
     if (emailUser == '' || emailUser == 'error') {
       swal({
-        title: "No Puede Jugar sin Iniciar Sesión",
+        title: "Debe Iniciar Sesión Para Guardar Los Datos De Su Partida",
         icon: "info",
       });
       navigate('/login');
