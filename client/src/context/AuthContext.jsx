@@ -1,5 +1,5 @@
 import { auth } from "../Front/firebase/firebase.config";
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 import {
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
@@ -19,6 +19,12 @@ export const useAuth = () => {
 };
 
 export function AuthProvider({ children }) {
+
+    const [id, setId] = useState(0);
+    const [ emailUser,setEmailUser] = useState('');
+
+
+
     const register = async (email, password) => {
         const response = await createUserWithEmailAndPassword(auth, email, password);
         console.log(response)
@@ -43,7 +49,11 @@ export function AuthProvider({ children }) {
             register,
             login,
             loginWithGoogle,
-            logout
+            logout,
+            id, 
+            setId,
+            emailUser,
+            setEmailUser
         }}>
         {children}
     </authContext.Provider>

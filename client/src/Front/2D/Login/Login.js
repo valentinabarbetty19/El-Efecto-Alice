@@ -1,13 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useContext } from "react";
 import "./Login.css";
 import { useAuth } from '../../../context/AuthContext';
+import { authContext } from "../../../context/AuthContext";
+
 import swal from "sweetalert";
 import { serviceLogin } from "../../../Services/serviceLogin";
 import { useNavigate } from "react-router-dom";
 
 
 
+
+
 const Login = ({ language }) => {
+
+  const { setEmailUser } = useContext(authContext);
+
   const auth = useAuth();
   const [emailRegister, setEmailRegister] = useState('');
   const [passwordRegister, setPasswordRegister] = useState('');
@@ -20,38 +27,54 @@ const Login = ({ language }) => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-  
+
     try {
       const response = await auth.loginWithGoogle();
       console.log(response);
-  
+      setEmailUser(response.user.email);
+
+
       swal({
         title: "Login éxitoso",
         icon: "success",
       });
-  
+
       navigate('/game');
     } catch (error) {
-      console.error("Error al iniciar sesión con Google:", error);
-  
+      setEmailUser('error');
+
       swal({
         title: "Login falló",
         icon: "error",
       });
     }
   }
-  
-  const handleLogin2 = (e) => {
-    e.preventDefault();
-    auth.login(emailRegister, passwordRegister);
-    console.log(auth.response)
 
-    swal({
-      title: "Login éxitoso",
-      icon: "success",
-    });
+  const handleLogin2 = async (e) => {
+    try {
+      e.preventDefault();
+      const response = await auth.login(emailRegister, passwordRegister);
+      console.log(auth.response)
 
-    navigate('/game');
+      setEmailUser(emailRegister);
+
+      swal({
+        title: "Login éxitoso",
+        icon: "success",
+      });
+
+      navigate('/game');
+
+    } catch (error) {
+      setEmailUser('error');
+
+      swal({
+        title: "Error en el Proceso de Login  Verifique sus Credenciales",
+        icon: "error",
+      });
+
+    }
+
 
   }
 

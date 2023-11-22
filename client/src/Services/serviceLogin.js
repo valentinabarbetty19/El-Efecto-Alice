@@ -24,4 +24,11 @@ export class serviceLogin {
             
         })    
     }
+    putUserEscenario = (correo, nuevoEstadoEscenario) => {
+        return new Promise((resolve, reject) => {
+            axios.put('http://localhost:4000/escenariousuarios', { correo, nuevoEstadoEscenario })
+                .then(response => resolve(response.data))
+                .catch(error => reject(error));
+        });
+    };
 }
