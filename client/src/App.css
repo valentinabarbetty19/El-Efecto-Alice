@@ -17,44 +17,7 @@
 .content {
   margin: 20px;
 }
-
 .canvas-container {
   width: 100%; /* Set your desired width */
   height: 100%; /* Set your desired height */
-}
-
-
-.loading-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.loading-content {
-  width: 60%; /* Ajusta según sea necesario */
-  max-width: 600px; /* Máximo ancho del contenedor */
-  text-align: center;
-}
-
-.loading-bar-container {
-  position: relative;
-  margin-bottom: 20px; /* Espaciado entre la barra y los mensajes */
-}
-
-.loading-bar {
-  height: 20px;
-  background-color: #4caf50;
-  border-radius: 5px;
-  transition: width 0.3s ease-in-out;
-  margin: 0 auto; /* Centro horizontalmente */
-}
-
-.loading-message {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.loading-percentage {
-  font-size: 16px;
 }

@@ -4,7 +4,7 @@
   /* Stack items vertically */
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ajusta la altura al 100% de la ventana para centrar verticalmente */
+  margin-top: 300px;
 }
 
 .transparent-button {
@@ -16,10 +16,10 @@
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
   display: block;
-  margin-bottom: 20px; /* Aumenta el margen entre los botones */
+  margin-bottom: 20px; /* Increase the margin between buttons */
+  margin-top: 10px; /* Increase the margin between buttons and text */
   text-decoration: none !important;
 }
-
 
 .index {
   background-color: #000000;
@@ -114,12 +114,13 @@
   font-family: "Kelly Slab", Helvetica;
   font-size: 90px;
   font-weight: 400;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 50%; /* Set left to 50% */
+  transform: translateX(-50%); /* Center horizontally */
   letter-spacing: 0;
   line-height: normal;
-  position: absolute; /* Mantenido para centrar */
-  top: 20%; /* Ajusta según sea necesario */
+  position: absolute;
+  top: 20%; /* Set top to 50% */
+ 
 }
 
 .index .div {

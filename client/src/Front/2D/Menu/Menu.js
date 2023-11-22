@@ -1,8 +1,10 @@
-import React, { useState, lazy, Suspense, useEffect , useContext } from "react";
+import React, { useState, useContext } from "react";
 import styles from "./Menu.css";
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../../../context/AuthContext";
 import swal from "sweetalert";
+
+
 
 const Menu = ({ language }) => {
 
@@ -22,11 +24,12 @@ const Menu = ({ language }) => {
   const navigateToGame = () => {
     if (emailUser == '' || emailUser == 'error') {
       swal({
-        title: "Debe Iniciar Sesión Para Guardar Los Datos De Su Partida",
+        title: "No Puede Jugar sin Iniciar Sesión",
         icon: "info",
       });
-      navigate('/login');
-    } else {
+
+    }
+    else {
       navigate('/game');
     }
     // 👇️ navigate to /contacts
@@ -36,15 +39,16 @@ const Menu = ({ language }) => {
   return (
     <div>
       <div className="index">
-        <div className="text-wrapper">{language === "español" ? "EFECTO ALICE" : "ALICE EFFECT"}</div>
-      </div>
 
+
+        <div className="text-wrapper">{language === "español" ? "EFECTO ALICE" : "ALICE EFFECT"}</div>
+
+      </div>
       <div className="container">
         <button className="transparent-button" onClick={navigateToGame}>
           {language === "español" ? "INICIAR" : "START"}
         </button>
-        <button className="transparent-button">{language === "español" ? "REANUDAR PARTIDA" : "RESUME GAME"}</button>
-      </div>
+        <button className="transparent-button">{language === "español" ? "REANUDAR PARTIDA" : "RESUME GAME"}</button> </div>
     </div>
 
   );

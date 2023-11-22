@@ -46,9 +46,9 @@ const SignUp = ({ language }) => {
       <div className="whiteBox">
         <h1 className="text"> {language === "español" ? "REGISTRARSE" : "SIGN UP"}</h1>
         {/* Content inside the white box */}
-        <input onChange={(e) => setEmailRegister(e.target.value)} className='input' type='email' placeholder={language === "español" ? "correo" : "email"}/>
+        <input onChange={(e) => setEmailRegister(e.target.value)} className='input' type='email' />
         <div style={{ padding: '10px' }}></div>
-        <input onChange={(e) => setPasswordRegister(e.target.value)} className='input' type='password' placeholder={language === "español" ? "contraseña" : "password"}/>
+        <input onChange={(e) => setPasswordRegister(e.target.value)} className='input' type='email' />
 
         <button className="button" onClick={(e) => handleRegister(e)}>
           { /*   <img

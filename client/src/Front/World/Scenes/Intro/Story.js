@@ -1,51 +1,42 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import "./Intro.css";
 
-import Alice from "../models/Alice";
+import Alice from "../models/Alice-hoodie";
 
 import { Canvas } from "@react-three/fiber";
 import { useNavigate } from "react-router-dom";
-import { authContext } from "../../../../context/AuthContext";
-import SceneDecision from "../Scene-decision/Scene-decision";
 
-import { serviceLogin } from "../../../../Services/serviceLogin";
+import SceneDecision from "../Scene-decision/Scene-decision";
 
 import Vecino from "../models/Vecino";
 import Alex from "../models/Alex";
 import Jonas from "../models/Jonas";
 import { CameraControls } from "@react-three/drei";
+import Lab from "../models/Scenarios/Lab";
+import AliceLab from "../models/Scenarios/Alice-lab";
+import Brazalete from "../models/Brazalete";
+import Bedroom from "../models/Scenarios/Bedroom";
+import Livingroom from "../models/Scenarios/Livingroom";
+import Tree from "../models/Scenarios/Tree";
+import Hospital from "../models/Scenarios/Hospital";
+import Manicomio from "../models/Scenarios/Manicomio";
+import Street from "../models/Street";
+import StreetDecision from "../models/Scenarios/Street-decision";
 
-const Story = ({ language, info, route1, route2, animation }) => {
-
-  const ServiceLogin = new serviceLogin();
-
+const Story = ({ language, id, info, route1, route2, animation }) => {
   const navigate = useNavigate();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const { id, setId, emailUser } = useContext(authContext);
   const [decision1, setDecision1] = useState(false);
   const [decision2, setDecision2] = useState(false);
-  const sumarEsce = () =>{
-    setId(id+1)
-}
+
   const changeImage = () => {
     if (currentImageIndex === info.length - 1) {
       if (decision1) {
-        sumarEsce();
-        console.log(id);
-        ServiceLogin.putUserEscenario(emailUser, id);
         navigate(route1);
       } else if (decision2) {
-        sumarEsce();
-        console.log(id);
-        ServiceLogin.putUserEscenario(emailUser, id);
-
         navigate(route2);
       }
     } else {
-      console.log(id);
-      sumarEsce();
-      ServiceLogin.putUserEscenario(emailUser, id);
-
       setCurrentImageIndex((prevIndex) => prevIndex + 1);
     }
   };
@@ -63,10 +54,18 @@ const Story = ({ language, info, route1, route2, animation }) => {
   const shouldShowAlex = info[currentImageIndex].alex === true;
   const shouldShowJonas = info[currentImageIndex].jonas === true;
   const shouldShowEyder = info[currentImageIndex].eyder === true;
+  const shouldShowAliceLab = info[currentImageIndex].aliceLab === true;
+  const shouldShowLab = info[currentImageIndex].lab === true;
+  const shouldShowBracelet = info[currentImageIndex].bracelet === true;
+  const shouldShowBedRoom = info[currentImageIndex].bedroom === true;
+  const shouldShowLivingRoom = info[currentImageIndex].livingroom === true;
+  const shouldShowTree = info[currentImageIndex].tree === true;
   const shouldShowCarl = info[currentImageIndex].carl === true;
   const shouldShowJimmy = info[currentImageIndex].jimmy === true;
-  const shouldShowNarrador = info[currentImageIndex].narrador === true;
-
+  const shouldShowHospital = info[currentImageIndex].hospital === true;
+  const shouldShowManicomio = info[currentImageIndex].manicomio === true;
+  const shouldShowStreet = info[currentImageIndex].street === true;
+  const shouldShowStreetDecision = info[currentImageIndex].street_decision === true;
 
   return (
     <div
@@ -77,15 +76,40 @@ const Story = ({ language, info, route1, route2, animation }) => {
         height: "100vh",
       }}
     >
-      <Canvas style={{ width: "100vw", height: "80vh" }}>
+      <div style={{ transform: 'translateY(30px)' }}>
+      <Canvas style={{ width: '100vw', height: '90vh' }}>
         <CameraControls />
         <ambientLight intensity={2} />
 
-        {shouldShowAlice && <Alice animation={info[currentImageIndex].animation} rotationx={info[currentImageIndex].rotationx} rotationy={info[currentImageIndex].rotationy}/>}
+        {shouldShowAlice && (
+          <Alice
+            animation={info[currentImageIndex].animation}
+            rotationx={info[currentImageIndex].rotationx}
+            rotationz={info[currentImageIndex].rotationz}
+            rotationy={info[currentImageIndex].rotationy}
+          />
+        )}
+        {shouldShowLab && <Lab />}
+        {shouldShowHospital && <Hospital />}
+        {shouldShowStreet && <Street />}
+        {shouldShowStreetDecision && <StreetDecision />}
+        {shouldShowLab && <AliceLab animation={info[currentImageIndex].animation}
+            rotationx={info[currentImageIndex].rotationx}
+            rotationz={info[currentImageIndex].rotationz}
+            rotationy={info[currentImageIndex].rotationy}
+            positionx={info[currentImageIndex].positionx}
+            positionz={info[currentImageIndex].positionz}
+            positiony={info[currentImageIndex].positiony}/>}
         {shouldShowEyder && <Vecino />}
+        {shouldShowBracelet && <Brazalete />}
         {shouldShowAlex && <Alex />}
         {shouldShowJonas && <Jonas />}
+        {shouldShowBedRoom && <Bedroom />}
+        {shouldShowLivingRoom && <Livingroom />}
+        {shouldShowTree && <Tree />}
+        {shouldShowManicomio && <Manicomio />}
       </Canvas>
+    </div>
       <div>
         <SceneDecision
           text={
