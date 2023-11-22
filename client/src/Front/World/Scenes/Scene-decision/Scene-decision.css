@@ -11,10 +11,7 @@
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-<<<<<<< HEAD
-=======
     user-select: none;
->>>>>>> b2449f6d195279d569403119ae26fbdf3d52120a
   }
   
   /* Style the text inside the box */
