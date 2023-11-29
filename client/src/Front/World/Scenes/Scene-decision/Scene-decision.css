@@ -51,4 +51,8 @@
     background-color: black;
     color: white;
   }
+
+  .content:hover{
+    cursor: pointer;
+  }
   

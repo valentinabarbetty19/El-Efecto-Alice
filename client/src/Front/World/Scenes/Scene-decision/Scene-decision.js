@@ -23,7 +23,7 @@ const SceneDecision = ({
           <div className="button-container">
             {animation === 0 ? (
               <div>
-                {decision1 !== null && (
+                {/* {decision1 !== null && (
                   <button
                     className="button-outline"
                     onClick={() => {
@@ -42,7 +42,7 @@ const SceneDecision = ({
                   >
                     {decision2}
                   </button>
-                )}
+                )} */}
               </div>
             ) : animation === 1 ? (
               <img
