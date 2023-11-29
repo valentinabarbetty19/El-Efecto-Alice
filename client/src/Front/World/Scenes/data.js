@@ -723,7 +723,7 @@ export const bifur1Array = [
   {
     //ANIMACIÓN 3D
     id: 34,
-    // imageUrl: "/assets/img/scenarios/laboratory.png",
+    imageUrl: "/assets/img/scenarios/fondo-bifur11.png",
     mensaje: "Alice: ¿Qué pasta debo tomar? ¿azul o roja?",
     message: "Alice: Which pill should I take? blue or red?",
     // decision1en: "Blue",
@@ -733,7 +733,7 @@ export const bifur1Array = [
     pastillas: true,
     mano: true,
     // alice: true,
-    hospital: true,
+    // hospital: true,
     animation: 0,
     id_scena: 1,
     rotationx: 0,
