@@ -1,57 +1,70 @@
-import React, { useRef, useMemo, useContext, createContext } from "react";
-import { useGLTF, Merged } from "@react-three/drei";
 
-const context = createContext();
-export function Instances({ children, ...props }) {
-  const { nodes } = useGLTF("/assets/models/pills.glb");
-  const instances = useMemo(
-    () => ({
-      PillPill: nodes.Pill3_Pill3_0,
-      PillMaterial: nodes["Pill4_Material_#24_0"],
-    }),
-    [nodes]
-  );
-  return (
-    <Merged meshes={instances} {...props}>
-      {(instances) => (
-        <context.Provider value={instances} children={children} />
-      )}
-    </Merged>
-  );
-}
+import React, { useRef, useState } from "react";
+import { Html, useGLTF } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 
-export function Model(props) {
-  const instances = useContext(context);
+export function Pastillas (props) {
+  const { nodes, materials } = useGLTF("/assets/models/Pastillas/pills.glb");
+
+  const [hoveredRed, setHoveredRed] = useState(false);
+  const [hoveredBlue, setHoveredBlue] = useState(false);
+  const [activeBlue, setActiveBlue] = useState(false)
+  const [activeRed, setActiveRed] = useState(false)
+  const pillBlueRef = useRef();
+  const pillRedRef = useRef();
+
+  useFrame((state, delta) => {
+    const time = state.clock.elapsedTime;
+
+    // Animación de escala para las pastillas
+    const scaleValue = 1.3 + Math.sin(time) * 0.2; 
+
+    pillRedRef.current.scale.set(scaleValue, scaleValue, scaleValue);
+    pillBlueRef.current.scale.set(scaleValue, scaleValue, scaleValue);
+  });
+
+
   return (
     <group {...props} dispose={null}>
-      <group name="Sketchfab_Scene">
-        <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
-          <group
-            name="57467a747b6b48a6b6ab702891d1a315fbx"
-            rotation={[Math.PI / 2, 0, 0]}
-            scale={0.025}
-          >
-            <group name="RootNode">
-              <group
-                name="Pill3"
-                position={[0.209, 0, -0.173]}
-                rotation={[-Math.PI / 2, 0, -Math.PI / 3]}
-              >
-                <instances.PillPill name="Pill3_Pill3_0" />
-              </group>
-              <group
-                name="Pill4"
-                position={[-0.209, 0, 0.173]}
-                rotation={[-Math.PI / 2, 0, 2.531]}
-              >
-                <instances.PillMaterial name="Pill4_Material_#24_0" />
-              </group>
-            </group>
-          </group>
-        </group>
+      {/* <Html>
+          <input type="text" name="pills" />
+      </Html> */}
+      <group scale={1.3}
+       position={[0, 1, -1.2]} 
+       rotation={[1, 0, 0]} 
+      //  onPointerOver={() => {console.log("Mouse sobre la pastilla");setHoveredRed(true)}}
+       >
+
+        {/* Azul */}
+        <mesh ref={pillBlueRef}
+          castShadow
+          receiveShadow
+          geometry={nodes["Pill4_Material_#24_0"].geometry}
+          material={materials.Material_24}
+          position={[-0.509, 0.3, 0.173]}
+          rotation={[-Math.PI / 2, 0, 2.531]}
+          onClick={() => console.log("Ppill azul")}
+          onPointerOver={() => setHoveredBlue(true)}
+          onPointerOut={() => setHoveredBlue(false)}
+          cursor={hoveredBlue ? "pointer" : "auto"}
+        />
+
+        {/* Roja */}
+        <mesh ref={pillRedRef}
+          castShadow
+          receiveShadow
+          geometry={nodes.Pill3_Pill3_0.geometry}
+          material={materials.Pill3}
+          position={[0.509, 0, -0.173]}
+          rotation={[-Math.PI / 2, 0, -Math.PI / 3]}
+          onClick={() => setActiveRed(activeRed)}
+          onPointerOver={() => setHoveredRed(true)}
+          onPointerOut={() => setHoveredRed(false)}
+          cursor={hoveredRed ? "pointer" : "auto"}
+        />
       </group>
     </group>
   );
 }
-
-useGLTF.preload("/assets/models/pills.glb");
+export default Pastillas;
+useGLTF.preload("/assets/models/Pastillas/pills.glb");

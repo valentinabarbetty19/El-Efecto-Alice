@@ -9,10 +9,12 @@ import { useNavigate } from "react-router-dom";
 import SceneDecision from "../Scene-decision/Scene-decision";
 
 import Vecino from "../models/Vecino";
+import Pastillas from "../models/Pastillas";
 import Alex from "../models/Alex";
 import Jonas from "../models/Jonas";
 import { CameraControls } from "@react-three/drei";
 import Lab from "../models/Scenarios/Lab";
+import Hand from "../models/Scenarios/Hand";
 import AliceLab from "../models/Scenarios/Alice-lab";
 import Brazalete from "../models/Brazalete";
 import Bedroom from "../models/Scenarios/Bedroom";
@@ -64,6 +66,8 @@ const Story = ({ language, id, info, route1, route2, animation }) => {
   const shouldShowJimmy = info[currentImageIndex].jimmy === true;
   const shouldShowHospital = info[currentImageIndex].hospital === true;
   const shouldShowManicomio = info[currentImageIndex].manicomio === true;
+  const shouldShowPastillas = info[currentImageIndex].pastillas === true;
+  const shouldShowMano = info[currentImageIndex].mano === true;
   const shouldShowStreet = info[currentImageIndex].street === true;
   const shouldShowStreetDecision = info[currentImageIndex].street_decision === true;
 
@@ -100,6 +104,8 @@ const Story = ({ language, id, info, route1, route2, animation }) => {
             positionx={info[currentImageIndex].positionx}
             positionz={info[currentImageIndex].positionz}
             positiony={info[currentImageIndex].positiony}/>}
+        {shouldShowPastillas && <Pastillas />}
+        {shouldShowMano && <Hand />}
         {shouldShowEyder && <Vecino />}
         {shouldShowBracelet && <Brazalete />}
         {shouldShowAlex && <Alex />}

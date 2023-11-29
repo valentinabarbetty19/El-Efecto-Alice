@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { bifur2Array } from "./data";
+import { bifur2Array } from "../data";
 import { authContext } from "../../../../context/AuthContext";
 
 
