@@ -733,7 +733,7 @@ export const bifur1Array = [
     pastillas: true,
     mano: true,
     // alice: true,
-    // hospital: true,
+    hospital: true,
     animation: 0,
     id_scena: 1,
     rotationx: 0,
@@ -745,7 +745,7 @@ export const bifur1Array = [
     sonido: 0,
   },
 ];
-export const bifur11Array = [-
+export const bifur11Array = [
   {
     id: 35,
     imageUrl: "/assets/img/scenarios/laboratory.png",
