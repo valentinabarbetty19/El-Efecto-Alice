@@ -1,6 +1,6 @@
 export const introArray = [
   {
-    // lab - animacion lab - estudiando
+    // Personaje: Alice lab - Animación: Cards
     id: 1,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
@@ -48,6 +48,8 @@ export const introArray = [
   }, //brazalete
   {
     //habitación - triste - alice llorando - musica sad
+
+    //Personaje: Alice Hoodie - Animación: sitting disbelief - Sonido: crying
     id: 3,
    // imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
@@ -69,9 +71,9 @@ export const introArray = [
     positionz: -5,
     animation: 0,
     sonido: 0,
-  }, //añadir modelosd e hijo y esposo
+  }, 
   {
-    //mismo del 3
+    //Personaje: Alice Hoodie - Animación: sitting disbelief - Sonido: crying
     id: 4,
     //imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
@@ -91,6 +93,7 @@ export const introArray = [
   },
   {
     //alice lab decepcionada con el brazalete ********************
+    // personaje: Alice Hoodie - animación: looking around 
     id: 5,
     imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
@@ -110,7 +113,7 @@ export const introArray = [
     rotationz: 0,
   },
   {
-    //alice lab decepcionada con el brazalete ********************
+    //Personaje: Alice Hoodie - animación: sitting disbelief
     id: 6,
     imageUrl: "/assets/img/scenarios/car.png",
     mensaje: "¿Jonas? No, no puede ser... ¿Qué me pasa?",
@@ -128,9 +131,7 @@ export const introArray = [
     rotationz: 0,
   },
   {
-    //brazalete - ventana el arbol ve al hijo - va a investigar - rayo
-
-    //img 3d ventana arbol dia lluvioso
+    //P: Alice Hoodie - animación: sitting disbelief
     id: 7,
     imageUrl: "/assets/img/scenarios/thundersorm.png",
     mensaje:
@@ -149,9 +150,8 @@ export const introArray = [
     rotationz: 0,
   },
   {
-    //brazalete - ventana el arbol ve al hijo - va a investigar - rayo
-
-    //img 3d ventana arbol dia lluvioso
+    
+    //personaje: jonas (el hijo) parado al lado del arbol **** - hacer lluvia?????? - sonido de lluvia con truenos
     id: 8,
     mensaje:
       "En una tarde lluviosa, cerca de su casa, Alice vio algo cerca a un viejo árbol, cree que es su hijo.",
@@ -168,9 +168,7 @@ export const introArray = [
     rotationz: 0,
   },
   {
-    //brazalete - ventana el arbol ve al hijo - va a investigar - rayo
-
-    //arbol sonido grito y rayo fondo negro
+  //sonido: gritoTrueno
     id: 9,
     imageUrl: "/assets/img/scenarios/thundersorm.png",
     mensaje: "Al ir a investigar, Fue alcanzada por un rayo.",
@@ -186,7 +184,8 @@ export const introArray = [
     rotationz: 0,
   },
   {
-    // al lado del arbol esta aturdida 
+    
+    //P: Alice Hoodie - animación: agony sonido: lluviaLlanto 
     id: 10,
    // imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
@@ -204,7 +203,7 @@ export const introArray = [
     rotationz: 0,
   },
   {
-    //sentada en la sala mirando el brazalete
+    //NO SE :C *********
     id: 11,
     imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
@@ -223,7 +222,7 @@ export const introArray = [
     rotationz: 0,
   },
   {
-    //cuarto de alice - llorando de felicidad 2D
+    //P: Alice Jeans (crying), Jonas y esposo(excited) 
     id: 12,
     imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
@@ -242,7 +241,7 @@ export const introArray = [
     rotationz: 0,
   },
   {
-    //sala bailando 3D
+    //P_ ALice jeans - jonas **** y esposo - aniamcion: dancing - sonido: don't go breaking my heart
     id: 13,
     imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
@@ -262,7 +261,7 @@ export const introArray = [
     rotationz: 0,
   },
   {
-    //cuarto confundida 
+    //P: Alice hoodie - aniamcion: focus
     id: 14,
     imageUrl: "/assets/img/scenarios/car.png",
     mensaje:
@@ -281,7 +280,7 @@ export const introArray = [
     rotationz: 0,
   },
   {
-    //en la puerta de la casa
+    //sonido: door knocking
     id: 15,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
@@ -299,7 +298,7 @@ export const introArray = [
     rotationz: 0,
   },
   {
-    //puerta alice y vecino hablando
+    //Liam: talking - Alice hoodie: idle
     id: 16,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
@@ -316,6 +315,7 @@ export const introArray = [
     rotationz: 0,
   },
   {
+    //Alice hoodie: talking - Liam: idle
     id: 17,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
@@ -339,6 +339,7 @@ export const introArray = [
     rotationz: 0,
   },
   {
+    //Liam: talking - Alice hoodie: idle
     id: 18,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
@@ -361,6 +362,7 @@ export const introArray = [
     rotationz: 0,
   },
   {
+    //Alice hoodie: talking - Liam: idle
     id: 19,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
@@ -383,6 +385,7 @@ export const introArray = [
     rotationz: 0,
   },
   {
+    //Liam: talking - Alice hoodie: idle
     id: 20,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
@@ -406,6 +409,7 @@ export const introArray = [
     rotationz: 0,
   },
   {
+    //Alice hoodie: talking - Liam: idle
     id: 21,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje: "Alice: No estoy segura de cómo ocurrió esto, pero...",
@@ -427,6 +431,7 @@ export const introArray = [
     rotationz: 0,
   },
   {
+    //Alice hoodie: asking 
     id: 22,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje: "Alice: ¿Qué hago? ¿Voy o no voy?",
@@ -456,6 +461,7 @@ export const introArray = [
 ];
 export const bifur1Array = [
   {
+    //Alice: talking - Liam: idle
     id: 23,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
@@ -484,6 +490,7 @@ export const bifur1Array = [
     sonido: 0,
   },
   {
+    //Liam: talking - Alice: idle
     id: 24,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
@@ -512,6 +519,7 @@ export const bifur1Array = [
     sonido: 0,
   },
   {
+    //Alice: talking - Liam: idle
     id: 25,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
@@ -540,7 +548,7 @@ export const bifur1Array = [
     sonido: 0,
   },
   {
-    //hospital
+    //Alice: idle
     id: 26,
    // imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
@@ -564,6 +572,7 @@ export const bifur1Array = [
     sonido: 0,
   },
   {
+    //Doctor: talking - Alice: idle
     id: 27,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
@@ -587,6 +596,7 @@ export const bifur1Array = [
     sonido: 0,
   },
   {
+//Alice: talking - doctor: idle
     id: 28,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
@@ -610,6 +620,7 @@ export const bifur1Array = [
     sonido: 0,
   },
   {
+    //Doctor: talking - Alice: idle
     id: 29,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
@@ -633,6 +644,7 @@ export const bifur1Array = [
     sonido: 0,
   },
   {
+    //Alice: talking - Doctor: idle
     id: 30,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje: "Alice: No estoy segura, Doctor Carl. ¿Qué tipo de pastillas son?",
@@ -793,6 +805,7 @@ export const bifur11Array = [-
   {
     //imagen de premio nobel ella esta feliz saliudando al publico - la img de fondo se cambia a la de un manicomio - ella haciendo 
     //la misma accion sonidos de publico que luego se van apagando mientras se cambia el fondo al manicomio
+    // Personaje: Alice Nobel - Animación: standing arguing - Sonido: audience clapping
     id: 37,
     imageUrl: "/assets/img/scenarios/award-stage.png",
     mensaje:
@@ -817,6 +830,7 @@ export const bifur11Array = [-
   {
     //imagen de premio nobel ella esta feliz saliudando al publico - la img de fondo se cambia a la de un manicomio - ella haciendo 
     //la misma accion sonidos de publico que luego se van apagando mientras se cambia el fondo al manicomio
+    //Personaje: Alice Hoodie - Animación - Greeting - Sonido: Aplausos borrosos ****???
     id: 38,
     imageUrl: "/assets/img/scenarios/award-stage.png",
     mensaje:
@@ -840,6 +854,7 @@ export const bifur11Array = [-
     sonido: 0,
   },
   {
+    //P: doctor jimin y carl - A: jimin talking carl idle - S:
     id: 39,
     imageUrl: "/assets/img/scenarios/hospital_aisle.png",
     mensaje:
@@ -862,6 +877,7 @@ export const bifur11Array = [-
     sonido: 0,
   },
   {
+    //P: carl y jimin - A:carl hablando jimin idle - S:
     id: 40,
     imageUrl: "/assets/img/scenarios/hospital_aisle.png",
     mensaje:
@@ -890,6 +906,7 @@ export const bifur11Array = [-
     sonido: 0,
   },
   {
+    //igual q anteriores
     id: 41,
     imageUrl: "/assets/img/scenarios/hospital_aisle.png",
     mensaje: "Doctor Jimin: Carl, ¿tomó Alice la pastilla azul que le ofrecimos?",
@@ -943,9 +960,11 @@ export const bifur11Array = [-
     positionz: 0,
     sonido: 0,
   },
+  //
 ];
 export const bifur12Array = [
   {
+    ////P: alice hoodie - A:talking - S:
     id: 43,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
@@ -970,6 +989,7 @@ export const bifur12Array = [
     sonido: 0,
   },
   {
+    //P: doctor y alcie hoodie - A: - S:
     id: 44,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
@@ -993,6 +1013,7 @@ export const bifur12Array = [
     sonido: 0,
   },
   {
+    //P: doctores - A: - S:
     id: 45,
     imageUrl: "/assets/img/scenarios/hospital_aisle.png",
     mensaje: "Doctor Jimin: Carl, ¿qué ha sucedido con la paciente?",
@@ -1013,6 +1034,7 @@ export const bifur12Array = [
     sonido: 0,
   },
   {
+    //P:doctores - A: - S:
     id: 46,
     imageUrl: "/assets/img/scenarios/hospital_aisle.png",
     mensaje:
@@ -1035,6 +1057,7 @@ export const bifur12Array = [
     sonido: 0,
   },
   {
+    //P: doctores - A: - S:
     id: 47,
     imageUrl: "/assets/img/scenarios/hospital_aisle.png",
     mensaje: "Doctor Jimin: Nadie puede salir de aquí, eh?",
@@ -1061,8 +1084,7 @@ export const bifur12Array = [
     sonido: 0,
   },
   {
-    // animacion de risa de los dos doctores
-    id: 48,
+    // //P: doctores - A: laughing - S:
     imageUrl: "/assets/img/scenarios/hospital_aisle.png",
     mensaje:
       "Doctor Jimin: Se estaba haciendo muchas preguntas, teníamos que deshacernos de ella. (Ambos ríen)",
@@ -1086,6 +1108,7 @@ export const bifur12Array = [
 ];
 export const bifur2Array = [
   {
+    //P: alice hoodie y vecino - A: - S:
     id: 49,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
@@ -1108,7 +1131,7 @@ export const bifur2Array = [
     sonido: 0,
   },
   {
-    //sala
+    //P: alice hoodie - A: sitting rubbing arm - S:
     id: 50,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
@@ -1132,7 +1155,7 @@ export const bifur2Array = [
     sonido: 0,
   },
   {
-    //
+    ////P: alice jeans - A: drunk run - S:
     id: 51,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
@@ -1156,7 +1179,7 @@ export const bifur2Array = [
     sonido: 0,
   },
   {
-    //preocupada - corriendo por la sala
+    //P: alcie jeans - A: corriendo running tired - S:
     id: 52,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
@@ -1180,7 +1203,7 @@ export const bifur2Array = [
     sonido: 0,
   },
   {
-  //Alice corriendo
+  //P: alice jeans - A: running drunk  - S:
     id: 53,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje:
@@ -1227,6 +1250,7 @@ export const bifur2Array = [
 ];
 export const bifur21Array = [
   {
+    //P:alice jeans  - A: standing yell - S:
     id: 55,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje: "¡Esperen!",
@@ -1248,7 +1272,7 @@ export const bifur21Array = [
     sonido: 0,
   },
   {
-    //sonidos de autos chocando ella gritando y llorando - fondo negro
+    ////P: - A: - S: car crash and scream
     id: 56,
     mensaje:
       "Alice ve frente a sus ojos cómo su familia pierde la vida en el accidente.",
@@ -1270,6 +1294,7 @@ export const bifur21Array = [
     sonido: 0,
   },
   {
+    //P: alice jeans - A: *** - S:
     id: 57,
     mensaje:
       "Decide hacer otro viaje al pasado, y esta vez ella ya sabe cómo han ocurrido las cosas.",
@@ -1291,7 +1316,7 @@ export const bifur21Array = [
     sonido: 0,
   },
   {
-    //sonidos de frenos y ella gritando / fondo negro
+    //sonidos: car crash / fondo negro
     id: 58,
     mensaje:
       "Ella es la que se accidenta con aquel camión y muere, y su familia se salva.",
@@ -1315,7 +1340,7 @@ export const bifur21Array = [
 ];
 export const bifur22Array = [
   {
-    //calle y el auto - alice agitada el esposo le habla
+    ///P: carro alice jeans- A: running tired - S:
     id: 59,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
@@ -1339,6 +1364,7 @@ export const bifur22Array = [
     sonido: 0,
   },
   {
+    //alice: talking - esposo idle
     id: 60,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
@@ -1475,7 +1501,7 @@ export const bifur22Array = [
     sonido: 0,
   },
   {
-    //bailando en la casa felices - alice baila raro mas lento preocupada
+    //alice dress - esposo BAILANDO 
     id: 66,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
@@ -1499,7 +1525,7 @@ export const bifur22Array = [
     sonido: 0,
   },
   {
-    //puerta de la casa
+    //sonido toca puerta
     id: 67,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje: "Sin embargo, el vecino regresa para saber cómo sigue.",
@@ -1520,7 +1546,7 @@ export const bifur22Array = [
     sonido: 0,
   },
   {
-    //puerta de la casa
+    //alice y liam 
     id: 68,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
     mensaje: "Liam: Hola Alice, cómo sigues?",
@@ -1608,7 +1634,7 @@ export const bifur22Array = [
     sonido: 0,
   },
   {
-    //agonia
+    //
     id: 72,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
@@ -1635,7 +1661,7 @@ export const bifur22Array = [
 export const bifur221Array = [
   
   {
-    //manicomio
+   
     id: 73,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje: "Liam: Alice, tu familia no está aquí",
@@ -1657,7 +1683,7 @@ export const bifur221Array = [
     sonido: 0,
   },
   {
-    //manicomio
+    //alice dress: looking around
     id: 74,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje: "Alice: estaban aquí hace un segundo. Lo juro",
@@ -1679,7 +1705,7 @@ export const bifur221Array = [
     sonido: 0,
   },
   {
-    //manicomio
+    //liam talking on the phone
     id: 75,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje: "Liam: Yo... Creo que es mejor llamar una ambulancia",
@@ -1701,7 +1727,7 @@ export const bifur221Array = [
     sonido: 0,
   },
   {
-    //manicomio
+    //alice hoodie en el manicomio agony
     id: 76,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje: "Alice es llevada a un hospital psiquiátrico, donde la diagnostican con esquizofrenia",
@@ -1748,6 +1774,7 @@ export const bifur222Array = [
     sonido: 0,
   },
   {
+    //alice dress agony
     id: 78,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
@@ -1795,7 +1822,7 @@ export const bifur222Array = [
     sonido: 0,
   },
   {
-    //llorando sentada en la camilla 
+    //alice hoodie sitting disbelief
     id: 80,
     imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
