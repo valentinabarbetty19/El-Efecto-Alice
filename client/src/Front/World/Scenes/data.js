@@ -11,7 +11,7 @@ export const introArray = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    aliceDress: true,
+    vecino: true,
     lab: true,
     animation: 2,
     id_scena: 1,

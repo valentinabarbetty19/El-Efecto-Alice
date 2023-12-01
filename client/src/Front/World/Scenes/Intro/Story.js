@@ -10,12 +10,12 @@ import SceneDecision from "../Scene-decision/Scene-decision";
 
 import Vecino from "../models/Vecino";
 import Pastillas from "../models/Pastillas";
-import Alex from "../models/Alex";
+import Alex, { Esposo } from "../models/Alex";
 import Jonas from "../models/Jonas";
 import { CameraControls } from "@react-three/drei";
 import Lab from "../models/Scenarios/Lab";
 import Hand from "../models/Scenarios/Hand";
-import AliceLab from "../models/Scenarios/Alice-lab";
+import AliceLab from "../models/Alice-lab";
 import Brazalete from "../models/Brazalete";
 import Bedroom from "../models/Scenarios/Bedroom";
 import Livingroom from "../models/Scenarios/Livingroom";
@@ -26,6 +26,10 @@ import Street from "../models/Street";
 import StreetDecision from "../models/Scenarios/Street-decision";
 import AliceJeans from "../models/AliceJeans";
 import AliceParty from "../models/Alice-party";
+import AliceHoodie2 from "../models/AliceHoodie2";
+import AliceNobel from "../models/AliceNobel";
+import DoctorCarl from "../models/DoctorCarl";
+import DoctorJimin from "../models/DoctorJimin";
 
 const Story = ({ language, id, info, route1, route2, animation }) => {
   const navigate = useNavigate();
@@ -74,7 +78,12 @@ const Story = ({ language, id, info, route1, route2, animation }) => {
   const shouldShowStreetDecision = info[currentImageIndex].street_decision === true;
   const shouldShowAliceJeans = info[currentImageIndex].aliceJeans === true;
   const shouldShowAliceDress = info[currentImageIndex].aliceDress === true;
-
+  const shouldShowAliceHoodie2 = info[currentImageIndex].aliceHoodie2 === true;
+  const shouldShowAliceNobel = info[currentImageIndex].aliceNobel === true;
+  const shouldShowDoctorCarl = info[currentImageIndex].doctorCarl === true;
+  const shouldShowDoctorJimin = info[currentImageIndex].doctorJimin === true;
+  const shouldShowEsposo = info[currentImageIndex].esposo === true;
+  const shouldShowVecino = info[currentImageIndex].vecino === true;
   return (
     <div
       style={{
@@ -101,6 +110,12 @@ const Story = ({ language, id, info, route1, route2, animation }) => {
         {shouldShowHospital && <Hospital />}
         {shouldShowAliceJeans && <AliceJeans />}
         {shouldShowAliceDress && <AliceParty />}
+        {shouldShowAliceHoodie2 && <AliceHoodie2 />}
+        {shouldShowAliceNobel && <AliceNobel />}
+        {shouldShowDoctorCarl && <DoctorCarl />}
+        {shouldShowDoctorJimin && <DoctorJimin />}
+        {shouldShowVecino && <Vecino />}
+        {shouldShowEsposo && <Esposo />}
         {shouldShowStreet && <Street />}
         {shouldShowStreetDecision && <StreetDecision />}
         {shouldShowLab && <AliceLab animation={info[currentImageIndex].animation}
