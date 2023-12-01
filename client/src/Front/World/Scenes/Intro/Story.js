@@ -24,6 +24,8 @@ import Hospital from "../models/Scenarios/Hospital";
 import Manicomio from "../models/Scenarios/Manicomio";
 import Street from "../models/Street";
 import StreetDecision from "../models/Scenarios/Street-decision";
+import AliceJeans from "../models/AliceJeans";
+import AliceParty from "../models/Alice-party";
 
 const Story = ({ language, id, info, route1, route2, animation }) => {
   const navigate = useNavigate();
@@ -70,6 +72,8 @@ const Story = ({ language, id, info, route1, route2, animation }) => {
   const shouldShowMano = info[currentImageIndex].mano === true;
   const shouldShowStreet = info[currentImageIndex].street === true;
   const shouldShowStreetDecision = info[currentImageIndex].street_decision === true;
+  const shouldShowAliceJeans = info[currentImageIndex].aliceJeans === true;
+  const shouldShowAliceDress = info[currentImageIndex].aliceDress === true;
 
   return (
     <div
@@ -95,6 +99,8 @@ const Story = ({ language, id, info, route1, route2, animation }) => {
         )}
         {shouldShowLab && <Lab />}
         {shouldShowHospital && <Hospital />}
+        {shouldShowAliceJeans && <AliceJeans />}
+        {shouldShowAliceDress && <AliceParty />}
         {shouldShowStreet && <Street />}
         {shouldShowStreetDecision && <StreetDecision />}
         {shouldShowLab && <AliceLab animation={info[currentImageIndex].animation}
