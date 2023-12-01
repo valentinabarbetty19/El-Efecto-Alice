@@ -109,13 +109,14 @@ const Story = ({ language, id, info, route1, route2, animation }) => {
         {shouldShowLab && <Lab />}
         {shouldShowHospital && <Hospital />}
         {shouldShowAliceJeans && <AliceJeans />}
-        {shouldShowAliceDress && <AliceParty />}
-        {shouldShowAliceHoodie2 && <AliceHoodie2 />}
+        {shouldShowAliceDress && <AliceParty animation={info[currentImageIndex].animation}
+        />}
+        {shouldShowAliceHoodie2 && <AliceHoodie2 animation={info[currentImageIndex].animation}/>}
         {shouldShowAliceNobel && <AliceNobel />}
         {shouldShowDoctorCarl && <DoctorCarl />}
         {shouldShowDoctorJimin && <DoctorJimin />}
-        {shouldShowVecino && <Vecino />}
-        {shouldShowEsposo && <Esposo />}
+        {shouldShowVecino && <Vecino animation={info[currentImageIndex].animation}/>}
+        {shouldShowEsposo && <Esposo animation={info[currentImageIndex].animation}/>}
         {shouldShowStreet && <Street />}
         {shouldShowStreetDecision && <StreetDecision />}
         {shouldShowLab && <AliceLab animation={info[currentImageIndex].animation}
