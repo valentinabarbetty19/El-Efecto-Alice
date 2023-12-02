@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Scene-decision.css";
-
+//import Typewriter from "typewriter-effect";
+import Typewriter from "../../Typewriter";
 const SceneDecision = ({
   language,
   text,
@@ -11,7 +12,7 @@ const SceneDecision = ({
   setDecision2,
   onClick,
   animation = 0,
-  photo
+  photo,
 }) => {
   document.body.style.backgroundImage = `url(${img})`;
 
@@ -21,11 +22,12 @@ const SceneDecision = ({
         <div className="content" onClick={onClick}>
           <p>{text}</p>
           <div className="button-container">
-            {animation === 0 ? (
+            {animation === 72 ? (
               <div>
-                 {decision1 !== null && (
+                {decision1 !== null && (
                   <button
                     className="button-outline"
+                    style={{ marginRight: '10px' }} 
                     onClick={() => {
                       setDecision1(true);
                     }}
@@ -36,21 +38,22 @@ const SceneDecision = ({
                 {decision2 !== null && (
                   <button
                     className="button-outline"
+                    style={{ marginLeft: '10px' }}
                     onClick={() => {
                       setDecision2(true);
                     }}
                   >
                     {decision2}
                   </button>
-                )} 
+                )}
               </div>
             ) : animation === 1 ? (
               <img
-                src= {photo} 
+                src={photo}
                 alt="GIF"
                 style={{
-                  width: "200px", 
-                  height: "150px", 
+                  width: "200px",
+                  height: "150px",
                 }}
               />
             ) : null}
