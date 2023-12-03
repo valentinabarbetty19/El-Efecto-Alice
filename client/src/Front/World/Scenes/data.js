@@ -13,7 +13,7 @@ export const introArray = [
     decision2es: null,
     //vecino: true,
     //lab: true,
-    animation: 2,
+    animation: 0,
     id_scena: 1,
     rotationx: Math.PI / 2,//Math.PI/5,
     rotationy: Math.PI / -1,//Math.PI / 1.2,
@@ -36,6 +36,7 @@ export const introArray = [
     decision1es: null,
     decision2es: null,
     bracelet: true,
+    video: true,
     id_scena: 1,
     rotationx: 0,
     rotationy: Math.PI / 2,
@@ -43,7 +44,7 @@ export const introArray = [
     positionx: 0,
     positiony: 0,
     positionz: 0,
-    animation: 0,
+    animation: 2,
     sonido: 0,
   }, //brazalete
   {

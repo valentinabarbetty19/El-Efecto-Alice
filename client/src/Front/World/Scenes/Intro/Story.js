@@ -30,6 +30,7 @@ import AliceHoodie2 from "../models/AliceHoodie2";
 import AliceNobel from "../models/AliceNobel";
 import DoctorCarl from "../models/DoctorCarl";
 import DoctorJimin from "../models/DoctorJimin";
+import Video from "../Video/Video";
 
 const Story = ({ language, id, info, route1, route2, animation }) => {
   const navigate = useNavigate();
@@ -138,32 +139,38 @@ const Story = ({ language, id, info, route1, route2, animation }) => {
         {shouldShowManicomio && <Manicomio />}
       </Canvas>
     </div>
-      <div>
-        <SceneDecision
-          text={
-            language === "español"
-              ? info[currentImageIndex].mensaje
-              : info[currentImageIndex].message
-          }
-          img={info[currentImageIndex].imageUrl}
-          onClick={() => changeImage()}
-          decision1={
-            language === "español"
-              ? info[currentImageIndex].decision1es
-              : info[currentImageIndex].decision1en
-          }
-          decision2={
-            language === "español"
-              ? info[currentImageIndex].decision2es
-              : info[currentImageIndex].decision2en
-          }
-          setDecision1={setDecision1}
-          setDecision2={setDecision2}
-          animation={info[currentImageIndex].animation}
-          photo={info[currentImageIndex].photo}
-          // onClick={changeDecision}
-        />
-      </div>
+    <div>
+      {info[currentImageIndex].animation === 2 ? (
+        <Video/>
+      ) : (
+        <div>
+          <SceneDecision
+            text={
+              language === 'español'
+                ? info[currentImageIndex].mensaje
+                : info[currentImageIndex].message
+            }
+            img={info[currentImageIndex].imageUrl}
+            onClick={() => changeImage()}
+            decision1={
+              language === 'español'
+                ? info[currentImageIndex].decision1es
+                : info[currentImageIndex].decision1en
+            }
+            decision2={
+              language === 'español'
+                ? info[currentImageIndex].decision2es
+                : info[currentImageIndex].decision2en
+            }
+            setDecision1={setDecision1}
+            setDecision2={setDecision2}
+            animation={info[currentImageIndex].animation}
+            photo={info[currentImageIndex].photo}
+            // onClick={changeDecision}
+          />
+        </div>
+      )}
+    </div>
     </div>
   );
 };
