@@ -4,7 +4,7 @@
   /* Stack items vertically */
   justify-content: center;
   align-items: center;
-  margin-top: 300px;
+  height: 100vh; /* Ajusta la altura al 100% de la ventana para centrar verticalmente */
 }
 
 .transparent-button {
@@ -16,10 +16,10 @@
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
   display: block;
-  margin-bottom: 20px; /* Increase the margin between buttons */
-  margin-top: 10px; /* Increase the margin between buttons and text */
+  margin-bottom: 20px; /* Aumenta el margen entre los botones */
   text-decoration: none !important;
 }
+
 
 .index {
   background-color: #000000;
@@ -69,7 +69,8 @@
 }
 
 .index .speaker-filled-audio,
-.index .book {
+.index .book, 
+.index .home {
   height: 50px;
   width: 50px;
   object-fit: cover;
@@ -113,13 +114,12 @@
   font-family: "Kelly Slab", Helvetica;
   font-size: 90px;
   font-weight: 400;
-  left: 50%; /* Set left to 50% */
-  transform: translateX(-50%); /* Center horizontally */
+  left: 50%;
+  transform: translateX(-50%);
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
-  top: 20%; /* Set top to 50% */
- 
+  position: absolute; /* Mantenido para centrar */
+  top: 20%; /* Ajusta según sea necesario */
 }
 
 .index .div {
@@ -127,4 +127,8 @@
   height: 100vh; /* Set the height to the viewport height */
   width: 100vw; /* Set the width to the viewport width */
   position: relative;
+}
+
+.index .speaker-filled-audio {
+  left: 185px; /* Adjust the left position to create horizontal spacing */
 }

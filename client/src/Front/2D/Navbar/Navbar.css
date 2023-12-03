@@ -96,23 +96,23 @@
   }
   
   .index .user {
-    height: 50px;
+    /* height: 50px; */
     width: 50px;
     object-fit: cover;
     position: fixed; /* Change to fixed position */
     top: 10px; /* Adjust the top position for the distance from the top */
     right: 10px; /* Adjust the right position for the distance from the right */
   }
+  
   .index .home {
-    height: 70px;
+    height: 50px;
     left: 355px;
     object-fit: cover;
     position: absolute;
     top: 29px;
-    width: 70px;
+    width: 50px;
   }
-  
-  
+
   .index .text-wrapper {
     color: #ffffff;
     font-family: "Kelly Slab", Helvetica;
