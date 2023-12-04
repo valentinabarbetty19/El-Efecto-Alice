@@ -1,26 +1,30 @@
-import React from 'react';
-import ReactPlayer from 'react-player';
-
+import React, { useRef, useEffect } from 'react';
 
 const Video = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    video.src = '/assets/video/Wormhole.mp4'; // Replace with the path to your video file
+    video.loop = false;
+    video.muted = true;
+    video.playsInline = true;
+
+    const onLoadedMetadata = () => {
+      video.play();
+    };
+
+    video.addEventListener('loadedmetadata', onLoadedMetadata);
+
+    return () => {
+      video.removeEventListener('loadedmetadata', onLoadedMetadata);
+      video.pause();
+    };
+  }, []);
+
   return (
-    <div className="video-background">
-      <ReactPlayer
-        url="/assets/video/Wormhole.mp4"
-        playing
-        loop
-        muted
-        width="100%"
-        height="100%"
-        style={{ position: 'absolute', top: 0, left: 0 }}
-      />
-      {/* Add other content on top of the video if needed */}
-      <div className="content">
-        <h1>Your Content Goes Here</h1>
-      </div>
-    </div>
+    <video ref={videoRef} muted playsInline style={{ width: '100%', height: '100%' }} />
   );
 };
 
-
-export default Video
+export default Video;

@@ -12,7 +12,7 @@ import Vecino from "../models/Vecino";
 import Pastillas from "../models/Pastillas";
 import Alex, { Esposo } from "../models/Alex";
 import Jonas from "../models/Jonas";
-import { CameraControls } from "@react-three/drei";
+import { CameraControls, Html } from "@react-three/drei";
 import Lab from "../models/Scenarios/Lab";
 import Hand from "../models/Scenarios/Hand";
 import AliceLab from "../models/Alice-lab";
@@ -76,7 +76,8 @@ const Story = ({ language, id, info, route1, route2, animation }) => {
   const shouldShowPastillas = info[currentImageIndex].pastillas === true;
   const shouldShowMano = info[currentImageIndex].mano === true;
   const shouldShowStreet = info[currentImageIndex].street === true;
-  const shouldShowStreetDecision = info[currentImageIndex].street_decision === true;
+  const shouldShowStreetDecision =
+    info[currentImageIndex].street_decision === true;
   const shouldShowAliceJeans = info[currentImageIndex].aliceJeans === true;
   const shouldShowAliceDress = info[currentImageIndex].aliceDress === true;
   const shouldShowAliceHoodie2 = info[currentImageIndex].aliceHoodie2 === true;
@@ -94,71 +95,84 @@ const Story = ({ language, id, info, route1, route2, animation }) => {
         height: "100vh",
       }}
     >
-      <div style={{ transform: 'translateY(30px)' }}>
-      <Canvas style={{ width: '100vw', height: '90vh' }}>
-        <CameraControls />
-        <ambientLight intensity={2} />
+      <div style={{ transform: "translateY(30px)" }}>
+      {info[currentImageIndex].animation === 57 ? <Video /> : 
+        <Canvas style={{ width: "100vw", height: "90vh" }}>
+          <CameraControls />
+          <ambientLight intensity={2} />
 
-        {shouldShowAlice && (
-          <Alice
-            animation={info[currentImageIndex].animation}
-            rotationx={info[currentImageIndex].rotationx}
-            rotationz={info[currentImageIndex].rotationz}
-            rotationy={info[currentImageIndex].rotationy}
-          />
-        )}
-        {shouldShowLab && <Lab />}
-        {shouldShowHospital && <Hospital />}
-        {shouldShowAliceJeans && <AliceJeans />}
-        {shouldShowAliceDress && <AliceParty animation={info[currentImageIndex].animation}
-        />}
-        {shouldShowAliceHoodie2 && <AliceHoodie2 animation={info[currentImageIndex].animation}/>}
-        {shouldShowAliceNobel && <AliceNobel />}
-        {shouldShowDoctorCarl && <DoctorCarl />}
-        {shouldShowDoctorJimin && <DoctorJimin />}
-        {shouldShowVecino && <Vecino animation={info[currentImageIndex].animation}/>}
-        {shouldShowEsposo && <Esposo animation={info[currentImageIndex].animation}/>}
-        {shouldShowStreet && <Street />}
-        {shouldShowStreetDecision && <StreetDecision />}
-        {shouldShowLab && <AliceLab animation={info[currentImageIndex].animation}
-            rotationx={info[currentImageIndex].rotationx}
-            rotationz={info[currentImageIndex].rotationz}
-            rotationy={info[currentImageIndex].rotationy}
-            positionx={info[currentImageIndex].positionx}
-            positionz={info[currentImageIndex].positionz}
-            positiony={info[currentImageIndex].positiony}/>}
-        {shouldShowPastillas && <Pastillas />}
-        {shouldShowMano && <Hand />}
-        {shouldShowEyder && <Vecino />}
-        {shouldShowBracelet && <Brazalete />}
-        {shouldShowAlex && <Alex />}
-        {shouldShowJonas && <Jonas />}
-        {shouldShowBedRoom && <Bedroom />}
-        {shouldShowLivingRoom && <Livingroom />}
-        {shouldShowTree && <Tree />}
-        {shouldShowManicomio && <Manicomio />}
-      </Canvas>
-    </div>
-    <div>
-      {info[currentImageIndex].animation === 2 ? (
-        <Video/>
-      ) : (
+          {shouldShowAlice && (
+            <Alice
+              animation={info[currentImageIndex].animation}
+              rotationx={info[currentImageIndex].rotationx}
+              rotationz={info[currentImageIndex].rotationz}
+              rotationy={info[currentImageIndex].rotationy}
+            />
+          )}
+          {shouldShowLab && <Lab />}
+          {shouldShowHospital && <Hospital />}
+          {shouldShowAliceJeans && <AliceJeans />}
+          {shouldShowAliceDress && (
+            <AliceParty animation={info[currentImageIndex].animation} />
+          )}
+          {shouldShowAliceHoodie2 && (
+            <AliceHoodie2 animation={info[currentImageIndex].animation} />
+          )}
+          {shouldShowAliceNobel && <AliceNobel />}
+          {shouldShowDoctorCarl && <DoctorCarl />}
+          {shouldShowDoctorJimin && <DoctorJimin />}
+          {shouldShowVecino && (
+            <Vecino animation={info[currentImageIndex].animation} />
+          )}
+          {shouldShowEsposo && (
+            <Esposo animation={info[currentImageIndex].animation} />
+          )}
+          {shouldShowStreet && <Street />}
+          {shouldShowStreetDecision && <StreetDecision />}
+          {shouldShowLab && (
+            <AliceLab
+              animation={info[currentImageIndex].animation}
+              rotationx={info[currentImageIndex].rotationx}
+              rotationz={info[currentImageIndex].rotationz}
+              rotationy={info[currentImageIndex].rotationy}
+              positionx={info[currentImageIndex].positionx}
+              positionz={info[currentImageIndex].positionz}
+              positiony={info[currentImageIndex].positiony}
+            />
+          )}
+          {shouldShowPastillas && <Pastillas />}
+          {shouldShowMano && <Hand />}
+          {shouldShowEyder && <Vecino />}
+          {shouldShowBracelet && <Brazalete />}
+          {shouldShowAlex && <Alex />}
+          {shouldShowJonas && (
+            <Jonas animation={info[currentImageIndex].animation} />
+          )}
+          {shouldShowBedRoom && <Bedroom />}
+          {shouldShowLivingRoom && <Livingroom />}
+          {shouldShowTree && <Tree />}
+          {shouldShowManicomio && <Manicomio />}
+
+        </Canvas>
+}
+      </div>
+      <div>
         <div>
           <SceneDecision
             text={
-              language === 'español'
+              language === "español"
                 ? info[currentImageIndex].mensaje
                 : info[currentImageIndex].message
             }
             img={info[currentImageIndex].imageUrl}
             onClick={() => changeImage()}
             decision1={
-              language === 'español'
+              language === "español"
                 ? info[currentImageIndex].decision1es
                 : info[currentImageIndex].decision1en
             }
             decision2={
-              language === 'español'
+              language === "español"
                 ? info[currentImageIndex].decision2es
                 : info[currentImageIndex].decision2en
             }
@@ -169,8 +183,7 @@ const Story = ({ language, id, info, route1, route2, animation }) => {
             // onClick={changeDecision}
           />
         </div>
-      )}
-    </div>
+      </div>
     </div>
   );
 };
