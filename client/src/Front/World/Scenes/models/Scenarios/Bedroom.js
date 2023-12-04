@@ -6,13 +6,60 @@ Source: https://sketchfab.com/3d-models/bedroom-test-941493a3c8554fa7a61a74ccee6
 Title: Bedroom Test
 */
 
-import React, { useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { useGLTF } from "@react-three/drei";
+import { MathUtils } from "three";
+import { useFrame, useThree } from "@react-three/fiber";
 
 export function Bedroom(props) {
   const { nodes, materials } = useGLTF("/assets/models/Scenarios/bedroom_test.glb");
+  const { camera } = useThree();
+
+  const [rotationx, setRotationx] = useState(0);
+  const [rotationz, setRotationz] = useState(0);
+  const [rotationy, setRotationy] = useState(0);
+  const [positionx, setPositionX] = useState(0);
+  const [positiony, setPositionY] = useState(0);
+  const [positionz, setPositionZ] = useState(0);
+
+  useFrame((state) => {
+    if ((props.id_pos === 3) || (props.id_pos === 4)) {
+      camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
+      camera.position.z = MathUtils.lerp(camera.position.z, 3, 0.1);
+      camera.position.y = MathUtils.lerp(camera.position.y, 10, 0.1);
+
+      // state.camera.fov = MathUtils.lerp(state.camera.fov,  50, 0.1)
+      // camera.rotation.x = MathUtils.lerp(camera.rotation.x, -1, 0.1);
+      // camera.rotation.y = MathUtils.lerp(camera.rotation.y, 12, 0.1);
+      // camera.rotation.z = MathUtils.lerp(camera.rotation.z, 0, 0.1);
+    }
+  });
+
+  useEffect(() => {
+
+    if((props.id_pos === 3) || (props.id_pos === 4)){
+
+      console.log("Bedroom")
+      setPositionZ(-10)
+      setPositionX(0)
+      setPositionY(-3)
+      setRotationy(Math.PI/111)
+      setRotationz(-Math.PI/900)
+      setRotationx(Math.PI /50)
+    } 
+  }, [props.id_pos]);
+
   return (
-    <group {...props} dispose={null} scale={0.045} rotation-x={Math.PI /8} rotation-y={Math.PI/10} rotation-z={-Math.PI/20} position-y={-3} position-x={-3} position-z={-10}>
+    <group 
+    {...props} 
+    rotation-x={rotationx}
+    rotation-z={rotationz}
+    rotation-y={rotationy}
+    position-x={positionx}
+    position-z={positionz}
+    position-y={positiony}
+    dispose={null} 
+    scale={0.05}>
       <group
         position={[34.981, 138.514, -71.428]}
         rotation={[-Math.PI / 2, 0, 0]}

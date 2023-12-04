@@ -20,6 +20,40 @@ export function AliceHoodie2(props) {
     for (const key in actions) {
       actions[key].stop();
     }
+    if((props.animation === 3) || (props.animation === 4)){
+      setPositionZ(-1.8)
+      setPositionX(1)
+      setPositionY(-3)
+      setRotationy( Math.PI / 2 )
+
+      console.log(animations)
+      
+      const action = actions["SittingCrying"];
+     action.play();
+    }
+
+    if((props.animation === 5)){
+      setPositionZ(-1.8)
+      setPositionX(1)
+      setPositionY(-3)
+      setRotationy( Math.PI / 2 )
+
+      console.log(animations)
+      
+      const action = actions["LookAround"];
+     action.play();
+    }
+
+    if((props.animation === 6)){
+      setPositionZ(-8)
+      setPositionX(1)
+      setPositionY(-3)
+      setRotationy( Math.PI / 30 )
+      
+      const action = actions["SittingCrying"];
+     action.play();
+    }
+
     if((props.animation === 68) || (props.animation === 70) || (props.animation === 71) ){
       setPositionZ(0)
       setPositionX(-3)
