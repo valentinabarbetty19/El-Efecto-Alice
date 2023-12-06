@@ -8,9 +8,9 @@ export const introArray = [
     mensaje: <Typewriter keyProp={1} text="Alice Brown, una de las mejores científicas del país, ha destinado toda su vida al estudio de la física cuántica y los viajes en el tiempo." speed={30} />,
     message:
       "Alice Brown, one of the country's top scientists, has dedicated her entire life to the study of quantum physics and time travel.",
-    // aliceLab: true,
-    // lab: true,
-    video:true,
+    aliceLab: true,
+    lab: true,
+   
     animation: 1,
     id_scena: 1,
     sonido: 0,

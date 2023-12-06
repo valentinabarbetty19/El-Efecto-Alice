@@ -88,6 +88,11 @@ const Navbar = ({ setLanguage, language }) => {
             src="/assets/img/menu-Items/book.png"
           />
         </div>
+        <div>
+          <a href="/" title="Ir a Inicio">
+            <img className="home" alt="Home" src="/assets/img/menu-Items/home.png" />
+          </a>
+        </div>
 
         <a href="/login">
           <img
@@ -100,6 +105,8 @@ const Navbar = ({ setLanguage, language }) => {
 
       {modalOpen && <Modal setOpenModal={setModalOpen} language={language} />}
     </div>
+
+    
   );
 };
 
