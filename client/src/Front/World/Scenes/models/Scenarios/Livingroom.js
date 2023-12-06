@@ -6,15 +6,74 @@ Source: https://sketchfab.com/3d-models/living-room-night-custom-home-environmen
 Title: Living Room (Night) - Custom Home Environment
 */
 
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
+import { useFrame, useThree } from "@react-three/fiber";
+import { MathUtils } from "three";
 
 export function Livingroom(props) {
+  const { camera } = useThree();
+
+  const [rotationx, setRotationx] = useState(0);
+  const [rotationz, setRotationz] = useState(0);
+  const [rotationy, setRotationy] = useState(0);
+  const [positionx, setPositionX] = useState(0);
+  const [positiony, setPositionY] = useState(0);
+  const [positionz, setPositionZ] = useState(0);
+
+  useFrame(() => {
+    if ((props.id_pos === 5) || (props.id_pos === 6 || (props.id_pos === 7))
+  ) {
+      camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
+      camera.position.z = MathUtils.lerp(camera.position.z, 19, 0.1);
+      camera.position.y = MathUtils.lerp(camera.position.y, 19, 0.1);
+
+      camera.rotation.x = MathUtils.lerp(camera.rotation.x, 1, 0.1);
+      // camera.rotation.y = MathUtils.lerp(camera.rotation.y, 12, 0.1);
+      // camera.rotation.z = MathUtils.lerp(camera.rotation.z, 0, 0.1);
+    }
+    if (props.id_pos === 66){
+      camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
+      camera.position.z = MathUtils.lerp(camera.position.z, 19, 0.1);
+      camera.position.y = MathUtils.lerp(camera.position.y, 80, 0.1);
+
+      camera.rotation.x = MathUtils.lerp(camera.rotation.x, -4, 0.1);
+      // camera.rotation.y = MathUtils.lerp(camera.rotation.y, 12, 0.1);
+      // camera.rotation.z = MathUtils.lerp(camera.rotation.z, 0, 0.1);
+    }
+  });
+
+  useEffect(() => {
+
+    if((props.id_pos === 5) || (props.id_pos === 6) || (props.id_pos === 7)){
+
+      console.log("Bedroom")
+      setPositionZ(-10)
+      setPositionX(0)
+      setPositionY(-3)
+      setRotationy(-Math.PI/1)
+      setRotationz(-Math.PI/900)
+      setRotationx(Math.PI /50)
+    } 
+    if((props.id_pos === 66)){
+      setPositionZ(-7)
+      setRotationy(-Math.PI/8)
+      setRotationx(Math.PI /50)
+    } 
+  }, [props.id_pos]);
   const group = useRef();
   const { nodes, materials, animations } = useGLTF("/assets/models/Scenarios/living-room.glb");
   const { actions } = useAnimations(animations, group);
   return (
-    <group ref={group} {...props} dispose={null} scale={5} rotation-x={Math.PI /5} position-z={-7} rotation-y={-Math.PI/8}>
+    <group 
+    {...props} 
+    rotation-x={rotationx}
+    rotation-z={rotationz}
+    rotation-y={rotationy}
+    position-x={positionx}
+    position-z={positionz}
+    position-y={positiony}ref={group}
+    dispose={null} scale={5}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
           <group name="root">
@@ -33,7 +92,8 @@ export function Livingroom(props) {
                   material={materials.Material_31232}
                 />
               </group>
-              <group
+
+              {/* <group
                 name="CoffeeTable_1"
                 position={[-0.054, -0.103, -2.101]}
                 rotation={[-Math.PI, 0, -Math.PI]}
@@ -46,7 +106,7 @@ export function Livingroom(props) {
                   geometry={nodes.Object_6.geometry}
                   material={materials.Material_310}
                 />
-              </group>
+              </group> */}
               <group
                 name="Plane001_2"
                 position={[0.233, -0.12, -0.662]}

@@ -32,7 +32,7 @@ import DoctorCarl from "../models/DoctorCarl";
 import DoctorJimin from "../models/DoctorJimin";
 import Video from "../Video/Video";
 
-const Story = ({ language, id, info, route1, route2, animation }) => {
+const Story = ({ language, info, route1, route2 }) => {
   const navigate = useNavigate();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [decision1, setDecision1] = useState(false);
@@ -101,62 +101,50 @@ const Story = ({ language, id, info, route1, route2, animation }) => {
           <CameraControls />
           <ambientLight intensity={2} />
 
-          {shouldShowAlice && (
-            <Alice
-              animation={info[currentImageIndex].animation}
-              rotationx={info[currentImageIndex].rotationx}
-              rotationz={info[currentImageIndex].rotationz}
-              rotationy={info[currentImageIndex].rotationy}
-            />
-          )}
-          {shouldShowLab && <Lab />}
-          {shouldShowHospital && <Hospital />}
-          {shouldShowAliceJeans && <AliceJeans />}
-          {shouldShowAliceDress && (
-            <AliceParty animation={info[currentImageIndex].animation} />
-          )}
-          {shouldShowAliceHoodie2 && (
-            <AliceHoodie2 animation={info[currentImageIndex].animation} />
-          )}
-          {shouldShowAliceNobel && <AliceNobel />}
-          {shouldShowDoctorCarl && <DoctorCarl />}
-          {shouldShowDoctorJimin && <DoctorJimin />}
-          {shouldShowVecino && (
-            <Vecino animation={info[currentImageIndex].animation} />
-          )}
-          {shouldShowEsposo && (
-            <Esposo animation={info[currentImageIndex].animation} />
-          )}
-          {shouldShowStreet && <Street />}
-          {shouldShowStreetDecision && <StreetDecision />}
-          {shouldShowLab && (
-            <AliceLab
-              animation={info[currentImageIndex].animation}
-              rotationx={info[currentImageIndex].rotationx}
-              rotationz={info[currentImageIndex].rotationz}
-              rotationy={info[currentImageIndex].rotationy}
-              positionx={info[currentImageIndex].positionx}
-              positionz={info[currentImageIndex].positionz}
-              positiony={info[currentImageIndex].positiony}
-            />
-          )}
-          {shouldShowPastillas && <Pastillas />}
-          {shouldShowMano && <Hand />}
-          {shouldShowEyder && <Vecino />}
-          {shouldShowBracelet && <Brazalete />}
-          {shouldShowAlex && <Alex />}
-          {shouldShowJonas && (
-            <Jonas animation={info[currentImageIndex].animation} />
-          )}
-          {shouldShowBedRoom && <Bedroom />}
-          {shouldShowLivingRoom && <Livingroom />}
-          {shouldShowTree && <Tree />}
-          {shouldShowManicomio && <Manicomio />}
+        {shouldShowAlice && (
+          <Alice
+            animation={info[currentImageIndex].animation}
+            rotationx={info[currentImageIndex].rotationx}
+            rotationz={info[currentImageIndex].rotationz}
+            rotationy={info[currentImageIndex].rotationy}
+          />
+        )}
+        {shouldShowLab && <Lab id_pos={info[currentImageIndex].id} />}
 
-        </Canvas>
-}
-      </div>
-      <div>
+        {shouldShowHospital && <Hospital />}
+        {shouldShowAliceJeans && <AliceJeans />}
+        {shouldShowAliceDress && <AliceParty animation={info[currentImageIndex].animation}
+        />}
+        {shouldShowAliceHoodie2 && <AliceHoodie2 animation={info[currentImageIndex].animation}/>}
+        {shouldShowAliceNobel && <AliceNobel />}
+        {shouldShowDoctorCarl && <DoctorCarl />}
+        {shouldShowDoctorJimin && <DoctorJimin />}
+        {shouldShowVecino && <Vecino animation={info[currentImageIndex].animation}/>}
+        {shouldShowEsposo && <Esposo animation={info[currentImageIndex].animation}/>}
+        {shouldShowStreet && <Street />}
+        {shouldShowStreetDecision && <StreetDecision />}
+        {shouldShowAliceLab && <AliceLab 
+        animation={info[currentImageIndex].animation}
+            // rotationx={info[currentImageIndex].rotationx}
+            // rotationz={info[currentImageIndex].rotationz}
+            // rotationy={info[currentImageIndex].rotationy}
+            // positionx={info[currentImageIndex].positionx}
+            // positionz={info[currentImageIndex].positionz}
+            // positiony={info[currentImageIndex].positiony}
+            />}
+        {shouldShowPastillas && <Pastillas />}
+        {shouldShowMano && <Hand />}
+        {shouldShowEyder && <Vecino />}
+        {shouldShowBracelet && <Brazalete id_pos={info[currentImageIndex].id} />}
+        {shouldShowAlex && <Alex />}
+        {shouldShowJonas && <Jonas />}
+        {shouldShowBedRoom && <Bedroom id_pos={info[currentImageIndex].id} />}
+        {shouldShowLivingRoom && <Livingroom id_pos={info[currentImageIndex].id} />}
+        {shouldShowTree && <Tree />}
+        {shouldShowManicomio && <Manicomio />}
+      </Canvas>}
+    </div>
+    <div>
         <div>
           <SceneDecision
             text={

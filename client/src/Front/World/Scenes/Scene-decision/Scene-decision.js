@@ -47,7 +47,7 @@ const SceneDecision = ({
                   </button>
                 )}
               </div>
-            ) : animation === 1 ? (
+            ) : animation === 90 ? (
               <img
                 src={photo}
                 alt="GIF"
