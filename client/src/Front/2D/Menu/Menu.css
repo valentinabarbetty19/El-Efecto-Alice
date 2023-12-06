@@ -57,7 +57,7 @@
 
 .index .text-wrapper-3 {
   color: #ffffff;
-  font-family: "Kelly Slab", Helvetica;
+  font-family: "Kelly Slab";
   font-size: 36px;
   font-weight: 400;
   left: 13px;
@@ -122,6 +122,7 @@
   top: 20%; /* Ajusta según sea necesario */
 }
 
+
 .index .div {
   background-color: #000000;
   height: 100vh; /* Set the height to the viewport height */
@@ -132,3 +133,4 @@
 .index .speaker-filled-audio {
   left: 185px; /* Adjust the left position to create horizontal spacing */
 }
+
