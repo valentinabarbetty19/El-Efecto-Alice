@@ -22,7 +22,7 @@ export function Livingroom(props) {
   const [positionz, setPositionZ] = useState(0);
 
   useFrame(() => {
-    if ((props.id_pos === 5) || (props.id_pos === 6)
+    if ((props.id_pos === 5) || (props.id_pos === 6 || (props.id_pos === 7))
   ) {
       camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
       camera.position.z = MathUtils.lerp(camera.position.z, 19, 0.1);
@@ -32,11 +32,20 @@ export function Livingroom(props) {
       // camera.rotation.y = MathUtils.lerp(camera.rotation.y, 12, 0.1);
       // camera.rotation.z = MathUtils.lerp(camera.rotation.z, 0, 0.1);
     }
+    if (props.id_pos === 66){
+      camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
+      camera.position.z = MathUtils.lerp(camera.position.z, 19, 0.1);
+      camera.position.y = MathUtils.lerp(camera.position.y, 80, 0.1);
+
+      camera.rotation.x = MathUtils.lerp(camera.rotation.x, -4, 0.1);
+      // camera.rotation.y = MathUtils.lerp(camera.rotation.y, 12, 0.1);
+      // camera.rotation.z = MathUtils.lerp(camera.rotation.z, 0, 0.1);
+    }
   });
 
   useEffect(() => {
 
-    if((props.id_pos === 5) || (props.id_pos === 6)){
+    if((props.id_pos === 5) || (props.id_pos === 6) || (props.id_pos === 7)){
 
       console.log("Bedroom")
       setPositionZ(-10)
@@ -44,6 +53,11 @@ export function Livingroom(props) {
       setPositionY(-3)
       setRotationy(-Math.PI/1)
       setRotationz(-Math.PI/900)
+      setRotationx(Math.PI /50)
+    } 
+    if((props.id_pos === 66)){
+      setPositionZ(-7)
+      setRotationy(-Math.PI/8)
       setRotationx(Math.PI /50)
     } 
   }, [props.id_pos]);
@@ -78,6 +92,7 @@ export function Livingroom(props) {
                   material={materials.Material_31232}
                 />
               </group>
+
               {/* <group
                 name="CoffeeTable_1"
                 position={[-0.054, -0.103, -2.101]}

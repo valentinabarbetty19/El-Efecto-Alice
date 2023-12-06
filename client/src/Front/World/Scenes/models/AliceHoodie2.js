@@ -54,6 +54,16 @@ export function AliceHoodie2(props) {
      action.play();
     }
 
+    if((props.animation === 7)){
+      setPositionZ(-8)
+      setPositionX(1)
+      setPositionY(-3)
+      setRotationy( Math.PI / 30 )
+      
+      const action = actions["SittingCrying"];
+     action.play();
+    }
+
     if((props.animation === 68) || (props.animation === 70) || (props.animation === 71) ){
       setPositionZ(0)
       setPositionX(-3)

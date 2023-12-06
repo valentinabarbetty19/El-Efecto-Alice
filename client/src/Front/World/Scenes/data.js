@@ -86,21 +86,15 @@ export const introArray = [
   {
     //P: Alice Hoodie - animación: sitting disbelief
     id: 7,
-    imageUrl: "/assets/img/scenarios/thundersorm.png",
+    // imageUrl: "/assets/img/scenarios/thundersorm.png",
     mensaje:
       "A pesar de su empeño en el brazalete, comienza a perder la esperanza en recuperar a su familia.",
     message:
       "Despite her efforts on the bracelet, she begins to lose hope in getting his family back.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    alice: true,
+    aliceHoodie2: true,
+    bracelet: true,
     livingroom: true,
-    animation: 0,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
+    animation: 7,
   },
   {
     
@@ -110,31 +104,17 @@ export const introArray = [
       "En una tarde lluviosa, cerca de su casa, Alice vio algo cerca a un viejo árbol, cree que es su hijo.",
     message:
       "On a rainy afternoon near her house, Alice saw something near an old tree. She thinks it's her son",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
     tree: true,
     animation: 0,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
   },
   {
   //sonido: gritoTrueno
     id: 9,
     imageUrl: "/assets/img/scenarios/thundersorm.png",
-    mensaje: "Al ir a investigar, Fue alcanzada por un rayo.",
+    mensaje: "Al ir a investigar, Fue alcanzada por un rayo.",
     message:
       "When she went to find out what it was, she was struck by a lightning.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
     animation: 0,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
   },
   {
     
@@ -1455,39 +1435,39 @@ export const bifur22Array = [
   //   positionz: 0,
   //   sonido: 0,
   // },
-  // {
-  //   //alice dress - esposo BAILANDO 
-  //   id: 66,
+  {
+    //alice dress - esposo BAILANDO 
+    id: 66,
     
-  //   mensaje:
-  //     "Alice logra salvar a su familia y regresa al presente original, donde su esposo e hijo están a salvo y bien. Aunque aún tiene esa sensación extraña.",
-  //   message:
-  //     "Alice finally saves her family and returns to the original present, where her husband and son are safe and well. Although she still has that strange feeling.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   aliceDress: true,
-  //   esposo: true,
-  //   livingroom: true,
-  //   animation: 66,
-  //   id_scena: 1,
-  //   sonido: 0,
-  // },
-  // {
-  //   //sonido toca puerta
-  //   id: 67,
-  //   imageUrl: "/assets/img/scenarios/house-door-outside.png",
-  //   mensaje: "Sin embargo, el vecino regresa para saber cómo sigue.",
-  //   message: "However, the neighbor returns to check how she's doing.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   animation: 0,
-  //   id_scena: 1,
-  //   sonido: 0,
-  // },
+    mensaje:
+      "Alice logra salvar a su familia y regresa al presente original, donde su esposo e hijo están a salvo y bien. Aunque aún tiene esa sensación extraña.",
+    message:
+      "Alice finally saves her family and returns to the original present, where her husband and son are safe and well. Although she still has that strange feeling.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    aliceDress: true,
+    esposo: true,
+    livingroom: true,
+    animation: 66,
+    id_scena: 1,
+    sonido: 0,
+  },
+  {
+    //sonido toca puerta
+    id: 67,
+    imageUrl: "/assets/img/scenarios/house-door-outside.png",
+    mensaje: "Sin embargo, el vecino regresa para saber cómo sigue.",
+    message: "However, the neighbor returns to check how she's doing.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    animation: 0,
+    id_scena: 1,
+    sonido: 0,
+  },
    {
     //alice y liam 
     id: 68,
