@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
@@ -10,8 +10,39 @@ export function Brazalete(props) {
     //groupRef.current.rotation.y += 0.01;
     groupRef.current.rotation.y += 0.01;
   });
+
+  const [rotationx, setRotationx] = useState(0);
+  const [rotationz, setRotationz] = useState(0);
+  const [rotationy, setRotationy] = useState(0);
+  const [positionx, setPositionX] = useState(0);
+  const [positiony, setPositionY] = useState(0);
+  const [positionz, setPositionZ] = useState(0);
+
+  useEffect(() => {
+
+    if((props.id_pos === 2)){
+      console.log("braz")
+      // setPositionZ(0)
+      // setPositionX(0)
+      // setPositionY(0)
+      // setRotationy(0)
+      // setRotationz(Math.PI/2.5)
+      setRotationx(Math.PI/2.5)
+    } 
+  }, [props.id_pos]);
+
   return (
-    <group ref={groupRef} {...props} dispose={null} scale={5} rotation-x={Math.PI/2.5}>
+    <group 
+    // rotation-x={rotationx}
+    rotation-z={rotationz}
+    rotation-y={rotationy}
+    position-x={positionx}
+    position-z={positionz}
+    position-y={positiony}
+    ref={groupRef} {...props} 
+    dispose={null} scale={5} 
+    rotation-x={Math.PI/2.5}
+    >
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <mesh

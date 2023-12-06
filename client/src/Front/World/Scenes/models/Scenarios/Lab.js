@@ -6,16 +6,61 @@ Source: https://sketchfab.com/3d-models/low-poly-laboratory-fedc3b5df4724997ac00
 Title: Low-Poly Laboratory
 */
 
-import React, { useRef } from "react";
-import { useGLTF, useAnimations } from "@react-three/drei";
+import React, { useEffect, useRef, useState } from "react";
+import { useGLTF } from "@react-three/drei";
+import { MathUtils } from "three";
+import { useFrame, useThree } from "@react-three/fiber";
 
 export function Lab(props) {
   const group = useRef();
+  const { camera } = useThree();
+
+  const [rotationx, setRotationx] = useState(0);
+  const [rotationz, setRotationz] = useState(0);
+  const [rotationy, setRotationy] = useState(0);
+  const [positionx, setPositionX] = useState(0);
+  const [positiony, setPositionY] = useState(0);
+  const [positionz, setPositionZ] = useState(0);
+
+  useFrame((state) => {
+    if (props.id_pos === 1) {
+      // camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
+      // camera.position.z = MathUtils.lerp(camera.position.z, 3, 0.1);
+      camera.position.y = MathUtils.lerp(camera.position.y, 10, 0.1);
+      camera.rotation.x = MathUtils.lerp(camera.rotation.x, -1, 0.1);
+      
+    }
+  });
+
+  useEffect(() => {
+
+    if((props.id_pos === 1)){
+      console.log("lab")
+      setPositionZ(0)
+      setPositionX(0)
+      setPositionY(0)
+      setRotationy( Math.PI / -6)
+      setRotationz(0)
+      setRotationx(0)
+    } 
+  }, [props.id_pos]);
+
   const { nodes, materials, animations } = useGLTF("/assets/models/Scenarios/lab.glb");
-  const { actions } = useAnimations(animations, group);
   return (
-    <group ref={group} {...props} dispose={null} scale={8} rotation-y={-Math.PI/5} rotation-x={Math.PI/5}>
-      <group name="Sketchfab_Scene">
+    <group 
+    rotation-x={rotationx}
+    rotation-z={rotationz}
+    rotation-y={rotationy}
+    position-x={positionx}
+    position-z={positionz}
+    position-y={positiony}
+    ref={group} 
+    {...props} 
+    dispose={null} 
+    scale={8}
+    >
+      <group 
+      name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
           <group
             name="6a2632b9b6cc4d70b6513b0dbc92b09afbx"
@@ -234,6 +279,7 @@ export function Lab(props) {
                     material={materials.Main}
                   />
                 </group>
+                {/* ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; */}
                 <group
                   name="screen"
                   position={[44.24, 6.403, 10.451]}
@@ -835,7 +881,7 @@ export function Lab(props) {
                     material={materials.Main}
                   />
                 </group>
-                <group
+                {/* <group
                   name="back3"
                   position={[-11.435, -8.323, -18.773]}
                   rotation={[-Math.PI / 2, 0, 1.193]}
@@ -932,7 +978,7 @@ export function Lab(props) {
                     geometry={nodes.wheel3_Main_0.geometry}
                     material={materials.Main}
                   />
-                </group>
+                </group> */}
                 <group
                   name="back2"
                   position={[82.583, -8.249, -48.877]}
@@ -3083,7 +3129,7 @@ export function Lab(props) {
                     material={materials.Main}
                   />
                 </group>
-                <group
+                {/* <group
                   name="Armature"
                   position={[-0.009, -4.598, 36.699]}
                   rotation={[-Math.PI / 2, 0, 0]}
@@ -3104,13 +3150,13 @@ export function Lab(props) {
                       scale={100}
                     />
                   </group>
-                </group>
-                <group
+                </group> */}
+                {/* <group
                   name="scientist"
                   position={[-0.009, -4.687, 35.274]}
                   rotation={[-Math.PI / 2, 0, 0]}
                   scale={100}
-                />
+                /> */}
               </group>
             </group>
           </group>
