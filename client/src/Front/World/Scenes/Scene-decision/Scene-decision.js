@@ -20,7 +20,7 @@ const SceneDecision = ({
     <div>
       <div className="App">
         <div className="content" onClick={onClick}>
-          <p>{text}</p>
+        <p><Typewriter keyProp={1} text={text} speed={30} /></p>
           <div className="button-container">
             {animation === 72 ? (
               <div>

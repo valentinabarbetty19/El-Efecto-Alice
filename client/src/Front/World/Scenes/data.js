@@ -5,7 +5,7 @@ export const introArray = [
   {
     id: 1,
     // imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje: <Typewriter keyProp={1} text="Alice Brown, una de las mejores científicas del país, ha destinado toda su vida al estudio de la física cuántica y los viajes en el tiempo." speed={30} />,
+    mensaje:"Alice Brown, una de las mejores científicas del país, ha destinado toda su vida al estudio de la física cuántica y los viajes en el tiempo.",
     message:
       "Alice Brown, one of the country's top scientists, has dedicated her entire life to the study of quantum physics and time travel.",
     aliceLab: true,
@@ -20,7 +20,7 @@ export const introArray = [
   {
     // fondo negro mostrando el brazalete en 3D
     id: 2,
-    mensaje: <Typewriter keyProp={2} text="Ha estado trabajando en un brazalete que le permitiría escoger la fecha a dónde quiere viajar en el pasado, sin embargo, este artefacto no tiene la energía suficiente para que funcione."speed={30} />,
+    mensaje: "Ha estado trabajando en un brazalete que le permitiría escoger la fecha a dónde quiere viajar en el pasado, sin embargo, este artefacto no tiene la energía suficiente para que funcione.",
     message:
       "She has been working on a bracelet that would allow her to choose the date to which she wants to travel into the past. However, this device does not have enough energy to function.",
     bracelet: true,
@@ -35,8 +35,8 @@ export const introArray = [
 
     //Personaje: Alice Hoodie - Animación: sitting disbelief - Sonido: crying
     id: 3,
-    mensaje:  <Typewriter keyProp={3} text=
-      "Tenía su vida feliz con su hijo y su esposo, pero desafortunadamente, tuvieron un accidente automovilístico, y todos menos ella, perdieron la vida."speed={30} />,
+    mensaje:  
+      "Tenía su vida feliz con su hijo y su esposo, pero desafortunadamente, tuvieron un accidente automovilístico, y todos menos ella, perdieron la vida.",
     message:
       "She had a happy life with her son and husband, but unfortunately, they had a car accident, and everyone except her, lost their lives.",
     aliceHoodie2: true,
@@ -48,8 +48,8 @@ export const introArray = [
   {
     //Personaje: Alice Hoodie - Animación: sitting disbelief - Sonido: crying
     id: 4,
-    mensaje: <Typewriter keyProp={4} text=
-      "Alice ha quedado devastada tras este hecho, pues prácticamente toda su vida se ha derrumbado."speed={30} />,
+    mensaje: 
+      "Alice ha quedado devastada tras este hecho, pues prácticamente toda su vida se ha derrumbado.",
     message:
       "Alice has been devastated by this event, as practically her whole life has crumbled.",
     aliceHoodie2: true,
@@ -61,8 +61,8 @@ export const introArray = [
     //alice lab decepcionada con el brazalete ********************
     // personaje: Alice Hoodie - animación: looking around 
     id: 5,
-    mensaje: <Typewriter keyProp={5} text=
-      "Tras la tragedia, experimenta visiones perturbadoras que la hacen dudar su salud."speed={30} />,
+    mensaje: 
+      "Tras la tragedia, experimenta visiones perturbadoras que la hacen dudar su salud.",
     message:
       "After the tragedy, she experiences disturbing visions that make her doubt her health...",
     aliceHoodie2: true,
@@ -74,7 +74,7 @@ export const introArray = [
   {
     //Personaje: Alice Hoodie - animación: sitting disbelief
     id: 6,
-    mensaje: <Typewriter keyProp={6} text="¿Jonas? No, no puede ser... ¿Qué me pasa?" speed={30} />,
+    mensaje: "¿Jonas? No, no puede ser... ¿Qué me pasa?",
     message: 
       "Jonas? No, this can't be real... What is going on with me?",
     aliceHoodie2: true,
@@ -85,7 +85,7 @@ export const introArray = [
   {
     //P: Alice Hoodie - animación: sitting disbelief
     id: 7,
-    mensaje: <Typewriter keyProp={7} text= "A pesar de su empeño en el brazalete, comienza a perder la esperanza en recuperar a su familia."speed={30} />,
+    mensaje: "A pesar de su empeño en el brazalete, comienza a perder la esperanza en recuperar a su familia.",
     message:
       "Despite her efforts on the bracelet, she begins to lose hope in getting his family back.",
     aliceHoodie2: true,
@@ -97,8 +97,8 @@ export const introArray = [
     
     //personaje: jonas (el hijo) parado al lado del arbol **** - hacer lluvia?????? - sonido de lluvia con truenos
     id: 8,
-    mensaje: <Typewriter keyProp={8} text=
-      "En una tarde lluviosa, cerca de su casa, Alice vio algo cerca a un viejo árbol, cree que es su hijo."speed={30} />,
+    mensaje: 
+      "En una tarde lluviosa, cerca de su casa, Alice vio algo cerca a un viejo árbol, cree que es su hijo.",
     message:
       "On a rainy afternoon near her house, Alice saw something near an old tree. She thinks it's her son",
     tree: true,
@@ -117,8 +117,8 @@ export const introArray = [
     
     //P: Alice Hoodie - animación: agony sonido: lluviaLlanto 
     id: 10,
-    mensaje: <Typewriter keyProp={10} text= 
-      "Tras el impacto del rayo, Alice momentáneamente aturdida y desconcertada, se apresura a casa para recuperarse."speed={30} />,
+    mensaje: 
+      "Tras el impacto del rayo, Alice momentáneamente aturdida y desconcertada, se apresura a casa para recuperarse.",
     message:
       "After the lightning strike, Alice momentarily stunned and bewildered, rushes home to recover.",
     decision1en: null,
@@ -134,8 +134,8 @@ export const introArray = [
   {
     //NO SE :C *********
     id: 11,
-    mensaje:  <Typewriter keyProp={11} text= 
-      "Mientras se recuperaba en casa, el brazalete en su brazo se iluminó, llevándola a creer que podría viajar en el tiempo. Sin dudarlo, eligió su cumpleaños como su primera parada en su viaje temporal."speed={30} />,
+    mensaje:  
+      "Mientras se recuperaba en casa, el brazalete en su brazo se iluminó, llevándola a creer que podría viajar en el tiempo. Sin dudarlo, eligió su cumpleaños como su primera parada en su viaje temporal.",
     message:
       "While recovering at home, the bracelet on her arm lit up, leading her to believe she could time travel. Without hesitation, she chose her birthday as her first stop on her temporal journey.",
     decision1en: null,
@@ -152,8 +152,8 @@ export const introArray = [
   {
     //P: Alice Jeans (crying), Jonas y esposo(excited) 
     id: 12,
-    mensaje:  <Typewriter keyProp={12} text= 
-      "De repente, todo se oscureció, y cuando despertó, se encontró en su cuarto. Para su asombro, su esposo e hijo la sorprendieron en la mañana de su cumpleaños, vivos y llenos de alegría."speed={30} />,
+    mensaje:  
+      "De repente, todo se oscureció, y cuando despertó, se encontró en su cuarto. Para su asombro, su esposo e hijo la sorprendieron en la mañana de su cumpleaños, vivos y llenos de alegría.",
     message:
       "Suddenly, everything went dark, and when she woke up, she found herself in her room. To her amazement, her husband and son surprised her on her birthday morning, alive and filled with joy.",
     decision1en: null,
@@ -170,8 +170,8 @@ export const introArray = [
   {
     //P_ ALice jeans - jonas **** y esposo - aniamcion: dancing - sonido: don't go breaking my heart
     id: 13,
-    mensaje:  <Typewriter keyProp={13} text= 
-      "Alice disfrutó el día con su familia, aunque las preguntas la atormentaban. Decidió no pensar demasiado en ello y se sumergió en la felicidad de estar con ellos de nuevo."speed={30} />,
+    mensaje:  
+      "Alice disfrutó el día con su familia, aunque las preguntas la atormentaban. Decidió no pensar demasiado en ello y se sumergió en la felicidad de estar con ellos de nuevo.",
     message:
       "Alice enjoyed the day with her family, although questions tormented her. She chose not to dwell on them and immersed herself in the happiness of being with them again.",
     decision1en: null,
@@ -189,8 +189,8 @@ export const introArray = [
   {
     //P: Alice hoodie - aniamcion: focus
     id: 14,
-    mensaje: <Typewriter keyProp={14} text=
-      "Al despertar, volvió a su triste realidad original, confundida y abrumada por la tristeza. Se preguntaba si lo que vivió fue un sueño o si el brazalete tuvo un papel en ese extraño episodio."speed={30} />,
+    mensaje: 
+      "Al despertar, volvió a su triste realidad original, confundida y abrumada por la tristeza. Se preguntaba si lo que vivió fue un sueño o si el brazalete tuvo un papel en ese extraño episodio.",
     message:
       "Upon waking, she returned to her original sad reality, confused and overwhelmed by sorrow. She wondered if what she had experienced was a dream or if the bracelet played a role in that strange episode.",
     decision1en: null,
@@ -208,8 +208,8 @@ export const introArray = [
     //sonido: door knocking
     id: 15,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje:  <Typewriter keyProp={15} text=
-      "Después de despertar en su realidad original, un vecino golpeó su puerta preocupado por el grito de una mujer la noche anterior"speed={30} />,
+    mensaje:  
+      "Después de despertar en su realidad original, un vecino golpeó su puerta preocupado por el grito de una mujer la noche anterior",
     message:
       "After waking up in her original reality, a neighbor knocked on her door, concerned about a women screaming last night",
     decision1en: null,
@@ -226,8 +226,8 @@ export const introArray = [
     //Liam: talking - Alice hoodie: idle
     id: 16,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje: <Typewriter keyProp={16} text=
-      "Liam: ¡Hola! Escuché un fuerte estruendo de un rayo y gritos de una mujer, he preguntado con los vecinos y todos sospechan de que fuiste tu y me preocupé. ¿Estás bien?"speed={30} />,
+    mensaje: 
+      "Liam: ¡Hola! Escuché un fuerte estruendo de un rayo y gritos de una mujer, he preguntado con los vecinos y todos sospechan de que fuiste tu y me preocupé. ¿Estás bien?",
     message: "Liam: Hello! I heard a loud thunder and a women screaming, I've been asking the neighrbors and everyone suspects it was you and I got worried. Are you okay?" ,
     decision1en: null,
     decision2en: null,
@@ -243,8 +243,8 @@ export const introArray = [
     //Alice hoodie: talking - Liam: idle
     id: 17,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje: <Typewriter keyProp={17} text=
-      "Alice: Sí, estoy bien, gracias por preocuparte. Fue un rayo cercano, pero estoy ilesa."speed={30} />,
+    mensaje: 
+      "Alice: Sí, estoy bien, gracias por preocuparte. Fue un rayo cercano, pero estoy ilesa.",
     message:
       "Alice: Yes, I'm fine, thank you for caring. It was a nearby lightning strike, but I'm unharmed.",
     decision1en: null,
@@ -267,7 +267,7 @@ export const introArray = [
     //Liam: talking - Alice hoodie: idle
     id: 18,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje: <Typewriter keyProp={18} text= "Liam: Espera, ¿qué te pasó en la mano? ¿Estás segura de que estás bien?"speed={30} />,
+    mensaje:"Liam: Espera, ¿qué te pasó en la mano? ¿Estás segura de que estás bien?",
     message: "Liam: Wait, what happened to your hand? Are you sure you're okay?",
     decision1en: null,
     decision2en: null,
@@ -289,8 +289,8 @@ export const introArray = [
     //Alice hoodie: talking - Liam: idle
     id: 19,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje: <Typewriter keyProp={19} text= 
-      "Alice: No estoy segura de cómo ocurrió. De repente, estaba en mi cuarto y..."speed={30} />,
+    mensaje: 
+      "Alice: No estoy segura de cómo ocurrió. De repente, estaba en mi cuarto y...",
     message: "Alice: I'm not sure how it happened. Suddenly, I was in my room and...",
     decision1en: null,
     decision2en: null,
@@ -312,8 +312,8 @@ export const introArray = [
     //Liam: talking - Alice hoodie: idle
     id: 20,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje: <Typewriter keyProp={20} text= 
-      "Liam: ¿Te lastimaste? Deberías ir al hospital para que lo revisen."speed={30} />,
+    mensaje: 
+      "Liam: ¿Te lastimaste? Deberías ir al hospital para que lo revisen.",
     message:
       "Liam: Did you get hurt? You should go to the hospital to get it checked.",
     decision1en: null,
@@ -336,7 +336,7 @@ export const introArray = [
     //Alice hoodie: talking - Liam: idle
     id: 21,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje: <Typewriter keyProp={21} text=  "Alice: No estoy segura de cómo ocurrió esto, pero..."speed={30} />,
+    mensaje: "Alice: No estoy segura de cómo ocurrió esto, pero...",
     message: "Alice: I'm not sure how this happened, but...",
     decision1en: null,
     decision2en: null,
@@ -358,7 +358,7 @@ export const introArray = [
     //Alice hoodie: asking 
     id: 22,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje: <Typewriter keyProp={21} text= "Alice: ¿Qué hago? ¿Voy o no voy?"speed={30} />,
+    mensaje:  "Alice: ¿Qué hago? ¿Voy o no voy?",
     message: "Alice: What should I do? Should I go or not?",
     decision1en: "Yes",
     decision2en: "No",
@@ -1464,7 +1464,6 @@ export const bifur22Array = [
     aliceHoodie2: true,
     vecino: true,
     animation: 68,
-    id_scena: 1,
     sonido: 0,
   },
   {
