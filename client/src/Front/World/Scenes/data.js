@@ -1437,6 +1437,7 @@ export const bifur22Array = [
     id_scena: 1,
     sonido: 0,
   },
+  //cambio
   {
     //sonido toca puerta
     id: 67,
