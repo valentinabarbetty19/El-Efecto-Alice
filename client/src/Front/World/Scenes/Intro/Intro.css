@@ -4,7 +4,8 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-      
+    z-index: 100; /* O ajusta según sea necesario */
+    pointer-events: auto;
   }
   
   .intro .overlap-group-wrapper {
