@@ -154,6 +154,7 @@ const Story = ({ language, info, route1, route2 }) => {
             }
             img={info[currentImageIndex].imageUrl}
             onClick={() => changeImage()}
+            id={info[currentImageIndex].id}
             decision1={
               language === "español"
                 ? info[currentImageIndex].decision1es

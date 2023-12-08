@@ -29,7 +29,7 @@ export function Vecino(props) {
       const action = actions["Talking"];
      action.play();
     }
-    if((props.animation === 69) || (props.animation === 72)){
+    if((props.animation === 69) || (props.animation === 72) || (props.animation === 22)){
    
       setPositionZ(0)
       setPositionX(5)
