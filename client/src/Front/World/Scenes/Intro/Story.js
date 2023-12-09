@@ -12,7 +12,7 @@ import Vecino from "../models/Vecino";
 import Pastillas from "../models/Pastillas";
 import Alex, { Esposo } from "../models/Alex";
 import Jonas from "../models/Jonas";
-import { CameraControls, Html } from "@react-three/drei";
+import { CameraControls, Html, Text } from "@react-three/drei";
 import Lab from "../models/Scenarios/Lab";
 import Hand from "../models/Scenarios/Hand";
 import AliceLab from "../models/Alice-lab";
@@ -32,6 +32,7 @@ import DoctorCarl from "../models/DoctorCarl";
 import DoctorJimin from "../models/DoctorJimin";
 import Video from "../Video/Video";
 import Car from "../models/Car";
+import Signs from "../models/Signs";
 
 
 
@@ -90,7 +91,10 @@ const Story = ({ language, info, route1, route2 }) => {
   const shouldShowEsposo = info[currentImageIndex].esposo === true;
   const shouldShowVecino = info[currentImageIndex].vecino === true;
   const shouldShowCar = info[currentImageIndex].car === true;
+  const shouldShowSigns = info[currentImageIndex].sign === true;
   const audioRef = useRef(null);
+  const boxRef = useRef();
+  const [hovered, setHover] = useState(false);
   useEffect(() => {
     // Cleanup function to pause and reset the audio when props.sonido changes
     const cleanupAudio = () => {
@@ -166,6 +170,7 @@ const Story = ({ language, info, route1, route2 }) => {
       <div style={{ transform: "translateY(30px)" }}>
       {info[currentImageIndex].video === true ? <Video /> : 
         <Canvas style={{ width: "100vw", height: "90vh" }}>
+                  
           <CameraControls />
           <ambientLight intensity={2} />
 
@@ -200,6 +205,7 @@ const Story = ({ language, info, route1, route2 }) => {
             // positiony={info[currentImageIndex].positiony}
             />}
         {shouldShowPastillas && <Pastillas />}
+        {shouldShowSigns && <Signs />}
         {shouldShowMano && <Hand />}
         {shouldShowBracelet && <Brazalete id_pos={info[currentImageIndex].id} />}
         {shouldShowAlex && <Alex />}

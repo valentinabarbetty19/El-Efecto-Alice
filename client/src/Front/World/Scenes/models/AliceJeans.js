@@ -18,10 +18,12 @@ export function AliceJeans(props) {
   const [positiony, setPositionY] = useState(0);
   const [positionz, setPositionZ] = useState(0);
   const [scale, setScale] = useState(0)
+  const [izqWalk, setIzqWalk] = useState(false);
+  const [derWalk, setDerWalk] = useState(false);
   useEffect(() => {
     console.log(actions)
     for (const key in actions) {
-      actions[key].fadeOut(0.5);
+      actions[key].stop();
     }
     if ((props.animation === 51)) {
       setPositionZ(-13);
@@ -110,6 +112,18 @@ export function AliceJeans(props) {
             .fadeIn(0.5) // Set the loop type to LoopOnce
             .play();
             setScale(1)
+        } else if ((props.animation === 54)) {
+          setPositionZ(-10);
+        setPositionX(-5);
+        setPositionY(-0.5);
+        setRotationy( Math.PI * 2.1)
+          const action = actions["Asking"];
+          action.reset()
+            .setEffectiveTimeScale(1)
+            .setEffectiveWeight(1)
+            .fadeIn(0.5) // Set the loop type to LoopOnce
+            .play();
+            setScale(4)
         } 
     else {
       setScale(4)
@@ -121,6 +135,56 @@ export function AliceJeans(props) {
       setPositionX((prevX) => prevX - 0.2);
     }
   });
+
+  useEffect(() => {
+    let animationFrameId;
+    const handleKeyDown = (event) => {
+      if (event.key === "ArrowLeft") {
+        setIzqWalk(true);
+        setDerWalk(false);
+      } else if (event.key === "ArrowRight") {
+        setDerWalk(true);
+        setIzqWalk(false);
+      }
+    };
+  
+    const handleKeyUp = (event) => {
+      if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+        setIzqWalk(false);
+        setDerWalk(false);
+        for (const key in actions) {
+          actions[key].stop();
+        }
+        actions["Idle"].play();
+      }
+    };
+  
+    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("keyup", handleKeyUp);
+  
+    const updateCharacterPosition = () => {
+      if (group.current) {
+        if (izqWalk) {
+          // Update X-axis position for walking left
+          group.current.position.x -= 0.06;
+          setRotationy(-Math.PI / 2);
+          actions["WalkPlace"].play();
+        } else if (derWalk) {
+          setRotationy(Math.PI / 2);
+          actions["Yes"].play();
+        }
+        animationFrameId = requestAnimationFrame(updateCharacterPosition);
+      }
+    };
+  
+    updateCharacterPosition();
+  
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keyup", handleKeyUp);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, [izqWalk, derWalk]);
   return (
     <group ref={group} {...props} dispose={null} scale={scale} rotation-x={rotationx}
     rotation-z={rotationz}

@@ -788,103 +788,95 @@ export const bifur12Array = [
   },
 ];
 export const bifur2Array = [
-  {
-    //P: alice hoodie y vecino - A: - S:
-    id: 49,
-    imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje:
-      "Alice: Aprecio tu preocupación, pero en realidad estoy cansada y preferiría quedarme, además, la quemadura es pequeña. Gracias de todos modos.",
-    message:
-      "Alice: I appreciate your concern, but I am actually tired and would rather stay home, besides, the burn is small. Thank you anyway.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceHoodie2: true,
-    vecino: true,
-    animation: 21,
-  },
-  {
-    //P: alice hoodie - A: sitting rubbing arm - S:
-    id: 50,
-    mensaje:
-      "En su casa, decide regresar al pasado una vez más para salvar a su familia. Va al día del accidente.",
-    message:
-      "At home, she decides to return to the past once more to save her family. She goes to the day of the accident.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    video: true,
-    sonido: 9
-  },
-  {
-    ////P: alice jeans - A: drunk run - S:
-    id: 51,
-    mensaje:
-      "Una vez se encontró en el pasado, se sentía apresurada por encontrar a su esposo y a su hijo.",
-    message:
-      "Once she got into the past, she felt rushed to find her husband and her son.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceJeans: true,
-    livingroom: true,
-    animation: 51
-  },
-  {
-    //P: alcie jeans - A: corriendo running tired - S:
-    id: 52,
-    mensaje:
-      "Buscó en todos los sitios de la casa y no los encontraba.",
-    message:
-      "She looked for them in all the places in the house and couldn't find them.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceJeans: true,
-    bedroom: true, 
-    animation: 52,
+  // {
+  //   //P: alice hoodie y vecino - A: - S:
+  //   id: 49,
+  //   imageUrl: "/assets/img/scenarios/house-door-outside.png",
+  //   mensaje:
+  //     "Alice: Aprecio tu preocupación, pero en realidad estoy cansada y preferiría quedarme, además, la quemadura es pequeña. Gracias de todos modos.",
+  //   message:
+  //     "Alice: I appreciate your concern, but I am actually tired and would rather stay home, besides, the burn is small. Thank you anyway.",
+  //   decision1en: null,
+  //   decision2en: null,
+  //   decision1es: null,
+  //   decision2es: null,
+  //   aliceHoodie2: true,
+  //   vecino: true,
+  //   animation: 21,
+  // },
+  // {
+  //   //P: alice hoodie - A: sitting rubbing arm - S:
+  //   id: 50,
+  //   mensaje:
+  //     "En su casa, decide regresar al pasado una vez más para salvar a su familia. Va al día del accidente.",
+  //   message:
+  //     "At home, she decides to return to the past once more to save her family. She goes to the day of the accident.",
+  //   decision1en: null,
+  //   decision2en: null,
+  //   decision1es: null,
+  //   decision2es: null,
+  //   video: true,
+  //   sonido: 9
+  // },
+  // {
+  //   ////P: alice jeans - A: drunk run - S:
+  //   id: 51,
+  //   mensaje:
+  //     "Una vez se encontró en el pasado, se sentía apresurada por encontrar a su esposo y a su hijo.",
+  //   message:
+  //     "Once she got into the past, she felt rushed to find her husband and her son.",
+  //   decision1en: null,
+  //   decision2en: null,
+  //   decision1es: null,
+  //   decision2es: null,
+  //   aliceJeans: true,
+  //   livingroom: true,
+  //   animation: 51
+  // },
+  // {
+  //   //P: alcie jeans - A: corriendo running tired - S:
+  //   id: 52,
+  //   mensaje:
+  //     "Buscó en todos los sitios de la casa y no los encontraba.",
+  //   message:
+  //     "She looked for them in all the places in the house and couldn't find them.",
+  //   decision1en: null,
+  //   decision2en: null,
+  //   decision1es: null,
+  //   decision2es: null,
+  //   aliceJeans: true,
+  //   bedroom: true, 
+  //   animation: 52,
    
-  },
-  {
-  //P: alice jeans - A: running drunk  - S:
-    id: 53,
-    imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje:
-      "Entonces decidió irse a buscarlos porque intuyó que ya se habían ido. Esta era su última oportunidad de cambiar el curso de los eventos y salvarlos.",
-    message:
-      "Then she decided to leave to look for them because she had a feeling they had already left. This was her last chance to change the way the events happened and save them.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceJeans: true,
-    animation: 53
-  },
+  // },
+  // {
+  // //P: alice jeans - A: running drunk  - S:
+  //   id: 53,
+  //   imageUrl: "/assets/img/scenarios/house-door-outside.png",
+  //   mensaje:
+  //     "Entonces decidió irse a buscarlos porque intuyó que ya se habían ido. Esta era su última oportunidad de cambiar el curso de los eventos y salvarlos.",
+  //   message:
+  //     "Then she decided to leave to look for them because she had a feeling they had already left. This was her last chance to change the way the events happened and save them.",
+  //   decision1en: null,
+  //   decision2en: null,
+  //   decision1es: null,
+  //   decision2es: null,
+  //   aliceJeans: true,
+  //   animation: 53
+  // },
   {
     //ANIMACIÓN 3D
     id: 54,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje: "No sabe por cuál camino ellos se fueron. ¿Por cuál calle debería ir? ¿Calle 1 o Calle 2?",
     message: "I know which way they went. Which street should I go on? Street 1 or Street 2?",
     decision1en: "Street 1",
     decision2en: "Street 2",
     decision1es: "Calle 1",
     decision2es: "Calle 2",
-    alice: true,
+    aliceJeans: true,
     street_decision: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    sign: true,
+    animation: 54,
   },
 ];
 export const bifur21Array = [
