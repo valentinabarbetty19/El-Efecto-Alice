@@ -20,7 +20,13 @@ export function Vecino(props) {
     for (const key in actions) {
       actions[key].stop();
     }
-    if((props.animation === 68) || (props.animation === 70) || (props.animation === 71) || (props.animation === 73)){
+    if((props.animation === 68) || 
+      (props.animation === 70) || 
+      (props.animation === 71) || 
+      (props.animation === 73) || 
+      (props.animation === 16) ||
+      (props.animation === 18) ||
+      (props.animation === 20)){
       setPositionZ(0)
       setPositionX(5)
       setPositionY(-5)
@@ -29,7 +35,7 @@ export function Vecino(props) {
       const action = actions["Talking"];
      action.play();
     }
-    if((props.animation === 69) || (props.animation === 72)){
+    if((props.animation === 69) || (props.animation === 72) || (props.animation === 17)  || (props.animation === 19)){
    
       setPositionZ(0)
       setPositionX(5)

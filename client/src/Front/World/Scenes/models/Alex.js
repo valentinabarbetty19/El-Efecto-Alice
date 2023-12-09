@@ -29,11 +29,32 @@ export function Esposo(props) {
       const action = actions["Dancing"];
      action.play();
     }
+
+    if(props.animation === 12){
+      setPositionZ(-5)
+      setPositionX(3.2)
+      setPositionY(-3.2)
+      setRotationy( Math.PI * 3.8 )
+      console.log(actions)
+
+      const action = actions["Excited"];
+     action.play();
+    }
+
+    if(props.animation === 13){
+      setPositionZ(-5)
+      setPositionX(-1.5)
+      setPositionY(-3.9)
+      setRotationy( Math.PI / 2 )
+
+      const action = actions["Dancing"];
+     action.play();
+    }
     
-  }, []);
+  }, [props.animation]);
   return (
-    <group ref={group} {...props} dispose={null} scale={4.5}
-    rotation-x={rotationx}
+    <group ref={group} {...props} dispose={null} scale={4.2}
+        rotation-x={rotationx}
         rotation-z={rotationz}
         rotation-y={rotationy}
         position-x={positionx}

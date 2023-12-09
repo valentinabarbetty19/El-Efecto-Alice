@@ -12,7 +12,7 @@ import Vecino from "../models/Vecino";
 import Pastillas from "../models/Pastillas";
 import Alex, { Esposo } from "../models/Alex";
 import Jonas from "../models/Jonas";
-import { CameraControls, Html } from "@react-three/drei";
+import { CameraControls, Environment, Html } from "@react-three/drei";
 import Lab from "../models/Scenarios/Lab";
 import Hand from "../models/Scenarios/Hand";
 import AliceLab from "../models/Alice-lab";
@@ -86,6 +86,9 @@ const Story = ({ language, info, route1, route2 }) => {
   const shouldShowDoctorJimin = info[currentImageIndex].doctorJimin === true;
   const shouldShowEsposo = info[currentImageIndex].esposo === true;
   const shouldShowVecino = info[currentImageIndex].vecino === true;
+  const shouldShowAmbienteTree = info[currentImageIndex].ambiente === true;
+
+
   return (
     <div
       style={{
@@ -99,22 +102,14 @@ const Story = ({ language, info, route1, route2 }) => {
       {info[currentImageIndex].animation === 57 ? <Video /> : 
         <Canvas style={{ width: "100vw", height: "90vh" }}>
           <CameraControls />
-          <ambientLight intensity={2} />
+          <ambientLight intensity={1} />
 
-        {shouldShowAlice && (
-          <Alice
-            animation={info[currentImageIndex].animation}
-            rotationx={info[currentImageIndex].rotationx}
-            rotationz={info[currentImageIndex].rotationz}
-            rotationy={info[currentImageIndex].rotationy}
-          />
-        )}
+        {shouldShowAlice && ( <Alice/>) }
         {shouldShowLab && <Lab id_pos={info[currentImageIndex].id} />}
 
         {shouldShowHospital && <Hospital />}
-        {shouldShowAliceJeans && <AliceJeans />}
-        {shouldShowAliceDress && <AliceParty animation={info[currentImageIndex].animation}
-        />}
+        {shouldShowAliceJeans && <AliceJeans animation={info[currentImageIndex].animation} />}
+        {shouldShowAliceDress && <AliceParty animation={info[currentImageIndex].animation} />}
         {shouldShowAliceHoodie2 && <AliceHoodie2 animation={info[currentImageIndex].animation}/>}
         {shouldShowAliceNobel && <AliceNobel />}
         {shouldShowDoctorCarl && <DoctorCarl />}
@@ -123,25 +118,23 @@ const Story = ({ language, info, route1, route2 }) => {
         {shouldShowEsposo && <Esposo animation={info[currentImageIndex].animation}/>}
         {shouldShowStreet && <Street />}
         {shouldShowStreetDecision && <StreetDecision />}
-        {shouldShowAliceLab && <AliceLab 
-        animation={info[currentImageIndex].animation}
-            // rotationx={info[currentImageIndex].rotationx}
-            // rotationz={info[currentImageIndex].rotationz}
-            // rotationy={info[currentImageIndex].rotationy}
-            // positionx={info[currentImageIndex].positionx}
-            // positionz={info[currentImageIndex].positionz}
-            // positiony={info[currentImageIndex].positiony}
-            />}
+        {shouldShowAliceLab && <AliceLab animation={info[currentImageIndex].animation} />}
         {shouldShowPastillas && <Pastillas />}
         {shouldShowMano && <Hand />}
         {shouldShowEyder && <Vecino />}
         {shouldShowBracelet && <Brazalete id_pos={info[currentImageIndex].id} />}
         {shouldShowAlex && <Alex />}
-        {shouldShowJonas && <Jonas />}
+        {shouldShowJonas && <Jonas animation={info[currentImageIndex].animation} />}
         {shouldShowBedRoom && <Bedroom id_pos={info[currentImageIndex].id} />}
         {shouldShowLivingRoom && <Livingroom id_pos={info[currentImageIndex].id} />}
-        {shouldShowTree && <Tree />}
+        {shouldShowTree && <Tree id_pos={info[currentImageIndex].id}/>}
         {shouldShowManicomio && <Manicomio />}
+        {shouldShowAmbienteTree && <Environment
+            files="/assets/environments/satara_night_no_lamps_1k.hdr"
+            background={true}
+            id_pos={info[currentImageIndex].id}
+
+        />}
       </Canvas>}
     </div>
     <div>

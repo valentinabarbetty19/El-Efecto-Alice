@@ -7,7 +7,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export function AliceLab(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/assets/models/Alice/AliceLab/AliceLabAnimations.glb");
+  const { nodes, materials, animations } = useGLTF("/assets/models/Alice/AliceLab/alielab.glb");
 
 const aliceRef = useRef();
 
@@ -27,11 +27,11 @@ const aliceRef = useRef();
     }
 
     if(props.animation === 1){
-      console.log("animation")
+
       setPositionZ(-2.1)
       setPositionX(-1.5)
       setPositionY(-3)
-      setRotationy( Math.PI / -2)
+      setRotationy( Math.PI / -2.8)
       
       const action = actions["Cards"];
       action.play();
@@ -125,5 +125,5 @@ const aliceRef = useRef();
   );
 }
 
-useGLTF.preload("/assets/models/Alice/AliceLab/AliceLabAnimations.glb");
+useGLTF.preload("/assets/models/Alice/AliceLab/alielab.glb");
 export default AliceLab;

@@ -22,6 +22,8 @@ export function Bedroom(props) {
   const [positiony, setPositionY] = useState(0);
   const [positionz, setPositionZ] = useState(0);
 
+  const [ambienteL, setAmbienteL] = useState(0);
+
   useFrame((state) => {
     if ((props.id_pos === 3) || (props.id_pos === 4)) {
       camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
@@ -33,23 +35,39 @@ export function Bedroom(props) {
       // camera.rotation.y = MathUtils.lerp(camera.rotation.y, 12, 0.1);
       // camera.rotation.z = MathUtils.lerp(camera.rotation.z, 0, 0.1);
     }
+    if ((props.id_pos === 12)) {
+      camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
+      camera.position.z = MathUtils.lerp(camera.position.z, 3, 0.1);
+      camera.position.y = MathUtils.lerp(camera.position.y, 10, 0.1);
+
+      
+      camera.rotation.y = MathUtils.lerp(camera.rotation.y, 3, 0.1);
+      camera.rotation.z = MathUtils.lerp(camera.rotation.z, 1, 0.1);
+    }
   });
 
   useEffect(() => {
 
-    if((props.id_pos === 3) || (props.id_pos === 4)){
+    if((props.id_pos === 3) || (props.id_pos === 4) || (props.id_pos === 14) || (props.id_pos === 12)){
 
-      console.log("Bedroom")
+      // console.log("Bedroom")
       setPositionZ(-10)
       setPositionX(0)
       setPositionY(-3)
       setRotationy(Math.PI/111)
       setRotationz(-Math.PI/900)
       setRotationx(Math.PI /50)
+      // setAmbienteL(0.1)
     } 
   }, [props.id_pos]);
+  
 
   return (
+    <>
+    {/* <ambientLight intensity={ambienteL}  color={0xF5B46F}/> */}
+    {/* <ambientLight intensity={ambienteL}  color={0x000000}/> */}
+    {/* <pointLight position={[1, -3, -1.8]} intensity={900} color={"orange"}/> */}
+    {/* <hemisphereLight position={[1, -3, -1.8]} intensity={2} color={"black"} /> */}
     <group 
     {...props} 
     rotation-x={rotationx}
@@ -258,6 +276,7 @@ export function Bedroom(props) {
         scale={0.9}
       />
     </group>
+    </>
   );
 }
 

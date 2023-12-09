@@ -22,12 +22,14 @@ export function Lab(props) {
   const [positiony, setPositionY] = useState(0);
   const [positionz, setPositionZ] = useState(0);
 
+  const [ambienteL, setAmbienteL] = useState(0);
+
   useFrame((state) => {
-    if (props.id_pos === 1) {
+    if ((props.id_pos === 1) || (props.id_pos === 2)) {
       // camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
       // camera.position.z = MathUtils.lerp(camera.position.z, 3, 0.1);
       camera.position.y = MathUtils.lerp(camera.position.y, 10, 0.1);
-      camera.rotation.x = MathUtils.lerp(camera.rotation.x, -1, 0.1);
+      camera.rotation.x = MathUtils.lerp(camera.rotation.x, -3.4, 0.1);
       
     }
   });
@@ -35,18 +37,27 @@ export function Lab(props) {
   useEffect(() => {
 
     if((props.id_pos === 1)){
-      console.log("lab")
+      setRotationy( Math.PI / -6)
+      // Añadir luz ambiente si es necesario
+      setAmbienteL(0)
+    } 
+    if((props.id_pos === 2)){
       setPositionZ(0)
       setPositionX(0)
       setPositionY(0)
       setRotationy( Math.PI / -6)
       setRotationz(0)
       setRotationx(0)
+      // Añadir luz ambiente si es necesario
+      setAmbienteL(0)
     } 
   }, [props.id_pos]);
 
   const { nodes, materials, animations } = useGLTF("/assets/models/Scenarios/lab.glb");
   return (
+    <>
+    {/* <ambientLight intensity={ambienteL} /> */}
+    <pointLight position={[-7.7, -0.4, -4]} intensity={40} color={"blue"}/>
     <group 
     rotation-x={rotationx}
     rotation-z={rotationz}
@@ -3163,6 +3174,7 @@ export function Lab(props) {
         </group>
       </group>
     </group>
+    </>
   );
 }
 

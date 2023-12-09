@@ -20,17 +20,21 @@ export function Livingroom(props) {
   const [positionx, setPositionX] = useState(0);
   const [positiony, setPositionY] = useState(0);
   const [positionz, setPositionZ] = useState(0);
+  const [ambienteL, setAmbienteL] = useState(0);
 
   useFrame(() => {
-    if ((props.id_pos === 5) || (props.id_pos === 6 || (props.id_pos === 7))
-  ) {
+    if ((props.id_pos === 5) || (props.id_pos === 6) || (props.id_pos === 7)) {
       camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
       camera.position.z = MathUtils.lerp(camera.position.z, 19, 0.1);
       camera.position.y = MathUtils.lerp(camera.position.y, 19, 0.1);
 
       camera.rotation.x = MathUtils.lerp(camera.rotation.x, 1, 0.1);
-      // camera.rotation.y = MathUtils.lerp(camera.rotation.y, 12, 0.1);
-      // camera.rotation.z = MathUtils.lerp(camera.rotation.z, 0, 0.1);
+    }
+    if (props.id_pos === 13){
+      camera.rotation.x = MathUtils.lerp(camera.rotation.x, 1.2, 0.1);
+    }
+    if (props.id_pos === 5){
+      camera.rotation.x = MathUtils.lerp(camera.rotation.x, 1.2, 0.1);
     }
     if (props.id_pos === 66){
       camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
@@ -45,15 +49,37 @@ export function Livingroom(props) {
 
   useEffect(() => {
 
-    if((props.id_pos === 5) || (props.id_pos === 6) || (props.id_pos === 7)){
+    if((props.id_pos === 5) || (props.id_pos === 6) || (props.id_pos === 7) || (props.id_pos === 11)){
 
-      console.log("Bedroom")
       setPositionZ(-10)
       setPositionX(0)
       setPositionY(-3)
       setRotationy(-Math.PI/1)
       setRotationz(-Math.PI/900)
       setRotationx(Math.PI /50)
+
+    } 
+    if(props.id_pos === 8){
+
+      setPositionZ(10)
+      setPositionX(0)
+      setPositionY(-4)
+      setRotationy(Math.PI/-80)
+      setRotationz(-Math.PI/900)
+      setRotationx(Math.PI /50)
+      // setAmbienteL(2)
+
+    } 
+    if(props.id_pos === 13){
+
+      setPositionZ(-10)
+      setPositionX(0)
+      setPositionY(-3)
+      setRotationy(-Math.PI/1)
+      setRotationz(-Math.PI/900)
+      setRotationx(Math.PI /50)
+      // setAmbienteL(2)
+
     } 
     if((props.id_pos === 66)){
       setPositionZ(-7)
@@ -65,6 +91,10 @@ export function Livingroom(props) {
   const { nodes, materials, animations } = useGLTF("/assets/models/Scenarios/living-room.glb");
   const { actions } = useAnimations(animations, group);
   return (
+    <>
+    {props.id_pos === 11 && (
+      <pointLight position={[-2.3, 0, -9]} intensity={200} color={"orange"} />
+    )}
     <group 
     {...props} 
     rotation-x={rotationx}
@@ -487,6 +517,7 @@ export function Livingroom(props) {
         </group>
       </group>
     </group>
+    </>
   );
 }
 

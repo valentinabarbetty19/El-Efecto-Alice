@@ -6,9 +6,9 @@ export function Brazalete(props) {
   const groupRef = useRef();
   const { nodes, materials } = useGLTF("/assets/models/Brazalete/brace_let.glb");
   useFrame(() => {
-    // Rotate the group on the y-axis (you can adjust the rotation speed by changing the second parameter)
-    //groupRef.current.rotation.y += 0.01;
+    if((props.id_pos === 2) || (props.id_pos === 11)){
     groupRef.current.rotation.y += 0.01;
+    }
   });
 
   const [rotationx, setRotationx] = useState(0);
@@ -21,12 +21,21 @@ export function Brazalete(props) {
   useEffect(() => {
 
     if((props.id_pos === 2)){
-      console.log("braz")
-      // setPositionZ(0)
-      // setPositionX(0)
-      // setPositionY(0)
-      // setRotationy(0)
-      // setRotationz(Math.PI/2.5)
+      setRotationy(Math.PI)
+      setRotationx(Math.PI/2.5)
+    } 
+    if((props.id_pos === 7)){
+      setPositionX(-2.4)
+      setPositionY(-1)
+      setPositionZ(-10)
+      setRotationy(Math.PI)
+      setRotationx(Math.PI/2.5)
+    } 
+    if((props.id_pos === 11)){
+      setPositionX(-2.4)
+      setPositionY(-0.7)
+      setPositionZ(-10)
+      setRotationy(Math.PI)
       setRotationx(Math.PI/2.5)
     } 
   }, [props.id_pos]);
@@ -40,7 +49,7 @@ export function Brazalete(props) {
     position-z={positionz}
     position-y={positiony}
     ref={groupRef} {...props} 
-    dispose={null} scale={5} 
+    dispose={null} scale={4} 
     rotation-x={Math.PI/2.5}
     >
       <group rotation={[-Math.PI / 2, 0, 0]}>
