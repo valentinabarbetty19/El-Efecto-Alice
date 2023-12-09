@@ -7,10 +7,10 @@ Title: Bedroom Test
 */
 
 import React, { useEffect, useState } from "react";
-import { useGLTF } from "@react-three/drei";
-import { MathUtils } from "three";
+import { Effects, useGLTF } from "@react-three/drei";
+import { MathUtils, Vector3  } from "three";
 import { useFrame, useThree } from "@react-three/fiber";
-
+import * as THREE from "three";
 export function Bedroom(props) {
   const { nodes, materials } = useGLTF("/assets/models/Scenarios/bedroom_test.glb");
   const { camera } = useThree();
@@ -60,6 +60,7 @@ export function Bedroom(props) {
     position-y={positiony}
     dispose={null} 
     scale={0.05}>
+      
       <group
         position={[34.981, 138.514, -71.428]}
         rotation={[-Math.PI / 2, 0, 0]}
