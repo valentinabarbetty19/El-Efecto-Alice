@@ -7,10 +7,10 @@ Title: Bedroom Test
 */
 
 import React, { useEffect, useState } from "react";
-import { useGLTF } from "@react-three/drei";
-import { MathUtils } from "three";
+import { Effects, useGLTF } from "@react-three/drei";
+import { MathUtils, Vector3  } from "three";
 import { useFrame, useThree } from "@react-three/fiber";
-
+import * as THREE from "three";
 export function Bedroom(props) {
   const { nodes, materials } = useGLTF("/assets/models/Scenarios/bedroom_test.glb");
   const { camera } = useThree();
@@ -25,7 +25,7 @@ export function Bedroom(props) {
   const [ambienteL, setAmbienteL] = useState(0);
 
   useFrame((state) => {
-    if ((props.id_pos === 3) || (props.id_pos === 4)) {
+    if ((props.id_pos === 3) || (props.id_pos === 4) ) {
       camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
       camera.position.z = MathUtils.lerp(camera.position.z, 3, 0.1);
       camera.position.y = MathUtils.lerp(camera.position.y, 10, 0.1);
@@ -48,7 +48,7 @@ export function Bedroom(props) {
 
   useEffect(() => {
 
-    if((props.id_pos === 3) || (props.id_pos === 4) || (props.id_pos === 14) || (props.id_pos === 12)){
+    if((props.id_pos === 3) || (props.id_pos === 4) || (props.id_pos === 14) || (props.id_pos === 12) || (props.id_pos === 52)){
 
       // console.log("Bedroom")
       setPositionZ(-10)
@@ -78,6 +78,7 @@ export function Bedroom(props) {
     position-y={positiony}
     dispose={null} 
     scale={0.05}>
+      
       <group
         position={[34.981, 138.514, -71.428]}
         rotation={[-Math.PI / 2, 0, 0]}

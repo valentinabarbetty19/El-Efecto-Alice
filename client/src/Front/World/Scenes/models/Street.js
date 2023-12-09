@@ -8,11 +8,26 @@ Title: Road Intersection
 
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import { Sky} from "@react-three/drei"
+import { useThree } from "@react-three/fiber";
+import { MathUtils } from "three";
 
 export function Street(props) {
   const { nodes, materials } = useGLTF("/assets/models/Scenarios/road_intersection.glb");
+
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} position-y={3} position-z={13} position-x={13}>
+      <Sky
+                sunPosition={[0, 0, -1]} // Places the sun below the horizon
+                inclination={0.2} // Adjusts the tilt to simulate sunset
+                azimuth={180} // Adjusts the azimuth angle to change the direction of the light
+                mieCoefficient={0.005} // Adjusts the atmospheric scattering
+                elevation={5} // Adjusts the elevation of the sun
+                mieDirectionalG={0.07} // Adjusts the brightness of the sun
+                rayleigh={3} // Adjusts the Rayleigh scattering
+                turbidity={10} // Adjusts the clarity of the sky]
+                exposure={0.5} // Adjusts the overall exposure
+            />
       <group rotation={[-Math.PI / 2, 0, 0]} scale={3.744}>
         <mesh
           castShadow

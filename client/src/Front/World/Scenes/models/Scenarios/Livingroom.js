@@ -23,7 +23,8 @@ export function Livingroom(props) {
   const [ambienteL, setAmbienteL] = useState(0);
 
   useFrame(() => {
-    if ((props.id_pos === 5) || (props.id_pos === 6) || (props.id_pos === 7)) {
+    if ((props.id_pos === 5) || (props.id_pos === 51) || (props.id_pos === 6 || (props.id_pos === 7))
+  ) {
       camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
       camera.position.z = MathUtils.lerp(camera.position.z, 19, 0.1);
       camera.position.y = MathUtils.lerp(camera.position.y, 19, 0.1);
@@ -49,7 +50,7 @@ export function Livingroom(props) {
 
   useEffect(() => {
 
-    if((props.id_pos === 5) || (props.id_pos === 6) || (props.id_pos === 7) || (props.id_pos === 11)){
+    if((props.id_pos === 5) || (props.id_pos === 51)  || (props.id_pos === 73) || (props.id_pos === 6) || (props.id_pos === 7) || (props.id_pos === 11)){
 
       setPositionZ(-10)
       setPositionX(0)

@@ -1,10 +1,9 @@
-import Typewriter from '../Typewriter';
-
 
 export const introArray = [
   {
     id: 1,
-    mensaje: <Typewriter keyProp={1} text="Alice Brown, una de las mejores científicas del país, ha destinado toda su vida al estudio de la física cuántica y los viajes en el tiempo." speed={30} />,
+    // imageUrl: "/assets/img/scenarios/laboratory.png",
+    mensaje:"Alice Brown, una de las mejores científicas del país, ha destinado toda su vida al estudio de la física cuántica y los viajes en el tiempo.",
     message:
       "Alice Brown, one of the country's top scientists, has dedicated her entire life to the study of quantum physics and time travel.",
     aliceLab: true,
@@ -12,13 +11,14 @@ export const introArray = [
     animation: 1,
     id_scena: 1,
     sonido: 0,
+    sad: true
   },
   // Otros objetos de introArray...
 
   {
     // fondo negro mostrando el brazalete en 3D
     id: 2,
-    mensaje: <Typewriter keyProp={2} text="Ha estado trabajando en un brazalete que le permitiría escoger la fecha a dónde quiere viajar en el pasado, sin embargo, este artefacto no tiene la energía suficiente para que funcione."speed={30} />,
+    mensaje: "Ha estado trabajando en un brazalete que le permitiría escoger la fecha a dónde quiere viajar en el pasado, sin embargo, este artefacto no tiene la energía suficiente para que funcione.",
     message:
       "She has been working on a bracelet that would allow her to choose the date to which she wants to travel into the past. However, this device does not have enough energy to function.",
     bracelet: true,
@@ -26,40 +26,44 @@ export const introArray = [
     id_scena: 1,
     animation: 2,
     sonido: 0,
+    sad: true
   }, //brazalete
   {
     //habitación - triste - alice llorando - musica sad
 
     //Personaje: Alice Hoodie - Animación: sitting disbelief - Sonido: crying
     id: 3,
-    mensaje:  <Typewriter keyProp={3} text=
-      "Tenía su vida feliz con su hijo y su esposo, pero desafortunadamente, tuvieron un accidente automovilístico, y todos menos ella, perdieron la vida."speed={30} />,
+    mensaje:  
+      "Tenía su vida feliz con su hijo y su esposo, pero desafortunadamente, tuvieron un accidente automovilístico, y todos menos ella, perdieron la vida.",
     message:
       "She had a happy life with her son and husband, but unfortunately, they had a car accident, and everyone except her, lost their lives.",
     aliceHoodie2: true,
     bedroom: true,
     id_scena: 1,
     animation: 3,
-    sonido: 0,
+    sonido: 1,
+    sad: true
   }, 
   {
     //Personaje: Alice Hoodie - Animación: sitting disbelief - Sonido: crying
     id: 4,
-    mensaje: <Typewriter keyProp={4} text=
-      "Alice ha quedado devastada tras este hecho, pues prácticamente toda su vida se ha derrumbado."speed={30} />,
+    mensaje: 
+      "Alice ha quedado devastada tras este hecho, pues prácticamente toda su vida se ha derrumbado.",
     message:
       "Alice has been devastated by this event, as practically her whole life has crumbled.",
     aliceHoodie2: true,
     id_scena: 1,
     bedroom: true,
     animation: 4,
+    sonido: 1,
+    sad: true
   },
   {
     //alice lab decepcionada con el brazalete ********************
     // personaje: Alice Hoodie - animación: looking around 
     id: 5,
-    mensaje: <Typewriter keyProp={5} text=
-      "Tras la tragedia, experimenta visiones perturbadoras que la hacen dudar su salud."speed={30} />,
+    mensaje: 
+      "Tras la tragedia, experimenta visiones perturbadoras que la hacen dudar su salud.",
     message:
       "After the tragedy, she experiences disturbing visions that make her doubt her health...",
     aliceHoodie2: true,
@@ -67,34 +71,38 @@ export const introArray = [
     jonas:true,
     id_scena: 1,
     animation: 5,
+    sonido: 3,
+    sad: true
   },
   {
     //Personaje: Alice Hoodie - animación: sitting disbelief
     id: 6,
-    mensaje: <Typewriter keyProp={6} text="¿Jonas? No, no puede ser... ¿Qué me pasa?" speed={30} />,
+    mensaje: "¿Jonas? No, no puede ser... ¿Qué me pasa?",
     message: 
       "Jonas? No, this can't be real... What is going on with me?",
     aliceHoodie2: true,
     livingroom: true,
     id_scena: 1,
-    animation: 6
+    animation: 6,
+    sad: true
   },
   {
     //P: Alice Hoodie - animación: sitting disbelief
     id: 7,
-    mensaje: <Typewriter keyProp={7} text= "A pesar de su empeño en el brazalete, comienza a perder la esperanza en recuperar a su familia."speed={30} />,
+    mensaje: "A pesar de su empeño en el brazalete, comienza a perder la esperanza en recuperar a su familia.",
     message:
       "Despite her efforts on the bracelet, she begins to lose hope in getting his family back.",
     aliceHoodie2: true,
     bracelet: true,
     livingroom: true,
     animation: 7,
+    sad: true
   },
   { 
     //personaje: jonas (el hijo) parado al lado del arbol **** - hacer lluvia?????? - sonido de lluvia con truenos
     id: 8,
-    mensaje: <Typewriter keyProp={8} text=
-      "En una tarde lluviosa, cerca de su casa, Alice vio algo cerca a un viejo árbol, cree que es su hijo."speed={30} />,
+    mensaje: 
+      "En una tarde lluviosa, cerca de su casa, Alice vio algo cerca a un viejo árbol, cree que es su hijo.",
     message:
       "On a rainy afternoon near her house, Alice saw something near an old tree. She thinks it's her son",
     tree: true,
@@ -102,39 +110,45 @@ export const introArray = [
     aliceHoodie2: true,
     livingroom:true,
     animation: 8,
+    sonido: 4,
+    sad: true
   },
   {
   //sonido: gritoTrueno
     id: 9,
     imageUrl: "/assets/img/scenarios/thundersorm.png",
-    mensaje: "Al ir a investigar, Fue alcanzada por un rayo.",
+    mensaje: "Al ir a investigar, fue alcanzada por un rayo.",
     message:
       "When she went to find out what it was, she was struck by a lightning.",
     animation: 0,
+    sonido: 5
   },
   {
     //P: Alice Hoodie - animación: agony sonido: lluviaLlanto 
     id: 10,
-    mensaje: <Typewriter keyProp={10} text= 
-      "Tras el impacto del rayo, Alice momentáneamente aturdida y desconcertada, se apresura a casa para recuperarse."speed={30} />,
+    mensaje: 
+      "Tras el impacto del rayo, Alice momentáneamente aturdida y desconcertada, se apresura a casa para recuperarse.",
     message:
       "After the lightning strike, Alice momentarily stunned and bewildered, rushes home to recover.",
     tree: true,
     aliceHoodie2:true,
     animation: 10,
     ambiente: true,
+    sonido: 6,
+    sad: true
   },
   {
     //NO SE :C *********
     id: 11,
-    mensaje:  <Typewriter keyProp={11} text= 
-      "Mientras se recuperaba en casa, el brazalete en su brazo se iluminó, llevándola a creer que podría viajar en el tiempo. Sin dudarlo, eligió su cumpleaños como su primera parada en su viaje temporal. De repente, todo se oscureció..."speed={30} />,
+    mensaje:  
+      "Mientras se recuperaba en casa, el brazalete en su brazo se iluminó, llevándola a creer que podría viajar en el tiempo. Sin dudarlo, eligió su cumpleaños como su primera parada en su viaje temporal.",
     message:
       "While recovering at home, the bracelet on her arm lit up, leading her to believe she could time travel. Without hesitation, she chose her birthday as her first stop on her temporal journey. Suddenly, everything went dark...",
     aliceHoodie2: true,
     livingroom: true,
     bracelet: true,
     animation: 11,
+    sad: true
   },
   {
     // Intermedio para video
@@ -145,8 +159,8 @@ export const introArray = [
   {
     //P: Alice Jeans (crying), Jonas y esposo (excited) 
     id: 12,
-    mensaje:  <Typewriter keyProp={12} text= 
-      "Y cuando despertó, se encontró en su cuarto. Para su asombro, su esposo e hijo la sorprendieron en la mañana de su cumpleaños, vivos y llenos de alegría."speed={30} />,
+    mensaje:  
+      "De repente, todo se oscureció, y cuando despertó, se encontró en su cuarto. Para su asombro, su esposo e hijo la sorprendieron en la mañana de su cumpleaños, vivos y llenos de alegría.",
     message:
       "Suddenly, everything went dark, and when she woke up, she found herself in her room. To her amazement, her husband and son surprised her on her birthday morning, alive and filled with joy.",
     aliceJeans: true,
@@ -158,8 +172,8 @@ export const introArray = [
   {
     //P_ ALice jeans - jonas **** y esposo - aniamcion: dancing - sonido: don't go breaking my heart
     id: 13,
-    mensaje:  <Typewriter keyProp={13} text= 
-      "Alice disfrutó el día con su familia, aunque las preguntas la atormentaban. Decidió no pensar demasiado en ello y se sumergió en la felicidad de estar con ellos de nuevo."speed={30} />,
+    mensaje:  
+      "Alice disfrutó el día con su familia, aunque las preguntas la atormentaban. Decidió no pensar demasiado en ello y se sumergió en la felicidad de estar con ellos de nuevo.",
     message:
       "Alice enjoyed the day with her family, although questions tormented her. She chose not to dwell on them and immersed herself in the happiness of being with them again.",
     aliceJeans: true,
@@ -167,131 +181,125 @@ export const introArray = [
     jonas: true,
     livingroom: true,
     animation: 13,
+    sonido: 7
   },
   {
     //P: Alice hoodie - aniamcion: focus
     id: 14,
-    mensaje: <Typewriter keyProp={14} text=
-      "Al despertar, volvió a su triste realidad original, confundida y abrumada por la tristeza. Se preguntaba si lo que vivió fue un sueño o si el brazalete tuvo un papel en ese extraño episodio."speed={30} />,
+    mensaje: 
+      "Al despertar, volvió a su triste realidad original, confundida y abrumada por la tristeza. Se preguntaba si lo que vivió fue un sueño o si el brazalete tuvo un papel en ese extraño episodio.",
     message:
       "Upon waking, she returned to her original sad reality, confused and overwhelmed by sorrow. She wondered if what she had experienced was a dream or if the bracelet played a role in that strange episode.",
     aliceHoodie2: true,
     bedroom: true,
     animation: 14,
+    sad: true
   },
   {
     //sonido: door knocking
     id: 15,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje:  <Typewriter keyProp={15} text=
-      "Después de despertar en su realidad original, un vecino golpeó su puerta preocupado por el grito de una mujer la noche anterior"speed={30} />,
+    mensaje:  
+      "Después de despertar en su realidad original, un vecino golpeó su puerta preocupado por el grito de una mujer la noche anterior",
     message:
       "After waking up in her original reality, a neighbor knocked on her door, concerned about a women screaming last night",
+    sonido: 8,
+    sad: true
   },
   {
     //Liam: talking - Alice hoodie: idle
     id: 16,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje: <Typewriter keyProp={16} text= "Liam: ¡Hola! Escuché un fuerte estruendo de un rayo y gritos de una mujer, he preguntado con los vecinos y todos sospechan de que fuiste tu y me preocupé. ¿Estás bien?"speed={30} />,
+    mensaje: "Liam: ¡Hola! Escuché un fuerte estruendo de un rayo y gritos de una mujer, he preguntado con los vecinos y todos sospechan de que fuiste tu y me preocupé. ¿Estás bien?",
     message: "Liam: Hello! I heard a loud thunder and a women screaming, I've been asking the neighrbors and everyone suspects it was you and I got worried. Are you okay?" ,
     aliceHoodie2: true,
     vecino: true,
     animation: 16,
+    sad: true
   },
   {
     //Alice hoodie: talking - Liam: idle
     id: 17,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje: <Typewriter keyProp={17} text=
-      "Alice: Sí, estoy bien, gracias por preocuparte. Fue un rayo cercano, pero estoy ilesa."speed={30} />,
+    mensaje: 
+      "Alice: Sí, estoy bien, gracias por preocuparte. Fue un rayo cercano, pero estoy ilesa.",
     message:
       "Alice: Yes, I'm fine, thank you for caring. It was a nearby lightning strike, but I'm unharmed.",
     aliceHoodie2: true,
     vecino: true,
     animation: 17,
+    sad: true
   },
   {
     //Liam: talking - Alice hoodie: idle
     id: 18,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje: <Typewriter keyProp={18} text= "Liam: Espera, ¿qué te pasó en la mano? ¿Estás segura de que estás bien?"speed={30} />,
+    mensaje:"Liam: Espera, ¿qué te pasó en la mano? ¿Estás segura de que estás bien?",
     message: "Liam: Wait, what happened to your hand? Are you sure you're okay?",
     aliceHoodie2: true,
     vecino: true,
     animation: 18,
+    sad: true
   },
   {
     //Alice hoodie: talking - Liam: idle
     id: 19,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje: <Typewriter keyProp={19} text= 
-      "Alice: No estoy segura de cómo ocurrió. De repente, estaba en mi cuarto y..."speed={30} />,
+    mensaje: 
+      "Alice: No estoy segura de cómo ocurrió. De repente, estaba en mi cuarto y...",
     message: "Alice: I'm not sure how it happened. Suddenly, I was in my room and...",
     aliceHoodie2: true,
     vecino: true,
     animation: 19,
+    sad: true
   },
   {
     //Liam: talking - Alice hoodie: idle
     id: 20,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje: <Typewriter keyProp={20} text= 
-      "Liam: ¿Te lastimaste? Deberías ir al hospital para que lo revisen."speed={30} />,
+    mensaje: 
+      "Liam: ¿Te lastimaste? Deberías ir al hospital para que lo revisen.",
     message:
       "Liam: Did you get hurt? You should go to the hospital to get it checked.",
     aliceHoodie2: true,
     vecino: true,
     animation: 20,
+    sad: true
   },
-  {
-    //Alice hoodie: talking - Liam: idle
+   {
+  //   //Alice hoodie: talking - Liam: idle
     id: 21,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje: <Typewriter keyProp={21} text=  "Alice: No estoy segura de cómo ocurrió esto, pero..."speed={30} />,
+    mensaje: "Alice: No estoy segura de cómo ocurrió esto, pero...",
     message: "Alice: I'm not sure how this happened, but...",
     decision1en: null,
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
+    aliceHoodie2: true,
+    vecino: true,
+    animation: 21,
     rotationx: 0,
     rotationy: 0,
     rotationz: 0,
+    sad: true
   },
   {
     //Alice hoodie: asking 
     id: 22,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje: <Typewriter keyProp={21} text= "Alice: ¿Qué hago? ¿Voy o no voy?"speed={30} />,
+    mensaje: "Alice: ¿Qué hago? ¿Voy o no voy?",
     message: "Alice: What should I do? Should I go or not?",
     decision1en: "Yes",
     decision2en: "No",
     decision1es: "Si",
     decision2es: "No",
     alice: true,
-    alex: false,
-    jonas: false,
-    eyder: true,
-    carl: false,
-    jimmy: false,
-    narrador: false,
+    vecino: true,
     photo: "assets/img/gif/keyboard.gif",
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    animation: 1,
+    animation: 22,
     sonido: 0,
+    sad: true
   },
 ];
 export const bifur1Array = [
@@ -307,22 +315,11 @@ export const bifur1Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
+    aliceHoodie2: true,
+    vecino: true,
+    animation: 23,
     sonido: 0,
+    sad: true
   },
   {
     //Liam: talking - Alice: idle
@@ -336,22 +333,10 @@ export const bifur1Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    aliceHoodie2: true,
+    vecino: true,
+    animation: 24,
+    sad: true
   },
   {
     //Alice: talking - Liam: idle
@@ -365,27 +350,15 @@ export const bifur1Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
+    aliceHoodie2: true,
+    vecino: true,
     sonido: 0,
+    animation: 25,
+    sad: true
   },
   {
     //Alice: idle
     id: 26,
-   // imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "En el hospital Alice comenta toda la situación acerca de sus visiones y el impacto del rayo al médico y espera resultados después de unos análisis médicos y de comportamiento.",
     message:
@@ -394,22 +367,15 @@ export const bifur1Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceHoodie2: true,
+    doctorCarl: true,
     hospital: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    animation: 26,
+    sad: true
   },
   {
     //Doctor: talking - Alice: idle
     id: 27,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Doctor Carl: Hemos revisado tus análisis al parecer la quemadura no es nada grave. Sanará en unos días, pero sí se pudieron evidencias problemas mentales y esquizofrenia.",
     message:
@@ -418,22 +384,16 @@ export const bifur1Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceHoodie2: true,
+    doctorCarl: true,
     hospital: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
+    animation: 27,
     sonido: 0,
+    sad: true
   },
   {
 //Alice: talking - doctor: idle
     id: 28,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Alice: ¿Esquizofrenia? ¿Estás seguro? ¿No es posible que todo esto sea solo un sueño, una ilusión? ¿Qué es real? Esto debe ser una broma",
     message:
@@ -442,22 +402,17 @@ export const bifur1Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceHoodie2: true,
+    doctorCarl: true,
     hospital: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    animation: 26,
+    sonido: 0,
+    sad: true
+  
   },
   {
     //Doctor: talking - Alice: idle
     id: 29,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Doctor Carl: Entiendo que esto debe ser abrumador para ti, Alice. Pero los análisis y observaciones clínicas son concluyentes. Ahora te quiero hablar respecto a dos pastillas experimentales, que son una opción que podría ayudarte a recuperar la estabilidad mental.",
     message:
@@ -466,22 +421,16 @@ export const bifur1Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceHoodie2: true,
+    doctorCarl: true,
     hospital: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
+    animation: 27,
     sonido: 0,
+    sad: true
   },
   {
     //Alice: talking - Doctor: idle
     id: 30,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje: "Alice: No estoy segura, Doctor Carl. ¿Qué tipo de pastillas son?",
     message:
       "Alice: I'm not sure, Doctor Carl. What kind of pills are those?",
@@ -489,21 +438,15 @@ export const bifur1Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceHoodie2: true,
+    doctorCarl: true,
     hospital: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
+    animation: 26,
     sonido: 0,
+    sad: true
   },
   {
     id: 31,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje: "Doctor Carl: Son pastillas seguras y ha ayudado a muchas personas en situaciones similares. Tienes que escoger entre la roja y la azul.",
     message:
       "Doctor Carl: They are safe pills and have helped many people in similar situations. You have to choose between the red and the blue one.",
@@ -511,42 +454,30 @@ export const bifur1Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceHoodie2: true,
+    doctorCarl: true,
     hospital: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
+    animation: 27,
     sonido: 0,
+    sad: true
   },
   {
     id: 32,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje: "Alice: ¿Qué efecto tendrá en mí?",
     message: "Alice: What will be the effect on me?",
     decision1en: null,
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceHoodie2: true,
+    doctorCarl: true,
     hospital: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
+    animation: 26,
     sonido: 0,
+    sad: true
   },
   {
     id: 33,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Doctor Carl: No te preocupes, no te alejará de la realidad, pero podría ayudarte a sentirte más tranquila, al menos temporalmente.",
     message:
@@ -555,24 +486,19 @@ export const bifur1Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceHoodie2: true,
+    doctorCarl: true,
     hospital: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
+    animation: 27,
     sonido: 0,
+    sad: true
   },
   {
     //ANIMACIÓN 3D
     id: 34,
     imageUrl: "/assets/img/scenarios/fondo-bifur11.png",
-    mensaje: "Alice: ¿Qué pasta debo tomar? ¿azul o roja?",
-    message: "Alice: Which pill should I take? blue or red?",
+    mensaje: "Alice: ¿Qué pasta debo tomar? ¿azul o roja? (Da click en la pastilla que quieras escoger)",
+    message: "Alice: Which pill should I take? blue or red? (Click on the pill you want to choose)",
     // decision1en: "Blue",
     // decision2en: "Red",
     // decision1es: "Azul",
@@ -582,20 +508,12 @@ export const bifur1Array = [
     // alice: true,
     // hospital: true,
     animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    sad: true
   },
 ];
 export const bifur11Array = [
   {
     id: 35,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Alice: Está bien, Doctor Carl, lo intentaré con la pasta azul. Necesito encontrar algo de paz.",
     message:
@@ -604,21 +522,15 @@ export const bifur11Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceHoodie2: true,
+    doctorCarl: true,
     hospital: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
+    animation: 26,
     sonido: 0,
+    sad: true
   },
   {
     id: 36,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Doctor Carl: Has tomado una decisión valiente, Alice. Verás que esto te ayudará a sentirte mejor.",
     message:
@@ -627,17 +539,12 @@ export const bifur11Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceHoodie2: true,
+    doctorCarl: true,
     hospital: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
+    animation: 27,
     sonido: 0,
+    sad: true
   },
   {
     //imagen de premio nobel ella esta feliz saliudando al publico - la img de fondo se cambia a la de un manicomio - ella haciendo 
@@ -653,23 +560,16 @@ export const bifur11Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    aliceNobel: true,
+    animation: 37,
+    sonido: 10,
+    
   },
   {
     //imagen de premio nobel ella esta feliz saliudando al publico - la img de fondo se cambia a la de un manicomio - ella haciendo 
     //la misma accion sonidos de publico que luego se van apagando mientras se cambia el fondo al manicomio
     //Personaje: Alice Hoodie - Animación - Greeting - Sonido: Aplausos borrosos ****???
     id: 38,
-    imageUrl: "/assets/img/scenarios/award-stage.png",
     mensaje:
       '¡Gracias!, ¡Gracias! De verdad muchas gracias',
     message:
@@ -678,17 +578,11 @@ export const bifur11Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceHoodie2: true,
     manicomio: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    animation: 38,
+    sad: true
+    
   },
   {
     //P: doctor jimin y carl - A: jimin talking carl idle - S:
@@ -702,45 +596,27 @@ export const bifur11Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    doctorCarl: true,
+    doctorJimin: true,
+    animation: 39,
+    sad: true
   },
   {
     //P: carl y jimin - A:carl hablando jimin idle - S:
     id: 40,
     imageUrl: "/assets/img/scenarios/hospital_aisle.png",
     mensaje:
-      "Doctor Carl: La paciente se encuentra muy bien, Jimmy. La pastilla ha tenido un efecto positivo en su estado. Está mucho más tranquila.",
+      "Doctor Carl: La paciente se encuentra muy bien, Jimin. La pastilla ha tenido un efecto positivo en su estado. Está mucho más tranquila.",
     message:
-      "Doctor Carl: The patient is doing very well, Jimmy. The pill has had a positive effect on her condition. She's much calmer.",
+      "Doctor Carl: The patient is doing very well, Jimin. The pill has had a positive effect on her condition. She's much calmer.",
     decision1en: null,
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    doctorCarl: true,
+    doctorJimin: true,
+    animation: 40,
+    sad: true
   },
   {
     //igual q anteriores
@@ -752,22 +628,10 @@ export const bifur11Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    doctorCarl: true,
+    doctorJimin: true,
+    animation: 39,
+    sad: true
   },
   {
     id: 42,
@@ -780,22 +644,10 @@ export const bifur11Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    doctorCarl: true,
+    doctorJimin: true,
+    animation: 42,
+    sad: true
   },
   //
 ];
@@ -803,7 +655,6 @@ export const bifur12Array = [
   {
     ////P: alice hoodie - A:talking - S:
     id: 43,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Alice: Está bien, lo intentaré con la pasta roja. Necesito encontrar algo de paz.",
     message:
@@ -812,23 +663,16 @@ export const bifur12Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceHoodie2: true,
+    doctorCarl: true,
     hospital: true,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
+    animation: 26,
     sonido: 0,
+    sad: true
   },
   {
     //P: doctor y alcie hoodie - A: - S:
     id: 44,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Doctor Carl: Has tomado una decisión valiente. Verás que esto te ayudará a sentirte mejor.",
     message:
@@ -837,17 +681,12 @@ export const bifur12Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceHoodie2: true,
+    doctorCarl: true,
     hospital: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
+    animation: 27,
     sonido: 0,
+    sad: true
   },
   {
     //P: doctores - A: - S:
@@ -859,16 +698,10 @@ export const bifur12Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    doctorCarl: true,
+    doctorJimin: true,
+    animation: 39,
+    sad: true
   },
   {
     //P:doctores - A: - S:
@@ -882,16 +715,10 @@ export const bifur12Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    doctorCarl: true,
+    doctorJimin: true,
+    animation: 40,
+    sad: true
   },
   {
     //P: doctores - A: - S:
@@ -903,22 +730,10 @@ export const bifur12Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    alex: false,
-    jonas: false,
-    eyder: false,
-    carl: false,
-    jimmy: false,
-    narrador: false,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    doctorCarl: true,
+    doctorJimin: true,
+    animation: 39,
+    sad: true
   },
   {
     // //P: doctores - A: laughing - S:
@@ -931,16 +746,10 @@ export const bifur12Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    doctorCarl: true,
+    doctorJimin: true,
+    animation: 42,
+    sad: true
   },
 ];
 export const bifur2Array = [
@@ -956,21 +765,14 @@ export const bifur2Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    aliceHoodie2: true,
+    vecino: true,
+    animation: 21,
+    sad: true
   },
   {
     //P: alice hoodie - A: sitting rubbing arm - S:
     id: 50,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "En su casa, decide regresar al pasado una vez más para salvar a su familia. Va al día del accidente.",
     message:
@@ -979,22 +781,13 @@ export const bifur2Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    livingroom: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    video: true,
+    sonido: 9,
+    sad: true
   },
   {
     ////P: alice jeans - A: drunk run - S:
     id: 51,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Una vez se encontró en el pasado, se sentía apresurada por encontrar a su esposo y a su hijo.",
     message:
@@ -1003,22 +796,13 @@ export const bifur2Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceJeans: true,
     livingroom: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    animation: 51
   },
   {
     //P: alcie jeans - A: corriendo running tired - S:
     id: 52,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje:
       "Buscó en todos los sitios de la casa y no los encontraba.",
     message:
@@ -1027,17 +811,10 @@ export const bifur2Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceJeans: true,
     bedroom: true, 
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    animation: 52,
+   
   },
   {
   //P: alice jeans - A: running drunk  - S:
@@ -1051,38 +828,22 @@ export const bifur2Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    aliceJeans: true,
+    animation: 53
   },
   {
     //ANIMACIÓN 3D
     id: 54,
-    imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje: "No sabe por cuál camino ellos se fueron. ¿Por cuál calle debería ir? ¿Calle 1 o Calle 2?",
     message: "I know which way they went. Which street should I go on? Street 1 or Street 2?",
     decision1en: "Street 1",
     decision2en: "Street 2",
     decision1es: "Calle 1",
     decision2es: "Calle 2",
-    alice: true,
+    aliceJeans: true,
     street_decision: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    sign: true,
+    animation: 54,
   },
 ];
 export const bifur21Array = [
@@ -1095,17 +856,10 @@ export const bifur21Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceJeans: true,
     street: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    car: true,
+    animation: 55
   },
   {
     ////P: - A: - S: car crash and scream
@@ -1118,16 +872,7 @@ export const bifur21Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    sonido: 11
   },
   {
     //P: alice jeans - A: *** - S:
@@ -1140,16 +885,8 @@ export const bifur21Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    animation: 57,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    video: true,
+    sonido: 9
   },
   {
     //sonidos: car crash / fondo negro
@@ -1162,173 +899,117 @@ export const bifur21Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    sonido: 12
   }
 ];
 export const bifur22Array = [
-  // {
-    ///P: carro alice jeans- A: running tired - S:
-  //   id: 59,
-  //   mensaje:
-  //     "Cerca del automóvil, Alice finalmente encuentra un momento a solas con su esposo, decidida a explicarle la extraña situación y, con suerte, evitar la tragedia que se avecina.",
-  //   message:
-  //     "Near the car, Alice finally finds a moment alone with her husband, determined to explain the strange situation and, hopefully, avoid the tragedy.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   alice: true,
-  //   street: true,
-  //   animation: 0,
-  //   id_scena: 1,
-  //   rotationx: 0,
-  //   rotationy: Math.PI / 2,
-  //   rotationz: 0,
-  //   positionx: 0,
-  //   positiony: 0,
-  //   positionz: 0,
-  //   sonido: 0,
-  // },
-  // {
-  //   //alice: talking - esposo idle
-  //   id: 60,
-  //   mensaje:
-  //     "Alice: Amor, por favor, necesito que me escuches. Lo que voy a decir puede sonar increíble, pero es de vital importancia.",
-  //   message:
-  //     "Alice: Honey, please, I need you to listen to me. What I'm about to say may sound unbelievable, but it's really important.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   alice: true,
-  //   street: true,
-  //   animation: 0,
-  //   id_scena: 1,
-  //   rotationx: 0,
-  //   rotationy: Math.PI / 2,
-  //   rotationz: 0,
-  //   positionx: 0,
-  //   positiony: 0,
-  //   positionz: 0,
-  //   sonido: 0,
-  // },
-  // {
-  //   id: 61,
-  //   mensaje:
-  //     "Fabián: ¿Qué pasa, Amor? Estás muy agitada, sabes que no podemos perder el viaje.",
-  //   message:
-  //     "Fabián: What's going on, my love? You seem very agitated, you know we can't miss the trip.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   alice: true,
-  //   street: true,
-  //   animation: 0,
-  //   id_scena: 1,
-  //   rotationx: 0,
-  //   rotationy: Math.PI / 2,
-  //   rotationz: 0,
-  //   positionx: 0,
-  //   positiony: 0,
-  //   positionz: 0,
-  //   sonido: 0,
-  // },
-  // {
-  //   id: 62,
-  //   mensaje:
-  //     "Alice: Lo que voy a decir puede sonar extraño, pero esta mañana experimenté algo que no puedo explicar. He viajado en el tiempo, he visto el futuro. Y en ese futuro, tú y nuestro hijo... están en peligro.",
-  //   message:
-  //     "Alice: What I'm about to say may sound strange, but this morning I experienced something I can't explain. I traveled through time, I saw the future. And in that future, you and our son... are in danger.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   alice: true,
-  //   street: true,
-  //   animation: 0,
-  //   id_scena: 1,
-  //   rotationx: 0,
-  //   rotationy: Math.PI / 2,
-  //   rotationz: 0,
-  //   positionx: 0,
-  //   positiony: 0,
-  //   positionz: 0,
-  //   sonido: 0,
-  // },
-  // {
-  //   id: 63,
-  //   mensaje: "Fabián: Alice, no entiendo. ¿De qué estás hablando?",
-  //   message: "Fabián: Alice, I don't understand. What are you talking about?",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   alice: true,
-  //   street: true, 
-  //   animation: 0,
-  //   id_scena: 1,
-  //   rotationx: 0,
-  //   rotationy: Math.PI / 2,
-  //   rotationz: 0,
-  //   positionx: 0,
-  //   positiony: 0,
-  //   positionz: 0,
-  //   sonido: 0,
-  // },
-  // {
-  //   id: 64,
-  //   mensaje:
-  //     "Alice: No tengo tiempo para explicarlo todo ahora, pero necesito que confíes en mí. Por favor, quédate con nuestro hijo aquí y evita que suba al automóvil. Yo lo manejaré. Es la única manera de mantenerlos a salvo.",
-  //   message:
-  //     "Alice: I don't have time to explain it all now, but I need you to trust me. Please, stay with our son here and prevent him from getting in the car. I'll drive it. It's the only way to keep you safe.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   alice: true,
-  //   street: true, 
-  //   animation: 0,
-  //   id_scena: 1,
-  //   rotationx: 0,
-  //   rotationy: Math.PI / 2,
-  //   rotationz: 0,
-  //   positionx: 0,
-  //   positiony: 0,
-  //   positionz: 0,
-  //   sonido: 0,
-  // },
-  // {
-  //   id: 65,
-  //   mensaje:
-  //     "Fabián: Alice, esto suena como una locura. Pero si esto es lo que necesitas, lo haré. Vamos a casa.",
-  //   message:
-  //     "Fabián: Alice, this sounds like madness. But if this is what you need, I'll do it. Let's go home.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   alice: true,
-  //   street: true,
-  //   animation: 0,
-  //   id_scena: 1,
-  //   rotationx: 0,
-  //   rotationy: Math.PI / 2,
-  //   rotationz: 0,
-  //   positionx: 0,
-  //   positiony: 0,
-  //   positionz: 0,
-  //   sonido: 0,
-  // },
+  {
+    //P: carro alice jeans- A: running tired - S:
+    id: 59,
+    mensaje:
+      "Cerca del automóvil, Alice finalmente encuentra un momento a solas con su esposo, decidida a explicarle la extraña situación y, con suerte, evitar la tragedia que se avecina.",
+    message:
+      "Near the car, Alice finally finds a moment alone with her husband, determined to explain the strange situation and, hopefully, avoid the tragedy.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    aliceJeans: true,
+    esposo: true,
+    street: true,
+    animation: 59,
+    
+  },
+  {
+    //alice: talking - esposo idle
+    id: 60,
+    mensaje:
+      "Alice: Amor, por favor, necesito que me escuches. Lo que voy a decir puede sonar increíble, pero es de vital importancia.",
+    message:
+      "Alice: Honey, please, I need you to listen to me. What I'm about to say may sound unbelievable, but it's really important.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    aliceJeans: true,
+    esposo: true,
+    street: true,
+    animation: 60
+  },
+  {
+    id: 61,
+    mensaje:
+      "Fabián: ¿Qué pasa, Amor? Estás muy agitada, sabes que no podemos perder el viaje.",
+    message:
+      "Fabián: What's going on, my love? You seem very agitated, you know we can't miss the trip.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    aliceJeans: true,
+    esposo: true,
+    street: true,
+    animation: 61
+  },
+  {
+    id: 62,
+    mensaje:
+      "Alice: Lo que voy a decir puede sonar extraño, pero esta mañana experimenté algo que no puedo explicar. He viajado en el tiempo, he visto el futuro. Y en ese futuro, tú y nuestro hijo... están en peligro.",
+    message:
+      "Alice: What I'm about to say may sound strange, but this morning I experienced something I can't explain. I traveled through time, I saw the future. And in that future, you and our son... are in danger.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    aliceJeans: true,
+    esposo: true,
+    street: true,
+    animation: 60
+  },
+  {
+    id: 63,
+    mensaje: "Fabián: Alice, no entiendo. ¿De qué estás hablando?",
+    message: "Fabián: Alice, I don't understand. What are you talking about?",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    street: true, 
+    aliceJeans: true,
+    esposo: true,
+    animation: 61
+    
+  },
+  {
+    id: 64,
+    mensaje:
+      "Alice: No tengo tiempo para explicarlo todo ahora, pero necesito que confíes en mí. Por favor, quédate con nuestro hijo aquí y evita que suba al automóvil. Yo lo manejaré. Es la única manera de mantenerlos a salvo.",
+    message:
+      "Alice: I don't have time to explain it all now, but I need you to trust me. Please, stay with our son here and prevent him from getting in the car. I'll drive it. It's the only way to keep you safe.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    aliceJeans: true,
+    esposo: true,
+    animation: 60,
+    street: true
+  },
+  {
+    id: 65,
+    mensaje:
+      "Fabián: Alice, esto suena como una locura. Pero si esto es lo que necesitas, lo haré. Vamos a casa.",
+    message:
+      "Fabián: Alice, this sounds like madness. But if this is what you need, I'll do it. Let's go home.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    aliceJeans: true,
+    esposo: true,
+    animation: 61,
+    street: true
+  },
   {
     //alice dress - esposo BAILANDO 
     id: 66,
@@ -1343,11 +1024,13 @@ export const bifur22Array = [
     decision2es: null,
     aliceDress: true,
     esposo: true,
+    jonas: true,
     livingroom: true,
     animation: 66,
     id_scena: 1,
-    sonido: 0,
+    sonido: 13,
   },
+  //cambio
   {
     //sonido toca puerta
     id: 67,
@@ -1360,7 +1043,7 @@ export const bifur22Array = [
     decision2es: null,
     animation: 0,
     id_scena: 1,
-    sonido: 0,
+    sonido: 8,
   },
    {
     //alice y liam 
@@ -1372,10 +1055,9 @@ export const bifur22Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    aliceHoodie2: true,
+    aliceDress: true,
     vecino: true,
     animation: 68,
-    id_scena: 1,
     sonido: 0,
   },
   {
@@ -1387,7 +1069,7 @@ export const bifur22Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    aliceHoodie2: true,
+    aliceDress: true,
     vecino: true,
     animation: 69,
     id_scena: 1,
@@ -1403,7 +1085,7 @@ export const bifur22Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    aliceHoodie2: true,
+    aliceDress: true,
     vecino: true,
     animation: 70,
     id_scena: 1,
@@ -1418,7 +1100,7 @@ export const bifur22Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    aliceHoodie2: true,
+    aliceDress: true,
     vecino: true,
     animation: 71,
     id_scena: 1,
@@ -1436,7 +1118,7 @@ export const bifur22Array = [
     decision2en: "No, don't let him in",
     decision1es: "Si, dejalo entrar",
     decision2es: "No, no lo dejes entrar",
-    aliceHoodie2: true,
+    aliceDress: true,
     vecino: true,
    // livingroom: true,
     animation: 72,
@@ -1453,18 +1135,11 @@ export const bifur221Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    aliceHoodie2: true,
+    aliceDress: true,
     vecino: true,
     livingroom: true,
     animation: 73,
     id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
   },
   {
     //alice dress: looking around
@@ -1479,13 +1154,7 @@ export const bifur221Array = [
     manicomio: true,
     animation: 0,
     id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    sad: true
   },
   {
     //liam talking on the phone
@@ -1499,14 +1168,7 @@ export const bifur221Array = [
     alice: true,
     manicomio: true,
     animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    sad: true
   },
   {
     //alice hoodie en el manicomio agony
@@ -1520,14 +1182,8 @@ export const bifur221Array = [
     alice: true,
     manicomio: true,
     animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    sonido: 14,
+    sad: true
   },
 ];
 export const bifur222Array = [
@@ -1544,20 +1200,13 @@ export const bifur222Array = [
     aliceHoodie2: true,
     livingroom: true,
     animation: 77,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    sad: true
   },
   {
     //alice dress agony
     id: 78,
     mensaje:
-      "No los veo, No entiendo nada...",
+      "No los veo, no entiendo nada...",
     message:
       "I can't see them, I don't understand...",
     decision1en: null,
@@ -1567,14 +1216,7 @@ export const bifur222Array = [
     alice: true,
     livingroom: true,
     animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    sad: true
   },
   {
     //hospital camilla
@@ -1590,14 +1232,8 @@ export const bifur222Array = [
     alice: true,
     hospital: true,
     animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    sonido: 15,
+    sad: true
   },
   {
     //alice hoodie sitting disbelief
@@ -1613,13 +1249,6 @@ export const bifur222Array = [
     alice: true,
     hospital: true,
     animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    sad: true
   },
 ];

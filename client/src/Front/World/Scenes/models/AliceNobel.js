@@ -11,10 +11,14 @@ export function AliceNobel(props) {
   const { actions } = useAnimations(animations, group);
   useEffect(() => {
     const action = actions["Talking"];
-    action.play();
+    action.reset()
+    .setEffectiveTimeScale( 1 )
+    .setEffectiveWeight( 1 )
+    .fadeIn( 0.01 )
+    .play();
   }, []);
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null} scale={8} position-y={-10} position-z={-8}>
       <group name="Scene">
         <group name="Armature">
           <skinnedMesh

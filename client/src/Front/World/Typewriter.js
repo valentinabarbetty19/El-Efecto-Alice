@@ -13,7 +13,7 @@ const Typewriter = ({ keyProp, text, speed, volume }) => {
   }, []);
 
   const handleDivClick = useCallback(() => {
-    setTypingSoundPlaying(true);
+    //setTypingSoundPlaying(true);
     // Play the sound
     if (soundRef.current && soundRef.current.play) {
       soundRef.current.play();
@@ -47,15 +47,9 @@ const Typewriter = ({ keyProp, text, speed, volume }) => {
   }, [text, speed]);
 
   return (
-    <div onClick={handleDivClick}>
+
       <p>{displayedText}</p>
-      <Sound
-        ref={soundRef}
-        url={typingSoundUrl}
-        playStatus={isTypingSoundPlaying ? Sound.status.PLAYING : Sound.status.STOPPED}
-        volume={volume}
-      />
-    </div>
+     
   );
 };
 

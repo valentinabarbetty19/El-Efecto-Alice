@@ -10,7 +10,6 @@ export function Jonas(props) {
   const audioRef = useRef(); // Referencia al elemento de audio
   const { nodes, materials, animations } = useGLTF("/assets/models/Hijo/boyJonas.glb");
   const { actions } = useAnimations(animations, group);
-
   const [rotationx, setRotationx] = useState(0);
   const [rotationz, setRotationz] = useState(0);
   const [rotationy, setRotationy] = useState(0);
@@ -74,23 +73,17 @@ export function Jonas(props) {
   
       const action = actions["Dancing"];
       action.play();
-
-      // Crear un contexto de audio
-      // const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-      // const audioSource = audioContext.createBufferSource();
-
-      // // Cargar el archivo de audio y reproducirlo
-      // fetch("/assets/Audio/Escena_1.mp3")
-      //   .then((response) => response.arrayBuffer())
-      //   .then((buffer) => {
-      //     audioContext.decodeAudioData(buffer, (decodedData) => {
-      //       audioSource.buffer = decodedData;
-      //       audioSource.connect(audioContext.destination);
-      //       audioSource.start(0);
-      //     });
-      //   });
     }
-  }, [props.animation]);
+    if (props.animation === 66) {
+      setPositionZ(-15);
+        setPositionX(2);
+        setPositionY(2);
+        setRotationy( Math.PI / 1.8);
+      const action = actions["Dancing"];
+      action.play();
+    setScale(2)
+  }}, [props.animation]);
+
   return (
     <group ref={group} {...props} dispose={null}
     rotation-x={rotationx}
@@ -99,7 +92,7 @@ export function Jonas(props) {
     position-x={positionx}
     position-z={positionz}
     position-y={positiony} 
-    scale={scaleJonas}
+    scale={scale}
     >
       <group name="Scene">
         <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={0.01}>

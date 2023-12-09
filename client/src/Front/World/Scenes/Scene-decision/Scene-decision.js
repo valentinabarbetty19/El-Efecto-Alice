@@ -3,6 +3,7 @@ import "./Scene-decision.css";
 //import Typewriter from "typewriter-effect";
 import Typewriter from "../../Typewriter";
 const SceneDecision = ({
+  id,
   language,
   text,
   img,
@@ -20,7 +21,7 @@ const SceneDecision = ({
     <div>
       <div className="App">
         <div className="content" onClick={onClick}>
-          <p>{text}</p>
+        <p><Typewriter keyProp={id} text={text} speed={30} /></p>
           <div className="button-container">
             {animation === 72 ? (
               <div>
@@ -47,13 +48,13 @@ const SceneDecision = ({
                   </button>
                 )}
               </div>
-            ) : animation === 90 ? (
+            ) : animation === 22 ? (
               <img
                 src={photo}
                 alt="GIF"
                 style={{
-                  width: "200px",
-                  height: "150px",
+                  width: "140px",
+                  height: "90px",
                 }}
               />
             ) : null}

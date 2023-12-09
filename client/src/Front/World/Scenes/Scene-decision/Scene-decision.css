@@ -1,22 +1,24 @@
 .content {
-    border-radius: 30px;
-    background-color: #ffffff; /* White */
-    padding: 20px;
-    border: 1px solid #ccc; /* Add a border for separation */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-    max-width: 1200px; /* Set a maximum width for the box */
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    user-select: none;
-  }
+  border-radius: 30px;
+  background-color: #ffffff; /* White */
+  padding: 10px;
+  border: 1px solid #ccc; /* Add a border for separation */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  max-width: 1200px; /* Set a maximum width for the box */
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  user-select: none;
+}
   
   /* Style the text inside the box */
   .content p {
-    font-size:25px;
+    font-size:20px;
     color: #000000; 
     font-family: "Open Sans-Regular", Helvetica;
     font-weight: 400;/* Dark gray text color */

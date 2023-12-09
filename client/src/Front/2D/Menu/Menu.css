@@ -4,7 +4,7 @@
   /* Stack items vertically */
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ajusta la altura al 100% de la ventana para centrar verticalmente */
+  height: 130vh; /* Ajusta la altura al 100% de la ventana para centrar verticalmente */
 }
 
 .transparent-button {
