@@ -109,7 +109,7 @@ export const introArray = [
   //sonido: gritoTrueno
     id: 9,
     imageUrl: "/assets/img/scenarios/thundersorm.png",
-    mensaje: "Al ir a investigar, Fue alcanzada por un rayo.",
+    mensaje: "Al ir a investigar, fue alcanzada por un rayo.",
     message:
       "When she went to find out what it was, she was struck by a lightning.",
     animation: 0,
