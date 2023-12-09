@@ -1,335 +1,332 @@
 
 export const introArray = [
-  // {
-  //   id: 1,
-  //   // imageUrl: "/assets/img/scenarios/laboratory.png",
-  //   mensaje:"Alice Brown, una de las mejores científicas del país, ha destinado toda su vida al estudio de la física cuántica y los viajes en el tiempo.",
-  //   message:
-  //     "Alice Brown, one of the country's top scientists, has dedicated her entire life to the study of quantum physics and time travel.",
-  //   aliceLab: true,
-  //   lab: true,
+  {
+    id: 1,
+    // imageUrl: "/assets/img/scenarios/laboratory.png",
+    mensaje:"Alice Brown, una de las mejores científicas del país, ha destinado toda su vida al estudio de la física cuántica y los viajes en el tiempo.",
+    message:
+      "Alice Brown, one of the country's top scientists, has dedicated her entire life to the study of quantum physics and time travel.",
+    aliceLab: true,
+    lab: true,
    
-  //   animation: 1,
-  //   id_scena: 1,
-  //   sonido: 0,
-  // },
-  // // Otros objetos de introArray...
+    animation: 1,
+    id_scena: 1,
+    sonido: 0,
+  },
+  // Otros objetos de introArray...
 
-  // {
-  //   // fondo negro mostrando el brazalete en 3D
-  //   id: 2,
-  //   mensaje: "Ha estado trabajando en un brazalete que le permitiría escoger la fecha a dónde quiere viajar en el pasado, sin embargo, este artefacto no tiene la energía suficiente para que funcione.",
-  //   message:
-  //     "She has been working on a bracelet that would allow her to choose the date to which she wants to travel into the past. However, this device does not have enough energy to function.",
-  //   bracelet: true,
-  //   lab: true,
-  //   // video: true,
-  //   id_scena: 1,
-  //   animation: 2,
-  //   sonido: 0,
-  // }, //brazalete
-  // {
-  //   //habitación - triste - alice llorando - musica sad
+  {
+    // fondo negro mostrando el brazalete en 3D
+    id: 2,
+    mensaje: "Ha estado trabajando en un brazalete que le permitiría escoger la fecha a dónde quiere viajar en el pasado, sin embargo, este artefacto no tiene la energía suficiente para que funcione.",
+    message:
+      "She has been working on a bracelet that would allow her to choose the date to which she wants to travel into the past. However, this device does not have enough energy to function.",
+    bracelet: true,
+    lab: true,
+    // video: true,
+    id_scena: 1,
+    animation: 2,
+    sonido: 0,
+  }, //brazalete
+  {
+    //habitación - triste - alice llorando - musica sad
 
-  //   //Personaje: Alice Hoodie - Animación: sitting disbelief - Sonido: crying
-  //   id: 3,
-  //   mensaje:  
-  //     "Tenía su vida feliz con su hijo y su esposo, pero desafortunadamente, tuvieron un accidente automovilístico, y todos menos ella, perdieron la vida.",
-  //   message:
-  //     "She had a happy life with her son and husband, but unfortunately, they had a car accident, and everyone except her, lost their lives.",
-  //   aliceHoodie2: true,
-  //   bedroom: true,
-  //   id_scena: 1,
-  //   animation: 3,
-  //   sonido: 0,
-  // }, 
-  // {
-  //   //Personaje: Alice Hoodie - Animación: sitting disbelief - Sonido: crying
-  //   id: 4,
-  //   mensaje: 
-  //     "Alice ha quedado devastada tras este hecho, pues prácticamente toda su vida se ha derrumbado.",
-  //   message:
-  //     "Alice has been devastated by this event, as practically her whole life has crumbled.",
-  //   aliceHoodie2: true,
-  // id_scena: 1,
-  //   bedroom: true,
-  //   animation: 4,
-  // },
-  // {
-  //   //alice lab decepcionada con el brazalete ********************
-  //   // personaje: Alice Hoodie - animación: looking around 
-  //   id: 5,
-  //   mensaje: 
-  //     "Tras la tragedia, experimenta visiones perturbadoras que la hacen dudar su salud.",
-  //   message:
-  //     "After the tragedy, she experiences disturbing visions that make her doubt her health...",
-  //   aliceHoodie2: true,
-  //   livingroom: true,
-  //   id_scena: 1,
-  //   narrador: false,
-  //   animation: 5,
-  // },
-  // {
-  //   //Personaje: Alice Hoodie - animación: sitting disbelief
-  //   id: 6,
-  //   mensaje: "¿Jonas? No, no puede ser... ¿Qué me pasa?",
-  //   message: 
-  //     "Jonas? No, this can't be real... What is going on with me?",
-  //   aliceHoodie2: true,
-  //   livingroom: true,
-  //   id_scena: 1,
-  //   animation: 6
-  // },
-  // {
-  //   //P: Alice Hoodie - animación: sitting disbelief
-  //   id: 7,
-  //   mensaje: "A pesar de su empeño en el brazalete, comienza a perder la esperanza en recuperar a su familia.",
-  //   message:
-  //     "Despite her efforts on the bracelet, she begins to lose hope in getting his family back.",
-  //   aliceHoodie2: true,
-  //   bracelet: true,
-  //   livingroom: true,
-  //   animation: 7,
-  // },
-  // {
+    //Personaje: Alice Hoodie - Animación: sitting disbelief - Sonido: crying
+    id: 3,
+    mensaje:  
+      "Tenía su vida feliz con su hijo y su esposo, pero desafortunadamente, tuvieron un accidente automovilístico, y todos menos ella, perdieron la vida.",
+    message:
+      "She had a happy life with her son and husband, but unfortunately, they had a car accident, and everyone except her, lost their lives.",
+    aliceHoodie2: true,
+    bedroom: true,
+    id_scena: 1,
+    animation: 3,
+    sonido: 1,
+  }, 
+  {
+    //Personaje: Alice Hoodie - Animación: sitting disbelief - Sonido: crying
+    id: 4,
+    mensaje: 
+      "Alice ha quedado devastada tras este hecho, pues prácticamente toda su vida se ha derrumbado.",
+    message:
+      "Alice has been devastated by this event, as practically her whole life has crumbled.",
+    aliceHoodie2: true,
+  id_scena: 1,
+    bedroom: true,
+    animation: 4,
+    sonido: 1,
+  },
+  {
+    //alice lab decepcionada con el brazalete ********************
+    // personaje: Alice Hoodie - animación: looking around 
+    id: 5,
+    mensaje: 
+      "Tras la tragedia, experimenta visiones perturbadoras que la hacen dudar su salud.",
+    message:
+      "After the tragedy, she experiences disturbing visions that make her doubt her health...",
+    aliceHoodie2: true,
+    livingroom: true,
+    id_scena: 1,
+    narrador: false,
+    animation: 5,
+    sonido: 3
+  },
+  {
+    //Personaje: Alice Hoodie - animación: sitting disbelief
+    id: 6,
+    mensaje: "¿Jonas? No, no puede ser... ¿Qué me pasa?",
+    message: 
+      "Jonas? No, this can't be real... What is going on with me?",
+    aliceHoodie2: true,
+    livingroom: true,
+    id_scena: 1,
+    animation: 6
+  },
+  {
+    //P: Alice Hoodie - animación: sitting disbelief
+    id: 7,
+    mensaje: "A pesar de su empeño en el brazalete, comienza a perder la esperanza en recuperar a su familia.",
+    message:
+      "Despite her efforts on the bracelet, she begins to lose hope in getting his family back.",
+    aliceHoodie2: true,
+    bracelet: true,
+    livingroom: true,
+    animation: 7,
+  },
+  {
     
-  //   //personaje: jonas (el hijo) parado al lado del arbol **** - hacer lluvia?????? - sonido de lluvia con truenos
-  //   id: 8,
-  //   mensaje: 
-  //     "En una tarde lluviosa, cerca de su casa, Alice vio algo cerca a un viejo árbol, cree que es su hijo.",
-  //   message:
-  //     "On a rainy afternoon near her house, Alice saw something near an old tree. She thinks it's her son",
-  //   tree: true,
-  //   animation: 0,
-  // },
-  // {
-  // //sonido: gritoTrueno
-  //   id: 9,
-  //   imageUrl: "/assets/img/scenarios/thundersorm.png",
-  //   mensaje: "Al ir a investigar, Fue alcanzada por un rayo.",
-  //   message:
-  //     "When she went to find out what it was, she was struck by a lightning.",
-  //   animation: 0,
-  // },
-  // {
+    //personaje: jonas (el hijo) parado al lado del arbol **** - hacer lluvia?????? - sonido de lluvia con truenos
+    id: 8,
+    mensaje: 
+      "En una tarde lluviosa, cerca de su casa, Alice vio algo cerca a un viejo árbol, cree que es su hijo.",
+    message:
+      "On a rainy afternoon near her house, Alice saw something near an old tree. She thinks it's her son",
+    tree: true,
+    animation: 0,
+    sonido: 4
+  },
+  {
+  //sonido: gritoTrueno
+    id: 9,
+    imageUrl: "/assets/img/scenarios/thundersorm.png",
+    mensaje: "Al ir a investigar, Fue alcanzada por un rayo.",
+    message:
+      "When she went to find out what it was, she was struck by a lightning.",
+    animation: 0,
+    sonido: 5
+  },
+  {
     
-  //   //P: Alice Hoodie - animación: agony sonido: lluviaLlanto 
-  //   id: 10,
-  //   mensaje: 
-  //     "Tras el impacto del rayo, Alice momentáneamente aturdida y desconcertada, se apresura a casa para recuperarse.",
-  //   message:
-  //     "After the lightning strike, Alice momentarily stunned and bewildered, rushes home to recover.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   tree: true,
-  //   animation: 0,
-  //   rotationx: 0,
-  //   rotationy: Math.PI / 2,
-  //   rotationz: 0,
-  // },
-  // {
-  //   //NO SE :C *********
-  //   id: 11,
-  //   mensaje:  
-  //     "Mientras se recuperaba en casa, el brazalete en su brazo se iluminó, llevándola a creer que podría viajar en el tiempo. Sin dudarlo, eligió su cumpleaños como su primera parada en su viaje temporal.",
-  //   message:
-  //     "While recovering at home, the bracelet on her arm lit up, leading her to believe she could time travel. Without hesitation, she chose her birthday as her first stop on her temporal journey.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   alice: true,
-  //   livingroom: true,
-  //   animation: 0,
-  //   rotationx: 0,
-  //   rotationy: Math.PI / 2,
-  //   rotationz: 0,
-  // },
-  // {
-  //   //P: Alice Jeans (crying), Jonas y esposo(excited) 
-  //   id: 12,
-  //   mensaje:  
-  //     "De repente, todo se oscureció, y cuando despertó, se encontró en su cuarto. Para su asombro, su esposo e hijo la sorprendieron en la mañana de su cumpleaños, vivos y llenos de alegría.",
-  //   message:
-  //     "Suddenly, everything went dark, and when she woke up, she found herself in her room. To her amazement, her husband and son surprised her on her birthday morning, alive and filled with joy.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   alice: true,
-  //   bedroom: true,
-  //   animation: 0,
-  //   rotationx: 0,
-  //   rotationy: Math.PI / 2,
-  //   rotationz: 0,
-  // },
-  // {
-  //   //P_ ALice jeans - jonas **** y esposo - aniamcion: dancing - sonido: don't go breaking my heart
-  //   id: 13,
-  //   mensaje:  
-  //     "Alice disfrutó el día con su familia, aunque las preguntas la atormentaban. Decidió no pensar demasiado en ello y se sumergió en la felicidad de estar con ellos de nuevo.",
-  //   message:
-  //     "Alice enjoyed the day with her family, although questions tormented her. She chose not to dwell on them and immersed herself in the happiness of being with them again.",
-  //   decision1en: null,
+    //P: Alice Hoodie - animación: agony sonido: lluviaLlanto 
+    id: 10,
+    mensaje: 
+      "Tras el impacto del rayo, Alice momentáneamente aturdida y desconcertada, se apresura a casa para recuperarse.",
+    message:
+      "After the lightning strike, Alice momentarily stunned and bewildered, rushes home to recover.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    tree: true,
+    animation: 0,
+    sonido: 6
+  },
+  {
+    //NO SE :C *********
+    id: 11,
+    mensaje:  
+      "Mientras se recuperaba en casa, el brazalete en su brazo se iluminó, llevándola a creer que podría viajar en el tiempo. Sin dudarlo, eligió su cumpleaños como su primera parada en su viaje temporal.",
+    message:
+      "While recovering at home, the bracelet on her arm lit up, leading her to believe she could time travel. Without hesitation, she chose her birthday as her first stop on her temporal journey.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    livingroom: true,
+    animation: 0,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+  },
+  {
+    //P: Alice Jeans (crying), Jonas y esposo(excited) 
+    id: 12,
+    mensaje:  
+      "De repente, todo se oscureció, y cuando despertó, se encontró en su cuarto. Para su asombro, su esposo e hijo la sorprendieron en la mañana de su cumpleaños, vivos y llenos de alegría.",
+    message:
+      "Suddenly, everything went dark, and when she woke up, she found herself in her room. To her amazement, her husband and son surprised her on her birthday morning, alive and filled with joy.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    bedroom: true,
+    animation: 0,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+  },
+  {
+    //P_ ALice jeans - jonas **** y esposo - aniamcion: dancing - sonido: don't go breaking my heart
+    id: 13,
+    mensaje:  
+      "Alice disfrutó el día con su familia, aunque las preguntas la atormentaban. Decidió no pensar demasiado en ello y se sumergió en la felicidad de estar con ellos de nuevo.",
+    message:
+      "Alice enjoyed the day with her family, although questions tormented her. She chose not to dwell on them and immersed herself in the happiness of being with them again.",
+    decision1en: null,
 
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   alice: true,
-  //   livingroom: true,
-  //   animation: 0,
-  //   rotationx: 0,
-  //   rotationy: Math.PI / 2,
-  //   rotationz: 0,
-  // },
-  // {
-  //   //P: Alice hoodie - aniamcion: focus
-  //   id: 14,
-  //   mensaje: 
-  //     "Al despertar, volvió a su triste realidad original, confundida y abrumada por la tristeza. Se preguntaba si lo que vivió fue un sueño o si el brazalete tuvo un papel en ese extraño episodio.",
-  //   message:
-  //     "Upon waking, she returned to her original sad reality, confused and overwhelmed by sorrow. She wondered if what she had experienced was a dream or if the bracelet played a role in that strange episode.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   alice: true,
-  //   bedroom: true,
-  //   animation: 0,
-  //   rotationx: 0,
-  //   rotationy: Math.PI / 2,
-  //   rotationz: 0,
-  // },
-  // {
-  //   //sonido: door knocking
-  //   id: 15,
-  //   imageUrl: "/assets/img/scenarios/house-door-outside.png",
-  //   mensaje:  
-  //     "Después de despertar en su realidad original, un vecino golpeó su puerta preocupado por el grito de una mujer la noche anterior",
-  //   message:
-  //     "After waking up in her original reality, a neighbor knocked on her door, concerned about a women screaming last night",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   alice: true,
-  //   animation: 0,
-  //   rotationx: 0,
-  //   rotationy: Math.PI / 2,
-  //   rotationz: 0,
-  // },
-  // {
-  //   //Liam: talking - Alice hoodie: idle
-  //   id: 16,
-  //   imageUrl: "/assets/img/scenarios/house-door-outside.png",
-  //   mensaje: 
-  //     "Liam: ¡Hola! Escuché un fuerte estruendo de un rayo y gritos de una mujer, he preguntado con los vecinos y todos sospechan de que fuiste tu y me preocupé. ¿Estás bien?",
-  //   message: "Liam: Hello! I heard a loud thunder and a women screaming, I've been asking the neighrbors and everyone suspects it was you and I got worried. Are you okay?" ,
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   alice: true,
-  //   animation: 0,
-  //   rotationx: 0,
-  //   rotationy: Math.PI / 2,
-  //   rotationz: 0,
-  // },
-  // {
-  //   //Alice hoodie: talking - Liam: idle
-  //   id: 17,
-  //   imageUrl: "/assets/img/scenarios/house-door-outside.png",
-  //   mensaje: 
-  //     "Alice: Sí, estoy bien, gracias por preocuparte. Fue un rayo cercano, pero estoy ilesa.",
-  //   message:
-  //     "Alice: Yes, I'm fine, thank you for caring. It was a nearby lightning strike, but I'm unharmed.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   alice: true,
-  //   alex: false,
-  //   jonas: false,
-  //   eyder: false,
-  //   carl: false,
-  //   jimmy: false,
-  //   narrador: false,
-  //   animation: 0,
-  //   rotationx: 0,
-  //   rotationy: Math.PI / 2,
-  //   rotationz: 0,
-  // },
-  // {
-  //   //Liam: talking - Alice hoodie: idle
-  //   id: 18,
-  //   imageUrl: "/assets/img/scenarios/house-door-outside.png",
-  //   mensaje:"Liam: Espera, ¿qué te pasó en la mano? ¿Estás segura de que estás bien?",
-  //   message: "Liam: Wait, what happened to your hand? Are you sure you're okay?",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   alice: true,
-  //   alex: false,
-  //   jonas: false,
-  //   eyder: false,
-  //   carl: false,
-  //   jimmy: false,
-  //   narrador: false,
-  //   animation: 0,
-  //   rotationx: 0,
-  //   rotationy: Math.PI / 2,
-  //   rotationz: 0,
-  // },
-  // {
-  //   //Alice hoodie: talking - Liam: idle
-  //   id: 19,
-  //   imageUrl: "/assets/img/scenarios/house-door-outside.png",
-  //   mensaje: 
-  //     "Alice: No estoy segura de cómo ocurrió. De repente, estaba en mi cuarto y...",
-  //   message: "Alice: I'm not sure how it happened. Suddenly, I was in my room and...",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   alice: true,
-  //   alex: false,
-  //   jonas: false,
-  //   eyder: false,
-  //   carl: false,
-  //   jimmy: false,
-  //   narrador: false,
-  //   animation: 0,
-  //   rotationx: 0,
-  //   rotationy: Math.PI / 2,
-  //   rotationz: 0,
-  // },
-  // {
-  //   //Liam: talking - Alice hoodie: idle
-  //   id: 20,
-  //   imageUrl: "/assets/img/scenarios/house-door-outside.png",
-  //   mensaje: 
-  //     "Liam: ¿Te lastimaste? Deberías ir al hospital para que lo revisen.",
-  //   message:
-  //     "Liam: Did you get hurt? You should go to the hospital to get it checked.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   alice: true,
-  //   alex: false,
-  //   jonas: false,
-  //   eyder: false,
-  //   carl: false,
-  //   jimmy: false,
-  //   narrador: false,
-  //   animation: 0,
-  //   rotationx: 0,
-  //   rotationy: 0,
-  //   rotationz: 0,
-  // },
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    livingroom: true,
+    sonido: 7
+  },
+  {
+    //P: Alice hoodie - aniamcion: focus
+    id: 14,
+    mensaje: 
+      "Al despertar, volvió a su triste realidad original, confundida y abrumada por la tristeza. Se preguntaba si lo que vivió fue un sueño o si el brazalete tuvo un papel en ese extraño episodio.",
+    message:
+      "Upon waking, she returned to her original sad reality, confused and overwhelmed by sorrow. She wondered if what she had experienced was a dream or if the bracelet played a role in that strange episode.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    bedroom: true,
+    animation: 0,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+  },
+  {
+    //sonido: door knocking
+    id: 15,
+    imageUrl: "/assets/img/scenarios/house-door-outside.png",
+    mensaje:  
+      "Después de despertar en su realidad original, un vecino golpeó su puerta preocupado por el grito de una mujer la noche anterior",
+    message:
+      "After waking up in her original reality, a neighbor knocked on her door, concerned about a women screaming last night",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    animation: 0,
+    sonido: 8
+  },
+  {
+    //Liam: talking - Alice hoodie: idle
+    id: 16,
+    imageUrl: "/assets/img/scenarios/house-door-outside.png",
+    mensaje: 
+      "Liam: ¡Hola! Escuché un fuerte estruendo de un rayo y gritos de una mujer, he preguntado con los vecinos y todos sospechan de que fuiste tu y me preocupé. ¿Estás bien?",
+    message: "Liam: Hello! I heard a loud thunder and a women screaming, I've been asking the neighrbors and everyone suspects it was you and I got worried. Are you okay?" ,
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    animation: 0,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+  },
+  {
+    //Alice hoodie: talking - Liam: idle
+    id: 17,
+    imageUrl: "/assets/img/scenarios/house-door-outside.png",
+    mensaje: 
+      "Alice: Sí, estoy bien, gracias por preocuparte. Fue un rayo cercano, pero estoy ilesa.",
+    message:
+      "Alice: Yes, I'm fine, thank you for caring. It was a nearby lightning strike, but I'm unharmed.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+  },
+  {
+    //Liam: talking - Alice hoodie: idle
+    id: 18,
+    imageUrl: "/assets/img/scenarios/house-door-outside.png",
+    mensaje:"Liam: Espera, ¿qué te pasó en la mano? ¿Estás segura de que estás bien?",
+    message: "Liam: Wait, what happened to your hand? Are you sure you're okay?",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+  },
+  {
+    //Alice hoodie: talking - Liam: idle
+    id: 19,
+    imageUrl: "/assets/img/scenarios/house-door-outside.png",
+    mensaje: 
+      "Alice: No estoy segura de cómo ocurrió. De repente, estaba en mi cuarto y...",
+    message: "Alice: I'm not sure how it happened. Suddenly, I was in my room and...",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    rotationx: 0,
+    rotationy: Math.PI / 2,
+    rotationz: 0,
+  },
+  {
+    //Liam: talking - Alice hoodie: idle
+    id: 20,
+    imageUrl: "/assets/img/scenarios/house-door-outside.png",
+    mensaje: 
+      "Liam: ¿Te lastimaste? Deberías ir al hospital para que lo revisen.",
+    message:
+      "Liam: Did you get hurt? You should go to the hospital to get it checked.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    alice: true,
+    alex: false,
+    jonas: false,
+    eyder: false,
+    carl: false,
+    jimmy: false,
+    narrador: false,
+    animation: 0,
+    rotationx: 0,
+    rotationy: 0,
+    rotationz: 0,
+  },
    {
   //   //Alice hoodie: talking - Liam: idle
     id: 21,
@@ -612,7 +609,7 @@ export const bifur11Array = [
     decision2es: null,
     aliceNobel: true,
     animation: 37,
-    sonido: 0,
+    sonido: 10,
   },
   {
     //imagen de premio nobel ella esta feliz saliudando al publico - la img de fondo se cambia a la de un manicomio - ella haciendo 
@@ -819,6 +816,7 @@ export const bifur2Array = [
     decision1es: null,
     decision2es: null,
     video: true,
+    sonido: 9
   },
   {
     ////P: alice jeans - A: drunk run - S:
@@ -915,7 +913,7 @@ export const bifur21Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-
+    sonido: 11
   },
   {
     //P: alice jeans - A: *** - S:
@@ -928,7 +926,8 @@ export const bifur21Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    video: true
+    video: true,
+    sonido: 9
   },
   {
     //sonidos: car crash / fondo negro
@@ -941,117 +940,117 @@ export const bifur21Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-
+    sonido: 12
   }
 ];
 export const bifur22Array = [
-  // {
-  //   //P: carro alice jeans- A: running tired - S:
-  //   id: 59,
-  //   mensaje:
-  //     "Cerca del automóvil, Alice finalmente encuentra un momento a solas con su esposo, decidida a explicarle la extraña situación y, con suerte, evitar la tragedia que se avecina.",
-  //   message:
-  //     "Near the car, Alice finally finds a moment alone with her husband, determined to explain the strange situation and, hopefully, avoid the tragedy.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   aliceJeans: true,
-  //   esposo: true,
-  //   street: true,
-  //   animation: 59,
+  {
+    //P: carro alice jeans- A: running tired - S:
+    id: 59,
+    mensaje:
+      "Cerca del automóvil, Alice finalmente encuentra un momento a solas con su esposo, decidida a explicarle la extraña situación y, con suerte, evitar la tragedia que se avecina.",
+    message:
+      "Near the car, Alice finally finds a moment alone with her husband, determined to explain the strange situation and, hopefully, avoid the tragedy.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    aliceJeans: true,
+    esposo: true,
+    street: true,
+    animation: 59,
     
-  // },
-  // {
-  //   //alice: talking - esposo idle
-  //   id: 60,
-  //   mensaje:
-  //     "Alice: Amor, por favor, necesito que me escuches. Lo que voy a decir puede sonar increíble, pero es de vital importancia.",
-  //   message:
-  //     "Alice: Honey, please, I need you to listen to me. What I'm about to say may sound unbelievable, but it's really important.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   aliceJeans: true,
-  //   esposo: true,
-  //   street: true,
-  //   animation: 60
-  // },
-  // {
-  //   id: 61,
-  //   mensaje:
-  //     "Fabián: ¿Qué pasa, Amor? Estás muy agitada, sabes que no podemos perder el viaje.",
-  //   message:
-  //     "Fabián: What's going on, my love? You seem very agitated, you know we can't miss the trip.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   aliceJeans: true,
-  //   esposo: true,
-  //   street: true,
-  //   animation: 61
-  // },
-  // {
-  //   id: 62,
-  //   mensaje:
-  //     "Alice: Lo que voy a decir puede sonar extraño, pero esta mañana experimenté algo que no puedo explicar. He viajado en el tiempo, he visto el futuro. Y en ese futuro, tú y nuestro hijo... están en peligro.",
-  //   message:
-  //     "Alice: What I'm about to say may sound strange, but this morning I experienced something I can't explain. I traveled through time, I saw the future. And in that future, you and our son... are in danger.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   aliceJeans: true,
-  //   esposo: true,
-  //   street: true,
-  //   animation: 60
-  // },
-  // {
-  //   id: 63,
-  //   mensaje: "Fabián: Alice, no entiendo. ¿De qué estás hablando?",
-  //   message: "Fabián: Alice, I don't understand. What are you talking about?",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   street: true, 
-  //   aliceJeans: true,
-  //   esposo: true,
-  //   animation: 61
+  },
+  {
+    //alice: talking - esposo idle
+    id: 60,
+    mensaje:
+      "Alice: Amor, por favor, necesito que me escuches. Lo que voy a decir puede sonar increíble, pero es de vital importancia.",
+    message:
+      "Alice: Honey, please, I need you to listen to me. What I'm about to say may sound unbelievable, but it's really important.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    aliceJeans: true,
+    esposo: true,
+    street: true,
+    animation: 60
+  },
+  {
+    id: 61,
+    mensaje:
+      "Fabián: ¿Qué pasa, Amor? Estás muy agitada, sabes que no podemos perder el viaje.",
+    message:
+      "Fabián: What's going on, my love? You seem very agitated, you know we can't miss the trip.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    aliceJeans: true,
+    esposo: true,
+    street: true,
+    animation: 61
+  },
+  {
+    id: 62,
+    mensaje:
+      "Alice: Lo que voy a decir puede sonar extraño, pero esta mañana experimenté algo que no puedo explicar. He viajado en el tiempo, he visto el futuro. Y en ese futuro, tú y nuestro hijo... están en peligro.",
+    message:
+      "Alice: What I'm about to say may sound strange, but this morning I experienced something I can't explain. I traveled through time, I saw the future. And in that future, you and our son... are in danger.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    aliceJeans: true,
+    esposo: true,
+    street: true,
+    animation: 60
+  },
+  {
+    id: 63,
+    mensaje: "Fabián: Alice, no entiendo. ¿De qué estás hablando?",
+    message: "Fabián: Alice, I don't understand. What are you talking about?",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    street: true, 
+    aliceJeans: true,
+    esposo: true,
+    animation: 61
     
-  // },
-  // {
-  //   id: 64,
-  //   mensaje:
-  //     "Alice: No tengo tiempo para explicarlo todo ahora, pero necesito que confíes en mí. Por favor, quédate con nuestro hijo aquí y evita que suba al automóvil. Yo lo manejaré. Es la única manera de mantenerlos a salvo.",
-  //   message:
-  //     "Alice: I don't have time to explain it all now, but I need you to trust me. Please, stay with our son here and prevent him from getting in the car. I'll drive it. It's the only way to keep you safe.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   aliceJeans: true,
-  //   esposo: true,
-  //   animation: 60,
-  //   street: true
-  // },
-  // {
-  //   id: 65,
-  //   mensaje:
-  //     "Fabián: Alice, esto suena como una locura. Pero si esto es lo que necesitas, lo haré. Vamos a casa.",
-  //   message:
-  //     "Fabián: Alice, this sounds like madness. But if this is what you need, I'll do it. Let's go home.",
-  //   decision1en: null,
-  //   decision2en: null,
-  //   decision1es: null,
-  //   decision2es: null,
-  //   aliceJeans: true,
-  //   esposo: true,
-  //   animation: 61,
-  //   street: true
-  // },
+  },
+  {
+    id: 64,
+    mensaje:
+      "Alice: No tengo tiempo para explicarlo todo ahora, pero necesito que confíes en mí. Por favor, quédate con nuestro hijo aquí y evita que suba al automóvil. Yo lo manejaré. Es la única manera de mantenerlos a salvo.",
+    message:
+      "Alice: I don't have time to explain it all now, but I need you to trust me. Please, stay with our son here and prevent him from getting in the car. I'll drive it. It's the only way to keep you safe.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    aliceJeans: true,
+    esposo: true,
+    animation: 60,
+    street: true
+  },
+  {
+    id: 65,
+    mensaje:
+      "Fabián: Alice, esto suena como una locura. Pero si esto es lo que necesitas, lo haré. Vamos a casa.",
+    message:
+      "Fabián: Alice, this sounds like madness. But if this is what you need, I'll do it. Let's go home.",
+    decision1en: null,
+    decision2en: null,
+    decision1es: null,
+    decision2es: null,
+    aliceJeans: true,
+    esposo: true,
+    animation: 61,
+    street: true
+  },
   {
     //alice dress - esposo BAILANDO 
     id: 66,
@@ -1066,10 +1065,11 @@ export const bifur22Array = [
     decision2es: null,
     aliceDress: true,
     esposo: true,
+    jonas: true,
     livingroom: true,
     animation: 66,
     id_scena: 1,
-    sonido: 0,
+    sonido: 13,
   },
   //cambio
   {
@@ -1084,7 +1084,7 @@ export const bifur22Array = [
     decision2es: null,
     animation: 0,
     id_scena: 1,
-    sonido: 0,
+    sonido: 8,
   },
    {
     //alice y liam 
@@ -1096,7 +1096,7 @@ export const bifur22Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    aliceHoodie2: true,
+    aliceDress: true,
     vecino: true,
     animation: 68,
     sonido: 0,
@@ -1110,7 +1110,7 @@ export const bifur22Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    aliceHoodie2: true,
+    aliceDress: true,
     vecino: true,
     animation: 69,
     id_scena: 1,
@@ -1126,7 +1126,7 @@ export const bifur22Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    aliceHoodie2: true,
+    aliceDress: true,
     vecino: true,
     animation: 70,
     id_scena: 1,
@@ -1141,7 +1141,7 @@ export const bifur22Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    aliceHoodie2: true,
+    aliceDress: true,
     vecino: true,
     animation: 71,
     id_scena: 1,
@@ -1159,7 +1159,7 @@ export const bifur22Array = [
     decision2en: "No, don't let him in",
     decision1es: "Si, dejalo entrar",
     decision2es: "No, no lo dejes entrar",
-    aliceHoodie2: true,
+    aliceDress: true,
     vecino: true,
    // livingroom: true,
     animation: 72,
@@ -1176,18 +1176,11 @@ export const bifur221Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    aliceHoodie2: true,
+    aliceDress: true,
     vecino: true,
     livingroom: true,
     animation: 73,
     id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
   },
   {
     //alice dress: looking around
@@ -1243,14 +1236,7 @@ export const bifur221Array = [
     alice: true,
     manicomio: true,
     animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    sonido: 14,
   },
 ];
 export const bifur222Array = [
@@ -1313,14 +1299,7 @@ export const bifur222Array = [
     alice: true,
     hospital: true,
     animation: 0,
-    id_scena: 1,
-    rotationx: 0,
-    rotationy: Math.PI / 2,
-    rotationz: 0,
-    positionx: 0,
-    positiony: 0,
-    positionz: 0,
-    sonido: 0,
+    sonido: 15,
   },
   {
     //alice hoodie sitting disbelief

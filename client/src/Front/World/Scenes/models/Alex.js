@@ -35,8 +35,8 @@ export function Esposo(props) {
      .setEffectiveTimeScale(1)
      .setEffectiveWeight(1)
      .fadeIn(0.5) // Set the loop type to LoopOnce
-     .play();;
-     setScale(4.5)
+     .play();
+     setScale(5)
     }
     else if ((props.animation === 59) || (props.animation === 60)) {
       setPositionZ(2);

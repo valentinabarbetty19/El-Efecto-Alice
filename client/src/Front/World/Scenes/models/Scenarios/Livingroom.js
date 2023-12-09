@@ -45,7 +45,7 @@ export function Livingroom(props) {
 
   useEffect(() => {
 
-    if((props.id_pos === 5) || (props.id_pos === 51)  || (props.id_pos === 6) || (props.id_pos === 7)){
+    if((props.id_pos === 5) || (props.id_pos === 51)  || (props.id_pos === 73) || (props.id_pos === 6) || (props.id_pos === 7)){
 
       console.log("Bedroom")
       setPositionZ(-10)

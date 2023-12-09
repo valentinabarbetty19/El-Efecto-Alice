@@ -21,7 +21,7 @@ export function AliceHoodie2(props) {
   const navigate = useNavigate();
   const [izqWalk, setIzqWalk] = useState(false);
   const [derWalk, setDerWalk] = useState(false);
- 
+
   useEffect(() => {
     
     console.log(actions)
@@ -87,7 +87,7 @@ export function AliceHoodie2(props) {
      .fadeIn(0.02)
      .play();
     }
-    if((props.animation === 68) || (props.animation === 24) || (props.animation === 70) || (props.animation === 71) ){
+    if((props.animation === 24) || (props.animation === 70) || (props.animation === 71) ){
       setPositionZ(0)
       setPositionX(-3)
       setPositionY(-5)
@@ -100,7 +100,7 @@ export function AliceHoodie2(props) {
      .fadeIn(2)
      .play();
     }
-    if((props.animation === 69) || (props.animation === 21) || (props.animation === 25) || (props.animation === 23) ){
+    if((props.animation === 21) || (props.animation === 25) || (props.animation === 23) ){
       setPositionZ(0)
       setPositionX(-3)
       setPositionY(-5)
@@ -113,18 +113,7 @@ export function AliceHoodie2(props) {
      .fadeIn(2 )
      .play();;
     }
-    if((props.animation === 72)){
-      setPositionZ(0)
-      setPositionX(-3)
-      setPositionY(-5)
-      setRotationy( Math.PI * 2.2)
-      const action = actions["Asking"];
-     action.reset()
-     .setEffectiveTimeScale( 1 )
-     .setEffectiveWeight( 1 )
-     .fadeIn( 0.5 )
-     .play();
-    }
+   
     if((props.animation === 26)){
       setPositionZ(-3)
       setPositionX(3)
@@ -161,21 +150,12 @@ export function AliceHoodie2(props) {
     } else {
       setScale(4)
     }
-    if(props.animation === 73){
-      setPositionZ(0)
-      setPositionX(-4)
-      setPositionY(-5)
-      setRotationy( Math.PI * 2.2)
-      
-      const action = actions["LookAround"];
-     action.reset()
-     .setEffectiveTimeScale( 1 )
-     .setEffectiveWeight( 1 )
-     .fadeIn( 0.5 )
-     .play();
-    }
+   
     
   }, [props.animation]);
+
+
+
   const { actions } = useAnimations(animations, group);
 
   return (

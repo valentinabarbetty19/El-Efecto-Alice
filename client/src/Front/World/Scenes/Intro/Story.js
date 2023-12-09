@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Intro.css";
 
 import Alice, { AliceHoodie } from "../models/Alice-hoodie";
@@ -90,7 +90,70 @@ const Story = ({ language, info, route1, route2 }) => {
   const shouldShowEsposo = info[currentImageIndex].esposo === true;
   const shouldShowVecino = info[currentImageIndex].vecino === true;
   const shouldShowCar = info[currentImageIndex].car === true;
+  const audioRef = useRef(null);
+  useEffect(() => {
+    // Cleanup function to pause and reset the audio when props.sonido changes
+    const cleanupAudio = () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
+    };
 
+    // Check if the sound should be played based on props.sonido
+    if (info[currentImageIndex].sonido === 1 || info[currentImageIndex].sonido === 2 || info[currentImageIndex].sonido === 3 || info[currentImageIndex].sonido === 4 || info[currentImageIndex].sonido === 5 || 
+      info[currentImageIndex].sonido === 6 || info[currentImageIndex].sonido === 7 || 
+      info[currentImageIndex].sonido === 8 || info[currentImageIndex].sonido === 9 || 
+      info[currentImageIndex].sonido === 10 || info[currentImageIndex].sonido === 11
+      || info[currentImageIndex].sonido === 12 || info[currentImageIndex].sonido === 13
+      || info[currentImageIndex].sonido === 14 || info[currentImageIndex].sonido === 15) {
+      // Cleanup previous audio if it exists
+      cleanupAudio();
+
+      // Create a new audio element
+      let audioSrc = '';
+      if (info[currentImageIndex].sonido === 1) {
+        audioSrc = '/assets/Audio/Cry.mp3';
+      } else if (info[currentImageIndex].sonido === 2) {
+        audioSrc = '/assets/Audio/GritoTrueno.mp3';
+      } else if (info[currentImageIndex].sonido === 3) {
+        audioSrc = '/assets/Audio/BoyLaugh.mp3';
+      } else if (info[currentImageIndex].sonido === 4) {
+        audioSrc = '/assets/Audio/lluvia_truenos.mp3';
+      } else if (info[currentImageIndex].sonido === 5) {
+        audioSrc = '/assets/Audio/GritoTrueno.mp3';
+      } else if (info[currentImageIndex].sonido === 6) {
+        audioSrc = '/assets/Audio/LluviaLlanto.mp3';
+      }
+      else if (info[currentImageIndex].sonido === 7) {
+        audioSrc = '/assets/Audio/HappySong.mp3';
+      }else if (info[currentImageIndex].sonido === 8) {
+        audioSrc = '/assets/Audio/Door.mp3';
+      } else if (info[currentImageIndex].sonido === 9) {
+        audioSrc = '/assets/Audio/Wormhole.mp3';
+      }  else if (info[currentImageIndex].sonido === 10) {
+        audioSrc = '/assets/Audio/ClapAudience.mp3';
+      } else if (info[currentImageIndex].sonido === 11) {
+        audioSrc = '/assets/Audio/CarScream.mp3';
+      } else if (info[currentImageIndex].sonido === 12) {
+        audioSrc = '/assets/Audio/Car.mp3';
+      } else if (info[currentImageIndex].sonido === 13) {
+        audioSrc = '/assets/Audio/Butter.mp3';
+      } else if (info[currentImageIndex].sonido === 14) {
+        audioSrc = '/assets/Audio/Screams.mp3';
+      } else if (info[currentImageIndex].sonido === 15) {
+        audioSrc = '/assets/Audio/Beep.mp3';
+      }
+
+      audioRef.current = new Audio(audioSrc);
+
+      // Play the sound
+      audioRef.current.play();
+    }
+
+    // Return the cleanup function
+    return cleanupAudio;
+  }, [info[currentImageIndex].sonido]);
   return (
     <div
       style={{
@@ -118,7 +181,7 @@ const Story = ({ language, info, route1, route2 }) => {
         {shouldShowAliceJeans && <AliceJeans animation={info[currentImageIndex].animation}/>}
         {shouldShowAliceDress && <AliceParty animation={info[currentImageIndex].animation}
         />}
-        {shouldShowAliceHoodie2 && <AliceHoodie2 animation={info[currentImageIndex].animation}/>}
+        {shouldShowAliceHoodie2 && <AliceHoodie2 animation={info[currentImageIndex].animation} />}
         {shouldShowAliceNobel && <AliceNobel animation={info[currentImageIndex].animation}/>}
         {shouldShowDoctorCarl && <DoctorCarl animation={info[currentImageIndex].animation}/>}
         {shouldShowDoctorJimin && <DoctorJimin animation={info[currentImageIndex].animation}/>}
@@ -138,10 +201,9 @@ const Story = ({ language, info, route1, route2 }) => {
             />}
         {shouldShowPastillas && <Pastillas />}
         {shouldShowMano && <Hand />}
-        {shouldShowEyder && <Vecino />}
         {shouldShowBracelet && <Brazalete id_pos={info[currentImageIndex].id} />}
         {shouldShowAlex && <Alex />}
-        {shouldShowJonas && <Jonas />}
+        {shouldShowJonas && <Jonas  animation={info[currentImageIndex].animation}/>}
         {shouldShowBedRoom && <Bedroom id_pos={info[currentImageIndex].id} />}
         {shouldShowLivingRoom && <Livingroom id_pos={info[currentImageIndex].id} />}
         {shouldShowTree && <Tree />}

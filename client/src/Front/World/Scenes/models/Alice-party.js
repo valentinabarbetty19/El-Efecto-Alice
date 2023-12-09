@@ -16,19 +16,81 @@ export function AliceParty(props) {
   const [positionx, setPositionX] = useState(0);
   const [positiony, setPositionY] = useState(0);
   const [positionz, setPositionZ] = useState(0);
+  const [scale, setScale] = useState(0)
   useEffect(() => {
+    console.log(actions)
+    for (const key in actions) {
+      actions[key].fadeOut(0.5);
+    }
     if(props.animation === 66){
       setPositionZ(-15)
       setPositionX(-2)
-      setPositionY(5)
-      setRotationx( -Math.PI / 0.55)
+      setPositionY(0)
+      setScale(5)
+     // setRotationx( -Math.PI / 0.55)
       const action = actions["Dancing"];
-      action.play();
+      action.reset()
+      .setEffectiveTimeScale( 1 )
+      .setEffectiveWeight( 1 )
+      .fadeIn(2)
+      .play();
+    }
+    if((props.animation === 68) || (props.animation === 70) || (props.animation === 71) ){
+      setPositionZ(0)
+      setPositionX(-3)
+      setPositionY(-5)
+      setRotationy( Math.PI / 2)
+      setScale(4)
+      const action = actions["Idle"];
+     action.reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn(2)
+     .play();
+    }
+    if((props.animation === 69) || (props.animation === 21) || (props.animation === 25) || (props.animation === 23) ){
+      setPositionZ(0)
+      setPositionX(-3)
+      setPositionY(-5)
+      setRotationy( Math.PI / 2)
+      setScale(4)
+      const action = actions["Talking"];
+     action.reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn(2 )
+     .play();;
+    }
+    if((props.animation === 72)){
+      setPositionZ(0)
+      setPositionX(-3)
+      setPositionY(-5)
+      setRotationy( Math.PI * 2.2)
+      const action = actions["Asking"];
+      setScale(4)
+     action.reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn( 0.5 )
+     .play();
+    }
+    if(props.animation === 73){
+      setPositionZ(0)
+      setPositionX(-4)
+      setPositionY(-5)
+      setRotationy( Math.PI * 2.2)
+      setScale(4)
+      const action = actions["LookAround"];
+     action.reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn( 0.5 )
+     .play();
     }
     
-  }, []);
+  }, [props.animation]);
   return (
-    <group ref={group} {...props} dispose={null} scale={4.5}
+    <group ref={group} {...props} dispose={null} scale={scale}
     rotation-x={rotationx}
         rotation-z={rotationz}
         rotation-y={rotationy}
