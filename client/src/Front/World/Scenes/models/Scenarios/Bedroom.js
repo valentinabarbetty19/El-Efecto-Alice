@@ -23,7 +23,7 @@ export function Bedroom(props) {
   const [positionz, setPositionZ] = useState(0);
 
   useFrame((state) => {
-    if ((props.id_pos === 3) || (props.id_pos === 4)) {
+    if ((props.id_pos === 3) || (props.id_pos === 4) ) {
       camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
       camera.position.z = MathUtils.lerp(camera.position.z, 3, 0.1);
       camera.position.y = MathUtils.lerp(camera.position.y, 10, 0.1);
@@ -37,7 +37,7 @@ export function Bedroom(props) {
 
   useEffect(() => {
 
-    if((props.id_pos === 3) || (props.id_pos === 4)){
+    if((props.id_pos === 3) || (props.id_pos === 4) || (props.id_pos === 52)){
 
       console.log("Bedroom")
       setPositionZ(-10)

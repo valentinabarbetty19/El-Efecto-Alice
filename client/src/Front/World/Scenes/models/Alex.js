@@ -18,21 +18,59 @@ export function Esposo(props) {
   const [positionx, setPositionX] = useState(0);
   const [positiony, setPositionY] = useState(0);
   const [positionz, setPositionZ] = useState(0);
+  const [scale, setScale] = useState(0)
 
   useEffect(() => {
+    for (const key in actions) {
+      actions[key].fadeOut(0.5);
+    }
     if(props.animation === 66){
       setPositionZ(-15)
       setPositionX(10)
-      setPositionY(5)
-      setRotationx( -Math.PI / 0.55)
+      setPositionY(0)
+      //setRotationx( -Math.PI / 0.55)
       setRotationy( -Math.PI / 2)
       const action = actions["Dancing"];
-     action.play();
+     action.reset()
+     .setEffectiveTimeScale(1)
+     .setEffectiveWeight(1)
+     .fadeIn(0.5) // Set the loop type to LoopOnce
+     .play();;
+     setScale(4.5)
+    }
+    else if ((props.animation === 59) || (props.animation === 60)) {
+      setPositionZ(2);
+        setPositionX(2);
+        setPositionY(-0.5);
+        setRotationy(- Math.PI / 1.8);
+        setScale(1)
+      const action = actions["Idle"];
+      action.reset()
+        .setEffectiveTimeScale(1)
+        .setEffectiveWeight(1)
+        .fadeIn(0.5) // Set the loop type to LoopOnce
+        .play();
+        
+    } else if ((props.animation === 61)) {
+      setPositionZ(2);
+        setPositionX(2);
+        setPositionY(-0.5);
+        setRotationy(- Math.PI / 1.8);
+        setScale(1)
+      const action = actions["Talking"];
+      action.reset()
+        .setEffectiveTimeScale(1)
+        .setEffectiveWeight(1)
+        .fadeIn(0.5) // Set the loop type to LoopOnce
+        .play();
+        
+    } else {
+      setScale(4.5)
     }
     
-  }, []);
+  }, [props.animation]);
   return (
-    <group ref={group} {...props} dispose={null} scale={4.5}
+    <group ref={group} {...props} scale={scale} dispose={null} 
     rotation-x={rotationx}
         rotation-z={rotationz}
         rotation-y={rotationy}

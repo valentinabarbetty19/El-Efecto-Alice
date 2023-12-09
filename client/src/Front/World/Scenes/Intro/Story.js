@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Intro.css";
 
-import Alice from "../models/Alice-hoodie";
+import Alice, { AliceHoodie } from "../models/Alice-hoodie";
 
 import { Canvas } from "@react-three/fiber";
 import { useNavigate } from "react-router-dom";
@@ -31,6 +31,9 @@ import AliceNobel from "../models/AliceNobel";
 import DoctorCarl from "../models/DoctorCarl";
 import DoctorJimin from "../models/DoctorJimin";
 import Video from "../Video/Video";
+import Car from "../models/Car";
+
+
 
 const Story = ({ language, info, route1, route2 }) => {
   const navigate = useNavigate();
@@ -86,6 +89,8 @@ const Story = ({ language, info, route1, route2 }) => {
   const shouldShowDoctorJimin = info[currentImageIndex].doctorJimin === true;
   const shouldShowEsposo = info[currentImageIndex].esposo === true;
   const shouldShowVecino = info[currentImageIndex].vecino === true;
+  const shouldShowCar = info[currentImageIndex].car === true;
+
   return (
     <div
       style={{
@@ -96,32 +101,31 @@ const Story = ({ language, info, route1, route2 }) => {
       }}
     >
       <div style={{ transform: "translateY(30px)" }}>
-      {info[currentImageIndex].animation === 57 ? <Video /> : 
+      {info[currentImageIndex].video === true ? <Video /> : 
         <Canvas style={{ width: "100vw", height: "90vh" }}>
           <CameraControls />
           <ambientLight intensity={2} />
 
         {shouldShowAlice && (
-          <Alice
+          <AliceHoodie
             animation={info[currentImageIndex].animation}
-            rotationx={info[currentImageIndex].rotationx}
-            rotationz={info[currentImageIndex].rotationz}
-            rotationy={info[currentImageIndex].rotationy}
+          
           />
         )}
         {shouldShowLab && <Lab id_pos={info[currentImageIndex].id} />}
 
         {shouldShowHospital && <Hospital />}
-        {shouldShowAliceJeans && <AliceJeans />}
+        {shouldShowAliceJeans && <AliceJeans animation={info[currentImageIndex].animation}/>}
         {shouldShowAliceDress && <AliceParty animation={info[currentImageIndex].animation}
         />}
         {shouldShowAliceHoodie2 && <AliceHoodie2 animation={info[currentImageIndex].animation}/>}
-        {shouldShowAliceNobel && <AliceNobel />}
-        {shouldShowDoctorCarl && <DoctorCarl />}
-        {shouldShowDoctorJimin && <DoctorJimin />}
+        {shouldShowAliceNobel && <AliceNobel animation={info[currentImageIndex].animation}/>}
+        {shouldShowDoctorCarl && <DoctorCarl animation={info[currentImageIndex].animation}/>}
+        {shouldShowDoctorJimin && <DoctorJimin animation={info[currentImageIndex].animation}/>}
         {shouldShowVecino && <Vecino animation={info[currentImageIndex].animation}/>}
         {shouldShowEsposo && <Esposo animation={info[currentImageIndex].animation}/>}
         {shouldShowStreet && <Street />}
+        {shouldShowStreet && <Car />}
         {shouldShowStreetDecision && <StreetDecision />}
         {shouldShowAliceLab && <AliceLab 
         animation={info[currentImageIndex].animation}
@@ -171,7 +175,7 @@ const Story = ({ language, info, route1, route2 }) => {
             photo={info[currentImageIndex].photo}
             // onClick={changeDecision}
           />
-        </div>
+        </div >
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ import { useGLTF } from "@react-three/drei";
 export function Manicomio(props) {
   const { nodes, materials } = useGLTF("/assets/models/Scenarios/18_misfit_room_-_inktober2019.glb");
   return (
-    <group {...props} dispose={null} position-z={4} rotation-y={-Math.PI/1} position-y={-0.5} >
+    <group {...props} dispose={null} position-z={4} rotation-y={-Math.PI/1} position-y={-1.5} >
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <mesh
           castShadow

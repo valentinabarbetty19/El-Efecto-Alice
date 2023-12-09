@@ -17,14 +17,16 @@ export function AliceHoodie2(props) {
   const [positionx, setPositionX] = useState(0);
   const [positiony, setPositionY] = useState(0);
   const [positionz, setPositionZ] = useState(0);
+  const [scale, setScale] = useState(0);
   const navigate = useNavigate();
   const [izqWalk, setIzqWalk] = useState(false);
   const [derWalk, setDerWalk] = useState(false);
+ 
   useEffect(() => {
     
     console.log(actions)
     for (const key in actions) {
-      actions[key].stop();
+      actions[key].fadeOut(0.5);
     }
     if((props.animation === 3) || (props.animation === 4)){
       setPositionZ(-1.8)
@@ -35,7 +37,11 @@ export function AliceHoodie2(props) {
       console.log(animations)
       
       const action = actions["SittingCrying"];
-     action.play();
+     action.reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn(0.01)
+     .play();
     }
 
     if((props.animation === 5)){
@@ -47,7 +53,11 @@ export function AliceHoodie2(props) {
       console.log(animations)
       
       const action = actions["LookAround"];
-     action.play();
+     action.reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn(2 )
+     .play();
     }
 
     if((props.animation === 6)){
@@ -57,7 +67,11 @@ export function AliceHoodie2(props) {
       setRotationy( Math.PI / 30 )
       
       const action = actions["SittingCrying"];
-     action.play();
+     action.reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn(0.01)
+     .play();
     }
 
     if((props.animation === 7)){
@@ -67,34 +81,85 @@ export function AliceHoodie2(props) {
       setRotationy( Math.PI / 30 )
       
       const action = actions["SittingCrying"];
-     action.play();
+     action.reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn(0.02)
+     .play();
     }
-    if((props.animation === 68) || (props.animation === 70) || (props.animation === 71) ){
+    if((props.animation === 68) || (props.animation === 24) || (props.animation === 70) || (props.animation === 71) ){
       setPositionZ(0)
       setPositionX(-3)
       setPositionY(-5)
       setRotationy( Math.PI / 2)
       
       const action = actions["Idle"];
-     action.play();
+     action.reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn(2)
+     .play();
     }
-    if(props.animation === 69){
+    if((props.animation === 69) || (props.animation === 21) || (props.animation === 25) || (props.animation === 23) ){
       setPositionZ(0)
       setPositionX(-3)
       setPositionY(-5)
       setRotationy( Math.PI / 2)
       
       const action = actions["Talking"];
-     action.play();
+     action.reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn(2 )
+     .play();;
     }
-    if((props.animation === 72) || (props.animation === 22)){
+    if((props.animation === 72)){
       setPositionZ(0)
       setPositionX(-3)
       setPositionY(-5)
       setRotationy( Math.PI * 2.2)
-     actions["Asking"].reset().fadeIn(0.5).play();
       const action = actions["Asking"];
-     action.play();
+     action.reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn( 0.5 )
+     .play();
+    }
+    if((props.animation === 26)){
+      setPositionZ(-3)
+      setPositionX(3)
+      setPositionY(-2)
+      setRotationy( - Math.PI /2)
+     actions["SittingTalking"].reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn( 0.01 )
+     .play();
+    }
+    if((props.animation === 27)){
+      setPositionZ(-3)
+      setPositionX(3)
+      setPositionY(-2)
+      setRotationy( - Math.PI /2)
+     actions["Sitting"].reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn( 0.01 )
+     .play();
+    }
+    if((props.animation === 38)){
+      setPositionZ(3)
+      setPositionX(0)
+      setPositionY(-1.5)
+      setScale(1.2)
+      
+     actions["Greet"].reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn( 0.5 )
+     .play();
+    } else {
+      setScale(4)
     }
     if(props.animation === 73){
       setPositionZ(0)
@@ -103,101 +168,23 @@ export function AliceHoodie2(props) {
       setRotationy( Math.PI * 2.2)
       
       const action = actions["LookAround"];
-     action.play();
+     action.reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn( 0.5 )
+     .play();
     }
+    
   }, [props.animation]);
   const { actions } = useAnimations(animations, group);
-  const nextBifur1 = () => {
-    //setPositionX(-2.3);
-    navigate("/game/bifur1");
-  };
-  const nextBifur2 = () => {
-    navigate("/game/bifur2");
-  };
-  useEffect(() => {
-    if (props.animation === 22) {
-      const handleKeyDown = (event) => {
-        if (event.key === "ArrowLeft") {
-          setIzqWalk(true);
-          setDerWalk(false);
-          window.removeEventListener("keydown", handleKeyDown);
-        } else if (event.key === "ArrowRight") {
-          setDerWalk(true);
-          setIzqWalk(false);
-          window.removeEventListener("keydown", handleKeyDown);
-        }
-      };
 
-      window.addEventListener("keydown", handleKeyDown);
-
-      return () => {
-        window.removeEventListener("keydown", handleKeyDown);
-      };
-    }
-  }, [props.animation]);
-  // useEffect(() => {
-  //     //actions[names[animationIndex]].reset().fadeIn(0.5).play();
-  //   return () => {
-
-  //     //actions[names[animationIndex]].fadeOut(0.5);
-  //   };
-
-  // }, [animationIndex]);
-
-  useEffect(() => {
-    if (props.animation === 22) {
-      const updateCharacterPosition = () => {
-        if (group.current) {
-          if (izqWalk) {
-            if (actions && actions["WalkPlace"]) {
-              setRotationy(-Math.PI / 2);
-              group.current.position.x -= 0.06; 
-              // Update X-axis position for walking left
-              actions["WalkPlace"].play();
-            }
-            setTimeout(nextBifur2, 1500);
-          }
-          if (derWalk) {
-            if (actions && actions["Yes"]) {
-              setRotationy(Math.PI / 2);
-              
-              actions["Yes"].play();
-            }
-            setTimeout(nextBifur1, 1500);
-          }
-          requestAnimationFrame(updateCharacterPosition);
-        }
-      };
-
-      updateCharacterPosition();
-
-      return () => {
-        cancelAnimationFrame(updateCharacterPosition);
-      };
-    } else {
-      setIzqWalk(false);
-      setDerWalk(false);
-    }
-    if (props.animation === 0) {
-      setRotationx(props.rotationx);
-      setRotationy(props.rotationy);
-      setRotationz(props.rotationz);
-    }
-  }, [
-    props.animation,
-    izqWalk,
-    derWalk,
-    props.rotationx,
-    props.rotationy,
-    props.rotationz,
-  ]);
   return (
     <group ref={group} {...props} dispose={null} rotation-x={rotationx}
     rotation-z={rotationz}
     rotation-y={rotationy}
     position-x={positionx}
     position-z={positionz}
-    position-y={positiony} scale={4}>
+    position-y={positiony} scale={scale}>
       <group name="Scene">
         <group name="Armature">
           <skinnedMesh
