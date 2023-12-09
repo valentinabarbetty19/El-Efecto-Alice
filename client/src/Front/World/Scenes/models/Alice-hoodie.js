@@ -96,7 +96,7 @@ export function AliceHoodie(props) {
               actions["Yes"]
               .play();
             }
-            setTimeout(nextBifur1, 4000);
+            setTimeout(nextBifur1, 1500);
           }
           requestAnimationFrame(updateCharacterPosition);
         }

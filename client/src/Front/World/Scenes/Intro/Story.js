@@ -188,80 +188,92 @@ const Story = ({ language, info, route1, route2 }) => {
     // Return the cleanup function
     return cleanupAudio;
   }, [info[currentImageIndex].sonido]);
-  const { focusDistance, focalLength, bokehScale, blendFunction, height, brightness, constrast, middleGrey, maxLuminance , scanlineDensity, saturation, hue } =
-    useControls({
-      focusDistance: {
-        min: 0,
-        max: 1,
-        value: 0,
-      },
-      focalLength: {
-        min: 0,
-        max: 2,
-        value: 0.2,
-      },
-      bokehScale: {
-        min: 0,
-        max: 10,
-        value: 4.2,
-      },
-      height: {
-        min: 0,
-        max: 1024,
-        value: 480,
-      },
-      scanlineDensity: {
-        min: 0,
-        max: 4,
-        value: 0.42,
-      },
-      saturation: {
-        value: 0,
-        min: 0,
-        max: Math.PI,
-        step: 0.1
-      },
-      hue: {
-        value: 0,
-        min: 0,
-        max: Math.PI,
-        step: 0.1
-      },brightness: {
-        value: 0,
-        min: -1,
-        max: 1,
-        step: 0.1
-      },
-      constrast: {
-        value: 0,
-        min: -1,
-        max: 1,
-        step: 0.1
-      },middleGrey: {
-        min: 0,
-        max: 1,
-        value: 0.6,
-        step: 0.1
-      },
-      maxLuminance: {
-        min: 0,
-        max: 64,
-        value: 16,
-        step: 1
-      }, blendFunction: {
-        label: "Blend Function",
-        options: [
-          BlendFunction.OVERLAY,
-          BlendFunction.NORMAL,
-          BlendFunction.ADD,
-          BlendFunction.COLOR_BURN,
-          BlendFunction.COLOR_DODGE,
-          BlendFunction.DARKEN,
-          BlendFunction.LIGHTEN,
-          BlendFunction.MULTIPLY
-        ]
-      }
-    });
+  // const { focusDistance, focalLength, bokehScale, blendFunction, height, brightness, constrast, middleGrey, maxLuminance , scanlineDensity, saturation, hue } =
+  //   useControls({
+  //     focusDistance: {
+  //       min: 0,
+  //       max: 1,
+  //       value: 0,
+  //     },
+  //     focalLength: {
+  //       min: 0,
+  //       max: 2,
+  //       value: 0.2,
+  //     },
+  //     bokehScale: {
+  //       min: 0,
+  //       max: 10,
+  //       value: 4.2,
+  //     },
+  //     height: {
+  //       min: 0,
+  //       max: 1024,
+  //       value: 480,
+  //     },
+  //     scanlineDensity: {
+  //       min: 0,
+  //       max: 4,
+  //       value: 0.42,
+  //     },
+  //     saturation: {
+  //       value: 0,
+  //       min: 0,
+  //       max: Math.PI,
+  //       step: 0.1
+  //     },
+  //     hue: {
+  //       value: 0,
+  //       min: 0,
+  //       max: Math.PI,
+  //       step: 0.1
+  //     },brightness: {
+  //       value: 0,
+  //       min: -1,
+  //       max: 1,
+  //       step: 0.1
+  //     },
+  //     constrast: {
+  //       value: 0,
+  //       min: -1,
+  //       max: 1,
+  //       step: 0.1
+  //     },middleGrey: {
+  //       min: 0,
+  //       max: 1,
+  //       value: 0.6,
+  //       step: 0.1
+  //     },
+  //     maxLuminance: {
+  //       min: 0,
+  //       max: 64,
+  //       value: 16,
+  //       step: 1
+  //     }, blendFunction: {
+  //       label: "Blend Function",
+  //       options: [
+  //         BlendFunction.OVERLAY,
+  //         BlendFunction.NORMAL,
+  //         BlendFunction.ADD,
+  //         BlendFunction.COLOR_BURN,
+  //         BlendFunction.COLOR_DODGE,
+  //         BlendFunction.DARKEN,
+  //         BlendFunction.LIGHTEN,
+  //         BlendFunction.MULTIPLY
+  //       ]
+  //     }
+  //   });
+  // const focusDistance = 0;
+  // const focalLength = 0.2;
+  // const bokehScale = 4.2;
+  // const height = 480;
+  // const scanlineDensity = 0.42;
+  // const saturation = 0;
+  // const hue = 0;
+  // const brightness = -0.08;
+  // const constrast = -0.5;
+  // const middleGrey = 0.6;
+  // const maxLuminance = 16;
+  // const blendFunction = BlendFunction.OVERLAY;
   return (
     <div
       style={{
@@ -277,8 +289,17 @@ const Story = ({ language, info, route1, route2 }) => {
         ) : (
           <Canvas style={{ width: "100vw", height: "90vh" }}>
             {/* <SepiaEffect /> */}
-            <EffectComposer>
-              <DepthOfField
+            {info[currentImageIndex].sad === true ? (
+              // <EffectComposer>
+              //   {/* Include your post-processing components here */}
+              //   <BrightnessContrast
+              //     brightness={brightness}
+              //     contrast={constrast}
+              //   />
+              //   <Vignette eskil={false} offset={0.3} darkness={0.9} />
+              // </EffectComposer>
+              <EffectComposer>
+              {/* <DepthOfField
                 focusDistance={focusDistance}
                 focalLength={focalLength}
                 bokehScale={bokehScale}
@@ -289,13 +310,14 @@ const Story = ({ language, info, route1, route2 }) => {
               <HueSaturation
                 blendFunction={BlendFunction.NORMAL} // blend mode
                 hue={hue} saturation={-0.2} // saturation in radians
-              />
-               <BrightnessContrast brightness={brightness} contrast={constrast} />
-               <ToneMapping middleGrey={middleGrey} maxLuminance={maxLuminance} />
+              /> */}
+               {/* <BrightnessContrast brightness={brightness} contrast={constrast} /> */}
+               <ToneMapping middleGrey={0.6} maxLuminance={1} />
                {/* <Glitch /> */}
                <Vignette eskil={false} offset={0.3} darkness={0.9} />
-               <ColorAverage blendFunction={blendFunction} />
+               <ColorAverage blendFunction={BlendFunction.DARKEN} />
             </EffectComposer>
+            ) : null}
             <CameraControls />
             <ambientLight intensity={2} />
 
