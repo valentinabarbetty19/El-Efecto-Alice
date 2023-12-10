@@ -20,6 +20,7 @@ export function AliceJeans(props) {
   const [scale, setScale] = useState(0)
   const [izqWalk, setIzqWalk] = useState(false);
   const [derWalk, setDerWalk] = useState(false);
+  const [direccion, setDireccion] = useState(0);
   useEffect(() => {
     console.log(actions)
     for (const key in actions) {
@@ -157,7 +158,7 @@ export function AliceJeans(props) {
     if (props.animation === 53) {
       setPositionX((prevX) => prevX - 0.2);
     }
-  });
+  })
 
   useEffect(() => {
     let animationFrameId;
@@ -188,13 +189,28 @@ export function AliceJeans(props) {
     const updateCharacterPosition = () => {
       if (group.current) {
         if (izqWalk) {
-          // Update X-axis position for walking left
+          if(group.current.position.x === -5 &&
+            group.current.position.y === 0.5 &&
+            group.current.position.z === -10){
+
           group.current.position.x -= 0.06;
+          group.current.position.z -= 0.04;
+          group.current.position.y += 0.015;
           setRotationy(-Math.PI / 2);
           actions["WalkPlace"].play();
+          }else {
+            group.current.position.x -= 0.06;
+          group.current.position.z -= 0.04;
+          group.current.position.y += 0.015;
+          setRotationy(-Math.PI / 2);
+          actions["WalkPlace"].play();
+          }
         } else if (derWalk) {
-          setRotationy(Math.PI / 2);
-          actions["Yes"].play();
+          group.current.position.x += 0.06;
+          group.current.position.z -= 0.04;
+          group.current.position.y += 0.015;
+          setRotationy(Math.PI * 0.8);
+          actions["WalkPlace"].play();
         }
         animationFrameId = requestAnimationFrame(updateCharacterPosition);
       }
@@ -208,6 +224,7 @@ export function AliceJeans(props) {
       cancelAnimationFrame(animationFrameId);
     };
   }, [izqWalk, derWalk]);
+
   return (
     <group ref={group} {...props} dispose={null}
     rotation-x={rotationx}
@@ -215,7 +232,8 @@ export function AliceJeans(props) {
     rotation-y={rotationy}
     position-x={positionx}
     position-z={positionz}
-    position-y={positiony}>
+    position-y={positiony}
+    scale={scale}>
       <group name="Scene">
         <group name="Armature">
           <skinnedMesh

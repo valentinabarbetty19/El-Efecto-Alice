@@ -17,6 +17,7 @@ import {
   Html,
   Text,
   ShaderPass,
+  Environment,
 } from "@react-three/drei";
 import Lab from "../models/Scenarios/Lab";
 import Hand from "../models/Scenarios/Hand";
@@ -64,22 +65,18 @@ const Story = ({ language, info, route1, route2 }) => {
 
   const changeImage = () => {
     if (currentImageIndex === info.length - 1) {
-      if (decision1) {
-        navigate(route1);
-      } else if (decision2) {
-        navigate(route2);
-      }
+      navigate("/fin");
     } else {
       setCurrentImageIndex((prevIndex) => prevIndex + 1);
     }
   };
   useEffect(() => {
     if (currentImageIndex === info.length - 1) {
-      if (decision1) {
-        navigate(route1);
-      } else if (decision2) {
-        navigate(route2);
-      }
+      // if (decision1) {
+      //   navigate(route1);
+      // } else if (decision2) {
+      //   navigate(route2);
+      // }
     }
   }, [currentImageIndex, decision1, decision2, info, navigate, route1, route2]);
 
@@ -167,7 +164,7 @@ const Story = ({ language, info, route1, route2 }) => {
       } else if (info[currentImageIndex].sonido === 8) {
         audioSrc = "/assets/Audio/Door.mp3";
       } else if (info[currentImageIndex].sonido === 9) {
-        audioSrc = "/assets/Audio/Wormhole.mp3";
+        audioSrc = "/assets/Audio/Wormhole2.mp3";
       } else if (info[currentImageIndex].sonido === 10) {
         audioSrc = "/assets/Audio/ClapAudience.mp3";
       } else if (info[currentImageIndex].sonido === 11) {
@@ -360,12 +357,6 @@ const Story = ({ language, info, route1, route2 }) => {
             {shouldShowAliceLab && (
               <AliceLab
                 animation={info[currentImageIndex].animation}
-                // rotationx={info[currentImageIndex].rotationx}
-                // rotationz={info[currentImageIndex].rotationz}
-                // rotationy={info[currentImageIndex].rotationy}
-                // positionx={info[currentImageIndex].positionx}
-                // positionz={info[currentImageIndex].positionz}
-                // positiony={info[currentImageIndex].positiony}
               />
             )}
             {shouldShowPastillas && <Pastillas />}
@@ -384,7 +375,7 @@ const Story = ({ language, info, route1, route2 }) => {
             {shouldShowLivingRoom && (
               <Livingroom id_pos={info[currentImageIndex].id} />
             )}
-            {shouldShowTree && <Tree />}
+            {shouldShowTree && <Tree id_pos={info[currentImageIndex].id}/>}
             {shouldShowManicomio && <Manicomio />}
             {shouldShowAmbienteTree && <Environment
             files="/assets/environments/satara_night_no_lamps_1k.hdr"

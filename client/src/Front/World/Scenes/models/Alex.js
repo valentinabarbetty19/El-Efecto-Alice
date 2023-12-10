@@ -76,7 +76,11 @@ export function Esposo(props) {
       console.log(actions)
 
       const action = actions["Excited"];
-     action.play();
+      action.reset()
+      .setEffectiveTimeScale(1)
+      .setEffectiveWeight(1)
+      .fadeIn(0.5) // Set the loop type to LoopOnce
+      .play();
     }
 
     if(props.animation === 13){
@@ -86,7 +90,11 @@ export function Esposo(props) {
       setRotationy( Math.PI / 2 )
 
       const action = actions["Dancing"];
-     action.play();
+      action.reset()
+      .setEffectiveTimeScale(1)
+      .setEffectiveWeight(1)
+      .fadeIn(0.5) // Set the loop type to LoopOnce
+      .play();
     }
     
   }, [props.animation]);

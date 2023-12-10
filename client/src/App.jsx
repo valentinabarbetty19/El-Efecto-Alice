@@ -4,10 +4,11 @@ import { AuthProvider } from "./context/AuthContext.jsx";
 import { Canvas } from "@react-three/fiber";
 import Navbar from "./Front/2D/Navbar/Navbar.js";
 import Menu from "./Front/2D/Menu/Menu.js";
+
 import Login from "./Front/2D/Login/Login.js";
 import SignUp from "./Front/2D/SignUp/SignUp.js";
 import "./App.css";
-
+import Fin from "./Front/2D/Fin/Fin.js";
 import Bifur11 from "./Front/World/Scenes/Bifurcación1.1/Bifur1.1.js";
 import Bifur12 from "./Front/World/Scenes/Bifurcación1.2/Bifur1.2.js";
 import Bifur21 from "./Front/World/Scenes/Bifurcación2.1/Bifur2.1.js";
@@ -75,7 +76,7 @@ function App() {
       <Route path="/game/bifur2/bifur2" element={<Bifur22 language={language} />} />
       <Route path="/game/bifur2/bifur2/bifur1" element={<Bifur221 language={language} />} />
       <Route path="/game/bifur2/bifur2/bifur2" element={<Bifur222 language={language} />} />
-      
+      <Route path="/fin" element={<Fin language={language} />} />
 
     </Routes>
   );

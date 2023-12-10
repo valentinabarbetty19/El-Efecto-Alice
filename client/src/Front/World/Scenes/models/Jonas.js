@@ -92,7 +92,7 @@ export function Jonas(props) {
     position-x={positionx}
     position-z={positionz}
     position-y={positiony} 
-    scale={scale}
+    scale={scaleJonas}
     >
       <group name="Scene">
         <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={0.01}>

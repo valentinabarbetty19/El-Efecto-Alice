@@ -1,91 +1,91 @@
 
 export const introArray = [
-  {
-    id: 1,
-    // imageUrl: "/assets/img/scenarios/laboratory.png",
-    mensaje:"Alice Brown, una de las mejores científicas del país, ha destinado toda su vida al estudio de la física cuántica y los viajes en el tiempo.",
-    message:
-      "Alice Brown, one of the country's top scientists, has dedicated her entire life to the study of quantum physics and time travel.",
-    aliceLab: true,
-    lab: true,
-    animation: 1,
-    id_scena: 1,
-    sonido: 0,
-    sad: true
-  },
-  // Otros objetos de introArray...
+  // {
+  //   id: 1,
+  //   // imageUrl: "/assets/img/scenarios/laboratory.png",
+  //   mensaje:"Alice Brown, una de las mejores científicas del país, ha destinado toda su vida al estudio de la física cuántica y los viajes en el tiempo.",
+  //   message:
+  //     "Alice Brown, one of the country's top scientists, has dedicated her entire life to the study of quantum physics and time travel.",
+  //   aliceLab: true,
+  //   lab: true,
+  //   animation: 1,
+  //   id_scena: 1,
+  //   sonido: 0,
+  //   sad: true
+  // },
+  // // Otros objetos de introArray...
 
-  {
-    // fondo negro mostrando el brazalete en 3D
-    id: 2,
-    mensaje: "Ha estado trabajando en un brazalete que le permitiría escoger la fecha a dónde quiere viajar en el pasado, sin embargo, este artefacto no tiene la energía suficiente para que funcione.",
-    message:
-      "She has been working on a bracelet that would allow her to choose the date to which she wants to travel into the past. However, this device does not have enough energy to function.",
-    bracelet: true,
-    lab: true,
-    id_scena: 1,
-    animation: 2,
-    sonido: 0,
-    sad: true
-  }, //brazalete
-  {
-    //habitación - triste - alice llorando - musica sad
+  // {
+  //   // fondo negro mostrando el brazalete en 3D
+  //   id: 2,
+  //   mensaje: "Ha estado trabajando en un brazalete que le permitiría escoger la fecha a dónde quiere viajar en el pasado, sin embargo, este artefacto no tiene la energía suficiente para que funcione.",
+  //   message:
+  //     "She has been working on a bracelet that would allow her to choose the date to which she wants to travel into the past. However, this device does not have enough energy to function.",
+  //   bracelet: true,
+  //   lab: true,
+  //   id_scena: 1,
+  //   animation: 2,
+  //   sonido: 0,
+  //   sad: true
+  // }, //brazalete
+  // {
+  //   //habitación - triste - alice llorando - musica sad
 
-    //Personaje: Alice Hoodie - Animación: sitting disbelief - Sonido: crying
-    id: 3,
-    mensaje:  
-      "Tenía su vida feliz con su hijo y su esposo, pero desafortunadamente, tuvieron un accidente automovilístico, y todos menos ella, perdieron la vida.",
-    message:
-      "She had a happy life with her son and husband, but unfortunately, they had a car accident, and everyone except her, lost their lives.",
-    aliceHoodie2: true,
-    bedroom: true,
-    id_scena: 1,
-    animation: 3,
-    sonido: 1,
-    sad: true
-  }, 
-  {
-    //Personaje: Alice Hoodie - Animación: sitting disbelief - Sonido: crying
-    id: 4,
-    mensaje: 
-      "Alice ha quedado devastada tras este hecho, pues prácticamente toda su vida se ha derrumbado.",
-    message:
-      "Alice has been devastated by this event, as practically her whole life has crumbled.",
-    aliceHoodie2: true,
-    id_scena: 1,
-    bedroom: true,
-    animation: 4,
-    sonido: 1,
-    sad: true
-  },
-  {
-    //alice lab decepcionada con el brazalete ********************
-    // personaje: Alice Hoodie - animación: looking around 
-    id: 5,
-    mensaje: 
-      "Tras la tragedia, experimenta visiones perturbadoras que la hacen dudar su salud.",
-    message:
-      "After the tragedy, she experiences disturbing visions that make her doubt her health...",
-    aliceHoodie2: true,
-    livingroom: true,
-    jonas:true,
-    id_scena: 1,
-    animation: 5,
-    sonido: 3,
-    sad: true
-  },
-  {
-    //Personaje: Alice Hoodie - animación: sitting disbelief
-    id: 6,
-    mensaje: "¿Jonas? No, no puede ser... ¿Qué me pasa?",
-    message: 
-      "Jonas? No, this can't be real... What is going on with me?",
-    aliceHoodie2: true,
-    livingroom: true,
-    id_scena: 1,
-    animation: 6,
-    sad: true
-  },
+  //   //Personaje: Alice Hoodie - Animación: sitting disbelief - Sonido: crying
+  //   id: 3,
+  //   mensaje:  
+  //     "Tenía su vida feliz con su hijo y su esposo, pero desafortunadamente, tuvieron un accidente automovilístico, y todos menos ella, perdieron la vida.",
+  //   message:
+  //     "She had a happy life with her son and husband, but unfortunately, they had a car accident, and everyone except her, lost their lives.",
+  //   aliceHoodie2: true,
+  //   bedroom: true,
+  //   id_scena: 1,
+  //   animation: 3,
+  //   sonido: 1,
+  //   sad: true
+  // }, 
+  // {
+  //   //Personaje: Alice Hoodie - Animación: sitting disbelief - Sonido: crying
+  //   id: 4,
+  //   mensaje: 
+  //     "Alice ha quedado devastada tras este hecho, pues prácticamente toda su vida se ha derrumbado.",
+  //   message:
+  //     "Alice has been devastated by this event, as practically her whole life has crumbled.",
+  //   aliceHoodie2: true,
+  //   id_scena: 1,
+  //   bedroom: true,
+  //   animation: 4,
+  //   sonido: 1,
+  //   sad: true
+  // },
+  // {
+  //   //alice lab decepcionada con el brazalete ********************
+  //   // personaje: Alice Hoodie - animación: looking around 
+  //   id: 5,
+  //   mensaje: 
+  //     "Tras la tragedia, experimenta visiones perturbadoras que la hacen dudar su salud.",
+  //   message:
+  //     "After the tragedy, she experiences disturbing visions that make her doubt her health...",
+  //   aliceHoodie2: true,
+  //   livingroom: true,
+  //   jonas: true,
+  //   id_scena: 1,
+  //   animation: 5,
+  //   sonido: 3,
+  //   sad: true
+  // },
+  // {
+  //   //Personaje: Alice Hoodie - animación: sitting disbelief
+  //   id: 6,
+  //   mensaje: "¿Jonas? No, no puede ser... ¿Qué me pasa?",
+  //   message: 
+  //     "Jonas? No, this can't be real... What is going on with me?",
+  //   aliceHoodie2: true,
+  //   livingroom: true,
+  //   id_scena: 1,
+  //   animation: 6,
+  //   sad: true
+  // },
   {
     //P: Alice Hoodie - animación: sitting disbelief
     id: 7,
@@ -116,11 +116,10 @@ export const introArray = [
   {
   //sonido: gritoTrueno
     id: 9,
-    imageUrl: "/assets/img/scenarios/thundersorm.png",
     mensaje: "Al ir a investigar, fue alcanzada por un rayo.",
     message:
       "When she went to find out what it was, she was struck by a lightning.",
-    animation: 0,
+    animation: 9,
     sonido: 5
   },
   {
@@ -151,10 +150,10 @@ export const introArray = [
     sad: true
   },
   {
-    // Intermedio para video
-    // id: 57,
-    // video:true,
-    animation: 57,
+    // Intermedio para video,
+    video:true,
+    sonido: 9,
+
   },
   {
     //P: Alice Jeans (crying), Jonas y esposo (excited) 
@@ -753,84 +752,84 @@ export const bifur12Array = [
   },
 ];
 export const bifur2Array = [
-  {
-    //P: alice hoodie y vecino - A: - S:
-    id: 49,
-    imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje:
-      "Alice: Aprecio tu preocupación, pero en realidad estoy cansada y preferiría quedarme, además, la quemadura es pequeña. Gracias de todos modos.",
-    message:
-      "Alice: I appreciate your concern, but I am actually tired and would rather stay home, besides, the burn is small. Thank you anyway.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceHoodie2: true,
-    vecino: true,
-    animation: 21,
-    sad: true
-  },
-  {
-    //P: alice hoodie - A: sitting rubbing arm - S:
-    id: 50,
-    mensaje:
-      "En su casa, decide regresar al pasado una vez más para salvar a su familia. Va al día del accidente.",
-    message:
-      "At home, she decides to return to the past once more to save her family. She goes to the day of the accident.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    video: true,
-    sonido: 9,
-    sad: true
-  },
-  {
-    ////P: alice jeans - A: drunk run - S:
-    id: 51,
-    mensaje:
-      "Una vez se encontró en el pasado, se sentía apresurada por encontrar a su esposo y a su hijo.",
-    message:
-      "Once she got into the past, she felt rushed to find her husband and her son.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceJeans: true,
-    livingroom: true,
-    animation: 51
-  },
-  {
-    //P: alcie jeans - A: corriendo running tired - S:
-    id: 52,
-    mensaje:
-      "Buscó en todos los sitios de la casa y no los encontraba.",
-    message:
-      "She looked for them in all the places in the house and couldn't find them.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceJeans: true,
-    bedroom: true, 
-    animation: 52,
+  // {
+  //   //P: alice hoodie y vecino - A: - S:
+  //   id: 49,
+  //   imageUrl: "/assets/img/scenarios/house-door-outside.png",
+  //   mensaje:
+  //     "Alice: Aprecio tu preocupación, pero en realidad estoy cansada y preferiría quedarme, además, la quemadura es pequeña. Gracias de todos modos.",
+  //   message:
+  //     "Alice: I appreciate your concern, but I am actually tired and would rather stay home, besides, the burn is small. Thank you anyway.",
+  //   decision1en: null,
+  //   decision2en: null,
+  //   decision1es: null,
+  //   decision2es: null,
+  //   aliceHoodie2: true,
+  //   vecino: true,
+  //   animation: 21,
+  //   sad: true
+  // },
+  // {
+  //   //P: alice hoodie - A: sitting rubbing arm - S:
+  //   id: 50,
+  //   mensaje:
+  //     "En su casa, decide regresar al pasado una vez más para salvar a su familia. Va al día del accidente.",
+  //   message:
+  //     "At home, she decides to return to the past once more to save her family. She goes to the day of the accident.",
+  //   decision1en: null,
+  //   decision2en: null,
+  //   decision1es: null,
+  //   decision2es: null,
+  //   video: true,
+  //   sonido: 9,
+  //   sad: true
+  // },
+  // {
+  //   ////P: alice jeans - A: drunk run - S:
+  //   id: 51,
+  //   mensaje:
+  //     "Una vez se encontró en el pasado, se sentía apresurada por encontrar a su esposo y a su hijo.",
+  //   message:
+  //     "Once she got into the past, she felt rushed to find her husband and her son.",
+  //   decision1en: null,
+  //   decision2en: null,
+  //   decision1es: null,
+  //   decision2es: null,
+  //   aliceJeans: true,
+  //   livingroom: true,
+  //   animation: 51
+  // },
+  // {
+  //   //P: alcie jeans - A: corriendo running tired - S:
+  //   id: 52,
+  //   mensaje:
+  //     "Buscó en todos los sitios de la casa y no los encontraba.",
+  //   message:
+  //     "She looked for them in all the places in the house and couldn't find them.",
+  //   decision1en: null,
+  //   decision2en: null,
+  //   decision1es: null,
+  //   decision2es: null,
+  //   aliceJeans: true,
+  //   bedroom: true, 
+  //   animation: 52,
    
-  },
-  {
-  //P: alice jeans - A: running drunk  - S:
-    id: 53,
-    imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje:
-      "Entonces decidió irse a buscarlos porque intuyó que ya se habían ido. Esta era su última oportunidad de cambiar el curso de los eventos y salvarlos.",
-    message:
-      "Then she decided to leave to look for them because she had a feeling they had already left. This was her last chance to change the way the events happened and save them.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceJeans: true,
-    animation: 53
-  },
+  // },
+  // {
+  // //P: alice jeans - A: running drunk  - S:
+  //   id: 53,
+  //   imageUrl: "/assets/img/scenarios/house-door-outside.png",
+  //   mensaje:
+  //     "Entonces decidió irse a buscarlos porque intuyó que ya se habían ido. Esta era su última oportunidad de cambiar el curso de los eventos y salvarlos.",
+  //   message:
+  //     "Then she decided to leave to look for them because she had a feeling they had already left. This was her last chance to change the way the events happened and save them.",
+  //   decision1en: null,
+  //   decision2en: null,
+  //   decision1es: null,
+  //   decision2es: null,
+  //   aliceJeans: true,
+  //   animation: 53
+  // },
   {
     //ANIMACIÓN 3D
     id: 54,
@@ -840,6 +839,7 @@ export const bifur2Array = [
     decision2en: "Street 2",
     decision1es: "Calle 1",
     decision2es: "Calle 2",
+    photo: "assets/img/gif/keyboard.gif",
     aliceJeans: true,
     street_decision: true,
     sign: true,

@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 export function AliceHoodie2(props) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(
-    "/assets/models/Alice/AliceHoodie2/AliceHoodieAnimations.glb"
+    "/assets/models/Alice/AliceHoodie2/AliceHoodieNewAnimations.glb"
   );
   const [rotationx, setRotationx] = useState(0);
   const [rotationz, setRotationz] = useState(0);
@@ -18,7 +18,7 @@ export function AliceHoodie2(props) {
   const [positionx, setPositionX] = useState(0);
   const [positiony, setPositionY] = useState(0);
   const [positionz, setPositionZ] = useState(0);
-  const [scale, setScale] = useState(4);
+  const [scale, setScale] = useState(0);
   const navigate = useNavigate();
   const [izqWalk, setIzqWalk] = useState(false);
   const [derWalk, setDerWalk] = useState(false);
@@ -35,7 +35,6 @@ export function AliceHoodie2(props) {
       setPositionY(-3)
       setRotationy( Math.PI / 2 )
 
-      console.log(animations)
       
       const action = actions["SittingCrying"];
      action.reset()
@@ -49,8 +48,6 @@ export function AliceHoodie2(props) {
       setPositionX(-1)
       setPositionY(-3)
       setRotationy( Math.PI / 8999 )
-
-      console.log(animations)
       
       const action = actions["SittingCrying"];
      action.reset()
@@ -70,10 +67,14 @@ export function AliceHoodie2(props) {
       setPositionY(-3)
       setRotationy( Math.PI / 8999 )
       // setRotationx( Math.PI / 2 )
-      // console.log(actions)
+      console.log("valentina es muy gei")
       
       const action = actions["StandingScared"];
-     action.play();
+      action.reset()
+      .setEffectiveTimeScale( 1 )
+      .setEffectiveWeight( 1 )
+      .fadeIn(0.01)
+      .play();
     }
     if((props.animation === 6)){
       setPositionZ(-8)
@@ -109,21 +110,30 @@ export function AliceHoodie2(props) {
       console.log(actions)
       
       const action = actions["Looking"];
-     action.play();
-    }
+      action.reset()
+      .setEffectiveTimeScale( 1 )
+      .setEffectiveWeight( 1 )
+      .fadeIn(0.01)
+      .play();
+    } 
     if((props.animation === 10)){
+      setScale(1.2)
       setPositionZ(1)
       setPositionX(-2)
       setPositionY(-1)
       setRotationy( Math.PI / 8 )
+
       setScale(1.2)
       
       const action = actions["Agony"];
-     action.play();
+      action.reset()
+      .setEffectiveTimeScale( 1 )
+      .setEffectiveWeight( 1 )
+      .fadeIn(0.01)
+      .play();
     } else {
-      setScale(4);
+      setScale(4)
     }
-
     if((props.animation === 11)){
       setPositionZ(-1)
       setPositionX(8)
@@ -133,7 +143,11 @@ export function AliceHoodie2(props) {
       console.log(animations)
       
       const action = actions["SitRubbingArm"];
-     action.play();
+      action.reset()
+      .setEffectiveTimeScale( 1 )
+      .setEffectiveWeight( 1 )
+      .fadeIn(0.01)
+      .play();
     }
 
     if((props.animation === 14)){
@@ -145,7 +159,11 @@ export function AliceHoodie2(props) {
       console.log(animations)
       
       const action = actions["SitRubbingArm"];
-     action.play();
+      action.reset()
+      .setEffectiveTimeScale( 1 )
+      .setEffectiveWeight( 1 )
+      .fadeIn(0.01)
+      .play();
     }
 
     if( (props.animation === 24) || (props.animation === 68) || (props.animation === 70) || (props.animation === 71) || (props.animation === 16) || (props.animation === 18) || (props.animation === 20) ){
@@ -162,7 +180,7 @@ export function AliceHoodie2(props) {
      .fadeIn(2)
      .play();
     }
-    if((props.animation === 21) || (props.animation === 25) || (props.animation === 23) ){
+    if((props.animation === 21) || (props.animation === 25) || (props.animation === 23) || (props.animation === 17)  || (props.animation === 19) ){
       setPositionZ(0)
       setPositionX(-3)
       setPositionY(-5)
@@ -216,8 +234,6 @@ export function AliceHoodie2(props) {
     
   }, [props.animation]);
 
-
-
   const { actions } = useAnimations(animations, group);
 
   return (
@@ -226,7 +242,8 @@ export function AliceHoodie2(props) {
     rotation-y={rotationy}
     position-x={positionx}
     position-z={positionz}
-    position-y={positiony} scale={scale}>
+    position-y={positiony} 
+    scale={scale}>
       <group name="Scene">
         <group name="Armature">
           <skinnedMesh
@@ -305,6 +322,6 @@ export function AliceHoodie2(props) {
   );
 }
 
-useGLTF.preload("/assets/models/Alice/AliceHoodie2/AliceHoodieAnimations.glb");
+useGLTF.preload("/assets/models/Alice/AliceHoodie2/AliceHoodieNewAnimations.glb");
 export default AliceHoodie2;
 
