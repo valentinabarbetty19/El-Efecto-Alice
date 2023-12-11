@@ -62,11 +62,18 @@ const Navbar = ({ setLanguage, language }) => {
   return (
     <div>
       <div className="index">
-        <button onClick={handleLanguage} className="transparent-button-lang">
+        <button
+          onClick={handleLanguage}
+          className="transparent-button-lang"
+          title="Cambiar Idioma"
+        >
           {language === "español" ? "EN" : "ES"}
         </button>
 
-        <div onClick={handleClick}>
+        <div onClick={handleClick}
+        title="Toggle Audio"
+        style={{ cursor: "pointer" }}
+      >
           <img
             className="speaker-filled-audio"
             alt="Speaker filled audio"
@@ -79,27 +86,24 @@ const Navbar = ({ setLanguage, language }) => {
           Tu navegador no admite la reproducción de audio.
         </audio>
 
-        <div onClick={() => {
-          setModalOpen(true);
-        }}>
-          <img
-            className="book"
-            alt="Book"
-            src="/assets/img/menu-Items/book.png"
-          />
+        <div
+          onClick={() => {
+            setModalOpen(true);
+          }}
+          title="Ver Instrucciones"
+          style={{ cursor: "pointer" }}
+        >
+          <img className="book" alt="Book" src="/assets/img/menu-Items/book.png" />
         </div>
+
         <div>
           <a href="/" title="Ir a Inicio">
             <img className="home" alt="Home" src="/assets/img/menu-Items/home.png" />
           </a>
         </div>
 
-        <a href="/login">
-          <img
-            className="user"
-            alt="User"
-            src="/assets/img/menu-Items/user.png"
-          />
+        <a href="/login" title="Iniciar Sesión" style={{ cursor: "pointer" }}>
+          <img className="user" alt="User" src="/assets/img/menu-Items/user.png" />
         </a>
       </div>
 
