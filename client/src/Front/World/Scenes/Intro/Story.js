@@ -65,18 +65,16 @@ const Story = ({ language, info, route1, route2 }) => {
 
   const changeImage = () => {
     if (currentImageIndex === info.length - 1) {
-      navigate("/fin");
+      if (info[currentImageIndex].id === "fin") {
+        navigate("/fin")
+      }
     } else {
       setCurrentImageIndex((prevIndex) => prevIndex + 1);
     }
   };
   useEffect(() => {
-    if (currentImageIndex === info.length - 1) {
-      // if (decision1) {
-      //   navigate(route1);
-      // } else if (decision2) {
-      //   navigate(route2);
-      // }
+    if (info[currentImageIndex].id === "fin") {
+      navigate("/fin")
     }
   }, [currentImageIndex, decision1, decision2, info, navigate, route1, route2]);
 
@@ -117,6 +115,10 @@ const Story = ({ language, info, route1, route2 }) => {
   const [hovered, setHover] = useState(false);
   useEffect(() => {
     // Cleanup function to pause and reset the audio when props.sonido changes
+
+    // if (info[currentImageIndex].id === "fin") {
+    //   navigate("/fin")
+    // }
     const cleanupAudio = () => {
       if (audioRef.current) {
         audioRef.current.pause();

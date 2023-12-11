@@ -1,91 +1,91 @@
 
 export const introArray = [
-  // {
-  //   id: 1,
-  //   // imageUrl: "/assets/img/scenarios/laboratory.png",
-  //   mensaje:"Alice Brown, una de las mejores científicas del país, ha destinado toda su vida al estudio de la física cuántica y los viajes en el tiempo.",
-  //   message:
-  //     "Alice Brown, one of the country's top scientists, has dedicated her entire life to the study of quantum physics and time travel.",
-  //   aliceLab: true,
-  //   lab: true,
-  //   animation: 1,
-  //   id_scena: 1,
-  //   sonido: 0,
-  //   sad: true
-  // },
-  // // Otros objetos de introArray...
+  {
+    id: 1,
+    // imageUrl: "/assets/img/scenarios/laboratory.png",
+    mensaje:"Alice Brown, una de las mejores científicas del país, ha destinado toda su vida al estudio de la física cuántica y los viajes en el tiempo.",
+    message:
+      "Alice Brown, one of the country's top scientists, has dedicated her entire life to the study of quantum physics and time travel.",
+    aliceLab: true,
+    lab: true,
+    animation: 1,
+    id_scena: 1,
+    sonido: 0,
+    sad: true
+  },
+  // Otros objetos de introArray...
 
-  // {
-  //   // fondo negro mostrando el brazalete en 3D
-  //   id: 2,
-  //   mensaje: "Ha estado trabajando en un brazalete que le permitiría escoger la fecha a dónde quiere viajar en el pasado, sin embargo, este artefacto no tiene la energía suficiente para que funcione.",
-  //   message:
-  //     "She has been working on a bracelet that would allow her to choose the date to which she wants to travel into the past. However, this device does not have enough energy to function.",
-  //   bracelet: true,
-  //   lab: true,
-  //   id_scena: 1,
-  //   animation: 2,
-  //   sonido: 0,
-  //   sad: true
-  // }, //brazalete
-  // {
-  //   //habitación - triste - alice llorando - musica sad
+  {
+    // fondo negro mostrando el brazalete en 3D
+    id: 2,
+    mensaje: "Ha estado trabajando en un brazalete que le permitiría escoger la fecha a dónde quiere viajar en el pasado, sin embargo, este artefacto no tiene la energía suficiente para que funcione.",
+    message:
+      "She has been working on a bracelet that would allow her to choose the date to which she wants to travel into the past. However, this device does not have enough energy to function.",
+    bracelet: true,
+    lab: true,
+    id_scena: 1,
+    animation: 2,
+    sonido: 0,
+    sad: true
+  }, //brazalete
+  {
+    //habitación - triste - alice llorando - musica sad
 
-  //   //Personaje: Alice Hoodie - Animación: sitting disbelief - Sonido: crying
-  //   id: 3,
-  //   mensaje:  
-  //     "Tenía su vida feliz con su hijo y su esposo, pero desafortunadamente, tuvieron un accidente automovilístico, y todos menos ella, perdieron la vida.",
-  //   message:
-  //     "She had a happy life with her son and husband, but unfortunately, they had a car accident, and everyone except her, lost their lives.",
-  //   aliceHoodie2: true,
-  //   bedroom: true,
-  //   id_scena: 1,
-  //   animation: 3,
-  //   sonido: 1,
-  //   sad: true
-  // }, 
-  // {
-  //   //Personaje: Alice Hoodie - Animación: sitting disbelief - Sonido: crying
-  //   id: 4,
-  //   mensaje: 
-  //     "Alice ha quedado devastada tras este hecho, pues prácticamente toda su vida se ha derrumbado.",
-  //   message:
-  //     "Alice has been devastated by this event, as practically her whole life has crumbled.",
-  //   aliceHoodie2: true,
-  //   id_scena: 1,
-  //   bedroom: true,
-  //   animation: 4,
-  //   sonido: 1,
-  //   sad: true
-  // },
-  // {
-  //   //alice lab decepcionada con el brazalete ********************
-  //   // personaje: Alice Hoodie - animación: looking around 
-  //   id: 5,
-  //   mensaje: 
-  //     "Tras la tragedia, experimenta visiones perturbadoras que la hacen dudar su salud.",
-  //   message:
-  //     "After the tragedy, she experiences disturbing visions that make her doubt her health...",
-  //   aliceHoodie2: true,
-  //   livingroom: true,
-  //   jonas: true,
-  //   id_scena: 1,
-  //   animation: 5,
-  //   sonido: 3,
-  //   sad: true
-  // },
-  // {
-  //   //Personaje: Alice Hoodie - animación: sitting disbelief
-  //   id: 6,
-  //   mensaje: "¿Jonas? No, no puede ser... ¿Qué me pasa?",
-  //   message: 
-  //     "Jonas? No, this can't be real... What is going on with me?",
-  //   aliceHoodie2: true,
-  //   livingroom: true,
-  //   id_scena: 1,
-  //   animation: 6,
-  //   sad: true
-  // },
+    //Personaje: Alice Hoodie - Animación: sitting disbelief - Sonido: crying
+    id: 3,
+    mensaje:  
+      "Tenía su vida feliz con su hijo y su esposo, pero desafortunadamente, tuvieron un accidente automovilístico, y todos menos ella, perdieron la vida.",
+    message:
+      "She had a happy life with her son and husband, but unfortunately, they had a car accident, and everyone except her, lost their lives.",
+    aliceHoodie2: true,
+    bedroom: true,
+    id_scena: 1,
+    animation: 3,
+    sonido: 1,
+    sad: true
+  }, 
+  {
+    //Personaje: Alice Hoodie - Animación: sitting disbelief - Sonido: crying
+    id: 4,
+    mensaje: 
+      "Alice ha quedado devastada tras este hecho, pues prácticamente toda su vida se ha derrumbado.",
+    message:
+      "Alice has been devastated by this event, as practically her whole life has crumbled.",
+    aliceHoodie2: true,
+    id_scena: 1,
+    bedroom: true,
+    animation: 4,
+    sonido: 1,
+    sad: true
+  },
+  {
+    //alice lab decepcionada con el brazalete ********************
+    // personaje: Alice Hoodie - animación: looking around 
+    id: 5,
+    mensaje: 
+      "Tras la tragedia, experimenta visiones perturbadoras que la hacen dudar su salud.",
+    message:
+      "After the tragedy, she experiences disturbing visions that make her doubt her health...",
+    aliceHoodie2: true,
+    livingroom: true,
+    jonas: true,
+    id_scena: 1,
+    animation: 5,
+    sonido: 3,
+    sad: true
+  },
+  {
+    //Personaje: Alice Hoodie - animación: sitting disbelief
+    id: 6,
+    mensaje: "¿Jonas? No, no puede ser... ¿Qué me pasa?",
+    message: 
+      "Jonas? No, this can't be real... What is going on with me?",
+    aliceHoodie2: true,
+    livingroom: true,
+    id_scena: 1,
+    animation: 6,
+    sad: true
+  },
   {
     //P: Alice Hoodie - animación: sitting disbelief
     id: 7,
@@ -116,11 +116,13 @@ export const introArray = [
   {
   //sonido: gritoTrueno
     id: 9,
+    // imageUrl: "/assets/img/scenarios/laboratory.png",
     mensaje: "Al ir a investigar, fue alcanzada por un rayo.",
     message:
       "When she went to find out what it was, she was struck by a lightning.",
-    animation: 9,
-    sonido: 5
+    // animation: 9,
+    sonido: 5,
+    sad: true,
   },
   {
     //P: Alice Hoodie - animación: agony sonido: lluviaLlanto 
@@ -302,196 +304,196 @@ export const introArray = [
   },
 ];
 export const bifur1Array = [
-  {
-    //Alice: talking - Liam: idle
-    id: 23,
-    imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje:
-      "Alice: ...creo que tienes razón. Es mejor asegurarse de que todo esté en orden.",
-    message:
-      "Alice: ...I think you're right. It's better to make sure everything is okay.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceHoodie2: true,
-    vecino: true,
-    animation: 23,
-    sonido: 0,
-    sad: true
-  },
-  {
-    //Liam: talking - Alice: idle
-    id: 24,
-    imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje:
-      "Liam: Bueno, no te preocupes. Puedo llevarte al hospital si lo necesitas. Es importante cuidar esa quemadura.",
-    message:
-      "Liam: Well, don't worry. I can take you to the hospital if you need to. It's important to take care of that burn.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceHoodie2: true,
-    vecino: true,
-    animation: 24,
-    sad: true
-  },
-  {
-    //Alice: talking - Liam: idle
-    id: 25,
-    imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje:
-      "Alice: Eso sería amable de tu parte, gracias. No entiendo lo que está sucediendo, pero creo que es lo mejor.",
-    message:
-      "Alice: That would be kind of you, thank you. I don't understand what's happening, but I think it's for the best.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceHoodie2: true,
-    vecino: true,
-    sonido: 0,
-    animation: 25,
-    sad: true
-  },
-  {
-    //Alice: idle
-    id: 26,
-    mensaje:
-      "En el hospital Alice comenta toda la situación acerca de sus visiones y el impacto del rayo al médico y espera resultados después de unos análisis médicos y de comportamiento.",
-    message:
-      "At the hospital Alice discusses the entire situation about her visions and the impact of the lightning to the doctor and waits for results after some medical and behavioral analysis.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceHoodie2: true,
-    doctorCarl: true,
-    hospital: true,
-    animation: 26,
-    sad: true
-  },
-  {
-    //Doctor: talking - Alice: idle
-    id: 27,
-    mensaje:
-      "Doctor Carl: Hemos revisado tus análisis al parecer la quemadura no es nada grave. Sanará en unos días, pero sí se pudieron evidencias problemas mentales y esquizofrenia.",
-    message:
-      "Doctor Carl: We have reviewed your tests, it seems the burn is nothing serious. It will heal in a few days, but there was evidence of mental problems and schizophrenia.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceHoodie2: true,
-    doctorCarl: true,
-    hospital: true,
-    animation: 27,
-    sonido: 0,
-    sad: true
-  },
-  {
-//Alice: talking - doctor: idle
-    id: 28,
-    mensaje:
-      "Alice: ¿Esquizofrenia? ¿Estás seguro? ¿No es posible que todo esto sea solo un sueño, una ilusión? ¿Qué es real? Esto debe ser una broma",
-    message:
-      "Alice: Schizophrenia? Are you sure? Could this all just be a dream, an illusion? What's real? This has to be a joke",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceHoodie2: true,
-    doctorCarl: true,
-    hospital: true,
-    animation: 26,
-    sonido: 0,
-    sad: true
+//   {
+//     //Alice: talking - Liam: idle
+//     id: 23,
+//     imageUrl: "/assets/img/scenarios/house-door-outside.png",
+//     mensaje:
+//       "Alice: ...creo que tienes razón. Es mejor asegurarse de que todo esté en orden.",
+//     message:
+//       "Alice: ...I think you're right. It's better to make sure everything is okay.",
+//     decision1en: null,
+//     decision2en: null,
+//     decision1es: null,
+//     decision2es: null,
+//     aliceHoodie2: true,
+//     vecino: true,
+//     animation: 23,
+//     sonido: 0,
+//     sad: true
+//   },
+//   {
+//     //Liam: talking - Alice: idle
+//     id: 24,
+//     imageUrl: "/assets/img/scenarios/house-door-outside.png",
+//     mensaje:
+//       "Liam: Bueno, no te preocupes. Puedo llevarte al hospital si lo necesitas. Es importante cuidar esa quemadura.",
+//     message:
+//       "Liam: Well, don't worry. I can take you to the hospital if you need to. It's important to take care of that burn.",
+//     decision1en: null,
+//     decision2en: null,
+//     decision1es: null,
+//     decision2es: null,
+//     aliceHoodie2: true,
+//     vecino: true,
+//     animation: 24,
+//     sad: true
+//   },
+//   {
+//     //Alice: talking - Liam: idle
+//     id: 25,
+//     imageUrl: "/assets/img/scenarios/house-door-outside.png",
+//     mensaje:
+//       "Alice: Eso sería amable de tu parte, gracias. No entiendo lo que está sucediendo, pero creo que es lo mejor.",
+//     message:
+//       "Alice: That would be kind of you, thank you. I don't understand what's happening, but I think it's for the best.",
+//     decision1en: null,
+//     decision2en: null,
+//     decision1es: null,
+//     decision2es: null,
+//     aliceHoodie2: true,
+//     vecino: true,
+//     sonido: 0,
+//     animation: 25,
+//     sad: true
+//   },
+//   {
+//     //Alice: idle
+//     id: 26,
+//     mensaje:
+//       "En el hospital Alice comenta toda la situación acerca de sus visiones y el impacto del rayo al médico y espera resultados después de unos análisis médicos y de comportamiento.",
+//     message:
+//       "At the hospital Alice discusses the entire situation about her visions and the impact of the lightning to the doctor and waits for results after some medical and behavioral analysis.",
+//     decision1en: null,
+//     decision2en: null,
+//     decision1es: null,
+//     decision2es: null,
+//     aliceHoodie2: true,
+//     doctorCarl: true,
+//     hospital: true,
+//     animation: 26,
+//     sad: true
+//   },
+//   {
+//     //Doctor: talking - Alice: idle
+//     id: 27,
+//     mensaje:
+//       "Doctor Carl: Hemos revisado tus análisis al parecer la quemadura no es nada grave. Sanará en unos días, pero sí se pudieron evidencias problemas mentales y esquizofrenia.",
+//     message:
+//       "Doctor Carl: We have reviewed your tests, it seems the burn is nothing serious. It will heal in a few days, but there was evidence of mental problems and schizophrenia.",
+//     decision1en: null,
+//     decision2en: null,
+//     decision1es: null,
+//     decision2es: null,
+//     aliceHoodie2: true,
+//     doctorCarl: true,
+//     hospital: true,
+//     animation: 27,
+//     sonido: 0,
+//     sad: true
+//   },
+//   {
+// //Alice: talking - doctor: idle
+//     id: 28,
+//     mensaje:
+//       "Alice: ¿Esquizofrenia? ¿Estás seguro? ¿No es posible que todo esto sea solo un sueño, una ilusión? ¿Qué es real? Esto debe ser una broma",
+//     message:
+//       "Alice: Schizophrenia? Are you sure? Could this all just be a dream, an illusion? What's real? This has to be a joke",
+//     decision1en: null,
+//     decision2en: null,
+//     decision1es: null,
+//     decision2es: null,
+//     aliceHoodie2: true,
+//     doctorCarl: true,
+//     hospital: true,
+//     animation: 26,
+//     sonido: 0,
+//     sad: true
   
-  },
-  {
-    //Doctor: talking - Alice: idle
-    id: 29,
-    mensaje:
-      "Doctor Carl: Entiendo que esto debe ser abrumador para ti, Alice. Pero los análisis y observaciones clínicas son concluyentes. Ahora te quiero hablar respecto a dos pastillas experimentales, que son una opción que podría ayudarte a recuperar la estabilidad mental.",
-    message:
-      "Doctor Carl: I understand that this must be overwhelming for you, Alice. But the clinical analyses and observations are conclusive. Now, I want to talk to you about two experimental pills, which are an option that could help you regain mental stability.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceHoodie2: true,
-    doctorCarl: true,
-    hospital: true,
-    animation: 27,
-    sonido: 0,
-    sad: true
-  },
-  {
-    //Alice: talking - Doctor: idle
-    id: 30,
-    mensaje: "Alice: No estoy segura, Doctor Carl. ¿Qué tipo de pastillas son?",
-    message:
-      "Alice: I'm not sure, Doctor Carl. What kind of pills are those?",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceHoodie2: true,
-    doctorCarl: true,
-    hospital: true,
-    animation: 26,
-    sonido: 0,
-    sad: true
-  },
-  {
-    id: 31,
-    mensaje: "Doctor Carl: Son pastillas seguras y ha ayudado a muchas personas en situaciones similares. Tienes que escoger entre la roja y la azul.",
-    message:
-      "Doctor Carl: They are safe pills and have helped many people in similar situations. You have to choose between the red and the blue one.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceHoodie2: true,
-    doctorCarl: true,
-    hospital: true,
-    animation: 27,
-    sonido: 0,
-    sad: true
-  },
-  {
-    id: 32,
-    mensaje: "Alice: ¿Qué efecto tendrá en mí?",
-    message: "Alice: What will be the effect on me?",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceHoodie2: true,
-    doctorCarl: true,
-    hospital: true,
-    animation: 26,
-    sonido: 0,
-    sad: true
-  },
-  {
-    id: 33,
-    mensaje:
-      "Doctor Carl: No te preocupes, no te alejará de la realidad, pero podría ayudarte a sentirte más tranquila, al menos temporalmente.",
-    message:
-      "Doctor Carl: Don't worry, it won't take you away from reality, but it might help you feel calmer, at least temporarily.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceHoodie2: true,
-    doctorCarl: true,
-    hospital: true,
-    animation: 27,
-    sonido: 0,
-    sad: true
-  },
+//   },
+//   {
+//     //Doctor: talking - Alice: idle
+//     id: 29,
+//     mensaje:
+//       "Doctor Carl: Entiendo que esto debe ser abrumador para ti, Alice. Pero los análisis y observaciones clínicas son concluyentes. Ahora te quiero hablar respecto a dos pastillas experimentales, que son una opción que podría ayudarte a recuperar la estabilidad mental.",
+//     message:
+//       "Doctor Carl: I understand that this must be overwhelming for you, Alice. But the clinical analyses and observations are conclusive. Now, I want to talk to you about two experimental pills, which are an option that could help you regain mental stability.",
+//     decision1en: null,
+//     decision2en: null,
+//     decision1es: null,
+//     decision2es: null,
+//     aliceHoodie2: true,
+//     doctorCarl: true,
+//     hospital: true,
+//     animation: 27,
+//     sonido: 0,
+//     sad: true
+//   },
+//   {
+//     //Alice: talking - Doctor: idle
+//     id: 30,
+//     mensaje: "Alice: No estoy segura, Doctor Carl. ¿Qué tipo de pastillas son?",
+//     message:
+//       "Alice: I'm not sure, Doctor Carl. What kind of pills are those?",
+//     decision1en: null,
+//     decision2en: null,
+//     decision1es: null,
+//     decision2es: null,
+//     aliceHoodie2: true,
+//     doctorCarl: true,
+//     hospital: true,
+//     animation: 26,
+//     sonido: 0,
+//     sad: true
+//   },
+//   {
+//     id: 31,
+//     mensaje: "Doctor Carl: Son pastillas seguras y ha ayudado a muchas personas en situaciones similares. Tienes que escoger entre la roja y la azul.",
+//     message:
+//       "Doctor Carl: They are safe pills and have helped many people in similar situations. You have to choose between the red and the blue one.",
+//     decision1en: null,
+//     decision2en: null,
+//     decision1es: null,
+//     decision2es: null,
+//     aliceHoodie2: true,
+//     doctorCarl: true,
+//     hospital: true,
+//     animation: 27,
+//     sonido: 0,
+//     sad: true
+//   },
+//   {
+//     id: 32,
+//     mensaje: "Alice: ¿Qué efecto tendrá en mí?",
+//     message: "Alice: What will be the effect on me?",
+//     decision1en: null,
+//     decision2en: null,
+//     decision1es: null,
+//     decision2es: null,
+//     aliceHoodie2: true,
+//     doctorCarl: true,
+//     hospital: true,
+//     animation: 26,
+//     sonido: 0,
+//     sad: true
+//   },
+//   {
+//     id: 33,
+//     mensaje:
+//       "Doctor Carl: No te preocupes, no te alejará de la realidad, pero podría ayudarte a sentirte más tranquila, al menos temporalmente.",
+//     message:
+//       "Doctor Carl: Don't worry, it won't take you away from reality, but it might help you feel calmer, at least temporarily.",
+//     decision1en: null,
+//     decision2en: null,
+//     decision1es: null,
+//     decision2es: null,
+//     aliceHoodie2: true,
+//     doctorCarl: true,
+//     hospital: true,
+//     animation: 27,
+//     sonido: 0,
+//     sad: true
+//   },
   {
     //ANIMACIÓN 3D
     id: 34,
@@ -648,6 +650,9 @@ export const bifur11Array = [
     animation: 42,
     sad: true
   },
+  {
+    id: "fin"
+  }
   //
 ];
 export const bifur12Array = [
@@ -750,6 +755,9 @@ export const bifur12Array = [
     animation: 42,
     sad: true
   },
+  {
+    id: "fin"
+  }
 ];
 export const bifur2Array = [
   // {
@@ -900,6 +908,9 @@ export const bifur21Array = [
     decision1es: null,
     decision2es: null,
     sonido: 12
+  },
+  {
+    id: "fin"
   }
 ];
 export const bifur22Array = [
@@ -1185,6 +1196,9 @@ export const bifur221Array = [
     sonido: 14,
     sad: true
   },
+  {
+    id: "fin"
+  }
 ];
 export const bifur222Array = [
   {
@@ -1251,4 +1265,7 @@ export const bifur222Array = [
     animation: 0,
     sad: true
   },
+  {
+    id: "fin"
+  }
 ];

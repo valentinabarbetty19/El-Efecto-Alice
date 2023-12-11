@@ -131,7 +131,8 @@ export function AliceHoodie2(props) {
       .setEffectiveWeight( 1 )
       .fadeIn(0.01)
       .play();
-    } else {
+    } 
+    else {
       setScale(4)
     }
     if((props.animation === 11)){
@@ -227,9 +228,10 @@ export function AliceHoodie2(props) {
      .setEffectiveWeight( 1 )
      .fadeIn( 0.5 )
      .play();
-    } else {
-      setScale(4)
-    }
+    } 
+    // else {
+    //   setScale(4)
+    // }
    
     
   }, [props.animation]);
