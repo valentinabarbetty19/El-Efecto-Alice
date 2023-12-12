@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+} 
+
+.navbar {
+  z-index: 1; /* Adjust the z-index as needed */
+  /* Add other styling for your navbar */
+}
+
+.content {
+  margin: 20px;
+  opacity: 0.7;
+}
+
+.canvas-container {
+  width: 100%; /* Set your desired width */
+  height: 100%; /* Set your desired height */
+}
+
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loading-content {
+  width: 60%; /* Ajusta según sea necesario */
+  max-width: 600px; /* Máximo ancho del contenedor */
+  text-align: center;
+}
+
+.loading-bar-container {
+  position: relative;
+  margin-bottom: 20px; /* Espaciado entre la barra y los mensajes */
+}
+
+.loading-bar {
+  height: 20px;
+  background-color: #4caf50;
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+  margin: 0 auto; /* Centro horizontalmente */
+}
+
+.loading-message {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.loading-percentage {
+  font-size: 16px;
+}

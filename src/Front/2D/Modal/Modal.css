@@ -1,0 +1,85 @@
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(200, 200, 200, 0.8); /* Ajusta el color de fondo y la opacidad según tus necesidades */
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Set un valor de z-index mayor si es necesario */
+}
+
+.modalContainer {
+  width: 80vw; /* Cambiado a porcentaje del ancho de la ventana */
+  max-width: 600px; /* Ancho máximo para evitar que sea demasiado grande en pantallas grandes */
+  max-height: 400vh; /* Altura máxima para evitar que sea demasiado alto en pantallas grandes */
+  overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido es muy largo */
+  border-radius: 12px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  text-align: center; /* Ajusta el texto al centro si es necesario */
+  z-index: 10000; /* Set un valor de z-index mayor si es necesario */
+  user-select: none;
+}
+  
+  .modalContainer .title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    color: black !important;
+    font-family: "Open Sans-Regular", Helvetica;
+    user-select: none;
+  }
+  
+  .titleCloseBtn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .titleCloseBtn button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    font-family: "Open Sans-Regular", Helvetica;
+  }
+  
+  .modalContainer .body {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    text-align: center;
+    color: black !important;
+    font-family: "Open Sans-Regular", Helvetica;
+  }
+  
+  .modalContainer .footer {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black !important;
+  }
+  
+  .modalContainer .footer button {
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  #cancelBtn {
+    background-color: crimson;
+  }
