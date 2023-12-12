@@ -20,8 +20,8 @@ export function AliceJeans(props) {
   const [scale, setScale] = useState(0)
   const [izqWalk, setIzqWalk] = useState(false);
   const [derWalk, setDerWalk] = useState(false);
- 
-
+  const [der, setEstadoDer] = useState(false);
+  const [izq, setEstadoIzq] = useState(false);
 
 
 
@@ -30,35 +30,35 @@ export function AliceJeans(props) {
     for (const key in actions) {
       actions[key].stop();
     }
-    
+
     if (props.animation === 12) {
       setPositionZ(1)
       setPositionX(-3)
       setPositionY(-3.9)
-      setRotationy( Math.PI / 1.2 )
+      setRotationy(Math.PI / 1.2)
       console.log(actions)
 
-    const action = actions["Crying"];
-    action.play();
+      const action = actions["Crying"];
+      action.play();
     }
-    
-    if((props.animation === 13)){
+
+    if ((props.animation === 13)) {
       setPositionZ(-3)
       setPositionX(3.4)
       setPositionY(-3.9)
-      setRotationy( Math.PI * 3.5)
+      setRotationy(Math.PI * 3.5)
 
       console.log(animations)
-      
+
       const action = actions["Dancing"];
-     action.play();
+      action.play();
     }
     if ((props.animation === 51)) {
       setPositionZ(-13);
       setPositionX(-4);
       setPositionY(-4);
       setRotationy(Math.PI * 2.2);
-    setScale(5)
+      setScale(5)
       const action = actions["Worried"];
       action.reset()
         .setEffectiveTimeScale(1)
@@ -76,87 +76,87 @@ export function AliceJeans(props) {
         .setEffectiveWeight(1)
         .fadeIn(0.5) // Set the loop type to LoopOnce
         .play();
-        setScale(4.5)
+      setScale(4.5)
     } else if ((props.animation === 53)) {
-    
+
       setPositionZ(-1);
       setPositionX((prevX) => prevX - 0.06);
       setPositionY(-8);
       setRotationy(- Math.PI / 2);
       const action = actions["RunDrunkPlace"];
-      group.current.position.x -= 1; 
+      group.current.position.x -= 1;
       action.reset()
         .setEffectiveTimeScale(1)
         .setEffectiveWeight(1)
         .fadeIn(0.5) // Set the loop type to LoopOnce
         .play();
-        setScale(5)
-      } else if ((props.animation === 55)) {
-    
-        setPositionZ(2);
-        setPositionX(-0.8);
-        setPositionY(-0.5);
-        setRotationy( Math.PI / 1.5);
-        const action = actions["Screaming"];
-        action.reset()
-          .setEffectiveTimeScale(1)
-          .setEffectiveWeight(1)
-          .fadeIn(0.5) // Set the loop type to LoopOnce
-          .play();
-          setScale(1)
-        } else if ((props.animation === 59)) {
-          setPositionZ(2);
-        setPositionX(1);
-        setPositionY(-0.5);
-        setRotationy( Math.PI / 2);
-          const action = actions["Crying"];
-          action.reset()
-            .setEffectiveTimeScale(1)
-            .setEffectiveWeight(1)
-            .fadeIn(0.5) // Set the loop type to LoopOnce
-            .play();
-            setScale(1)
-        } else if ((props.animation === 60)) {
-          setPositionZ(2);
-        setPositionX(1);
-        setPositionY(-0.5);
-        setRotationy( Math.PI / 2);
-          const action = actions["Talking"];
-          action.reset()
-            .setEffectiveTimeScale(1)
-            .setEffectiveWeight(1)
-            .fadeIn(0.5) // Set the loop type to LoopOnce
-            .play();
-            setScale(1)
-        } else if ((props.animation === 61)) {
-          setPositionZ(2);
-        setPositionX(1);
-        setPositionY(-0.5);
-        setRotationy( Math.PI / 2);
-          const action = actions["Idle"];
-          action.reset()
-            .setEffectiveTimeScale(1)
-            .setEffectiveWeight(1)
-            .fadeIn(0.5) // Set the loop type to LoopOnce
-            .play();
-            setScale(1)
-        } else if ((props.animation === 54)) {
-          setPositionZ(-10);
-        setPositionX(-5);
-        setPositionY(-0.5);
-        setRotationy( Math.PI * 2.1)
-          const action = actions["Asking"];
-          action.reset()
-            .setEffectiveTimeScale(1)
-            .setEffectiveWeight(1)
-            .fadeIn(0.5) // Set the loop type to LoopOnce
-            .play();
-            setScale(4)
-        } 
+      setScale(5)
+    } else if ((props.animation === 55)) {
+
+      setPositionZ(2);
+      setPositionX(-0.8);
+      setPositionY(-0.5);
+      setRotationy(Math.PI / 1.5);
+      const action = actions["Screaming"];
+      action.reset()
+        .setEffectiveTimeScale(1)
+        .setEffectiveWeight(1)
+        .fadeIn(0.5) // Set the loop type to LoopOnce
+        .play();
+      setScale(1)
+    } else if ((props.animation === 59)) {
+      setPositionZ(2);
+      setPositionX(1);
+      setPositionY(-0.5);
+      setRotationy(Math.PI / 2);
+      const action = actions["Crying"];
+      action.reset()
+        .setEffectiveTimeScale(1)
+        .setEffectiveWeight(1)
+        .fadeIn(0.5) // Set the loop type to LoopOnce
+        .play();
+      setScale(1)
+    } else if ((props.animation === 60)) {
+      setPositionZ(2);
+      setPositionX(1);
+      setPositionY(-0.5);
+      setRotationy(Math.PI / 2);
+      const action = actions["Talking"];
+      action.reset()
+        .setEffectiveTimeScale(1)
+        .setEffectiveWeight(1)
+        .fadeIn(0.5) // Set the loop type to LoopOnce
+        .play();
+      setScale(1)
+    } else if ((props.animation === 61)) {
+      setPositionZ(2);
+      setPositionX(1);
+      setPositionY(-0.5);
+      setRotationy(Math.PI / 2);
+      const action = actions["Idle"];
+      action.reset()
+        .setEffectiveTimeScale(1)
+        .setEffectiveWeight(1)
+        .fadeIn(0.5) // Set the loop type to LoopOnce
+        .play();
+      setScale(1)
+    } else if ((props.animation === 54)) {
+      setPositionZ(-10);
+      setPositionX(-5);
+      setPositionY(-0.5);
+      setRotationy(Math.PI * 2.1)
+      const action = actions["Asking"];
+      action.reset()
+        .setEffectiveTimeScale(1)
+        .setEffectiveWeight(1)
+        .fadeIn(0.5) // Set the loop type to LoopOnce
+        .play();
+      setScale(4)
+    }
     else {
       setScale(4)
     }
-    
+
   }, [props.animation, group.current]);
 
   useFrame(() => {
@@ -176,7 +176,7 @@ export function AliceJeans(props) {
         setIzqWalk(false);
       }
     };
-  
+
     const handleKeyUp = (event) => {
       if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
         setIzqWalk(false);
@@ -187,16 +187,70 @@ export function AliceJeans(props) {
         actions["Idle"].play();
       }
     };
-  
+
     window.addEventListener("keydown", handleKeyDown);
     window.addEventListener("keyup", handleKeyUp);
-  
+
     const updateCharacterPosition = () => {
+      //  console.log("x",Math.round(group.current.position.x));
+      // console.log("y", Math.round(group.current.position.y));
+      // console.log("z" , Math.round(group.current.position.z) );
       if (group.current) {
+        if (Math.round(group.current.position.z) === -22) {
+          console.log("hola");
+        }
+        if (izqWalk &&
+          (Math.round(group.current.position.x) === -5) &&
+          (Math.round(group.current.position.y) === -0) &&
+          (Math.round(group.current.position.z) === -10)) {
+          setEstadoIzq(true);
+          setEstadoDer(false);
+        } else if (derWalk &&
+          (Math.round(group.current.position.x) === -5) &&
+          (Math.round(group.current.position.y) === -0) &&
+          (Math.round(group.current.position.z) === -10)) {
+          setEstadoDer(true);
+          setEstadoIzq(false);
+        }
+
+        if (izq && izqWalk) {
+          console.log("izquierda");
+          group.current.position.x -= 0.06;
+          group.current.position.z -= 0.031;
+          group.current.position.y += 0.01;
+          setRotationy(-Math.PI / 2);
+          actions["WalkPlace"].play();
+        } else if (izq && derWalk) {
+          console.log("derecha");
+          group.current.position.x += 0.06;
+          group.current.position.z += 0.031;
+          group.current.position.y -= 0.01;
+          setRotationy(Math.PI / 2);
+          actions["WalkPlace"].play();
+        }
+        if (der && derWalk) {
+          console.log("derecha");
+          group.current.position.x += 0.06;
+          group.current.position.z -= 0.04;
+          group.current.position.y += 0.015;
+          setRotationy(Math.PI * 0.8);
+          actions["WalkPlace"].play();
+        }
+        else if (der && izqWalk) {
+          console.log("izquierda");
+          group.current.position.x -= 0.06;
+          group.current.position.z += 0.04;
+          group.current.position.y -= 0.015;
+          setRotationy(-Math.PI / 5);
+          actions["WalkPlace"].play();
+        } 
+        /*else 
         if (izqWalk) {
-          if (group.current.position.x === -5 &&
-              group.current.position.y === 0.5 &&
-              group.current.position.z === -10) {
+          if (
+            group.current.position.x === -3 &&
+            group.current.position.y === 0.5 &&
+            group.current.position.z === -10
+          ) {
             group.current.position.x -= 0.06;
             group.current.position.z -= 0.04;
             group.current.position.y += 0.015;
@@ -210,30 +264,56 @@ export function AliceJeans(props) {
             actions["WalkPlace"].play();
           }
         }
-        
+
         // Manejar la flecha derecha para revertir el movimiento
         if (derWalk) {
-          if (group.current.position.x !== -5 || group.current.position.y !== 0.5 || group.current.position.z !== -10) {
+          if (
+            group.current.position.x !== -3 ||
+            group.current.position.y !== -1 ||
+            group.current.position.z !== -9
+          ) {
+            
+
             group.current.position.x += 0.06; // Ajusta estos valores según tus necesidades
             group.current.position.z += 0.04; // Ajusta estos valores según tus necesidades
             group.current.position.y -= 0.015; // Ajusta estos valores según tus necesidades
             setRotationy(Math.PI / 2); // Puedes ajustar el ángulo según tus necesidades
             actions["WalkPlace"].play();
-          }
-        }
-         else if (derWalk) {
+          } else {
+            group.current.position.x += 0.06;
+            group.current.position.z -= 0.04;
+            group.current.position.y += 0.015;
+            setRotationy(Math.PI * 0.8);
+            actions["WalkPlace"].play();
+          }*/
+
+        /*if (
+          group.current.position.x !== -5 ||
+          group.current.position.y !== 0.5 ||
+          group.current.position.z !== -10
+        ) {
+          
+
+          group.current.position.x += 0.06; // Ajusta estos valores según tus necesidades
+          group.current.position.z += 0.04; // Ajusta estos valores según tus necesidades
+          group.current.position.y -= 0.015; // Ajusta estos valores según tus necesidades
+          setRotationy(Math.PI / 2); // Puedes ajustar el ángulo según tus necesidades
+          actions["WalkPlace"].play();
+        } else {
           group.current.position.x += 0.06;
           group.current.position.z -= 0.04;
           group.current.position.y += 0.015;
           setRotationy(Math.PI * 0.8);
           actions["WalkPlace"].play();
         }
+      }*/
+
         animationFrameId = requestAnimationFrame(updateCharacterPosition);
       }
     };
-  
+
     updateCharacterPosition();
-  
+
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
       window.removeEventListener("keyup", handleKeyUp);
@@ -243,13 +323,13 @@ export function AliceJeans(props) {
 
   return (
     <group ref={group} {...props} dispose={null}
-    rotation-x={rotationx}
-    rotation-z={rotationz}
-    rotation-y={rotationy}
-    position-x={positionx}
-    position-z={positionz}
-    position-y={positiony}
-    scale={scale}>
+      rotation-x={rotationx}
+      rotation-z={rotationz}
+      rotation-y={rotationy}
+      position-x={positionx}
+      position-z={positionz}
+      position-y={positiony}
+      scale={scale}>
       <group name="Scene">
         <group name="Armature">
           <skinnedMesh
