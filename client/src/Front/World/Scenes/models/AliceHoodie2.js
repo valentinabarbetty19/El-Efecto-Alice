@@ -47,6 +47,18 @@ export function AliceHoodie2(props) {
      .fadeIn(0.01)
      .play();
     }
+    if((props.animation === 76)){
+      setPositionZ(3)
+      setPositionX(0)
+      setPositionY(-1.5)
+      setScale(1.2)
+      
+     actions["Agony"].reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn( 0.5 )
+     .play();
+    }
     if((props.animation === 4)){
       setPositionZ(-1.8)
       setPositionX(-1)
