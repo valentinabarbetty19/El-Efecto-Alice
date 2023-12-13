@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
 import "./Intro.css";
 
 import Alice, { AliceHoodie } from "../models/Alice-hoodie";
@@ -11,6 +11,9 @@ import Vecino from "../models/Vecino";
 import Pastillas from "../models/Pastillas";
 import Alex, { Esposo } from "../models/Alex";
 import Jonas from "../models/Jonas";
+import { serviceLogin } from "../../../../Services/serviceLogin";
+import { authContext } from "../../../../context/AuthContext";
+
 import {
   CameraControls,
   Effects,
@@ -55,6 +58,7 @@ import {
 } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
 import { useControls } from "leva";
+const ServiceLogin = new serviceLogin();
 
 const Story = ({ language, info, route1, route2 }) => {
   const navigate = useNavigate();
@@ -62,25 +66,53 @@ const Story = ({ language, info, route1, route2 }) => {
   const [decision1, setDecision1] = useState(false);
   const [decision2, setDecision2] = useState(false);
 
+  const { setId, setId2, id, emailUser, id2 } = useContext(authContext);
+
   const changeImage = () => {
+
     if (currentImageIndex === info.length - 1) {
       if (decision1) {
+        setId(route1)
+        ServiceLogin.putUserEscenario(emailUser, route1);
         navigate(route1);
       } else if (decision2) {
+        setId(route2)
+        ServiceLogin.putUserEscenario(emailUser, route2);
         navigate(route2);
       }
     } else {
-      setCurrentImageIndex((prevIndex) => prevIndex + 1);
+
+      console.log(id)
+      if (id2!='0') { 
+      navigate(id)
+      setId2('0')
+      } else {
+        setCurrentImageIndex((prevIndex) => prevIndex + 1);
+      }
+
     }
   };
+
   useEffect(() => {
-    if (currentImageIndex === info.length - 1) {
-      if (decision1) {
-        navigate(route1);
-      } else if (decision2) {
-        navigate(route2);
+    if (id2!='0') { 
+      navigate(id)
+      setId2('0')
+      }else{
+        if (currentImageIndex === info.length - 1) {
+          if (decision1) {
+            navigate(route1);
+            ServiceLogin.putUserEscenario(emailUser, route1);
+    
+          } else if (decision2) {
+            navigate(route2);
+            ServiceLogin.putUserEscenario(emailUser, route2);
+    
+          } 
+        }
       }
-    }
+ 
+
+
   }, [currentImageIndex, decision1, decision2, info, navigate, route1, route2]);
 
   const shouldShowAlice = info[currentImageIndex].alice === true;
@@ -299,7 +331,7 @@ const Story = ({ language, info, route1, route2 }) => {
               //   <Vignette eskil={false} offset={0.3} darkness={0.9} />
               // </EffectComposer>
               <EffectComposer>
-              {/* <DepthOfField
+                {/* <DepthOfField
                 focusDistance={focusDistance}
                 focalLength={focalLength}
                 bokehScale={bokehScale}
@@ -311,12 +343,12 @@ const Story = ({ language, info, route1, route2 }) => {
                 blendFunction={BlendFunction.NORMAL} // blend mode
                 hue={hue} saturation={-0.2} // saturation in radians
               /> */}
-               {/* <BrightnessContrast brightness={brightness} contrast={constrast} /> */}
-               <ToneMapping middleGrey={0.6} maxLuminance={1} />
-               {/* <Glitch /> */}
-               <Vignette eskil={false} offset={0.3} darkness={0.9} />
-               <ColorAverage blendFunction={BlendFunction.DARKEN} />
-            </EffectComposer>
+                {/* <BrightnessContrast brightness={brightness} contrast={constrast} /> */}
+                <ToneMapping middleGrey={0.6} maxLuminance={1} />
+                {/* <Glitch /> */}
+                <Vignette eskil={false} offset={0.3} darkness={0.9} />
+                <ColorAverage blendFunction={BlendFunction.DARKEN} />
+              </EffectComposer>
             ) : null}
             <CameraControls />
             <ambientLight intensity={2} />
@@ -357,12 +389,12 @@ const Story = ({ language, info, route1, route2 }) => {
             {shouldShowAliceLab && (
               <AliceLab
                 animation={info[currentImageIndex].animation}
-                // rotationx={info[currentImageIndex].rotationx}
-                // rotationz={info[currentImageIndex].rotationz}
-                // rotationy={info[currentImageIndex].rotationy}
-                // positionx={info[currentImageIndex].positionx}
-                // positionz={info[currentImageIndex].positionz}
-                // positiony={info[currentImageIndex].positiony}
+              // rotationx={info[currentImageIndex].rotationx}
+              // rotationz={info[currentImageIndex].rotationz}
+              // rotationy={info[currentImageIndex].rotationy}
+              // positionx={info[currentImageIndex].positionx}
+              // positionz={info[currentImageIndex].positionz}
+              // positiony={info[currentImageIndex].positiony}
               />
             )}
             {shouldShowPastillas && <Pastillas />}
@@ -411,7 +443,7 @@ const Story = ({ language, info, route1, route2 }) => {
             setDecision2={setDecision2}
             animation={info[currentImageIndex].animation}
             photo={info[currentImageIndex].photo}
-            // onClick={changeDecision}
+          // onClick={changeDecision}
           />
         </div>
       </div>

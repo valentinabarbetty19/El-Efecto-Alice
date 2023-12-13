@@ -20,7 +20,7 @@ export function Vecino(props) {
     for (const key in actions) {
       actions[key].fadeOut(0.5);
     }
-    if((props.animation === 68) || (props.animation === 70) || (props.animation === 24) || (props.animation === 71) || (props.animation === 73)){
+    if((props.animation === 68) || (props.animation === 70) || (props.animation === 24) || (props.animation === 71) || (props.animation === 73)||(props.animation === 74)){
       setPositionZ(0)
       setPositionX(5)
       setPositionY(-5)
@@ -33,7 +33,22 @@ export function Vecino(props) {
      .fadeIn(0.01)
      .play();
     }
-    if((props.animation === 69) || (props.animation === 70) || (props.animation === 72) || (props.animation === 25) || (props.animation === 23) || (props.animation === 22) || (props.animation === 21)){
+    if((props.animation === 75) ||(props.animation === 77)  ){
+      setPositionZ(0)
+      setPositionX(5)
+      setPositionY(-5)
+      setRotationy( -Math.PI / 1.5)
+      
+      const action = actions["Talking"];
+     action.reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn(0.01)
+     .play();
+    }
+    
+    
+    if((props.animation === 69) || (props.animation === 70) ||(props.animation === 78) || (props.animation === 72) || (props.animation === 25) || (props.animation === 23) || (props.animation === 22) || (props.animation === 21)){
    
       setPositionZ(0)
       setPositionX(5)

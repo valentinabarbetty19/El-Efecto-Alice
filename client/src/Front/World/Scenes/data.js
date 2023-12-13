@@ -1226,9 +1226,10 @@ export const bifur221Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    manicomio: true,
-    animation: 0,
+    vecino: true,
+    aliceDress: true,
+    livingroom: true,
+    animation: 74,
     id_scena: 1,
     sad: true
   },
@@ -1239,11 +1240,12 @@ export const bifur221Array = [
     message: "Liam: I... think it's better to call an ambulance",
     decision1en: null,
     decision2en: null,
+    vecino: true,
     decision1es: null,
     decision2es: null,
-    alice: true,
-    manicomio: true,
-    animation: 0,
+    aliceDress: true,
+    livingroom: true,
+    animation: 75,
     sad: true
   },
   {
@@ -1255,9 +1257,9 @@ export const bifur221Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceHoodie2: true,
     manicomio: true,
-    animation: 0,
+    animation: 76,
     sonido: 14,
     sad: true
   },
@@ -1269,14 +1271,16 @@ export const bifur222Array = [
       "Alice: No es cierto, mi familia está conmigo.",
     message:
       "Alice: That's not true, my family is with me.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceHoodie2: true,
-    livingroom: true,
-    animation: 77,
-    sad: true
+      decision1en: null,
+      decision2en: null,
+      decision1es: null,
+      decision2es: null,
+      vecino: true,
+      aliceDress: true,
+      livingroom: true,
+      animation: 77,
+      id_scena: 1,
+      sad: true
   },
   {
     //alice dress agony
@@ -1285,14 +1289,16 @@ export const bifur222Array = [
       "No los veo, no entiendo nada...",
     message:
       "I can't see them, I don't understand...",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    alice: true,
-    livingroom: true,
-    animation: 0,
-    sad: true
+      decision1en: null,
+      decision2en: null,
+      decision1es: null,
+      decision2es: null,
+      vecino: true,
+      aliceDress: true,
+      livingroom: true,
+      animation: 78,
+      id_scena: 1,
+      sad: true
   },
   {
     //hospital camilla
@@ -1305,9 +1311,9 @@ export const bifur222Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceHoodie2: true,
     hospital: true,
-    animation: 0,
+    animation: 79,
     sonido: 15,
     sad: true
   },
@@ -1322,9 +1328,10 @@ export const bifur222Array = [
     decision2en: null,
     decision1es: null,
     decision2es: null,
-    alice: true,
+    aliceHoodie2: true,
     hospital: true,
-    animation: 0,
+    sonido: 1,
+    animation: 80,
     sad: true
   },
 ];

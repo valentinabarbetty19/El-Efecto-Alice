@@ -45,7 +45,7 @@ export function Livingroom(props) {
 
   useEffect(() => {
 
-    if((props.id_pos === 5) || (props.id_pos === 51)  || (props.id_pos === 73) || (props.id_pos === 6) || (props.id_pos === 7)){
+    if((props.id_pos === 5) || (props.id_pos === 74)  || (props.id_pos === 75) || (props.id_pos === 77) || (props.id_pos === 51)  || (props.id_pos === 73) || (props.id_pos === 6) || (props.id_pos === 7)){
 
       console.log("Bedroom")
       setPositionZ(-10)
@@ -55,6 +55,7 @@ export function Livingroom(props) {
       setRotationz(-Math.PI/900)
       setRotationx(Math.PI /50)
     } 
+    
     if((props.id_pos === 66)){
       setPositionZ(-7)
       setRotationy(-Math.PI/8)

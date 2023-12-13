@@ -1,17 +1,20 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
 import { Html, useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { useNavigate } from "react-router-dom"; 
-
+import { useNavigate } from "react-router-dom";
+import { authContext } from "../../../../context/AuthContext";
+import { serviceLogin } from "../../../../Services/serviceLogin";
 export function Pastillas(props) {
   const { nodes, materials } = useGLTF("/assets/models/Pastillas/pills.glb");
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
+  const { setId, setId2, id, emailUser, id2 } = useContext(authContext);
 
   const [hoveredRed, setHoveredRed] = useState(false);
   const [hoveredBlue, setHoveredBlue] = useState(false);
 
   const pillBlueRef = useRef();
   const pillRedRef = useRef();
+  const ServiceLogin = new serviceLogin();
 
   // Creamos objetos internos para aplicar la rotación
   const pillBlueRotationRef = useRef();
@@ -34,6 +37,8 @@ export function Pastillas(props) {
 
     if (route) {
       navigate(route);
+      setId(route)
+      ServiceLogin.putUserEscenario(emailUser, route);
     }
   };
 
@@ -52,11 +57,11 @@ export function Pastillas(props) {
     pillBlueRef.current.scale.set(scaleValue, scaleValue, scaleValue);
 
     if (hoveredRed) {
-      pillRedRotationRef.current.rotation.z = -swayAngle; 
+      pillRedRotationRef.current.rotation.z = -swayAngle;
     }
 
     if (hoveredBlue) {
-      pillBlueRotationRef.current.rotation.z = -swayAngle; 
+      pillBlueRotationRef.current.rotation.z = -swayAngle;
     }
   });
 

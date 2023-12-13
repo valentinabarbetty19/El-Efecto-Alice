@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 const Login = ({ language }) => {
 
-  const { setEmailUser } = useContext(authContext);
+  const { setEmailUser, setId2, setId } = useContext(authContext);
 
   const auth = useAuth();
   const [emailRegister, setEmailRegister] = useState('');
@@ -29,6 +29,7 @@ const Login = ({ language }) => {
       const response = await auth.loginWithGoogle();
       console.log(response);
       setEmailUser(response.user.email);
+  
 
 
       swal({
@@ -53,6 +54,11 @@ const Login = ({ language }) => {
       const response = await auth.login(emailRegister, passwordRegister);
       console.log(auth.response)
 
+      await ServiceLogin.getUsers().then(data => {
+        const userWithMatchingEmail = data.find(item => item.correo === emailRegister);
+       setId2(userWithMatchingEmail.estado_escenario)
+       setId(userWithMatchingEmail.estado_escenario)
+      })
       setEmailUser(emailRegister);
 
       swal({
