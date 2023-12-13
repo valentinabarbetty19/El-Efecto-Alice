@@ -234,7 +234,7 @@ export function AliceJeans(props) {
             group.current.position.y += 0.015;
             setRotationy(Math.PI * 0.8);
             if(group.current.position.x >= 15  ){
-              navigate("/game/bifur2/bifur1");
+              navigate("/game/bifur2/bifur2");
             }
             // console.log(group.current.position.x, group.current.position.y, group.current.position.z);
             actions["WalkPlace"].play();

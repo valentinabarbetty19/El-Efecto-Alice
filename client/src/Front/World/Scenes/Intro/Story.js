@@ -21,6 +21,7 @@ import {
   Text,
   ShaderPass,
   Environment,
+  OrbitControls,
 } from "@react-three/drei";
 import Lab from "../models/Scenarios/Lab";
 import Hand from "../models/Scenarios/Hand";
@@ -68,6 +69,9 @@ const Story = ({ language, info, route1, route2, sound }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [decision1, setDecision1] = useState(false);
   const [decision2, setDecision2] = useState(false);
+  const cameraControlsRef = useRef()
+  const orbitControlsRef = useRef();     
+ 
 
   const { setId, setId2, id, emailUser, id2 } = useContext(authContext);
 
@@ -354,6 +358,7 @@ const Story = ({ language, info, route1, route2, sound }) => {
               //   <Vignette eskil={false} offset={0.3} darkness={0.9} />
               // </EffectComposer>
               <EffectComposer>
+                
                 {/* <DepthOfField
                 focusDistance={focusDistance}
                 focalLength={focalLength}
@@ -373,8 +378,28 @@ const Story = ({ language, info, route1, route2, sound }) => {
                 <ColorAverage blendFunction={BlendFunction.DARKEN} />
               </EffectComposer>
             ) : null}
-            <CameraControls />
+            <CameraControls 
+            makeDefault
+            enabled = {false}
+                  enableZoom={false}
+                  enablePan={false}
+                  enableRotate={false}
+                  ref={cameraControlsRef} />
+            {/* <OrbitControls 
+            enabled = {{ value : false }}
+                  // makeDefault
+                  // enableZoom={false}
+                  // enablePan={false}
+                  // enableRotate={false}
+                  /> */}
+                  
             <ambientLight intensity={2} />
+            <OrbitControls
+            rotateSpeed={0.5}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 3}
+            maxAzimuthAngle={Math.PI / 4}
+            minAzimuthAngle={-Math.PI/4}/>
 
             {shouldShowAlice && (
               <AliceHoodie animation={info[currentImageIndex].animation} />
