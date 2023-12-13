@@ -915,113 +915,113 @@ export const bifur21Array = [
   }
 ];
 export const bifur22Array = [
-  {
-    //P: carro alice jeans- A: running tired - S:
-    id: 59,
-    mensaje:
-      "Cerca del automóvil, Alice finalmente encuentra un momento a solas con su esposo, decidida a explicarle la extraña situación y, con suerte, evitar la tragedia que se avecina.",
-    message:
-      "Near the car, Alice finally finds a moment alone with her husband, determined to explain the strange situation and, hopefully, avoid the tragedy.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceJeans: true,
-    esposo: true,
-    street: true,
-    animation: 59,
+  // {
+  //   //P: carro alice jeans- A: running tired - S:
+  //   id: 59,
+  //   mensaje:
+  //     "Cerca del automóvil, Alice finalmente encuentra un momento a solas con su esposo, decidida a explicarle la extraña situación y, con suerte, evitar la tragedia que se avecina.",
+  //   message:
+  //     "Near the car, Alice finally finds a moment alone with her husband, determined to explain the strange situation and, hopefully, avoid the tragedy.",
+  //   decision1en: null,
+  //   decision2en: null,
+  //   decision1es: null,
+  //   decision2es: null,
+  //   aliceJeans: true,
+  //   esposo: true,
+  //   street: true,
+  //   animation: 59,
     
-  },
-  {
-    //alice: talking - esposo idle
-    id: 60,
-    mensaje:
-      "Alice: Amor, por favor, necesito que me escuches. Lo que voy a decir puede sonar increíble, pero es de vital importancia.",
-    message:
-      "Alice: Honey, please, I need you to listen to me. What I'm about to say may sound unbelievable, but it's really important.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceJeans: true,
-    esposo: true,
-    street: true,
-    animation: 60
-  },
-  {
-    id: 61,
-    mensaje:
-      "Fabián: ¿Qué pasa, Amor? Estás muy agitada, sabes que no podemos perder el viaje.",
-    message:
-      "Fabián: What's going on, my love? You seem very agitated, you know we can't miss the trip.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceJeans: true,
-    esposo: true,
-    street: true,
-    animation: 61
-  },
-  {
-    id: 62,
-    mensaje:
-      "Alice: Lo que voy a decir puede sonar extraño, pero esta mañana experimenté algo que no puedo explicar. He viajado en el tiempo, he visto el futuro. Y en ese futuro, tú y nuestro hijo... están en peligro.",
-    message:
-      "Alice: What I'm about to say may sound strange, but this morning I experienced something I can't explain. I traveled through time, I saw the future. And in that future, you and our son... are in danger.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceJeans: true,
-    esposo: true,
-    street: true,
-    animation: 60
-  },
-  {
-    id: 63,
-    mensaje: "Fabián: Alice, no entiendo. ¿De qué estás hablando?",
-    message: "Fabián: Alice, I don't understand. What are you talking about?",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    street: true, 
-    aliceJeans: true,
-    esposo: true,
-    animation: 61
+  // },
+  // {
+  //   //alice: talking - esposo idle
+  //   id: 60,
+  //   mensaje:
+  //     "Alice: Amor, por favor, necesito que me escuches. Lo que voy a decir puede sonar increíble, pero es de vital importancia.",
+  //   message:
+  //     "Alice: Honey, please, I need you to listen to me. What I'm about to say may sound unbelievable, but it's really important.",
+  //   decision1en: null,
+  //   decision2en: null,
+  //   decision1es: null,
+  //   decision2es: null,
+  //   aliceJeans: true,
+  //   esposo: true,
+  //   street: true,
+  //   animation: 60
+  // },
+  // {
+  //   id: 61,
+  //   mensaje:
+  //     "Fabián: ¿Qué pasa, Amor? Estás muy agitada, sabes que no podemos perder el viaje.",
+  //   message:
+  //     "Fabián: What's going on, my love? You seem very agitated, you know we can't miss the trip.",
+  //   decision1en: null,
+  //   decision2en: null,
+  //   decision1es: null,
+  //   decision2es: null,
+  //   aliceJeans: true,
+  //   esposo: true,
+  //   street: true,
+  //   animation: 61
+  // },
+  // {
+  //   id: 62,
+  //   mensaje:
+  //     "Alice: Lo que voy a decir puede sonar extraño, pero esta mañana experimenté algo que no puedo explicar. He viajado en el tiempo, he visto el futuro. Y en ese futuro, tú y nuestro hijo... están en peligro.",
+  //   message:
+  //     "Alice: What I'm about to say may sound strange, but this morning I experienced something I can't explain. I traveled through time, I saw the future. And in that future, you and our son... are in danger.",
+  //   decision1en: null,
+  //   decision2en: null,
+  //   decision1es: null,
+  //   decision2es: null,
+  //   aliceJeans: true,
+  //   esposo: true,
+  //   street: true,
+  //   animation: 60
+  // },
+  // {
+  //   id: 63,
+  //   mensaje: "Fabián: Alice, no entiendo. ¿De qué estás hablando?",
+  //   message: "Fabián: Alice, I don't understand. What are you talking about?",
+  //   decision1en: null,
+  //   decision2en: null,
+  //   decision1es: null,
+  //   decision2es: null,
+  //   street: true, 
+  //   aliceJeans: true,
+  //   esposo: true,
+  //   animation: 61
     
-  },
-  {
-    id: 64,
-    mensaje:
-      "Alice: No tengo tiempo para explicarlo todo ahora, pero necesito que confíes en mí. Por favor, quédate con nuestro hijo aquí y evita que suba al automóvil. Yo lo manejaré. Es la única manera de mantenerlos a salvo.",
-    message:
-      "Alice: I don't have time to explain it all now, but I need you to trust me. Please, stay with our son here and prevent him from getting in the car. I'll drive it. It's the only way to keep you safe.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceJeans: true,
-    esposo: true,
-    animation: 60,
-    street: true
-  },
-  {
-    id: 65,
-    mensaje:
-      "Fabián: Alice, esto suena como una locura. Pero si esto es lo que necesitas, lo haré. Vamos a casa.",
-    message:
-      "Fabián: Alice, this sounds like madness. But if this is what you need, I'll do it. Let's go home.",
-    decision1en: null,
-    decision2en: null,
-    decision1es: null,
-    decision2es: null,
-    aliceJeans: true,
-    esposo: true,
-    animation: 61,
-    street: true
-  },
+  // },
+  // {
+  //   id: 64,
+  //   mensaje:
+  //     "Alice: No tengo tiempo para explicarlo todo ahora, pero necesito que confíes en mí. Por favor, quédate con nuestro hijo aquí y evita que suba al automóvil. Yo lo manejaré. Es la única manera de mantenerlos a salvo.",
+  //   message:
+  //     "Alice: I don't have time to explain it all now, but I need you to trust me. Please, stay with our son here and prevent him from getting in the car. I'll drive it. It's the only way to keep you safe.",
+  //   decision1en: null,
+  //   decision2en: null,
+  //   decision1es: null,
+  //   decision2es: null,
+  //   aliceJeans: true,
+  //   esposo: true,
+  //   animation: 60,
+  //   street: true
+  // },
+  // {
+  //   id: 65,
+  //   mensaje:
+  //     "Fabián: Alice, esto suena como una locura. Pero si esto es lo que necesitas, lo haré. Vamos a casa.",
+  //   message:
+  //     "Fabián: Alice, this sounds like madness. But if this is what you need, I'll do it. Let's go home.",
+  //   decision1en: null,
+  //   decision2en: null,
+  //   decision1es: null,
+  //   decision2es: null,
+  //   aliceJeans: true,
+  //   esposo: true,
+  //   animation: 61,
+  //   street: true
+  // },
   {
     //alice dress - esposo BAILANDO 
     id: 66,

@@ -90,8 +90,11 @@ export function Livingroom(props) {
     } 
     
     if((props.id_pos === 66)){
-      setPositionZ(-7)
-      setRotationy(-Math.PI/8)
+      setPositionZ(-10)
+      setPositionX(0)
+      setPositionY(-3)
+      setRotationy(-Math.PI/1)
+      setRotationz(-Math.PI/900)
       setRotationx(Math.PI /50)
     } 
   }, [props.id_pos]);

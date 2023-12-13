@@ -58,12 +58,12 @@ const Menu = ({ language }) => {
           {language === "español" ? "INICIAR" : "START"}
         </button>
 
-        <button
+        {/* <button
           className="transparent-button"
           onClick={() => handleClick("resume")}
         >
           {language === "español" ? "REANUDAR PARTIDA" : "RESUME GAME"}
-        </button>
+        </button> */}
 
         <Sound
           url="/assets/Audio/Audio_iniciar.mp3"
