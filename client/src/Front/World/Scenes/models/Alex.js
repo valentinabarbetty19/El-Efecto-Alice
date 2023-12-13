@@ -99,7 +99,7 @@ export function Esposo(props) {
     
   }, [props.animation]);
   return (
-    <group ref={group} {...props} dispose={null} scale={4.2}
+    <group ref={group} {...props} dispose={null} scale={scale}
         rotation-x={rotationx}
         rotation-z={rotationz}
         rotation-y={rotationy}

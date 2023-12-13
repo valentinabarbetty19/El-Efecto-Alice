@@ -39,6 +39,8 @@ import DoctorJimin from "../models/DoctorJimin";
 import Video from "../Video/Video";
 import Car from "../models/Car";
 import Signs from "../models/Signs";
+import Arrow from "../models/Scenarios/Arrow";
+import Arrow2 from "../models/Scenarios/Arrow2";
 import SepiaEffect from "./Filter";
 import {
   Bloom,
@@ -65,19 +67,35 @@ const Story = ({ language, info, route1, route2 }) => {
 
   const changeImage = () => {
     if (currentImageIndex === info.length - 1) {
-      if (info[currentImageIndex].id === "fin") {
-        navigate("/fin")
+      if (decision1) {
+        navigate(route1);
+      } else if (decision2) {
+        navigate(route2);
       }
     } else {
       setCurrentImageIndex((prevIndex) => prevIndex + 1);
     }
   };
+
+  useEffect(() => {
+    if (currentImageIndex === info.length - 1) {
+      if (decision1) {
+        navigate(route1);
+      } else if (decision2) {
+        navigate(route2);
+      }
+    }
+  }, [currentImageIndex, decision1, decision2, info, navigate, route1, route2]);
+
   useEffect(() => {
     if (info[currentImageIndex].id === "fin") {
       navigate("/fin")
     }
-  }, [currentImageIndex, decision1, decision2, info, navigate, route1, route2]);
+  }, [currentImageIndex, info]);
 
+
+  const shouldShowArrow = info[currentImageIndex].arrow === true;
+  const shouldShowArrow2 = info[currentImageIndex].arrow2 === true;
   const shouldShowAlice = info[currentImageIndex].alice === true;
   const shouldShowAlex = info[currentImageIndex].alex === true;
   const shouldShowJonas = info[currentImageIndex].jonas === true;
@@ -374,6 +392,13 @@ const Story = ({ language, info, route1, route2 }) => {
             {shouldShowBedRoom && (
               <Bedroom id_pos={info[currentImageIndex].id} />
             )}
+            {shouldShowArrow && (
+            <Arrow id_pos={info[currentImageIndex].id} />
+            )}
+            {shouldShowArrow2 && (
+            <Arrow2 id_pos={info[currentImageIndex].id} />
+            )}
+
             {shouldShowLivingRoom && (
               <Livingroom id_pos={info[currentImageIndex].id} />
             )}
@@ -383,6 +408,7 @@ const Story = ({ language, info, route1, route2 }) => {
             files="/assets/environments/satara_night_no_lamps_1k.hdr"
             background={true}
             id_pos={info[currentImageIndex].id}
+            
 
         />}
           </Canvas>

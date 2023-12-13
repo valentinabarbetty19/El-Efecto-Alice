@@ -6,6 +6,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import * as THREE from 'three';
+import { useNavigate } from "react-router-dom"; 
 
 export function AliceJeans(props) {
   const group = useRef();
@@ -21,6 +22,7 @@ export function AliceJeans(props) {
   const [izqWalk, setIzqWalk] = useState(false);
   const [derWalk, setDerWalk] = useState(false);
   const [direccion, setDireccion] = useState(0);
+  const navigate = useNavigate(); 
   useEffect(() => {
     console.log(actions)
     for (const key in actions) {
@@ -161,6 +163,7 @@ export function AliceJeans(props) {
   })
 
   useEffect(() => {
+
     let animationFrameId;
     const handleKeyDown = (event) => {
       if (event.key === "ArrowLeft") {
@@ -188,33 +191,66 @@ export function AliceJeans(props) {
   
     const updateCharacterPosition = () => {
       if (group.current) {
-        if (izqWalk) {
-          if(group.current.position.x === -5 &&
+        let isMovingLeft = false;
+        let isMovingRight = false;
+    
+        if (izqWalk 
+          && !isMovingRight
+          ) {
+          if (
+            (group.current.position.x === -5 &&
             group.current.position.y === 0.5 &&
-            group.current.position.z === -10){
-
-          group.current.position.x -= 0.06;
-          group.current.position.z -= 0.04;
-          group.current.position.y += 0.015;
-          setRotationy(-Math.PI / 2);
-          actions["WalkPlace"].play();
-          }else {
+            group.current.position.z === -10) || group.current.position.x <= -5
+          ) {
             group.current.position.x -= 0.06;
-          group.current.position.z -= 0.04;
-          group.current.position.y += 0.015;
-          setRotationy(-Math.PI / 2);
-          actions["WalkPlace"].play();
+            group.current.position.z -= 0.04;
+            group.current.position.y += 0.015;
+            setRotationy(-Math.PI / 2);
+            actions["WalkPlace"].play();
+            if
+              (group.current.position.x <= -16 ){
+              navigate("/game/bifur2/bifur1");
+            }
+  
+            console.log(group.current.position.x, group.current.position.y, group.current.position.z);
+            isMovingLeft = true; 
+          } else {
+            group.current.position.x -= 0.06;
+            group.current.position.z += 0.04;
+            group.current.position.y -= 0.015;
+            setRotationy(-Math.PI * 0.2);
+            actions["WalkPlace"].play();
           }
-        } else if (derWalk) {
-          group.current.position.x += 0.06;
-          group.current.position.z -= 0.04;
-          group.current.position.y += 0.015;
-          setRotationy(Math.PI * 0.8);
-          actions["WalkPlace"].play();
+        } 
+        else if (derWalk && !isMovingLeft) {
+          if (
+            (group.current.position.x === -5 &&
+            group.current.position.y === 0.5 &&
+            group.current.position.z === -10) || group.current.position.x >= -5
+          ) {
+            isMovingRight = true;
+            group.current.position.x += 0.06;
+            group.current.position.z -= 0.04;
+            group.current.position.y += 0.015;
+            setRotationy(Math.PI * 0.8);
+            if(group.current.position.x >= 15  ){
+              navigate("/game/bifur2/bifur1");
+            }
+            // console.log(group.current.position.x, group.current.position.y, group.current.position.z);
+            actions["WalkPlace"].play();
+          } else {
+            group.current.position.x += 0.06;
+            group.current.position.z += 0.04;
+            group.current.position.y -= 0.015;
+            setRotationy(Math.PI / 2.4);
+            actions["WalkPlace"].play();
+          }
         }
+    
         animationFrameId = requestAnimationFrame(updateCharacterPosition);
       }
     };
+    
   
     updateCharacterPosition();
   
@@ -223,7 +259,7 @@ export function AliceJeans(props) {
       window.removeEventListener("keyup", handleKeyUp);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [izqWalk, derWalk]);
+  }, [izqWalk, derWalk, group.current]);
 
   return (
     <group ref={group} {...props} dispose={null}
