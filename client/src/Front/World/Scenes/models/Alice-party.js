@@ -23,11 +23,11 @@ export function AliceParty(props) {
       actions[key].fadeOut(0.5);
     }
     if(props.animation === 66){
-      setPositionZ(-15)
-      setPositionX(-2)
-      setPositionY(0)
-      setScale(5)
-     // setRotationx( -Math.PI / 0.55)
+      setPositionZ(-3)
+      setPositionX(3.4)
+      setPositionY(-3.9)
+      setRotationy( Math.PI * 3.5)
+      setScale(4)
       const action = actions["Dancing"];
       action.reset()
       .setEffectiveTimeScale( 1 )

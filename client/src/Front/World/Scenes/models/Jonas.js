@@ -75,10 +75,10 @@ export function Jonas(props) {
       action.play();
     }
     if (props.animation === 66) {
-      setPositionZ(-15);
-        setPositionX(2);
-        setPositionY(2);
-        setRotationy( Math.PI / 1.8);
+      setPositionZ(-6)
+        setPositionX(1)
+        setPositionY(-3.9)
+        setRotationy( Math.PI * 4.2 )
       const action = actions["Dancing"];
       action.play();
     setScale(2)

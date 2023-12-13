@@ -25,11 +25,11 @@ export function Esposo(props) {
       actions[key].fadeOut(0.5);
     }
     if(props.animation === 66){
-      setPositionZ(-15)
-      setPositionX(10)
-      setPositionY(0)
-      //setRotationx( -Math.PI / 0.55)
-      setRotationy( -Math.PI / 2)
+      setPositionZ(-5)
+      setPositionX(-1.5)
+      setPositionY(-3.9)
+      setRotationy( Math.PI / 2 )
+
       const action = actions["Dancing"];
      action.reset()
      .setEffectiveTimeScale(1)

@@ -46,7 +46,7 @@ export function AliceJeans(props) {
       setPositionY(-3.9)
       setRotationy( Math.PI * 3.5)
 
-      console.log(animations)
+      // console.log(animations)
       
       const action = actions["Dancing"];
      action.play();
