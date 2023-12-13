@@ -7,7 +7,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export function Vecino(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/assets/models/Vecino/Vecino.glb");
+  const { nodes, materials, animations } = useGLTF("/assets/models/Vecino/Vecino2.glb");
   const { actions } = useAnimations(animations, group);
   const [rotationx, setRotationx] = useState(0);
   const [rotationz, setRotationz] = useState(0);
@@ -139,5 +139,5 @@ export function Vecino(props) {
   );
 }
 
-useGLTF.preload("/assets/models/Vecino/Vecino.glb");
+useGLTF.preload("/assets/models/Vecino/Vecino2.glb");
 export default Vecino;

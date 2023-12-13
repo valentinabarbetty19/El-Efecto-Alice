@@ -199,7 +199,7 @@ export const introArray = [
   {
     //sonido: door knocking
     id: 15,
-    // imageUrl: "/assets/img/scenarios/house-door-outside-2.png",
+    imageUrl: "/assets/img/scenarios/house-door-outside-2.png",
     mensaje:  
       "Después de despertar en su realidad original, un vecino golpeó su puerta preocupado por el grito de una mujer la noche anterior",
     message:
@@ -210,7 +210,7 @@ export const introArray = [
   {
     //Liam: talking - Alice hoodie: idle
     id: 16,
-    // imageUrl: "/assets/img/scenarios/house-door-outside-2.png",
+    imageUrl: "/assets/img/scenarios/house-door-outside-2.png",
     mensaje: "Liam: ¡Hola! Escuché un fuerte estruendo de un rayo y gritos de una mujer, he preguntado con los vecinos y todos sospechan de que fuiste tu y me preocupé. ¿Estás bien?",
     message: "Liam: Hello! I heard a loud thunder and a women screaming, I've been asking the neighrbors and everyone suspects it was you and I got worried. Are you okay?" ,
     aliceHoodie2: true,
@@ -306,7 +306,7 @@ export const bifur1Array = [
   {
     //Alice: talking - Liam: idle
     id: 23,
-    imageUrl: "/assets/img/scenarios/house-door-outside.png",
+    imageUrl: "/assets/img/scenarios/house-door-outside-2.png",
     mensaje:
       "Alice: ...creo que tienes razón. Es mejor asegurarse de que todo esté en orden.",
     message:
@@ -324,7 +324,7 @@ export const bifur1Array = [
   {
     //Liam: talking - Alice: idle
     id: 24,
-    imageUrl: "/assets/img/scenarios/house-door-outside.png",
+    imageUrl: "/assets/img/scenarios/house-door-outside-2.png",
     mensaje:
       "Liam: Bueno, no te preocupes. Puedo llevarte al hospital si lo necesitas. Es importante cuidar esa quemadura.",
     message:
@@ -341,7 +341,7 @@ export const bifur1Array = [
   {
     //Alice: talking - Liam: idle
     id: 25,
-    imageUrl: "/assets/img/scenarios/house-door-outside.png",
+    imageUrl: "/assets/img/scenarios/house-door-outside-2.png",
     mensaje:
       "Alice: Eso sería amable de tu parte, gracias. No entiendo lo que está sucediendo, pero creo que es lo mejor.",
     message:
