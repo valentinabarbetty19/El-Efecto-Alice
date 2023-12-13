@@ -60,7 +60,7 @@ import { BlendFunction } from "postprocessing";
 import { useControls } from "leva";
 const ServiceLogin = new serviceLogin();
 
-const Story = ({ language, info, route1, route2 }) => {
+const Story = ({ language, info, route1, route2, sound }) => {
   const navigate = useNavigate();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [decision1, setDecision1] = useState(false);
@@ -157,7 +157,8 @@ const Story = ({ language, info, route1, route2 }) => {
     };
 
     // Check if the sound should be played based on props.sonido
-    if (
+    if(!sound)
+   {audioRef.current.pause()} else if (
       info[currentImageIndex].sonido === 1 ||
       info[currentImageIndex].sonido === 2 ||
       info[currentImageIndex].sonido === 3 ||
@@ -219,7 +220,7 @@ const Story = ({ language, info, route1, route2 }) => {
 
     // Return the cleanup function
     return cleanupAudio;
-  }, [info[currentImageIndex].sonido]);
+  }, [info[currentImageIndex].sonido, sound]);
   // const { focusDistance, focalLength, bokehScale, blendFunction, height, brightness, constrast, middleGrey, maxLuminance , scanlineDensity, saturation, hue } =
   //   useControls({
   //     focusDistance: {
