@@ -13,12 +13,12 @@ export function Tree(props) {
   const [positionz, setPositionZ] = useState(0);
   const { camera } = useThree();
 
-  useFrame(() => {
+  // useFrame(() => {
     
-    if (props.id_pos === 10){
-      camera.rotation.x = MathUtils.lerp(camera.rotation.x, 1.2, 0.1);
-    }    
-  });
+  //   if (props.id_pos === 10){
+  //     camera.rotation.x = MathUtils.lerp(camera.rotation.x, 1.2, 0.1);
+  //   }    
+  // });
 
   useEffect(() => {
 

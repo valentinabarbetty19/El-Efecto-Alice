@@ -28,8 +28,8 @@ export function Lab(props) {
     if ((props.id_pos === 1) || (props.id_pos === 2)) {
       // camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
       // camera.position.z = MathUtils.lerp(camera.position.z, 3, 0.1);
-      camera.position.y = MathUtils.lerp(camera.position.y, 10, 0.1);
-      camera.rotation.x = MathUtils.lerp(camera.rotation.x, -3.4, 0.1);
+      // camera.position.y = MathUtils.lerp(camera.position.y, 10, 0.1);
+      // camera.rotation.x = MathUtils.lerp(camera.rotation.x, -3.4, 0.1);
       
     }
   });

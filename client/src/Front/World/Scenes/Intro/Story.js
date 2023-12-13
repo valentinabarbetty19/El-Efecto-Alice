@@ -456,14 +456,14 @@ const Story = ({ language, info, route1, route2, sound }) => {
             
 
         />}
-            {/* <CameraControls enabled={false} /> */}
+            {/* <CameraControls /> */}
             <OrbitControls 
             // enabled = {{ value : false }}
                 // makeDefault
                 enableZoom={false}
                 enablePan={false}
                 enableRotate={false}
-                target={[2,10, 0]}
+                target={[0,0, 0]}
                   />
           </Canvas>
         )}

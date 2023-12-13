@@ -22,31 +22,31 @@ export function Livingroom(props) {
   const [positionz, setPositionZ] = useState(0);
   const [ambienteL, setAmbienteL] = useState(0);
 
-  useFrame(() => {
-    if ((props.id_pos === 5) || (props.id_pos === 51) || (props.id_pos === 6 || (props.id_pos === 7))
-  ) {
-      camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
-      camera.position.z = MathUtils.lerp(camera.position.z, 19, 0.1);
-      camera.position.y = MathUtils.lerp(camera.position.y, 19, 0.1);
+  // useFrame(() => {
+  //   if ((props.id_pos === 5) || (props.id_pos === 51) || (props.id_pos === 6 || (props.id_pos === 7))
+  // ) {
+  //     camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
+  //     camera.position.z = MathUtils.lerp(camera.position.z, 19, 0.1);
+  //     camera.position.y = MathUtils.lerp(camera.position.y, 19, 0.1);
 
-      camera.rotation.x = MathUtils.lerp(camera.rotation.x, 1, 0.1);
-    }
-    if (props.id_pos === 13){
-      camera.rotation.x = MathUtils.lerp(camera.rotation.x, 1.2, 0.1);
-    }
-    if (props.id_pos === 5){
-      camera.rotation.x = MathUtils.lerp(camera.rotation.x, 1.2, 0.1);
-    }
-    if (props.id_pos === 66){
-      camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
-      camera.position.z = MathUtils.lerp(camera.position.z, 19, 0.1);
-      camera.position.y = MathUtils.lerp(camera.position.y, 80, 0.1);
+  //     camera.rotation.x = MathUtils.lerp(camera.rotation.x, 1, 0.1);
+  //   }
+  //   if (props.id_pos === 13){
+  //     camera.rotation.x = MathUtils.lerp(camera.rotation.x, 1.2, 0.1);
+  //   }
+  //   if (props.id_pos === 5){
+  //     camera.rotation.x = MathUtils.lerp(camera.rotation.x, 1.2, 0.1);
+  //   }
+  //   if (props.id_pos === 66){
+  //     camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
+  //     camera.position.z = MathUtils.lerp(camera.position.z, 19, 0.1);
+  //     camera.position.y = MathUtils.lerp(camera.position.y, 80, 0.1);
 
-      camera.rotation.x = MathUtils.lerp(camera.rotation.x, -4, 0.1);
-      // camera.rotation.y = MathUtils.lerp(camera.rotation.y, 12, 0.1);
-      // camera.rotation.z = MathUtils.lerp(camera.rotation.z, 0, 0.1);
-    }
-  });
+  //     camera.rotation.x = MathUtils.lerp(camera.rotation.x, -4, 0.1);
+  //     // camera.rotation.y = MathUtils.lerp(camera.rotation.y, 12, 0.1);
+  //     // camera.rotation.z = MathUtils.lerp(camera.rotation.z, 0, 0.1);
+  //   }
+  // });
 
   useEffect(() => {
 

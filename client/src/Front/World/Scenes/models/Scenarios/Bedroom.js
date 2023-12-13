@@ -24,27 +24,27 @@ export function Bedroom(props) {
 
   const [ambienteL, setAmbienteL] = useState(0);
 
-  useFrame((state) => {
-    if ((props.id_pos === 3) || (props.id_pos === 4) ) {
-      camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
-      camera.position.z = MathUtils.lerp(camera.position.z, 3, 0.1);
-      camera.position.y = MathUtils.lerp(camera.position.y, 10, 0.1);
+  // useFrame((state) => {
+  //   if ((props.id_pos === 3) || (props.id_pos === 4) ) {
+  //     camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
+  //     camera.position.z = MathUtils.lerp(camera.position.z, 3, 0.1);
+  //     camera.position.y = MathUtils.lerp(camera.position.y, 10, 0.1);
 
-      // state.camera.fov = MathUtils.lerp(state.camera.fov,  50, 0.1)
-      // camera.rotation.x = MathUtils.lerp(camera.rotation.x, -1, 0.1);
-      // camera.rotation.y = MathUtils.lerp(camera.rotation.y, 12, 0.1);
-      // camera.rotation.z = MathUtils.lerp(camera.rotation.z, 0, 0.1);
-    }
-    if ((props.id_pos === 12)) {
-      camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
-      camera.position.z = MathUtils.lerp(camera.position.z, 3, 0.1);
-      camera.position.y = MathUtils.lerp(camera.position.y, 10, 0.1);
+  //     // state.camera.fov = MathUtils.lerp(state.camera.fov,  50, 0.1)
+  //     // camera.rotation.x = MathUtils.lerp(camera.rotation.x, -1, 0.1);
+  //     // camera.rotation.y = MathUtils.lerp(camera.rotation.y, 12, 0.1);
+  //     // camera.rotation.z = MathUtils.lerp(camera.rotation.z, 0, 0.1);
+  //   }
+  //   if ((props.id_pos === 12)) {
+  //     camera.position.x = MathUtils.lerp(camera.position.x, 12, 0.1);
+  //     camera.position.z = MathUtils.lerp(camera.position.z, 3, 0.1);
+  //     camera.position.y = MathUtils.lerp(camera.position.y, 10, 0.1);
 
       
-      camera.rotation.y = MathUtils.lerp(camera.rotation.y, 3, 0.1);
-      camera.rotation.z = MathUtils.lerp(camera.rotation.z, 1, 0.1);
-    }
-  });
+  //     camera.rotation.y = MathUtils.lerp(camera.rotation.y, 3, 0.1);
+  //     camera.rotation.z = MathUtils.lerp(camera.rotation.z, 1, 0.1);
+  //   }
+  // });
 
   useEffect(() => {
 
