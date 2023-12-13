@@ -48,15 +48,6 @@ const SceneDecision = ({
                   </button>
                 )}
               </div>
-            ) : animation === 22 ? (
-              <img
-                src={photo}
-                alt="GIF"
-                style={{
-                  width: "140px",
-                  height: "90px",
-                }}
-              />
             ) : null}
           </div>
         </div>

@@ -338,7 +338,7 @@ const Story = ({ language, info, route1, route2 }) => {
                <ColorAverage blendFunction={BlendFunction.DARKEN} />
             </EffectComposer>
             ) : null}
-            <CameraControls />
+            {/* <CameraControls /> */}
             <ambientLight intensity={2} />
 
             {shouldShowAlice && (

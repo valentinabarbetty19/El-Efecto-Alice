@@ -289,15 +289,14 @@ export const introArray = [
     //Alice hoodie: asking 
     id: 22,
     imageUrl: "/assets/img/scenarios/house-door-outside.png",
-    mensaje: "Alice: ¿Qué hago? ¿Voy o no voy?",
-    message: "Alice: What should I do? Should I go or not?",
+    mensaje: "Alice: ¿Qué hago? ¿Voy o no voy? (Presiona las ← o → para desplazarte)",
+    message: "Alice: What should I do? Should I go or not? (Press the keys ← or → to move)",
     decision1en: "Yes",
     decision2en: "No",
     decision1es: "Si",
     decision2es: "No",
     alice: true,
     vecino: true,
-    photo: "assets/img/gif/keyboard.gif",
     animation: 22,
     sonido: 0,
     sad: true
@@ -841,8 +840,8 @@ export const bifur2Array = [
   {
     //ANIMACIÓN 3D
     id: 54,
-    mensaje: "No sabe por cuál camino ellos se fueron. ¿Por cuál calle debería ir? ¿Calle 1 o Calle 2?",
-    message: "I know which way they went. Which street should I go on? Street 1 or Street 2?",
+    mensaje: "No sabe por cuál camino ellos se fueron. ¿Por cuál calle debería ir? ¿Calle 1 o Calle 2? (Presiona las ← o → para desplazarte)",
+    message: "I know which way they went. Which street should I go on? Street 1 or Street 2? (Press the keys ← or → to move)",
     decision1en: "Street 1",
     decision2en: "Street 2",
     decision1es: "Calle 1",
