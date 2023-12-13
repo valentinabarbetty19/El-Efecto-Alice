@@ -378,28 +378,13 @@ const Story = ({ language, info, route1, route2, sound }) => {
                 <ColorAverage blendFunction={BlendFunction.DARKEN} />
               </EffectComposer>
             ) : null}
-            <CameraControls 
-            makeDefault
-            enabled = {false}
-                  enableZoom={false}
-                  enablePan={false}
-                  enableRotate={false}
-                  ref={cameraControlsRef} />
-            {/* <OrbitControls 
-            enabled = {{ value : false }}
-                  // makeDefault
-                  // enableZoom={false}
-                  // enablePan={false}
-                  // enableRotate={false}
-                  /> */}
-                  
             <ambientLight intensity={2} />
-            <OrbitControls
+            {/* <OrbitControls
             rotateSpeed={0.5}
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 3}
             maxAzimuthAngle={Math.PI / 4}
-            minAzimuthAngle={-Math.PI/4}/>
+            minAzimuthAngle={-Math.PI/4}/> */}
 
             {shouldShowAlice && (
               <AliceHoodie animation={info[currentImageIndex].animation} />
@@ -471,6 +456,15 @@ const Story = ({ language, info, route1, route2, sound }) => {
             
 
         />}
+            {/* <CameraControls enabled={false} /> */}
+            <OrbitControls 
+            // enabled = {{ value : false }}
+                // makeDefault
+                enableZoom={false}
+                enablePan={false}
+                enableRotate={false}
+                target={[2,10, 0]}
+                  />
           </Canvas>
         )}
       </div>
