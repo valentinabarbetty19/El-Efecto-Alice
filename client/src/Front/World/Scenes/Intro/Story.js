@@ -177,7 +177,10 @@ const Story = ({ language, info, route1, route2, sound }) => {
 
     // Check if the sound should be played based on props.sonido
     if(!sound)
-   {audioRef.current.pause()} else if (
+   { if (audioRef.current) {
+    audioRef.current.pause();
+    audioRef.current.currentTime = 0;
+  }} else if (
       info[currentImageIndex].sonido === 1 ||
       info[currentImageIndex].sonido === 2 ||
       info[currentImageIndex].sonido === 3 ||
@@ -370,7 +373,7 @@ const Story = ({ language, info, route1, route2, sound }) => {
                 <ColorAverage blendFunction={BlendFunction.DARKEN} />
               </EffectComposer>
             ) : null}
-            {/* <CameraControls /> */}
+            <CameraControls />
             <ambientLight intensity={2} />
 
             {shouldShowAlice && (
