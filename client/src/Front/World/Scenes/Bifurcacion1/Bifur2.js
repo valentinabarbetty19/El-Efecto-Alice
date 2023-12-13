@@ -4,7 +4,7 @@ import { authContext } from "../../../../context/AuthContext";
 
 
 import Story from "../Intro/Story";
-const Bifur2 = ({ language }) => {
+const Bifur2 = ({ language, sound }) => {
   const info = bifur2Array;
   const route = "/home"
   const { id, setId } = useContext(authContext);
@@ -17,7 +17,7 @@ const Bifur2 = ({ language }) => {
   }, [setId]);
 
   return (
-    <Story language={language} info={info} route={route} />
+    <Story language={language} info={info} route={route} sound={sound} />
   );
 };
 

@@ -87,8 +87,47 @@ export function AliceParty(props) {
      .fadeIn( 0.5 )
      .play();
     }
-    
+    if((props.animation === 74)){
+      setPositionZ(0)
+      setPositionX(-3)
+      setPositionY(-5)
+      setRotationy( Math.PI / 2)
+      setScale(4)
+      const action = actions["Talking"];
+     action.reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn(2 )
+     .play();;
+    }
+    if((props.animation === 75) || (props.animation === 78)){
+      setPositionZ(0)
+      setPositionX(-3)
+      setPositionY(-5)
+      setRotationy( Math.PI / 2)
+      setScale(4)
+      const action = actions["LookAround"];
+     action.reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn(2 )
+     .play();;
+    }
+    if((props.animation === 77)){
+      setPositionZ(0)
+      setPositionX(-3)
+      setPositionY(-5)
+      setRotationy( Math.PI / 2)
+      setScale(4)
+      const action = actions["Talking"];
+     action.reset()
+     .setEffectiveTimeScale( 1 )
+     .setEffectiveWeight( 1 )
+     .fadeIn(2 )
+     .play();;
+    }
   }, [props.animation]);
+  
   return (
     <group ref={group} {...props} dispose={null} scale={scale}
     rotation-x={rotationx}

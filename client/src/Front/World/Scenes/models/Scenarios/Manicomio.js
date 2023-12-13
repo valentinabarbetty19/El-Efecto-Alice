@@ -6,13 +6,17 @@ Source: https://sketchfab.com/3d-models/18-misfit-room-inktober2019-6e216a6f02da
 Title: #18 Misfit Room - "Inktober2019"
 */
 
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
+import { useFrame, useThree } from "@react-three/fiber";
 
+ 
 export function Manicomio(props) {
+
   const { nodes, materials } = useGLTF("/assets/models/Scenarios/18_misfit_room_-_inktober2019.glb");
+
   return (
-    <group {...props} dispose={null} position-z={4} rotation-y={-Math.PI/1} position-y={-1.5} >
+    <group {...props} dispose={null} position-z={-1} rotation-y={-Math.PI/1} position-y={-3} scale={[3.2, 3.8, 3]}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <mesh
           castShadow

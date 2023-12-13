@@ -22,6 +22,7 @@ const Intro = lazy(() => import('./Front/World/Scenes/Intro/Intro.js'));
 
 function App() {
   const [language, setLanguage] = useState("español");
+  const [sound, setSound] = useState(true)
   const [isGameLoading, setIsGameLoading] = useState(true);
   const [loadingPercentage, setLoadingPercentage] = useState(0);
   const [loadingMessages, setLoadingMessages] = useState([
@@ -64,6 +65,9 @@ function App() {
       clearInterval(messagesInterval);
     };
   }, []);
+  useEffect(() => {
+    console.log(sound)
+  }, [sound]);
 
   const nonLazyRoutes = (
     <Routes>
@@ -83,9 +87,9 @@ function App() {
 
   const lazyRoutes = (
     <Routes>
-      <Route path="/game/bifur1" element={<Bifur1 language={language} />} />
-      <Route path="/game/bifur2" element={<Bifur2 language={language} />} />
-      <Route path="/game" element={<Intro language={language} />} />
+      <Route path="/game/bifur1" element={<Bifur1 language={language} sound={sound}/>} />
+      <Route path="/game/bifur2" element={<Bifur2 language={language} sound={sound}/>} />
+      <Route path="/game" element={<Intro language={language} sound={sound}/>} />
 
     </Routes>
   );
@@ -95,7 +99,7 @@ function App() {
     <AuthProvider>
       <Router>
         <div className="App">
-          <Navbar className="navbar" setLanguage={setLanguage} language={language} />
+          <Navbar className="navbar" setLanguage={setLanguage} language={language} setSound={setSound} sound={sound} />
 
           {/* Rutas sin suspense */}
           {nonLazyRoutes}

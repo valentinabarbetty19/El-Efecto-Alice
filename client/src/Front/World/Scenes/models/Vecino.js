@@ -40,7 +40,7 @@ export function Vecino(props) {
      .fadeIn(0.01)
      .play();
     }
-    if((props.animation === 69) || (props.animation === 17)  || (props.animation === 19) || (props.animation === 70) || (props.animation === 72) || (props.animation === 25) || (props.animation === 23) || (props.animation === 22) || (props.animation === 21)){
+    if((props.animation === 75) ||(props.animation === 77) || (props.animation === 69) || (props.animation === 17)  || (props.animation === 19) || (props.animation === 70) || (props.animation === 72) || (props.animation === 25) || (props.animation === 23) || (props.animation === 78) || (props.animation === 22) || (props.animation === 21)){
    
       setPositionZ(0)
       setPositionX(5)

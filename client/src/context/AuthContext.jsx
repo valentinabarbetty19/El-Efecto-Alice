@@ -20,7 +20,9 @@ export const useAuth = () => {
 
 export function AuthProvider({ children }) {
 
-    const [id, setId] = useState(0);
+
+    const [id2, setId2] = useState('0');
+    const [id, setId] = useState('');
     const [ emailUser,setEmailUser] = useState('');
 
 
@@ -52,6 +54,8 @@ export function AuthProvider({ children }) {
             logout,
             id, 
             setId,
+            id2,
+            setId2,
             emailUser,
             setEmailUser
         }}>
